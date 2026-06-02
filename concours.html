@@ -1,9 +1,207 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concours STOOM Clermont-Ferrand</title><meta name="description" content="Concours, tirages clients et animations à venir chez STOOM Clermont-Ferrand."><meta name="theme-color" content="#06131d">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Concours STOOM Clermont-Ferrand</title>
+  <meta name="description" content="Concours, tirages clients et animations à venir chez STOOM Clermont-Ferrand.">
+  <meta name="theme-color" content="#06131d">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    .contest-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:22px;
+    }
+
+    .contest-card{
+      background:rgba(255,255,255,.075);
+      border:1px solid var(--line);
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .contest-image{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      background:rgba(255,255,255,.08);
+    }
+
+    .contest-content{
+      padding:24px;
+    }
+
+    .contest-date{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:linear-gradient(135deg,var(--blue2),var(--cyan));
+      color:#06131d;
+      border-radius:999px;
+      padding:9px 13px;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:.78rem;
+      margin-bottom:14px;
+    }
+
+    .contest-content h3{
+      color:white;
+      text-transform:uppercase;
+      font-size:1.45rem;
+      line-height:1.05;
+      margin-bottom:12px;
+    }
+
+    .contest-content p{
+      color:var(--muted);
+      line-height:1.65;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+
+    .contest-status{
+      display:inline-flex;
+      border-radius:999px;
+      padding:9px 13px;
+      background:rgba(142,234,255,.14);
+      border:1px solid rgba(142,234,255,.3);
+      color:var(--cyan);
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:.74rem;
+    }
+
+    .contest-empty{
+      color:var(--muted);
+      font-weight:700;
+      line-height:1.6;
+      padding:24px;
+      border-radius:24px;
+      background:rgba(255,255,255,.075);
+      border:1px solid var(--line);
+    }
+  </style>
+</head>
+
 <body data-page="contest">
-<div class="top">STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne</div>
-<header><div class="container nav"><a href="index.html" class="logo"><div class="logo-mark">S</div><div><strong>STOOM</strong><span>Clermont-Ferrand</span></div></a><nav class="menu"><a href="nouveautes.html" class="">Nouveautés</a><a href="economies.html" class="">Économies</a><a href="diy.html" class="">DIY</a><a href="concours.html" class="active">Concours</a><a href="debuter.html" class="">Débuter</a><a href="contact.html" class="">Contact</a><a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a></nav></div></header>
-<div class="mobile-actions"><a href="tel:0473273394">Appeler</a><a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a></div>
-<main><section><div class="container"><div class="section-head"><div><span class="badge">Jeux & animations</span><h2>Concours à venir</h2></div><p>Concours boutique, tirages clients privilège et animations saisonnières. Les conditions exactes sont précisées en magasin.</p></div><div class="contest-list" id="contestList"></div></div></section></main><footer><div class="container footer-inner"><span>© STOOM Clermont-Ferrand</span><span>Conseil en boutique · Pas de vente en ligne</span></div></footer><script src="assets/app.js"></script></body></html>
+
+<div class="top">
+  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div>
+        <strong>STOOM</strong>
+        <span>Clermont-Ferrand</span>
+      </div>
+    </a>
+
+    <nav class="menu">
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="economies.html">Économies</a>
+      <a href="diy.html">DIY</a>
+      <a href="concours.html" class="active">Concours</a>
+      <a href="debuter.html">Débuter</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-actions">
+  <a href="tel:0473273394">Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="badge">Jeux & animations</span>
+          <h2>Concours à venir</h2>
+        </div>
+        <p>
+          Concours boutique, tirages clients privilège et animations saisonnières.
+          Les conditions exactes sont précisées en magasin.
+        </p>
+      </div>
+
+      <div class="contest-list" id="contestList"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© STOOM Clermont-Ferrand</span>
+    <span>Conseil en boutique · Pas de vente en ligne</span>
+  </div>
+</footer>
+
+<script>
+  function escapeHtml(str){
+    return String(str ?? '').replace(/[&<>"']/g, function(m){
+      return {
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        "'":'&#039;'
+      }[m];
+    });
+  }
+
+  async function loadContests(){
+    const list = document.getElementById('contestList');
+
+    try{
+      const response = await fetch('data/concours.json');
+      const contests = await response.json();
+
+      if(!Array.isArray(contests) || contests.length === 0){
+        list.innerHTML = '<div class="contest-empty">Aucun concours annoncé pour le moment. Revenez bientôt.</div>';
+        return;
+      }
+
+      list.innerHTML = contests.map(function(item){
+        const image = item.image && item.image.trim() !== ''
+          ? `<img class="contest-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.titre)}">`
+          : `<div class="contest-image" style="display:grid;place-items:center;font-size:4rem;">🎁</div>`;
+
+        return `
+          <article class="contest-card">
+            ${image}
+            <div class="contest-content">
+              <div class="contest-date">${escapeHtml(item.jour)} ${escapeHtml(item.mois)}</div>
+              <h3>${escapeHtml(item.titre)}</h3>
+              <p>${escapeHtml(item.description)}</p>
+              <span class="contest-status">${escapeHtml(item.statut)}</span>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+    }catch(error){
+      list.innerHTML = '<div class="contest-empty">Impossible de charger les concours pour le moment.</div>';
+    }
+  }
+
+  loadContests();
+</script>
+
+</body>
+</html>
