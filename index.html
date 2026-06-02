@@ -1,62 +1,469 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STOOM Clermont-Ferrand | Cigarette électronique & conseil</title><meta name="description" content="STOOM Clermont-Ferrand : conseil en boutique, nouveautés, calculateur d'économies et calculateur DIY."><meta name="theme-color" content="#06131d">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>STOOM Clermont-Ferrand | Nouveautés, concours & conseil vape</title>
+  <meta name="description" content="STOOM Clermont-Ferrand : nouveautés, concours, calculateur d'économies, calculateur DIY et conseil en boutique. Pas de vente en ligne.">
+  <meta name="theme-color" content="#06131d">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    .home-hero{
+      min-height:calc(100vh - 120px);
+      display:flex;
+      align-items:center;
+      padding:80px 0;
+    }
+
+    .home-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .home-title{
+      font-size:clamp(3.6rem,8vw,8.5rem);
+      line-height:.82;
+      letter-spacing:-5px;
+      text-transform:uppercase;
+      font-weight:900;
+      color:white;
+      margin:22px 0;
+    }
+
+    .home-title span{
+      display:block;
+      background:linear-gradient(135deg,var(--cyan),var(--blue2),white);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .home-lead{
+      max-width:720px;
+      color:#c5e2ee;
+      font-size:1.08rem;
+      line-height:1.8;
+      font-weight:600;
+    }
+
+    .home-warning{
+      margin-top:22px;
+      display:inline-flex;
+      padding:12px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid var(--line);
+      color:#d8f5ff;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:.78rem;
+    }
+
+    .home-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .home-feature{
+      border-radius:38px;
+      overflow:hidden;
+      background:rgba(255,255,255,.075);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .home-feature-visual{
+      height:340px;
+      background:
+        linear-gradient(180deg,rgba(6,19,29,.05),rgba(6,19,29,.92)),
+        url("uploads/sixvape.jpg");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .home-feature-content{
+      padding:28px;
+    }
+
+    .home-feature-content h2{
+      color:white;
+      text-transform:uppercase;
+      font-size:2rem;
+      line-height:1;
+      margin-bottom:12px;
+    }
+
+    .home-feature-content p{
+      color:var(--muted);
+      line-height:1.65;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+
+    .home-cards{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:-20px;
+      position:relative;
+      z-index:2;
+    }
+
+    .home-card{
+      background:rgba(255,255,255,.075);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:26px;
+      box-shadow:0 20px 70px rgba(0,0,0,.18);
+      transition:.22s;
+    }
+
+    .home-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(142,234,255,.35);
+    }
+
+    .home-card-icon{
+      width:52px;
+      height:52px;
+      border-radius:18px;
+      background:linear-gradient(135deg,var(--blue2),var(--cyan));
+      color:#06131d;
+      display:grid;
+      place-items:center;
+      font-size:1.35rem;
+      font-weight:900;
+      margin-bottom:18px;
+    }
+
+    .home-card h3{
+      color:white;
+      text-transform:uppercase;
+      font-size:1.08rem;
+      line-height:1.1;
+      margin-bottom:10px;
+    }
+
+    .home-card p{
+      color:var(--muted);
+      line-height:1.6;
+      font-weight:600;
+      font-size:.92rem;
+    }
+
+    .home-section{
+      padding:86px 0;
+    }
+
+    .home-split{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:20px;
+      align-items:stretch;
+    }
+
+    .home-panel{
+      background:rgba(255,255,255,.075);
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+
+    .home-panel h2{
+      color:white;
+      text-transform:uppercase;
+      font-size:clamp(2.2rem,4vw,4rem);
+      line-height:.95;
+      letter-spacing:-1.8px;
+      margin-bottom:18px;
+    }
+
+    .home-panel p{
+      color:var(--muted);
+      line-height:1.75;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+
+    .proof-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+
+    .proof{
+      background:rgba(255,255,255,.08);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:20px;
+    }
+
+    .proof b{
+      display:block;
+      color:var(--cyan);
+      font-size:1.8rem;
+      margin-bottom:6px;
+    }
+
+    .proof span{
+      color:#d8f5ff;
+      font-weight:700;
+      line-height:1.45;
+    }
+
+    .home-map{
+      width:100%;
+      min-height:420px;
+      border:0;
+      border-radius:34px;
+      box-shadow:var(--shadow);
+    }
+
+    @media(max-width:980px){
+      .home-grid,
+      .home-split{
+        grid-template-columns:1fr;
+      }
+
+      .home-cards{
+        grid-template-columns:repeat(2,1fr);
+        margin-top:20px;
+      }
+    }
+
+    @media(max-width:640px){
+      .home-hero{
+        min-height:auto;
+        padding:58px 0 38px;
+      }
+
+      .home-title{
+        letter-spacing:-2.4px;
+      }
+
+      .home-actions .btn{
+        width:100%;
+      }
+
+      .home-cards{
+        grid-template-columns:1fr;
+      }
+
+      .proof-grid{
+        grid-template-columns:1fr;
+      }
+
+      .home-feature-visual{
+        height:260px;
+      }
+
+      .home-panel{
+        padding:28px;
+      }
+    }
+  </style>
+</head>
+
 <body data-page="home">
-<div class="top">STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne</div>
-<header><div class="container nav"><a href="index.html" class="logo"><div class="logo-mark">S</div><div><strong>STOOM</strong><span>Clermont-Ferrand</span></div></a><nav class="menu"><a href="nouveautes.html" class="">Nouveautés</a><a href="economies.html" class="">Économies</a><a href="diy.html" class="">DIY</a><a href="concours.html" class="">Concours</a><a href="debuter.html" class="">Débuter</a><a href="contact.html" class="">Contact</a><a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a></nav></div></header>
-<div class="mobile-actions"><a href="tel:0473273394">Appeler</a><a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a></div>
-<main><section class="hero" id="accueil">
-  <div class="container hero-grid">
+
+<div class="top">
+  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div>
+        <strong>STOOM</strong>
+        <span>Clermont-Ferrand</span>
+      </div>
+    </a>
+
+    <nav class="menu">
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="economies.html">Économies</a>
+      <a href="diy.html">DIY</a>
+      <a href="concours.html">Concours</a>
+      <a href="debuter.html">Débuter</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-actions">
+  <a href="tel:0473273394">Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+<main>
+
+<section class="home-hero">
+  <div class="container home-grid">
+
     <div>
       <span class="badge">STOOM Clermont-Ferrand</span>
-      <h1>La vape<br><span>avec du conseil.</span></h1>
-      <p>Une boutique physique, des conseils personnalisés, des nouveautés à suivre et des outils simples pour mieux choisir. Ici, pas de vente en ligne : l’objectif est de vous accompagner correctement.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="nouveautes.html">Nouveautés</a>
-        <a class="btn btn-ghost" href="economies.html">Économies tabac</a>
-        <a class="btn btn-white" href="diy.html">Calculateur DIY</a>
+
+      <h1 class="home-title">
+        Nouveautés.<br>
+        <span>Concours.</span>
+        Conseils.
+      </h1>
+
+      <p class="home-lead">
+        Retrouvez les arrivages, les jeux concours et les outils pratiques de STOOM.
+        Pour acheter, comparer ou être conseillé : rendez-vous directement en boutique.
+      </p>
+
+      <div class="home-warning">
+        Pas de vente en ligne · Conseil en magasin
+      </div>
+
+      <div class="home-actions">
+        <a class="btn btn-primary" href="nouveautes.html">🔥 Voir les nouveautés</a>
+        <a class="btn btn-ghost" href="concours.html">🎁 Concours en cours</a>
+        <a class="btn btn-white" href="contact.html">📍 Venir en boutique</a>
       </div>
     </div>
-    <div class="showcase">
-      <div class="showcase-inner">
-        <div class="showcase-img"></div>
-        <div class="showcase-body">
-          <div class="app-row"><span>Conseil en boutique</span><b>STOOM</b></div>
-          <div class="app-row"><span>Arrivages & concours</span><b>Actu</b></div>
-          <div class="app-row"><span>109 avenue Édouard Michelin</span><b>Clermont</b></div>
-        </div>
+
+    <div class="home-feature">
+      <div class="home-feature-visual"></div>
+      <div class="home-feature-content">
+        <span class="badge">En ce moment</span>
+        <h2>Jeu concours SIX VAPE</h2>
+        <p>
+          Un concours à suivre directement en boutique. Découvrez les lots, les conditions et les prochaines animations STOOM.
+        </p>
+        <a class="btn btn-primary" href="concours.html">Voir le concours</a>
       </div>
     </div>
+
   </div>
 </section>
 
-<div class="container stats">
-  <div class="stats-grid">
-    <div class="stat"><b>4,9/5</b><span>Note Google moyenne</span></div>
-    <div class="stat"><b>640+</b><span>Avis clients</span></div>
-    <div class="stat"><b>100%</b><span>Conseil en boutique</span></div>
-    <div class="stat"><b>FP</b><span>E-liquides auvergnats Flavour Power</span></div>
+<div class="container">
+  <div class="home-cards">
+
+    <a href="nouveautes.html" class="home-card">
+      <div class="home-card-icon">🔥</div>
+      <h3>Nouveautés</h3>
+      <p>Arrivages, retours en stock et coups de cœur disponibles en boutique.</p>
+    </a>
+
+    <a href="concours.html" class="home-card">
+      <div class="home-card-icon">🎁</div>
+      <h3>Concours</h3>
+      <p>Jeux, tirages et animations à venir chez STOOM Clermont-Ferrand.</p>
+    </a>
+
+    <a href="economies.html" class="home-card">
+      <div class="home-card-icon">€</div>
+      <h3>Économies</h3>
+      <p>Calculez le budget tabac mensuel, annuel et sur plusieurs années.</p>
+    </a>
+
+    <a href="diy.html" class="home-card">
+      <div class="home-card-icon">🧪</div>
+      <h3>DIY</h3>
+      <p>Estimez vos quantités de base, arôme et boosters nicotine.</p>
+    </a>
+
   </div>
 </div>
 
-<section>
-  <div class="container grid4">
-    <a class="card" href="nouveautes.html"><div class="card-icon">🔥</div><h3>Nouveautés</h3><p>Arrivages, retours en stock et coups de cœur à découvrir en boutique.</p></a>
-    <a class="card" href="economies.html"><div class="card-icon">€</div><h3>Économies</h3><p>Estimez votre budget tabac mensuel, annuel et sur 5 ans.</p></a>
-    <a class="card" href="diy.html"><div class="card-icon">🧪</div><h3>DIY</h3><p>Calculez vos quantités de booster, arôme et base neutre.</p></a>
-    <a class="card" href="concours.html"><div class="card-icon">🎁</div><h3>Concours</h3><p>Suivez les animations et tirages à venir en magasin.</p></a>
+<section class="home-section">
+  <div class="container home-split">
+
+    <div class="home-panel">
+      <span class="badge">Pourquoi STOOM ?</span>
+      <h2>Un vrai magasin, un vrai conseil.</h2>
+      <p>
+        Une cigarette électronique ne se choisit pas au hasard.
+        Le matériel, le dosage, le tirage et le liquide doivent être cohérents avec votre profil.
+      </p>
+      <p>
+        STOOM privilégie l’échange en boutique pour éviter les mauvais choix et proposer une solution adaptée.
+      </p>
+
+      <div class="home-actions">
+        <a class="btn btn-primary" href="debuter.html">Débuter correctement</a>
+        <a class="btn btn-ghost" href="contact.html">Nous trouver</a>
+      </div>
+    </div>
+
+    <div class="home-panel">
+      <div class="proof-grid">
+        <div class="proof">
+          <b>4,9/5</b>
+          <span>Note Google moyenne</span>
+        </div>
+        <div class="proof">
+          <b>640+</b>
+          <span>Avis clients</span>
+        </div>
+        <div class="proof">
+          <b>100%</b>
+          <span>Conseil en boutique</span>
+        </div>
+        <div class="proof">
+          <b>FP</b>
+          <span>E-liquides auvergnats Flavour Power</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section>
-  <div class="container contact-grid">
-    <div class="panel">
-      <span class="badge">Venir en boutique</span>
-      <h2>Un vrai conseil, en vrai.</h2>
-      <p>Le matériel, le dosage, le tirage et le choix du liquide doivent être cohérents avec votre profil. C’est pour cette raison que STOOM privilégie l’accompagnement en magasin.</p>
-      <div class="actions"><a class="btn btn-primary" href="contact.html">Nous trouver</a><a class="btn btn-ghost" href="debuter.html">Débuter la vape</a></div>
+<section class="home-section">
+  <div class="container home-split">
+
+    <div class="home-panel">
+      <span class="badge">Venir chez STOOM</span>
+      <h2>109 avenue Édouard Michelin</h2>
+      <p>
+        Boutique spécialisée en cigarette électronique à Clermont-Ferrand.
+        Conseils, nouveautés, résistances, liquides et accompagnement en magasin.
+      </p>
+
+      <div class="home-actions">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Lancer l’itinéraire</a>
+        <a class="btn btn-ghost" href="tel:0473273394">Appeler</a>
+      </div>
     </div>
-    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand&output=embed" title="Carte STOOM Clermont-Ferrand"></iframe>
+
+    <iframe
+      class="home-map"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand&output=embed"
+      title="Carte STOOM Clermont-Ferrand">
+    </iframe>
+
   </div>
-</section></main><footer><div class="container footer-inner"><span>© STOOM Clermont-Ferrand</span><span>Conseil en boutique · Pas de vente en ligne</span></div></footer><script src="assets/app.js"></script></body></html>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© STOOM Clermont-Ferrand</span>
+    <span>Conseil en boutique · Pas de vente en ligne</span>
+  </div>
+</footer>
+
+</body>
+</html>
