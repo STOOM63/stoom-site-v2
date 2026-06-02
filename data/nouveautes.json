@@ -1,0 +1,32 @@
+[
+  {
+    "titre": "Wild Berry",
+    "categorie": "Nouveauté liquide",
+    "description": "Mûre sauvage, fruits rouges et fraîcheur légère. Une carte puissante pour les amateurs de fruité moderne.",
+    "emoji": "🫐"
+  },
+  {
+    "titre": "Dragon Paradise",
+    "categorie": "Arrivage",
+    "description": "Ananas, fruit du dragon et corossol. Une nouveauté solaire, visuelle et très accrocheuse.",
+    "emoji": "🐉"
+  },
+  {
+    "titre": "Pods sélectionnés",
+    "categorie": "Matériel",
+    "description": "Des kits simples et efficaces pour débuter sans se tromper, avec conseil dosage en magasin.",
+    "emoji": "⚡"
+  },
+  {
+    "titre": "Flavour Power",
+    "categorie": "Auvergnat",
+    "description": "Les e-liquides auvergnats incontournables, avec conseil personnalisé selon le profil fumeur.",
+    "emoji": "💙"
+  },
+  {
+    "titre": "Retour résistances",
+    "categorie": "Retour stock",
+    "description": "Les références les plus demandées reviennent progressivement en boutique.",
+    "emoji": "🔋"
+  }
+]

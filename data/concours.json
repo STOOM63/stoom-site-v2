@@ -1,0 +1,23 @@
+[
+  {
+    "jour": "15",
+    "mois": "Juin",
+    "titre": "Tirage client privilège",
+    "description": "Un concours boutique pour remercier les clients fidèles. Modalités disponibles en magasin.",
+    "statut": "À venir"
+  },
+  {
+    "jour": "01",
+    "mois": "Juil",
+    "titre": "Jeu de l'été STOOM",
+    "description": "Animation spéciale été avec lots et surprises pour les clients participants.",
+    "statut": "Bientôt"
+  },
+  {
+    "jour": "31",
+    "mois": "Oct",
+    "titre": "Halloween Vape Night",
+    "description": "Une animation visuelle et fun à préparer pour générer du passage en boutique.",
+    "statut": "Idée"
+  }
+]

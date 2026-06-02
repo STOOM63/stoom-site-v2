@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur DIY STOOM Clermont-Ferrand</title><meta name="description" content="Calculateur DIY pour estimer boosters, arôme et base neutre."><meta name="theme-color" content="#06131d">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head>
+<body data-page="diy">
+<div class="top">STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne</div>
+<header><div class="container nav"><a href="index.html" class="logo"><div class="logo-mark">S</div><div><strong>STOOM</strong><span>Clermont-Ferrand</span></div></a><nav class="menu"><a href="nouveautes.html" class="">Nouveautés</a><a href="economies.html" class="">Économies</a><a href="diy.html" class="active">DIY</a><a href="concours.html" class="">Concours</a><a href="debuter.html" class="">Débuter</a><a href="contact.html" class="">Contact</a><a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a></nav></div></header>
+<div class="mobile-actions"><a href="tel:0473273394">Appeler</a><a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a></div>
+<main><section>
+  <div class="container diy-layout">
+    <div class="panel">
+      <span class="badge">DIY e-liquide</span>
+      <h2>Calculateur DIY</h2>
+      <p>Préparez votre mélange en indiquant le volume final souhaité, le dosage de nicotine et le pourcentage d’arôme. Le résultat donne une estimation des quantités à prévoir.</p>
+      <div class="form-grid">
+        <div class="field">
+          <label for="diyVolume">Volume final</label>
+          <select id="diyVolume">
+            <option value="50">50 ml</option>
+            <option value="100" selected>100 ml</option>
+            <option value="200">200 ml</option>
+            <option value="500">500 ml</option>
+            <option value="1000">1 litre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="diyNicotine">Nicotine souhaitée</label>
+          <select id="diyNicotine">
+            <option value="0">0 mg/ml</option>
+            <option value="3" selected>3 mg/ml</option>
+            <option value="6">6 mg/ml</option>
+            <option value="9">9 mg/ml</option>
+            <option value="12">12 mg/ml</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="diyAroma">Dosage arôme</label>
+          <select id="diyAroma">
+            <option value="10">10 %</option>
+            <option value="12">12 %</option>
+            <option value="15" selected>15 %</option>
+            <option value="20">20 %</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="diyBooster">Booster utilisé</label>
+          <select id="diyBooster">
+            <option value="20" selected>20 mg/ml</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <span class="badge">Résultat</span>
+      <h3 id="outSummary">100 ml en 3 mg/ml avec 15% d’arôme</h3>
+      <div class="diy-result">
+        <div class="diy-line"><span>Booster nicotine</span><b id="outBoosters">15 ml</b></div>
+        <div class="diy-line"><span>Arôme concentré</span><b id="outAroma">15 ml</b></div>
+        <div class="diy-line"><span>Base neutre</span><b id="outBase">70 ml</b></div>
+      </div>
+      <div class="warning">
+        Les valeurs sont données à titre indicatif. Pour un mélange confortable, il est conseillé de demander confirmation en boutique selon le matériel utilisé, le ratio PG/VG et le type d’arôme.
+      </div>
+      <div class="actions"><a class="btn btn-primary" href="contact.html">Demander conseil en boutique</a></div>
+    </div>
+  </div>
+</section></main><footer><div class="container footer-inner"><span>© STOOM Clermont-Ferrand</span><span>Conseil en boutique · Pas de vente en ligne</span></div></footer><script src="assets/app.js"></script></body></html>
