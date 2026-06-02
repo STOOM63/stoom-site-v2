@@ -3,22 +3,8 @@
     "jour": "05",
     "mois": "Juin",
     "titre": "Tirage Jeux concours SIX VAPE",
-    "description": "Qui sera le grand gagnant de la box 6 Liquides + Pod OXVA en collaboration avec SIX VAPE !.",
-    "statut": "À venir"
+    "description": "Qui sera le grand gagnant de la box 6 Liquides + Pod OXVA en collaboration avec SIX VAPE !",
+    "statut": "À venir",
     "image": "uploads/sixvape.jpg"
-  },
-  {
-    "jour": "01",
-    "mois": "Juil",
-    "titre": "Jeu de l'été STOOM",
-    "description": "Animation spéciale été avec lots et surprises pour les clients participants.",
-    "statut": "Bientôt"
-  },
-  {
-    "jour": "31",
-    "mois": "Oct",
-    "titre": "Halloween Vape Night",
-    "description": "Une animation visuelle et fun à préparer pour générer du passage en boutique.",
-    "statut": "Idée"
-  },
+  }
 ]
