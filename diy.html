@@ -18,7 +18,9 @@
 
     .diy-hero{
       padding:70px 0 45px;
-      background:radial-gradient(circle at 20% 10%,rgba(53,185,238,.20),transparent 32%),linear-gradient(135deg,#06131d 0%,#0b2a3a 55%,#06131d 100%);
+      background:
+        radial-gradient(circle at 20% 10%,rgba(53,185,238,.20),transparent 32%),
+        linear-gradient(135deg,#06131d 0%,#0b2a3a 55%,#06131d 100%);
     }
 
     .diy-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
@@ -30,7 +32,9 @@
       min-height:360px;
       border-radius:34px;
       border:1px solid rgba(142,234,255,.18);
-      background:radial-gradient(circle at 50% 35%,rgba(142,234,255,.25),transparent 34%),linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
+      background:
+        radial-gradient(circle at 50% 35%,rgba(142,234,255,.25),transparent 34%),
+        linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
       box-shadow:var(--shadow);
       display:grid;
       place-items:center;
@@ -43,7 +47,9 @@
       aspect-ratio:1/1;
       border-radius:34px;
       border:1px solid rgba(142,234,255,.22);
-      background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.02)),radial-gradient(circle at 50% 80%,rgba(53,185,238,.35),transparent 42%);
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.02)),
+        radial-gradient(circle at 50% 80%,rgba(53,185,238,.35),transparent 42%);
       display:grid;
       place-items:center;
       position:relative;
@@ -153,10 +159,12 @@
 
     .base-image{
       width:100%;
-      aspect-ratio:1/1;
-      object-fit:cover;
+      height:310px;
+      object-fit:contain;
+      object-position:center;
       display:block;
-      background:#081923;
+      background:linear-gradient(180deg,#ffffff,#f4f7fa);
+      padding:18px;
       pointer-events:none;
       user-select:none;
     }
@@ -189,6 +197,7 @@
       .diy-icon{width:44px;height:44px}
       .actions .btn{width:100%}
       .base-grid{grid-template-columns:1fr}
+      .base-image{height:360px}
     }
   </style>
 </head>
