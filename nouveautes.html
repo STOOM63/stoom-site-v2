@@ -20,7 +20,8 @@
     }
 
     .news-card{
-      display:block;
+      display:flex;
+      flex-direction:column;
       background:rgba(255,255,255,.075);
       border:1px solid var(--line);
       border-radius:30px;
@@ -38,13 +39,15 @@
 
     .news-image{
       width:100%;
-      height:auto;
+      aspect-ratio:16/5;
+      object-fit:cover;
       display:block;
       background:#06131d;
     }
 
     .news-placeholder{
-      height:260px;
+      width:100%;
+      aspect-ratio:16/5;
       display:grid;
       place-items:center;
       font-size:4rem;
@@ -53,10 +56,14 @@
 
     .news-content{
       padding:26px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
     }
 
     .news-category{
       display:inline-flex;
+      align-self:flex-start;
       background:linear-gradient(135deg,var(--blue2),var(--cyan));
       color:#06131d;
       border-radius:999px;
@@ -83,6 +90,7 @@
     }
 
     .news-button{
+      margin-top:auto;
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -105,6 +113,7 @@
       border-radius:24px;
       background:rgba(255,255,255,.075);
       border:1px solid var(--line);
+      grid-column:1/-1;
     }
 
     @media(max-width:640px){
@@ -120,6 +129,10 @@
         margin-top:6px;
         font-size:3.1rem;
         line-height:.9;
+      }
+
+      .news-grid{
+        grid-template-columns:1fr;
       }
     }
   </style>
@@ -201,7 +214,7 @@
     const list = document.getElementById('newsGrid');
 
     try{
-      const response = await fetch('data/nouveautes.json?v=4');
+      const response = await fetch('data/nouveautes.json?v=5');
       const news = await response.json();
 
       if(!Array.isArray(news) || news.length === 0){
@@ -225,7 +238,7 @@
               <div class="news-category">${escapeHtml(item.categorie || 'Nouveauté')}</div>
               <h3>${escapeHtml(item.titre)}</h3>
               <p>${escapeHtml(item.description)}</p>
-              <div class="news-button">Voir le produit →</div>
+              <div class="news-button">Découvrir →</div>
             </div>
           </a>
         `;
