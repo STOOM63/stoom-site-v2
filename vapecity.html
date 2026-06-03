@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Vape City | STOOM Clermont-Ferrand</title>
-  <meta name="description" content="Découvrez la gamme Vape City disponible chez STOOM Clermont-Ferrand. Produits disponibles uniquement en boutique.">
+  <meta name="description" content="Découvrez la gamme Vape City disponible chez STOOM Clermont-Ferrand. Catalogue vitrine, produits disponibles uniquement en boutique.">
   <meta name="theme-color" content="#06131d">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,35 +14,21 @@
   <link rel="stylesheet" href="assets/style.css">
 
   <style>
-    html,body{
-      width:100%;
-      max-width:100%;
-      overflow-x:hidden;
-      background:#06131d;
-    }
+    html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
 
     .vapecity-hero{
-      position:relative;
       min-height:310px;
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
-      overflow:hidden;
-      background:
-        linear-gradient(180deg,rgba(6,19,29,.30),rgba(6,19,29,.92)),
-        url("uploads/vapecityville.jpg");
+      background:linear-gradient(180deg,rgba(6,19,29,.30),rgba(6,19,29,.92)),url("uploads/vapecityville.jpg");
       background-size:cover;
       background-position:center;
       border-bottom:1px solid rgba(142,234,255,.18);
     }
 
-    .vapecity-hero-content{
-      position:relative;
-      z-index:2;
-      width:min(92%,900px);
-      padding:56px 0;
-    }
+    .vapecity-hero-content{width:min(92%,900px);padding:56px 0}
 
     .vapecity-hero h1{
       color:white;
@@ -54,10 +40,7 @@
       margin-bottom:18px;
     }
 
-    .vapecity-hero h1 span{
-      display:block;
-      color:var(--blue2);
-    }
+    .vapecity-hero h1 span{display:block;color:var(--blue2)}
 
     .vapecity-hero p{
       color:#d8f5ff;
@@ -70,8 +53,6 @@
 
     .shop-alert{
       display:inline-flex;
-      align-items:center;
-      justify-content:center;
       margin-top:22px;
       padding:10px 14px;
       border-radius:999px;
@@ -81,12 +62,20 @@
       font-weight:900;
       text-transform:uppercase;
       font-size:.72rem;
-      letter-spacing:.4px;
     }
 
-    .catalog-section{
-      padding:38px 0 90px;
-      background:#06131d;
+    .catalog-section{padding:38px 0 90px;background:#06131d}
+
+    .catalog-note{
+      margin-bottom:22px;
+      padding:18px 20px;
+      border-radius:22px;
+      background:rgba(142,234,255,.10);
+      border:1px solid rgba(142,234,255,.22);
+      color:#d8f5ff;
+      font-weight:800;
+      line-height:1.5;
+      text-align:center;
     }
 
     .catalog-toolbar{
@@ -101,27 +90,18 @@
       margin-bottom:26px;
     }
 
-    .filter-button,
-    .sort-button{
+    .filter-select,.sort-select{
       min-height:52px;
       border-radius:14px;
       border:1px solid rgba(142,234,255,.18);
-      background:rgba(255,255,255,.055);
+      background:#081923;
       color:#d8f5ff;
       font-weight:900;
-      text-transform:uppercase;
       padding:0 18px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
+      width:100%;
     }
 
-    .sort-button{
-      justify-self:end;
-      text-transform:none;
-      font-weight:700;
-    }
+    .sort-select{justify-self:end;max-width:220px}
 
     .product-count{
       color:#d8f5ff;
@@ -143,14 +123,7 @@
       border-radius:24px;
       overflow:hidden;
       color:inherit;
-      text-decoration:none;
       box-shadow:0 18px 70px rgba(0,0,0,.22);
-      transition:.22s ease;
-    }
-
-    .product-card:hover{
-      transform:translateY(-6px);
-      border-color:rgba(142,234,255,.55);
     }
 
     .product-image{
@@ -159,6 +132,8 @@
       object-fit:cover;
       display:block;
       background:#081923;
+      pointer-events:none;
+      user-select:none;
     }
 
     .product-content{
@@ -192,8 +167,6 @@
 
     .tag-mini{
       display:inline-flex;
-      align-items:center;
-      justify-content:center;
       padding:7px 11px;
       border-radius:999px;
       background:rgba(53,185,238,.12);
@@ -208,7 +181,6 @@
       font-size:.9rem;
       font-weight:700;
       margin-top:auto;
-      margin-bottom:14px;
     }
 
     .available::before{
@@ -219,20 +191,6 @@
       border-radius:50%;
       background:#27e74f;
       margin-right:8px;
-    }
-
-    .product-button{
-      min-height:46px;
-      border-radius:14px;
-      border:1px solid var(--cyan);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      color:white;
-      font-weight:900;
-      text-transform:uppercase;
-      font-size:.78rem;
     }
 
     .store-banner{
@@ -266,18 +224,12 @@
       margin-bottom:6px;
     }
 
-    .store-banner h2 span{
-      color:var(--blue2);
-    }
+    .store-banner h2 span{color:var(--blue2)}
 
     .store-banner p{
       color:#c5e2ee;
       line-height:1.55;
       font-weight:600;
-    }
-
-    .store-banner .btn{
-      white-space:nowrap;
     }
 
     .empty{
@@ -292,69 +244,33 @@
     }
 
     @media(max-width:760px){
-      .vapecity-hero{
-        min-height:280px;
-        background-position:center top;
-      }
+      .vapecity-hero{min-height:280px;background-position:center top}
+      .vapecity-hero h1{font-size:3.15rem;letter-spacing:-1.5px}
 
-      .vapecity-hero h1{
-        font-size:3.15rem;
-        letter-spacing:-1.5px;
-      }
-
-      .catalog-toolbar{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .product-count{
-        grid-column:1/-1;
-        order:3;
-      }
-
-      .filter-button,
-      .sort-button{
-        width:100%;
-      }
+      .catalog-toolbar{grid-template-columns:1fr 1fr}
+      .product-count{grid-column:1/-1;order:3}
+      .sort-select{max-width:none}
 
       .product-grid{
         grid-template-columns:repeat(2,1fr);
         gap:14px;
       }
 
-      .product-content{
-        padding:14px;
-      }
-
-      .product-content h2{
-        font-size:1rem;
-      }
-
-      .product-content p{
-        font-size:.86rem;
-      }
-
-      .product-button{
-        font-size:.72rem;
-      }
+      .product-content{padding:14px}
+      .product-content h2{font-size:1rem}
+      .product-content p{font-size:.86rem}
 
       .store-banner{
         grid-template-columns:1fr;
         text-align:center;
       }
 
-      .store-icon{
-        margin:auto;
-      }
-
-      .store-banner .btn{
-        width:100%;
-      }
+      .store-icon{margin:auto}
+      .store-banner .btn{width:100%}
     }
 
     @media(max-width:390px){
-      .product-grid{
-        grid-template-columns:1fr;
-      }
+      .product-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -382,15 +298,15 @@
       <a href="concours.html">Concours</a>
       <a href="debuter.html">Débuter</a>
       <a href="contact.html">Contact</a>
-      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank">Itinéraire</a>
     </nav>
   </div>
 </header>
 
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
-  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
-  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank">Itinéraire</a>
+  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank">Instagram</a>
 </div>
 
 <main>
@@ -402,17 +318,36 @@
       Découvrez la gamme Vape City, des e-liquides aux saveurs fruitées et originales,
       disponibles chez STOOM Clermont-Ferrand.
     </p>
-    <div class="shop-alert">Disponible uniquement en boutique</div>
+    <div class="shop-alert">Catalogue vitrine · Aucun achat en ligne</div>
   </div>
 </section>
 
 <section class="catalog-section">
   <div class="container">
 
+    <div class="catalog-note">
+      Cette page présente les produits disponibles en boutique. Pour choisir le bon liquide, le bon dosage ou le matériel adapté, notre équipe vous conseille directement chez STOOM.
+    </div>
+
     <div class="catalog-toolbar">
-      <button class="filter-button" type="button">☰ Filtres</button>
+      <select class="filter-select" id="filterSelect">
+        <option value="all">Toutes les saveurs</option>
+        <option value="framboise">Framboise</option>
+        <option value="fraise">Fraise</option>
+        <option value="pastèque">Pastèque</option>
+        <option value="mangue">Mangue</option>
+        <option value="kiwi">Kiwi</option>
+        <option value="grenade">Grenade</option>
+        <option value="pêche">Pêche</option>
+        <option value="cerise">Cerise</option>
+      </select>
+
       <div class="product-count"><span id="productCount">0</span> produits</div>
-      <button class="sort-button" type="button">Tri : A à Z</button>
+
+      <select class="sort-select" id="sortSelect">
+        <option value="az">Tri : A à Z</option>
+        <option value="za">Tri : Z à A</option>
+      </select>
     </div>
 
     <div class="product-grid" id="productGrid"></div>
@@ -439,16 +374,63 @@
 </footer>
 
 <script>
+  let allProducts = [];
+
   function escapeHtml(str){
     return String(str ?? '').replace(/[&<>"']/g, function(m){
-      return {
-        '&':'&amp;',
-        '<':'&lt;',
-        '>':'&gt;',
-        '"':'&quot;',
-        "'":'&#039;'
-      }[m];
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];
     });
+  }
+
+  function renderProducts(){
+    const grid = document.getElementById('productGrid');
+    const count = document.getElementById('productCount');
+    const filter = document.getElementById('filterSelect').value;
+    const sort = document.getElementById('sortSelect').value;
+
+    let products = [...allProducts];
+
+    if(filter !== 'all'){
+      products = products.filter(function(item){
+        const text = `${item.nom || ''} ${item.saveurs || ''} ${item.description || ''}`.toLowerCase();
+        return text.includes(filter.toLowerCase());
+      });
+    }
+
+    products.sort(function(a,b){
+      if(sort === 'za'){
+        return String(b.nom || '').localeCompare(String(a.nom || ''), 'fr');
+      }
+      return String(a.nom || '').localeCompare(String(b.nom || ''), 'fr');
+    });
+
+    count.textContent = products.length;
+
+    if(products.length === 0){
+      grid.innerHTML = '<div class="empty">Aucun produit ne correspond à ce filtre.</div>';
+      return;
+    }
+
+    grid.innerHTML = products.map(function(item){
+      return `
+        <article class="product-card">
+          <img class="product-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.nom)}">
+
+          <div class="product-content">
+            <h2>${escapeHtml(item.nom)}</h2>
+            <p><strong>Saveurs :</strong> ${escapeHtml(item.saveurs)}</p>
+            <p>${escapeHtml(item.description || '')}</p>
+
+            <div class="product-tags">
+              <span class="tag-mini">${escapeHtml(item.format || '50ml')}</span>
+              <span class="tag-mini">${escapeHtml(item.nicotine || '0mg')}</span>
+            </div>
+
+            <div class="available">Disponible uniquement en boutique</div>
+          </div>
+        </article>
+      `;
+    }).join('');
   }
 
   async function loadVapeCity(){
@@ -456,48 +438,25 @@
     const count = document.getElementById('productCount');
 
     try{
-      const response = await fetch('data/vapecity.json?v=1');
-      const products = await response.json();
+      const response = await fetch('data/vapecity.json?v=3');
+      allProducts = await response.json();
 
-      if(!Array.isArray(products) || products.length === 0){
+      if(!Array.isArray(allProducts) || allProducts.length === 0){
         grid.innerHTML = '<div class="empty">Aucun produit Vape City n’est affiché pour le moment.</div>';
         count.textContent = '0';
         return;
       }
 
-      count.textContent = products.length;
-
-      products.sort(function(a,b){
-        return String(a.nom).localeCompare(String(b.nom), 'fr');
-      });
-
-      grid.innerHTML = products.map(function(item){
-        return `
-          <a class="product-card" href="contact.html">
-            <img class="product-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.nom)}">
-
-            <div class="product-content">
-              <h2>${escapeHtml(item.nom)}</h2>
-              <p><strong>Saveurs :</strong> ${escapeHtml(item.saveurs)}</p>
-<p>${escapeHtml(item.description)}</p>
-
-              <div class="product-tags">
-                <span class="tag-mini">${escapeHtml(item.format || '50ml')}</span>
-                <span class="tag-mini">${escapeHtml(item.nicotine || '0mg')}</span>
-              </div>
-
-              <div class="available">Disponible en boutique</div>
-              <div class="product-button">Voir le produit →</div>
-            </div>
-          </a>
-        `;
-      }).join('');
+      renderProducts();
 
     }catch(error){
       grid.innerHTML = '<div class="empty">Impossible de charger les produits Vape City pour le moment.</div>';
       count.textContent = '0';
     }
   }
+
+  document.getElementById('filterSelect').addEventListener('change', renderProducts);
+  document.getElementById('sortSelect').addEventListener('change', renderProducts);
 
   loadVapeCity();
 </script>
