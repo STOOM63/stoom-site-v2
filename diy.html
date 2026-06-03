@@ -1,17 +1,410 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculateur DIY STOOM Clermont-Ferrand</title><meta name="description" content="Calculateur DIY pour estimer boosters, arôme et base neutre."><meta name="theme-color" content="#06131d">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculateur DIY | STOOM Clermont-Ferrand</title>
+  <meta name="description" content="Calculateur DIY STOOM pour estimer base, arôme et boosters nicotine. Produits disponibles en boutique.">
+  <meta name="theme-color" content="#06131d">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    html,body{
+      width:100%;
+      max-width:100%;
+      overflow-x:hidden;
+      background:#06131d;
+    }
+
+    .diy-hero{
+      padding:70px 0 45px;
+      background:
+        radial-gradient(circle at 20% 10%,rgba(53,185,238,.20),transparent 32%),
+        linear-gradient(135deg,#06131d 0%,#0b2a3a 55%,#06131d 100%);
+    }
+
+    .diy-hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .diy-title{
+      color:white;
+      text-transform:uppercase;
+      font-size:clamp(3rem,7vw,6.5rem);
+      line-height:.86;
+      letter-spacing:-3px;
+      font-weight:900;
+      margin:22px 0;
+    }
+
+    .diy-title span{
+      display:block;
+      color:var(--cyan);
+    }
+
+    .diy-lead{
+      color:#c5e2ee;
+      font-size:1.05rem;
+      line-height:1.75;
+      font-weight:600;
+      max-width:720px;
+    }
+
+    .diy-visual{
+      min-height:360px;
+      border-radius:34px;
+      border:1px solid rgba(142,234,255,.18);
+      background:
+        radial-gradient(circle at 50% 35%,rgba(142,234,255,.25),transparent 34%),
+        linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
+      box-shadow:var(--shadow);
+      display:grid;
+      place-items:center;
+      padding:28px;
+      overflow:hidden;
+    }
+
+    .diy-beaker{
+      width:min(100%,330px);
+      aspect-ratio:1/1;
+      border-radius:34px;
+      border:1px solid rgba(142,234,255,.22);
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.02)),
+        radial-gradient(circle at 50% 80%,rgba(53,185,238,.35),transparent 42%);
+      display:grid;
+      place-items:center;
+      position:relative;
+    }
+
+    .diy-beaker::before{
+      content:"";
+      position:absolute;
+      width:130px;
+      height:190px;
+      border:5px solid rgba(216,245,255,.75);
+      border-top:none;
+      border-radius:0 0 34px 34px;
+      bottom:48px;
+    }
+
+    .diy-beaker::after{
+      content:"DIY";
+      position:absolute;
+      color:white;
+      font-weight:900;
+      font-size:3.4rem;
+      letter-spacing:-2px;
+    }
+
+    .bubble{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(142,234,255,.35);
+      box-shadow:0 0 25px rgba(142,234,255,.25);
+    }
+
+    .bubble.one{width:28px;height:28px;top:58px;left:72px}
+    .bubble.two{width:18px;height:18px;top:105px;right:78px}
+    .bubble.three{width:38px;height:38px;bottom:66px;right:52px}
+
+    .calculator-section{
+      padding:46px 0 90px;
+      background:#06131d;
+    }
+
+    .diy-card{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:22px;
+    }
+
+    .diy-panel{
+      background:rgba(255,255,255,.065);
+      border:1px solid rgba(142,234,255,.16);
+      border-radius:30px;
+      padding:28px;
+      box-shadow:0 18px 70px rgba(0,0,0,.22);
+    }
+
+    .diy-panel h2{
+      color:white;
+      text-transform:uppercase;
+      font-size:2rem;
+      line-height:1;
+      margin:14px 0 18px;
+    }
+
+    .diy-panel p{
+      color:#c5e2ee;
+      line-height:1.65;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:22px;
+    }
+
+    .field{
+      display:grid;
+      gap:8px;
+    }
+
+    .field label{
+      color:#d8f5ff;
+      text-transform:uppercase;
+      font-size:.76rem;
+      font-weight:900;
+      letter-spacing:.4px;
+    }
+
+    .field select{
+      min-height:54px;
+      width:100%;
+      border-radius:16px;
+      border:1px solid rgba(142,234,255,.18);
+      background:#081923;
+      color:white;
+      font-weight:800;
+      padding:0 16px;
+      outline:none;
+    }
+
+    .result-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:18px;
+    }
+
+    .result-header h2{
+      margin:0;
+    }
+
+    .result-chip{
+      display:inline-flex;
+      border-radius:999px;
+      padding:10px 14px;
+      background:linear-gradient(135deg,var(--blue2),var(--cyan));
+      color:#06131d;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:.72rem;
+      white-space:nowrap;
+    }
+
+    .result-summary{
+      padding:18px;
+      border-radius:22px;
+      background:rgba(142,234,255,.10);
+      border:1px solid rgba(142,234,255,.22);
+      color:#d8f5ff;
+      font-weight:800;
+      line-height:1.55;
+      margin-bottom:18px;
+    }
+
+    .diy-result{
+      display:grid;
+      gap:12px;
+    }
+
+    .diy-line{
+      display:grid;
+      grid-template-columns:52px 1fr auto;
+      gap:14px;
+      align-items:center;
+      padding:16px;
+      border-radius:20px;
+      background:rgba(255,255,255,.065);
+      border:1px solid rgba(142,234,255,.14);
+    }
+
+    .diy-icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      background:rgba(142,234,255,.12);
+      border:1px solid rgba(142,234,255,.24);
+      display:grid;
+      place-items:center;
+      color:var(--cyan);
+      font-size:1.4rem;
+      font-weight:900;
+    }
+
+    .diy-line span{
+      color:#d8f5ff;
+      font-weight:800;
+    }
+
+    .diy-line small{
+      display:block;
+      color:var(--muted);
+      font-weight:700;
+      margin-top:4px;
+    }
+
+    .diy-line b{
+      color:var(--cyan);
+      font-size:1.35rem;
+      white-space:nowrap;
+    }
+
+    .warning{
+      margin-top:18px;
+      padding:18px;
+      border-radius:22px;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(142,234,255,.18);
+      color:#c5e2ee;
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .actions{
+      margin-top:22px;
+    }
+
+    @media(max-width:900px){
+      .diy-hero-grid,
+      .diy-card{
+        grid-template-columns:1fr;
+      }
+
+      .diy-visual{
+        min-height:300px;
+      }
+    }
+
+    @media(max-width:640px){
+      .diy-hero{
+        padding:52px 0 34px;
+      }
+
+      .diy-title{
+        font-size:3.1rem;
+        line-height:.9;
+        letter-spacing:-1.8px;
+      }
+
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .diy-panel{
+        padding:22px;
+      }
+
+      .result-header{
+        display:block;
+      }
+
+      .result-chip{
+        margin-top:14px;
+      }
+
+      .diy-line{
+        grid-template-columns:44px 1fr;
+      }
+
+      .diy-line b{
+        grid-column:1/-1;
+        font-size:1.6rem;
+      }
+
+      .diy-icon{
+        width:44px;
+        height:44px;
+      }
+
+      .actions .btn{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
 <body data-page="diy">
-<div class="top">STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne</div>
-<header><div class="container nav"><a href="index.html" class="logo"><div class="logo-mark">S</div><div><strong>STOOM</strong><span>Clermont-Ferrand</span></div></a><nav class="menu"><a href="nouveautes.html" class="">Nouveautés</a><a href="economies.html" class="">Économies</a><a href="diy.html" class="active">DIY</a><a href="concours.html" class="">Concours</a><a href="debuter.html" class="">Débuter</a><a href="contact.html" class="">Contact</a><a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a></nav></div></header>
-<div class="mobile-actions"><a href="tel:0473273394">Appeler</a><a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a></div>
-<main><section>
-  <div class="container diy-layout">
-    <div class="panel">
+
+<div class="top">
+  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div>
+        <strong>STOOM</strong>
+        <span>Clermont-Ferrand</span>
+      </div>
+    </a>
+
+    <nav class="menu">
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="economies.html">Économies</a>
+      <a href="diy.html" class="active">DIY</a>
+      <a href="concours.html">Concours</a>
+      <a href="debuter.html">Débuter</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-actions">
+  <a href="tel:0473273394">Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+<main>
+
+<section class="diy-hero">
+  <div class="container diy-hero-grid">
+    <div>
       <span class="badge">DIY e-liquide</span>
-      <h2>Calculateur DIY</h2>
-      <p>Préparez votre mélange en indiquant le volume final souhaité, le dosage de nicotine et le pourcentage d’arôme. Le résultat donne une estimation des quantités à prévoir.</p>
+      <h1 class="diy-title">Calculez<br><span>votre mélange.</span></h1>
+      <p class="diy-lead">
+        Estimez rapidement les quantités de base, d’arôme et de boosters nécessaires pour préparer votre e-liquide.
+        Pour un résultat confortable, demandez toujours conseil en boutique selon votre matériel et votre dosage.
+      </p>
+    </div>
+
+    <div class="diy-visual">
+      <div class="diy-beaker">
+        <span class="bubble one"></span>
+        <span class="bubble two"></span>
+        <span class="bubble three"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container diy-card">
+
+    <div class="diy-panel">
+      <span class="badge">Paramètres</span>
+      <h2>Votre préparation</h2>
+      <p>
+        Sélectionnez le volume final souhaité, le taux de nicotine visé et le dosage d’arôme recommandé.
+      </p>
+
       <div class="form-grid">
         <div class="field">
           <label for="diyVolume">Volume final</label>
@@ -23,6 +416,7 @@
             <option value="1000">1 litre</option>
           </select>
         </div>
+
         <div class="field">
           <label for="diyNicotine">Nicotine souhaitée</label>
           <select id="diyNicotine">
@@ -33,6 +427,7 @@
             <option value="12">12 mg/ml</option>
           </select>
         </div>
+
         <div class="field">
           <label for="diyAroma">Dosage arôme</label>
           <select id="diyAroma">
@@ -42,6 +437,7 @@
             <option value="20">20 %</option>
           </select>
         </div>
+
         <div class="field">
           <label for="diyBooster">Booster utilisé</label>
           <select id="diyBooster">
@@ -51,18 +447,115 @@
       </div>
     </div>
 
-    <div class="panel">
-      <span class="badge">Résultat</span>
-      <h3 id="outSummary">100 ml en 3 mg/ml avec 15% d’arôme</h3>
+    <div class="diy-panel">
+      <div class="result-header">
+        <h2>Résultat</h2>
+        <div class="result-chip">Estimation</div>
+      </div>
+
+      <div class="result-summary" id="outSummary">
+        100 ml en 3 mg/ml avec 15% d’arôme
+      </div>
+
       <div class="diy-result">
-        <div class="diy-line"><span>Booster nicotine</span><b id="outBoosters">15 ml</b></div>
-        <div class="diy-line"><span>Arôme concentré</span><b id="outAroma">15 ml</b></div>
-        <div class="diy-line"><span>Base neutre</span><b id="outBase">70 ml</b></div>
+        <div class="diy-line">
+          <div class="diy-icon">N</div>
+          <div>
+            <span>Booster nicotine</span>
+            <small>Quantité totale de booster à ajouter</small>
+          </div>
+          <b id="outBoosters">15 ml</b>
+        </div>
+
+        <div class="diy-line">
+          <div class="diy-icon">A</div>
+          <div>
+            <span>Arôme concentré</span>
+            <small>Selon le pourcentage choisi</small>
+          </div>
+          <b id="outAroma">15 ml</b>
+        </div>
+
+        <div class="diy-line">
+          <div class="diy-icon">B</div>
+          <div>
+            <span>Base neutre</span>
+            <small>Complément pour atteindre le volume final</small>
+          </div>
+          <b id="outBase">70 ml</b>
+        </div>
       </div>
+
       <div class="warning">
-        Les valeurs sont données à titre indicatif. Pour un mélange confortable, il est conseillé de demander confirmation en boutique selon le matériel utilisé, le ratio PG/VG et le type d’arôme.
+        Les valeurs sont données à titre indicatif. Le dosage peut varier selon le ratio PG/VG, le type d’arôme, le matériel utilisé et votre ressenti en nicotine.
       </div>
-      <div class="actions"><a class="btn btn-primary" href="contact.html">Demander conseil en boutique</a></div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="contact.html">Demander conseil en boutique</a>
+      </div>
     </div>
+
   </div>
-</section></main><footer><div class="container footer-inner"><span>© STOOM Clermont-Ferrand</span><span>Conseil en boutique · Pas de vente en ligne</span></div></footer><script src="assets/app.js"></script></body></html>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© STOOM Clermont-Ferrand</span>
+    <span>Conseil en boutique · Pas de vente en ligne</span>
+  </div>
+</footer>
+
+<script>
+  function initDiy(){
+    const volume = document.getElementById('diyVolume');
+    const nicotine = document.getElementById('diyNicotine');
+    const aroma = document.getElementById('diyAroma');
+    const booster = document.getElementById('diyBooster');
+
+    const outBoosters = document.getElementById('outBoosters');
+    const outAroma = document.getElementById('outAroma');
+    const outBase = document.getElementById('outBase');
+    const outSummary = document.getElementById('outSummary');
+
+    function formatMl(value){
+      return value.toFixed(1).replace('.', ',') + ' ml';
+    }
+
+    function calc(){
+      const V = Number(volume.value);
+      const target = Number(nicotine.value);
+      const aromaPct = Number(aroma.value);
+      const boosterStrength = Number(booster.value);
+
+      const boosterMl = target > 0 ? (target * V) / boosterStrength : 0;
+      const aromaMl = V * aromaPct / 100;
+      const baseMl = Math.max(0, V - boosterMl - aromaMl);
+      const boosters10 = Math.ceil(boosterMl / 10);
+
+      outBoosters.textContent =
+        target > 0
+          ? formatMl(boosterMl) + ' ≈ ' + boosters10 + ' booster(s)'
+          : '0 ml';
+
+      outAroma.textContent = formatMl(aromaMl);
+      outBase.textContent = formatMl(baseMl);
+
+      outSummary.textContent =
+        V + ' ml en ' + target + ' mg/ml avec ' + aromaPct + '% d’arôme';
+    }
+
+    [volume, nicotine, aroma, booster].forEach(function(el){
+      el.addEventListener('input', calc);
+      el.addEventListener('change', calc);
+    });
+
+    calc();
+  }
+
+  initDiy();
+</script>
+
+</body>
+</html>
