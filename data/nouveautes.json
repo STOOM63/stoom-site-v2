@@ -11,23 +11,5 @@
   "description": "Découvrez la nouvelle gamme Flavour Power Le Perfect Match.",
   "image": "uploads/leperfectmatch.jpg",
   "lien": "leperfectmatch.html"
-},
-  {
-    "titre": "Pods sélectionnés",
-    "categorie": "Matériel",
-    "description": "Des kits simples et efficaces pour débuter sans se tromper, avec conseil dosage en magasin.",
-    "emoji": "⚡"
-  },
-  {
-    "titre": "Flavour Power",
-    "categorie": "Auvergnat",
-    "description": "Les e-liquides auvergnats incontournables, avec conseil personnalisé selon le profil fumeur.",
-    "emoji": "💙"
-  },
-  {
-    "titre": "Retour résistances",
-    "categorie": "Retour stock",
-    "description": "Les références les plus demandées reviennent progressivement en boutique.",
-    "emoji": "🔋"
-  }
+}
 ]
