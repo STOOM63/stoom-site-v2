@@ -22,13 +22,5 @@
     "image": "uploads/base50501l.jpg",
     "lien": "diy.html",
     "bouton": "Voir le DIY"
-  },
-  {
-    "titre": "Concours",
-    "categorie": "Animation boutique",
-    "description": "Jeux, tirages et lots à gagner en boutique.",
-    "image": "uploads/sixvape.jpg",
-    "lien": "concours.html",
-    "bouton": "Voir les concours"
   }
 ]
