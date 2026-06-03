@@ -20,11 +20,20 @@
     }
 
     .news-card{
+      display:block;
       background:rgba(255,255,255,.075);
       border:1px solid var(--line);
       border-radius:30px;
       overflow:hidden;
       box-shadow:var(--shadow);
+      text-decoration:none;
+      color:inherit;
+      transition:.25s ease;
+    }
+
+    .news-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(142,234,255,.45);
     }
 
     .news-image{
@@ -70,6 +79,22 @@
       color:var(--muted);
       line-height:1.65;
       font-weight:600;
+      margin-bottom:18px;
+    }
+
+    .news-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      width:100%;
+      min-height:48px;
+      border-radius:16px;
+      border:1px solid var(--cyan);
+      color:white;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:.82rem;
     }
 
     .news-empty{
@@ -84,7 +109,7 @@
 
     @media(max-width:640px){
       main section{
-        padding-top:90px;
+        padding-top:70px;
       }
 
       .section-head .badge{
@@ -176,7 +201,7 @@
     const list = document.getElementById('newsGrid');
 
     try{
-      const response = await fetch('data/nouveautes.json?v=3');
+      const response = await fetch('data/nouveautes.json?v=4');
       const news = await response.json();
 
       if(!Array.isArray(news) || news.length === 0){
@@ -189,15 +214,20 @@
           ? `<img class="news-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.titre)}">`
           : `<div class="news-placeholder">${escapeHtml(item.emoji || '✨')}</div>`;
 
+        const destination = item.lien && item.lien.trim() !== ''
+          ? item.lien
+          : 'vapecity.html';
+
         return `
-          <article class="news-card">
+          <a class="news-card" href="${escapeHtml(destination)}">
             ${image}
             <div class="news-content">
               <div class="news-category">${escapeHtml(item.categorie || 'Nouveauté')}</div>
               <h3>${escapeHtml(item.titre)}</h3>
               <p>${escapeHtml(item.description)}</p>
+              <div class="news-button">Voir le produit →</div>
             </div>
-          </article>
+          </a>
         `;
       }).join('');
 
