@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>STOOM Clermont-Ferrand | Catalogue boutique vape</title>
-<meta name="description" content="Catalogue vitrine STOOM Clermont-Ferrand : nouveautés, gammes, DIY, concours et conseil en boutique. Pas de vente en ligne.">
+<meta name="description" content="Catalogue vitrine STOOM Clermont-Ferrand : e-liquides, matériel, DIY, nouveautés, concours et conseil en boutique. Pas de vente en ligne.">
 <meta name="theme-color" content="#06131d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +22,12 @@ header{width:100%;background:#06131d!important;border-bottom:1px solid rgba(255,
 header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
 
 .catalog-hero{
-  min-height:520px;
+  min-height:560px;
   display:flex;
   align-items:center;
   background:
-  linear-gradient(90deg,rgba(6,19,29,.96) 0%,rgba(6,19,29,.82) 42%,rgba(6,19,29,.35) 100%),
-  url("uploads/vapecityville.jpg");
+    linear-gradient(90deg,rgba(6,19,29,.98) 0%,rgba(6,19,29,.86) 45%,rgba(6,19,29,.35) 100%),
+    url("uploads/vapecityville.jpg");
   background-size:cover;
   background-position:center;
   border-bottom:1px solid rgba(142,234,255,.18);
@@ -43,13 +43,13 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   letter-spacing:-3px;
   font-weight:900;
   margin:22px 0;
-  max-width:820px;
+  max-width:860px;
 }
 
 .hero-title span{color:var(--cyan)}
 
 .hero-lead{
-  max-width:620px;
+  max-width:660px;
   color:#c5e2ee;
   font-size:1.08rem;
   line-height:1.75;
@@ -94,7 +94,47 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   color:#c5e2ee;
   font-weight:600;
   line-height:1.6;
-  max-width:460px;
+  max-width:500px;
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;
+}
+
+.quick-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:120px;
+  text-align:center;
+  background:rgba(255,255,255,.065);
+  border:1px solid rgba(142,234,255,.18);
+  border-radius:22px;
+  color:inherit;
+  text-decoration:none;
+  padding:18px 12px;
+  transition:.22s ease;
+}
+
+.quick-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(142,234,255,.48);
+}
+
+.quick-card b{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.quick-card span{
+  color:white;
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:.78rem;
+  line-height:1.25;
 }
 
 .card-grid{
@@ -134,6 +174,19 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   display:flex;
   flex-direction:column;
   flex:1;
+}
+
+.catalog-badge{
+  display:inline-flex;
+  align-self:flex-start;
+  background:linear-gradient(135deg,var(--blue2),var(--cyan));
+  color:#06131d;
+  border-radius:999px;
+  padding:8px 12px;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.7rem;
+  margin-bottom:14px;
 }
 
 .catalog-content h3{
@@ -180,7 +233,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
 
 .small-product img{
   width:100%;
-  height:180px;
+  height:190px;
   object-fit:contain;
   background:linear-gradient(180deg,#fff,#f4f7fa);
   padding:14px;
@@ -298,10 +351,21 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   box-shadow:var(--shadow);
 }
 
+.empty-message{
+  grid-column:1/-1;
+  padding:24px;
+  border-radius:24px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(142,234,255,.18);
+  color:#c5e2ee;
+  font-weight:700;
+}
+
 @media(max-width:900px){
   .menu{display:none!important}
   .logo{width:100%}
   .catalog-hero{min-height:auto;padding:60px 0}
+  .quick-grid{grid-template-columns:repeat(3,1fr)}
   .tools-grid,.contact-panel{grid-template-columns:1fr}
   .tool-card{grid-template-columns:1fr}
   .reassurance-grid{grid-template-columns:repeat(2,1fr)}
@@ -310,11 +374,12 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
 @media(max-width:640px){
   .top{font-size:.68rem;line-height:1.35;padding:10px 18px}
   header .container.nav{padding:0 26px;height:92px}
-  .hero-title{font-size:2.85rem;letter-spacing:-1.4px}
+  .hero-title{font-size:2.75rem;letter-spacing:-1.4px}
   .hero-note{width:100%;justify-content:center;text-align:center;border-radius:18px}
   .home-actions .btn{width:100%;min-width:0}
   .section-title{display:block}
   .section-title p{margin-top:12px}
+  .quick-grid{grid-template-columns:repeat(2,1fr)}
   .catalog-img{height:145px}
   .tools-grid{grid-template-columns:1fr}
   .reassurance-grid{grid-template-columns:1fr}
@@ -359,20 +424,38 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
     <span class="badge">Catalogue boutique</span>
 
     <h1 class="hero-title">
-      Découvrez ce qui est disponible chez <span>STOOM</span>
+      Parcourez les produits disponibles chez <span>STOOM</span>
     </h1>
 
     <p class="hero-lead">
-      Parcourez nos nouveautés, nos gammes, nos bases DIY, nos concours et nos produits du moment.
-      Tous nos produits sont disponibles uniquement en boutique avec conseil personnalisé.
+      Un catalogue vitrine pour découvrir les nouveautés, les gammes, le DIY, les concours et les produits du moment.
+      L’achat se fait uniquement en boutique, avec conseil personnalisé.
     </p>
 
     <div class="hero-note">Catalogue vitrine · Aucun achat en ligne</div>
 
     <div class="home-actions">
-      <a class="btn btn-primary" href="nouveautes.html">Voir les nouveautés</a>
-      <a class="btn btn-ghost" href="#gammes">Voir les gammes</a>
+      <a class="btn btn-primary" href="#catalogue">Voir le catalogue</a>
+      <a class="btn btn-ghost" href="nouveautes.html">Nouveautés</a>
       <a class="btn btn-white" href="contact.html">Venir en boutique</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section" id="catalogue">
+  <div class="container">
+    <div class="section-title">
+      <h2>Rayons STOOM</h2>
+      <p>Accédez rapidement aux grandes familles de produits disponibles ou bientôt présentées sur le catalogue.</p>
+    </div>
+
+    <div class="quick-grid">
+      <a class="quick-card" href="#gammes"><b>🍓</b><span>E-liquides</span></a>
+      <a class="quick-card" href="diy.html"><b>🧪</b><span>DIY</span></a>
+      <a class="quick-card" href="nouveautes.html"><b>🔥</b><span>Nouveautés</span></a>
+      <a class="quick-card" href="concours.html"><b>🎁</b><span>Concours</span></a>
+      <a class="quick-card" href="#produits"><b>⭐</b><span>Produits du moment</span></a>
+      <a class="quick-card" href="contact.html"><b>📍</b><span>Boutique</span></a>
     </div>
   </div>
 </section>
@@ -384,34 +467,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
       <p>Les arrivages et animations actuellement mis en avant chez STOOM Clermont-Ferrand.</p>
     </div>
 
-    <div class="card-grid">
-      <a class="catalog-card" href="vapecity.html">
-        <img class="catalog-img" src="uploads/vapecity.jpg" alt="Vape City">
-        <div class="catalog-content">
-          <h3>Vape City</h3>
-          <p>Une gamme fruitée et fraîche à découvrir en boutique.</p>
-          <div class="catalog-button">Découvrir</div>
-        </div>
-      </a>
-
-      <a class="catalog-card" href="leperfectmatch.html">
-        <img class="catalog-img" src="uploads/leperfectmatchhero.jpg" alt="Le Perfect Match">
-        <div class="catalog-content">
-          <h3>Le Perfect Match</h3>
-          <p>Nouvelle gamme auvergnate Flavour Power aux recettes originales.</p>
-          <div class="catalog-button">Découvrir</div>
-        </div>
-      </a>
-
-      <a class="catalog-card" href="concours.html">
-        <img class="catalog-img" src="uploads/sixvape.jpg" alt="Concours STOOM">
-        <div class="catalog-content">
-          <h3>Concours en cours</h3>
-          <p>Jeux, tirages et lots à gagner directement en boutique.</p>
-          <div class="catalog-button">Participer</div>
-        </div>
-      </a>
-    </div>
+    <div class="card-grid" id="homeNewsGrid"></div>
   </div>
 </section>
 
@@ -419,61 +475,21 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Nos gammes</h2>
-      <p>Un accès rapide aux univers produits que vous retrouverez progressivement sur le catalogue STOOM.</p>
+      <p>Le catalogue évoluera progressivement avec toutes les gammes disponibles en boutique.</p>
     </div>
 
-    <div class="card-grid">
-      <a class="catalog-card" href="vapecity.html">
-        <img class="catalog-img" src="uploads/vapecityville.jpg" alt="Vape City">
-        <div class="catalog-content"><h3>Vape City</h3><p>Fruités intenses et recettes fraîches.</p><div class="catalog-button">Voir</div></div>
-      </a>
-
-      <a class="catalog-card" href="leperfectmatch.html">
-        <img class="catalog-img" src="uploads/superlikehead.jpg" alt="Le Perfect Match">
-        <div class="catalog-content"><h3>Le Perfect Match</h3><p>Gamme auvergnate Flavour Power.</p><div class="catalog-button">Voir</div></div>
-      </a>
-
-      <a class="catalog-card" href="diy.html">
-        <img class="catalog-img" src="uploads/base50501l.jpg" alt="DIY STOOM">
-        <div class="catalog-content"><h3>DIY</h3><p>Bases STOOM, boosters et calculateur.</p><div class="catalog-button">Voir</div></div>
-      </a>
-
-      <a class="catalog-card" href="nouveautes.html">
-        <img class="catalog-img" src="uploads/leperfectmatchhero.jpg" alt="Toutes les nouveautés">
-        <div class="catalog-content"><h3>Toutes les nouveautés</h3><p>Arrivages, retours stock et coups de cœur.</p><div class="catalog-button">Voir</div></div>
-      </a>
-    </div>
+    <div class="card-grid" id="homeRangesGrid"></div>
   </div>
 </section>
 
-<section class="home-section">
+<section class="home-section" id="produits">
   <div class="container">
     <div class="section-title">
       <h2>Produits du moment</h2>
-      <p>Quelques produits à retrouver en boutique. Le catalogue sera enrichi progressivement.</p>
+      <p>Quelques produits à retrouver en boutique. Cette section peut évoluer simplement avec un fichier JSON.</p>
     </div>
 
-    <div class="product-strip">
-      <div class="small-product">
-        <img src="uploads/base5050500.jpg" alt="Base STOOM 50/50">
-        <div><h3>Base STOOM 50/50</h3><p>500 ml · DIY</p></div>
-      </div>
-
-      <div class="small-product">
-        <img src="uploads/base30701l.jpg" alt="Base STOOM 30/70">
-        <div><h3>Base STOOM 30/70</h3><p>1 L · DIY</p></div>
-      </div>
-
-      <div class="small-product">
-        <img src="uploads/lecrush.jpg" alt="Le Crush">
-        <div><h3>Le Crush</h3><p>Framboise · Hibiscus</p></div>
-      </div>
-
-      <div class="small-product">
-        <img src="uploads/leswipe.jpg" alt="Le Swipe">
-        <div><h3>Le Swipe</h3><p>Pamplemousse · Menthe · Eucalyptus</p></div>
-      </div>
-    </div>
+    <div class="product-strip" id="homeProductsGrid"></div>
   </div>
 </section>
 
@@ -551,6 +567,167 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
     <span>Catalogue vitrine · Conseil en boutique · Pas de vente en ligne</span>
   </div>
 </footer>
+
+<script>
+function escapeHtml(str){
+  return String(str ?? '').replace(/[&<>"']/g,function(m){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];
+  });
+}
+
+async function loadJson(path,fallback){
+  try{
+    const r = await fetch(path);
+    if(!r.ok) return fallback;
+    return await r.json();
+  }catch(e){
+    return fallback;
+  }
+}
+
+function renderCards(targetId, items){
+  const el = document.getElementById(targetId);
+  if(!el) return;
+
+  if(!Array.isArray(items) || items.length === 0){
+    el.innerHTML = '<div class="empty-message">Aucun élément à afficher pour le moment.</div>';
+    return;
+  }
+
+  el.innerHTML = items.map(function(item){
+    return `
+      <a class="catalog-card" href="${escapeHtml(item.lien || '#')}">
+        <img class="catalog-img" src="${escapeHtml(item.image || '')}" alt="${escapeHtml(item.titre || '')}">
+        <div class="catalog-content">
+          <div class="catalog-badge">${escapeHtml(item.categorie || 'Catalogue')}</div>
+          <h3>${escapeHtml(item.titre || '')}</h3>
+          <p>${escapeHtml(item.description || '')}</p>
+          <div class="catalog-button">${escapeHtml(item.bouton || 'Découvrir')}</div>
+        </div>
+      </a>
+    `;
+  }).join('');
+}
+
+function renderProducts(targetId, items){
+  const el = document.getElementById(targetId);
+  if(!el) return;
+
+  if(!Array.isArray(items) || items.length === 0){
+    el.innerHTML = '<div class="empty-message">Aucun produit à afficher pour le moment.</div>';
+    return;
+  }
+
+  el.innerHTML = items.map(function(item){
+    return `
+      <div class="small-product">
+        <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(item.titre || '')}">
+        <div>
+          <h3>${escapeHtml(item.titre || '')}</h3>
+          <p>${escapeHtml(item.description || '')}</p>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+const fallbackNews = [
+  {
+    "titre":"Vape City",
+    "categorie":"Nouveauté liquide",
+    "description":"Une gamme fruitée et fraîche à découvrir en boutique.",
+    "image":"uploads/vapecity.jpg",
+    "lien":"vapecity.html",
+    "bouton":"Découvrir"
+  },
+  {
+    "titre":"Le Perfect Match",
+    "categorie":"Nouveauté auvergnate",
+    "description":"Nouvelle gamme Flavour Power fabriquée en Auvergne.",
+    "image":"uploads/leperfectmatchhero.jpg",
+    "lien":"leperfectmatch.html",
+    "bouton":"Découvrir"
+  },
+  {
+    "titre":"Concours en cours",
+    "categorie":"Animation boutique",
+    "description":"Jeux, tirages et lots à gagner directement en boutique.",
+    "image":"uploads/sixvape.jpg",
+    "lien":"concours.html",
+    "bouton":"Participer"
+  }
+];
+
+const fallbackRanges = [
+  {
+    "titre":"Vape City",
+    "categorie":"E-liquides",
+    "description":"Fruités intenses et recettes fraîches.",
+    "image":"uploads/vapecityville.jpg",
+    "lien":"vapecity.html",
+    "bouton":"Voir la gamme"
+  },
+  {
+    "titre":"Le Perfect Match",
+    "categorie":"E-liquides auvergnats",
+    "description":"Gamme Flavour Power fabriquée en Auvergne.",
+    "image":"uploads/superlikehead.jpg",
+    "lien":"leperfectmatch.html",
+    "bouton":"Voir la gamme"
+  },
+  {
+    "titre":"DIY STOOM",
+    "categorie":"DIY",
+    "description":"Bases STOOM, boosters et calculateur de mélange.",
+    "image":"uploads/base50501l.jpg",
+    "lien":"diy.html",
+    "bouton":"Voir le DIY"
+  },
+  {
+    "titre":"Toutes les nouveautés",
+    "categorie":"Catalogue",
+    "description":"Arrivages, retours stock et coups de cœur.",
+    "image":"uploads/leperfectmatchhero.jpg",
+    "lien":"nouveautes.html",
+    "bouton":"Voir"
+  }
+];
+
+const fallbackProducts = [
+  {
+    "titre":"Base STOOM 50/50",
+    "description":"500 ml · DIY",
+    "image":"uploads/base5050500.jpg"
+  },
+  {
+    "titre":"Base STOOM 30/70",
+    "description":"1 L · DIY",
+    "image":"uploads/base30701l.jpg"
+  },
+  {
+    "titre":"Le Crush",
+    "description":"Framboise · Hibiscus",
+    "image":"uploads/lecrush.jpg"
+  },
+  {
+    "titre":"Le Swipe",
+    "description":"Pamplemousse · Menthe · Eucalyptus",
+    "image":"uploads/leswipe.jpg"
+  }
+];
+
+async function initHome(){
+  const news = await loadJson('data/home-nouveautes.json?v=1', fallbackNews);
+  const ranges = await loadJson('data/home-gammes.json?v=1', fallbackRanges);
+  const products = await loadJson('data/home-produits.json?v=1', fallbackProducts);
+
+  renderCards('homeNewsGrid', news);
+  renderCards('homeRangesGrid', ranges);
+  renderProducts('homeProductsGrid', products);
+}
+
+initHome();
+</script>
 
 </body>
 </html>
