@@ -1,0 +1,56 @@
+[
+  {
+    "nom": "Framboise Bleue Fruit du Dragon",
+    "saveurs": "Framboise bleue, Fruit du dragon",
+    "image": "uploads/framboisebleuefruitdudragonvapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Framboise Cassis Mûre",
+    "saveurs": "Framboise, Cassis, Mûre",
+    "image": "uploads/framboisecassismurevapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Framboise Violette",
+    "saveurs": "Framboise, Violette",
+    "image": "uploads/framboiseviolettevapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Grenade Kiwi",
+    "saveurs": "Grenade, Kiwi",
+    "image": "uploads/grenadekiwivapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Mangue Passion",
+    "saveurs": "Mangue, Fruit de la passion",
+    "image": "uploads/manguepassionvapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Myrtille Grenade Framboise Bleue",
+    "saveurs": "Myrtille, Grenade, Framboise bleue",
+    "image": "uploads/myrtillegrenadeframboisebleuevapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Pastèque Fraise",
+    "saveurs": "Pastèque, Fraise",
+    "image": "uploads/pastequefraisevapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Pastèque Fruits Rouges Kiwi",
+    "saveurs": "Pastèque, Fruits rouges, Kiwi",
+    "image": "uploads/pastequefruitrougekiwivapecity.jpg",
+    "format": "50ml"
+  },
+  {
+    "nom": "Pêche Blanche Cerise",
+    "saveurs": "Pêche blanche, Cerise",
+    "image": "uploads/pecheblanchecerisevapecity.jpg",
+    "format": "50ml"
+  }
+]
