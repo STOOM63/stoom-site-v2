@@ -6,11 +6,12 @@
     "image": "uploads/vapecity.jpg"
   },
   {
-    "titre": "Dragon Paradise",
-    "categorie": "Arrivage",
-    "description": "Ananas, fruit du dragon et corossol. Une nouveauté solaire, visuelle et très accrocheuse.",
-    "emoji": "🐉"
-  },
+  "titre": "Le Perfect Match",
+  "categorie": "Nouveauté Auvergnate",
+  "description": "Découvrez la nouvelle gamme Flavour Power Le Perfect Match.",
+  "image": "uploads/leperfectmatch.jpg",
+  "lien": "leperfectmatch.html"
+},
   {
     "titre": "Pods sélectionnés",
     "categorie": "Matériel",
