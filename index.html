@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>STOOM Clermont-Ferrand | Catalogue boutique vape</title>
-<meta name="description" content="Catalogue vitrine STOOM Clermont-Ferrand : e-liquides, matériel, DIY, nouveautés, concours et conseil en boutique. Pas de vente en ligne.">
+<meta name="description" content="Catalogue vitrine STOOM Clermont-Ferrand : e-liquides, DIY, matériel, nouveautés, concours et conseil en boutique. Pas de vente en ligne.">
 <meta name="theme-color" content="#06131d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   display:flex;
   align-items:center;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.98) 0%,rgba(6,19,29,.86) 45%,rgba(6,19,29,.35) 100%),
+    linear-gradient(90deg,rgba(6,19,29,.98) 0%,rgba(6,19,29,.88) 42%,rgba(6,19,29,.35) 100%),
     url("uploads/vapecityville.jpg");
   background-size:cover;
   background-position:center;
@@ -43,13 +43,13 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   letter-spacing:-3px;
   font-weight:900;
   margin:22px 0;
-  max-width:860px;
+  max-width:900px;
 }
 
 .hero-title span{color:var(--cyan)}
 
 .hero-lead{
-  max-width:660px;
+  max-width:700px;
   color:#c5e2ee;
   font-size:1.08rem;
   line-height:1.75;
@@ -94,7 +94,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   color:#c5e2ee;
   font-weight:600;
   line-height:1.6;
-  max-width:500px;
+  max-width:520px;
 }
 
 .quick-grid{
@@ -108,7 +108,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  min-height:120px;
+  min-height:118px;
   text-align:center;
   background:rgba(255,255,255,.065);
   border:1px solid rgba(142,234,255,.18);
@@ -119,23 +119,9 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   transition:.22s ease;
 }
 
-.quick-card:hover{
-  transform:translateY(-5px);
-  border-color:rgba(142,234,255,.48);
-}
-
-.quick-card b{
-  font-size:2rem;
-  margin-bottom:10px;
-}
-
-.quick-card span{
-  color:white;
-  text-transform:uppercase;
-  font-weight:900;
-  font-size:.78rem;
-  line-height:1.25;
-}
+.quick-card:hover{transform:translateY(-5px);border-color:rgba(142,234,255,.48)}
+.quick-card b{font-size:2rem;margin-bottom:10px}
+.quick-card span{color:white;text-transform:uppercase;font-weight:900;font-size:.78rem;line-height:1.25}
 
 .card-grid{
   display:grid;
@@ -156,10 +142,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   transition:.22s ease;
 }
 
-.catalog-card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(142,234,255,.48);
-}
+.catalog-card:hover{transform:translateY(-6px);border-color:rgba(142,234,255,.48)}
 
 .catalog-img{
   width:100%;
@@ -227,23 +210,67 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
 .small-product{
   background:rgba(255,255,255,.055);
   border:1px solid rgba(142,234,255,.18);
-  border-radius:22px; 
+  border-radius:22px;
   overflow:hidden;
 }
 
 .small-product img{
-.small-product img{
   width:100%;
   height:190px;
   object-fit:contain;
-  background:radial-gradient(circle at center, rgba(53,185,238,.18), #081923 70%);
-  padding:12px;
+  object-position:center;
+  background:#0b1c27;
+  padding:8px;
   display:block;
 }
 
 .small-product div{padding:16px}
 .small-product h3{color:white;text-transform:uppercase;font-size:1rem;margin-bottom:8px}
 .small-product p{color:#c5e2ee;font-weight:600;line-height:1.45;font-size:.9rem}
+
+.contest-banner{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:0;
+  overflow:hidden;
+  border-radius:32px;
+  background:rgba(255,255,255,.065);
+  border:1px solid rgba(142,234,255,.18);
+  box-shadow:0 18px 70px rgba(0,0,0,.22);
+  text-decoration:none;
+  color:inherit;
+}
+
+.contest-content{
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.contest-content h2{
+  color:white;
+  text-transform:uppercase;
+  font-size:clamp(2rem,4vw,3.6rem);
+  line-height:.95;
+  margin:16px 0;
+}
+
+.contest-content p{
+  color:#c5e2ee;
+  line-height:1.7;
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.contest-img{
+  min-height:320px;
+  background:
+    linear-gradient(90deg,rgba(6,19,29,.35),rgba(6,19,29,.05)),
+    url("uploads/sixvape.jpg");
+  background-size:cover;
+  background-position:center;
+}
 
 .tools-grid{
   display:grid;
@@ -276,18 +303,8 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   font-size:2rem;
 }
 
-.tool-card h3{
-  color:white;
-  text-transform:uppercase;
-  font-size:1.35rem;
-  margin-bottom:8px;
-}
-
-.tool-card p{
-  color:#c5e2ee;
-  line-height:1.55;
-  font-weight:600;
-}
+.tool-card h3{color:white;text-transform:uppercase;font-size:1.35rem;margin-bottom:8px}
+.tool-card p{color:#c5e2ee;line-height:1.55;font-weight:600}
 
 .reassurance-grid{
   display:grid;
@@ -302,18 +319,8 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   padding:22px;
 }
 
-.reassurance b{
-  display:block;
-  color:white;
-  font-size:1.1rem;
-  margin-bottom:8px;
-}
-
-.reassurance span{
-  color:#c5e2ee;
-  line-height:1.5;
-  font-weight:600;
-}
+.reassurance b{display:block;color:white;font-size:1.1rem;margin-bottom:8px}
+.reassurance span{color:#c5e2ee;line-height:1.5;font-weight:600}
 
 .contact-panel{
   display:grid;
@@ -338,11 +345,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   margin:16px 0;
 }
 
-.home-panel p{
-  color:#c5e2ee;
-  line-height:1.7;
-  font-weight:600;
-}
+.home-panel p{color:#c5e2ee;line-height:1.7;font-weight:600}
 
 .home-map{
   width:100%;
@@ -367,7 +370,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   .logo{width:100%}
   .catalog-hero{min-height:auto;padding:60px 0}
   .quick-grid{grid-template-columns:repeat(3,1fr)}
-  .tools-grid,.contact-panel{grid-template-columns:1fr}
+  .tools-grid,.contact-panel,.contest-banner{grid-template-columns:1fr}
   .tool-card{grid-template-columns:1fr}
   .reassurance-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -375,11 +378,14 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
 @media(max-width:640px){
   .top{font-size:.68rem;line-height:1.35;padding:10px 18px}
   header .container.nav{padding:0 26px;height:92px}
-  .hero-title{font-size:2.75rem;letter-spacing:-1.4px}
+
+  .hero-title{font-size:2.65rem;letter-spacing:-1.4px}
   .hero-note{width:100%;justify-content:center;text-align:center;border-radius:18px}
   .home-actions .btn{width:100%;min-width:0}
+
   .section-title{display:block}
   .section-title p{margin-top:12px}
+
   .quick-grid{grid-template-columns:repeat(2,1fr)}
 
   .card-grid{
@@ -387,16 +393,11 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
     gap:12px;
   }
 
-  .catalog-img{
-    height:115px;
-  }
-
-  .catalog-content{
-    padding:14px;
-  }
+  .catalog-img{height:112px}
+  .catalog-content{padding:14px}
 
   .catalog-badge{
-    font-size:.58rem;
+    font-size:.56rem;
     padding:6px 8px;
     margin-bottom:10px;
   }
@@ -406,9 +407,7 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
     line-height:1.05;
   }
 
-  .catalog-content p{
-    display:none;
-  }
+  .catalog-content p{display:none}
 
   .catalog-button{
     min-height:38px;
@@ -423,19 +422,17 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
 
   .small-product img{
     height:145px;
+    object-fit:contain;
+    background:#0b1c27;
+    padding:6px;
   }
 
-  .small-product div{
-    padding:12px;
-  }
+  .small-product div{padding:12px}
+  .small-product h3{font-size:.85rem}
+  .small-product p{font-size:.78rem}
 
-  .small-product h3{
-    font-size:.85rem;
-  }
-
-  .small-product p{
-    font-size:.78rem;
-  }
+  .contest-content{padding:26px}
+  .contest-img{min-height:220px}
 
   .tools-grid{grid-template-columns:1fr}
   .tool-card{grid-template-columns:1fr}
@@ -486,7 +483,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
     </h1>
 
     <p class="hero-lead">
-      Un catalogue vitrine pour découvrir les nouveautés, les gammes, le DIY, les concours et les produits du moment.
+      Découvrez les nouveautés, les gammes, le DIY et les produits du moment.
       L’achat se fait uniquement en boutique, avec conseil personnalisé.
     </p>
 
@@ -504,15 +501,15 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Rayons STOOM</h2>
-      <p>Accédez rapidement aux grandes familles de produits disponibles ou bientôt présentées sur le catalogue.</p>
+      <p>Accès rapide aux familles de produits et aux services utiles de la boutique.</p>
     </div>
 
     <div class="quick-grid">
       <a class="quick-card" href="#gammes"><b>🍓</b><span>E-liquides</span></a>
       <a class="quick-card" href="diy.html"><b>🧪</b><span>DIY</span></a>
       <a class="quick-card" href="nouveautes.html"><b>🔥</b><span>Nouveautés</span></a>
+      <a class="quick-card" href="#produits"><b>⭐</b><span>Produits</span></a>
       <a class="quick-card" href="concours.html"><b>🎁</b><span>Concours</span></a>
-      <a class="quick-card" href="#produits"><b>⭐</b><span>Produits du moment</span></a>
       <a class="quick-card" href="contact.html"><b>📍</b><span>Boutique</span></a>
     </div>
   </div>
@@ -522,7 +519,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Nouveautés du moment</h2>
-      <p>Les arrivages et animations actuellement mis en avant chez STOOM Clermont-Ferrand.</p>
+      <p>Uniquement les nouveaux arrivages produits. Les concours sont séparés plus bas.</p>
     </div>
 
     <div class="card-grid" id="homeNewsGrid"></div>
@@ -533,7 +530,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Nos gammes</h2>
-      <p>Le catalogue évoluera progressivement avec toutes les gammes disponibles en boutique.</p>
+      <p>Les familles de produits disponibles ou bientôt présentées dans le catalogue STOOM.</p>
     </div>
 
     <div class="card-grid" id="homeRangesGrid"></div>
@@ -544,10 +541,26 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Produits du moment</h2>
-      <p>Quelques produits à retrouver en boutique. Cette section peut évoluer simplement avec un fichier JSON.</p>
+      <p>Sélection boutique à mettre en avant. Cette zone se modifie avec un simple fichier JSON.</p>
     </div>
 
     <div class="product-strip" id="homeProductsGrid"></div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <a class="contest-banner" href="concours.html">
+      <div class="contest-content">
+        <span class="badge">Concours & animations</span>
+        <h2>Jeux concours en boutique</h2>
+        <p>
+          Retrouvez les concours en cours, les lots à gagner et les animations à venir chez STOOM Clermont-Ferrand.
+        </p>
+        <div class="catalog-button">Voir les concours</div>
+      </div>
+      <div class="contest-img"></div>
+    </a>
   </div>
 </section>
 
@@ -705,14 +718,6 @@ const fallbackNews = [
     "image":"uploads/leperfectmatchhero.jpg",
     "lien":"leperfectmatch.html",
     "bouton":"Découvrir"
-  },
-  {
-    "titre":"Concours en cours",
-    "categorie":"Animation boutique",
-    "description":"Jeux, tirages et lots à gagner directement en boutique.",
-    "image":"uploads/sixvape.jpg",
-    "lien":"concours.html",
-    "bouton":"Participer"
   }
 ];
 
@@ -750,26 +755,26 @@ const fallbackProducts = [
     "image":"uploads/base5050500.jpg"
   },
   {
+    "titre":"Base STOOM 50/50",
+    "description":"1 L · DIY",
+    "image":"uploads/base50501l.jpg"
+  },
+  {
+    "titre":"Base STOOM 30/70",
+    "description":"500 ml · DIY",
+    "image":"uploads/base3070500.jpg"
+  },
+  {
     "titre":"Base STOOM 30/70",
     "description":"1 L · DIY",
     "image":"uploads/base30701l.jpg"
-  },
-  {
-    "titre":"Le Crush",
-    "description":"Framboise · Hibiscus",
-    "image":"uploads/lecrush.jpg"
-  },
-  {
-    "titre":"Le Swipe",
-    "description":"Pamplemousse · Menthe · Eucalyptus",
-    "image":"uploads/leswipe.jpg"
   }
 ];
 
 async function initHome(){
-  const news = await loadJson('data/home-nouveautes.json?v=2', fallbackNews);
-  const ranges = await loadJson('data/home-gammes.json?v=2', fallbackRanges);
-  const products = await loadJson('data/home-produits.json?v=2', fallbackProducts);
+  const news = await loadJson('data/home-nouveautes.json?v=3', fallbackNews);
+  const ranges = await loadJson('data/home-gammes.json?v=3', fallbackRanges);
+  const products = await loadJson('data/home-produits.json?v=3', fallbackProducts);
 
   renderCards('homeNewsGrid', news);
   renderCards('homeRangesGrid', ranges);
