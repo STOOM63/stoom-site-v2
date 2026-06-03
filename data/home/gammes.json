@@ -1,0 +1,34 @@
+[
+  {
+    "titre": "Vape City",
+    "categorie": "E-liquides",
+    "description": "Fruités intenses et recettes fraîches.",
+    "image": "uploads/vapecityville.jpg",
+    "lien": "vapecity.html",
+    "bouton": "Voir la gamme"
+  },
+  {
+    "titre": "Le Perfect Match",
+    "categorie": "E-liquides auvergnats",
+    "description": "Gamme Flavour Power fabriquée en Auvergne.",
+    "image": "uploads/superlikehead.jpg",
+    "lien": "leperfectmatch.html",
+    "bouton": "Voir la gamme"
+  },
+  {
+    "titre": "DIY STOOM",
+    "categorie": "DIY",
+    "description": "Bases STOOM, boosters et calculateur de mélange.",
+    "image": "uploads/base50501l.jpg",
+    "lien": "diy.html",
+    "bouton": "Voir le DIY"
+  },
+  {
+    "titre": "Concours",
+    "categorie": "Animation boutique",
+    "description": "Jeux, tirages et lots à gagner en boutique.",
+    "image": "uploads/sixvape.jpg",
+    "lien": "concours.html",
+    "bouton": "Voir les concours"
+  }
+]
