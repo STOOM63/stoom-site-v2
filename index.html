@@ -380,9 +380,66 @@ header .container.nav{width:100%;max-width:100%;margin:0;padding:0 26px}
   .section-title{display:block}
   .section-title p{margin-top:12px}
   .quick-grid{grid-template-columns:repeat(2,1fr)}
-  .catalog-img{height:145px}
+
+  .card-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .catalog-img{
+    height:115px;
+  }
+
+  .catalog-content{
+    padding:14px;
+  }
+
+  .catalog-badge{
+    font-size:.58rem;
+    padding:6px 8px;
+    margin-bottom:10px;
+  }
+
+  .catalog-content h3{
+    font-size:.95rem;
+    line-height:1.05;
+  }
+
+  .catalog-content p{
+    display:none;
+  }
+
+  .catalog-button{
+    min-height:38px;
+    font-size:.66rem;
+    border-radius:12px;
+  }
+
+  .product-strip{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .small-product img{
+    height:145px;
+  }
+
+  .small-product div{
+    padding:12px;
+  }
+
+  .small-product h3{
+    font-size:.85rem;
+  }
+
+  .small-product p{
+    font-size:.78rem;
+  }
+
   .tools-grid{grid-template-columns:1fr}
+  .tool-card{grid-template-columns:1fr}
   .reassurance-grid{grid-template-columns:1fr}
+  .home-map{min-height:340px}
 }
 </style>
 </head>
@@ -684,12 +741,12 @@ const fallbackRanges = [
     "bouton":"Voir le DIY"
   },
   {
-    "titre":"Toutes les nouveautés",
-    "categorie":"Catalogue",
-    "description":"Arrivages, retours stock et coups de cœur.",
-    "image":"uploads/leperfectmatchhero.jpg",
-    "lien":"nouveautes.html",
-    "bouton":"Voir"
+    "titre":"Concours",
+    "categorie":"Animation boutique",
+    "description":"Jeux, tirages et lots à gagner en boutique.",
+    "image":"uploads/sixvape.jpg",
+    "lien":"concours.html",
+    "bouton":"Voir les concours"
   }
 ];
 
@@ -717,9 +774,9 @@ const fallbackProducts = [
 ];
 
 async function initHome(){
-  const news = await loadJson('data/home-nouveautes.json?v=1', fallbackNews);
-  const ranges = await loadJson('data/home-gammes.json?v=1', fallbackRanges);
-  const products = await loadJson('data/home-produits.json?v=1', fallbackProducts);
+  const news = await loadJson('data/home-nouveautes.json?v=2', fallbackNews);
+  const ranges = await loadJson('data/home-gammes.json?v=2', fallbackRanges);
+  const products = await loadJson('data/home-produits.json?v=2', fallbackProducts);
 
   renderCards('homeNewsGrid', news);
   renderCards('homeRangesGrid', ranges);
