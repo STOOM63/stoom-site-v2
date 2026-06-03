@@ -2,55 +2,73 @@
   {
     "nom": "Framboise Bleue Fruit du Dragon",
     "saveurs": "Framboise bleue, Fruit du dragon",
+    "description": "Une recette fruitée mêlant la douceur de la framboise bleue aux notes exotiques du fruit du dragon.",
     "image": "uploads/framboisebleuefruitdudragonvapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Framboise Cassis Mûre",
     "saveurs": "Framboise, Cassis, Mûre",
+    "description": "Un mélange de fruits rouges intense associant la fraîcheur du cassis à la rondeur de la mûre.",
     "image": "uploads/framboisecassismurevapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Framboise Violette",
     "saveurs": "Framboise, Violette",
+    "description": "Une alliance originale entre la gourmandise de la framboise et les notes florales de la violette.",
     "image": "uploads/framboiseviolettevapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Grenade Kiwi",
     "saveurs": "Grenade, Kiwi",
+    "description": "Un duo fruité équilibré entre l'acidité du kiwi et la puissance aromatique de la grenade.",
     "image": "uploads/grenadekiwivapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Mangue Passion",
     "saveurs": "Mangue, Fruit de la passion",
+    "description": "Une recette exotique mêlant une mangue généreuse à un fruit de la passion acidulé.",
     "image": "uploads/manguepassionvapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Myrtille Grenade Framboise Bleue",
     "saveurs": "Myrtille, Grenade, Framboise bleue",
+    "description": "Un cocktail fruité complexe associant des fruits rouges intenses et une touche exotique.",
     "image": "uploads/myrtillegrenadeframboisebleuevapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Pastèque Fraise",
     "saveurs": "Pastèque, Fraise",
+    "description": "Une recette légère et rafraîchissante où la pastèque rencontre une fraise sucrée.",
     "image": "uploads/pastequefraisevapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Pastèque Fruits Rouges Kiwi",
     "saveurs": "Pastèque, Fruits rouges, Kiwi",
+    "description": "Un mélange fruité et frais associant des fruits rouges gourmands à une pointe de kiwi.",
     "image": "uploads/pastequefruitrougekiwivapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   },
   {
     "nom": "Pêche Blanche Cerise",
     "saveurs": "Pêche blanche, Cerise",
+    "description": "Une recette douce et fruitée mêlant la délicatesse de la pêche blanche à la cerise.",
     "image": "uploads/pecheblanchecerisevapecity.jpg",
-    "format": "50ml"
+    "format": "50ml",
+    "nicotine": "0mg"
   }
 ]
