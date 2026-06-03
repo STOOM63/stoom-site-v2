@@ -1,0 +1,50 @@
+[
+  {
+    "nom": "Le Crush",
+    "saveurs": "Framboise, Hibiscus",
+    "description": "Une recette fruitée et florale associant la douceur de la framboise à des notes délicates d’hibiscus.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/lecrush.jpg"
+  },
+  {
+    "nom": "Le Flame",
+    "saveurs": "Pomme, Poire, Citron",
+    "description": "Un mélange équilibré entre pomme croquante, poire juteuse et une touche citronnée rafraîchissante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/leflame.jpg"
+  },
+  {
+    "nom": "Le Date",
+    "saveurs": "Limonade, Cassis, Framboise",
+    "description": "Une limonade fruitée associée au cassis et à la framboise avec une légère fraîcheur.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/ledate.jpg"
+  },
+  {
+    "nom": "Le Flirt",
+    "saveurs": "Fraise, Melon, Kiwi",
+    "description": "Une association gourmande et fruitée mêlant fraise, melon et kiwi avec une fraîcheur légère.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/leflirt.jpg"
+  },
+  {
+    "nom": "Le Super Like",
+    "saveurs": "Framboise Bleue, Litchi, Sureau",
+    "description": "Une recette originale mariant framboise bleue, litchi exotique et notes délicates de sureau.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/lesuperlike.jpg"
+  },
+  {
+    "nom": "Le Swipe",
+    "saveurs": "Pamplemousse, Menthe, Eucalyptus",
+    "description": "Une saveur fraîche et tonique combinant agrumes, menthe et eucalyptus.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/leswipe.jpg"
+  }
+]
