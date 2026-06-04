@@ -125,57 +125,95 @@ header .container.nav{
 }
 
 .catalog-hero{
-  min-height:560px;
+  min-height:250px;
   display:flex;
   align-items:center;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.98) 0%,rgba(6,19,29,.88) 42%,rgba(6,19,29,.35) 100%),
+    linear-gradient(90deg,rgba(6,19,29,.98) 0%,rgba(6,19,29,.92) 44%,rgba(6,19,29,.62) 100%),
     url("uploads/premierepage.jpg");
   background-size:cover;
-  background-position:center;
+  background-position:center 48%;
   border-bottom:1px solid rgba(142,234,255,.18);
 }
 
-.hero-inner{width:min(92%,1180px);margin:auto}
+.hero-inner{
+  width:min(92%,1180px);
+  margin:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:28px;
+}
 
 .hero-title{
   color:white;
   text-transform:uppercase;
-  font-size:clamp(3rem,7vw,6.8rem);
-  line-height:.88;
-  letter-spacing:-3px;
+  font-size:clamp(2rem,4vw,4rem);
+  line-height:.9;
+  letter-spacing:-1.8px;
   font-weight:900;
-  margin:22px 0;
-  max-width:900px;
+  margin:12px 0 10px;
+  max-width:620px;
 }
 
 .hero-title span{color:var(--cyan)}
 
 .hero-lead{
-  max-width:700px;
+  max-width:560px;
   color:#c5e2ee;
-  font-size:1.08rem;
-  line-height:1.75;
-  font-weight:600;
+  font-size:.92rem;
+  line-height:1.55;
+  font-weight:650;
 }
 
 .hero-note{
-  margin-top:22px;
+  margin-top:12px;
   display:inline-flex;
-  padding:12px 16px;
+  padding:8px 12px;
   border-radius:999px;
   background:rgba(255,255,255,.08);
   border:1px solid var(--line);
   color:#d8f5ff;
   font-weight:900;
   text-transform:uppercase;
-  font-size:.78rem;
+  font-size:.62rem;
 }
 
-.home-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.home-actions .btn{min-width:220px}
+.hero-side{
+  width:310px;
+  padding:18px;
+  border-radius:24px;
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(142,234,255,.2);
+  box-shadow:0 18px 60px rgba(0,0,0,.22);
+}
 
-.home-section{padding:58px 0;background:#06131d}
+.hero-side strong{
+  display:block;
+  color:white;
+  text-transform:uppercase;
+  font-size:1.05rem;
+  line-height:1.1;
+  margin-bottom:8px;
+}
+
+.hero-side span{
+  display:block;
+  color:#c5e2ee;
+  font-weight:700;
+  font-size:.82rem;
+  line-height:1.45;
+}
+
+.home-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.home-actions .btn{
+  min-width:150px;
+  min-height:42px;
+  padding:0 18px;
+  font-size:.72rem;
+}
+
+.home-section{padding:42px 0;background:#06131d}
 
 .section-title{
   display:flex;
@@ -495,7 +533,7 @@ header .container.nav{
   }
 
   .logo{width:100%}
-  .catalog-hero{min-height:auto;padding:60px 0}
+  .catalog-hero{min-height:auto;padding:38px 0}.hero-inner{grid-template-columns:1fr}.hero-side{width:100%}
   .quick-grid{grid-template-columns:repeat(3,1fr)}
   .tools-grid,.contact-panel,.contest-banner{grid-template-columns:1fr}
   .tool-card{grid-template-columns:1fr}
@@ -514,7 +552,7 @@ header .container.nav{
     height:92px;
   }
 
-  .hero-title{font-size:2.65rem;letter-spacing:-1.4px}
+  .hero-title{font-size:2rem;letter-spacing:-.8px}
   .hero-note{width:100%;justify-content:center;text-align:center;border-radius:18px}
   .home-actions .btn{width:100%;min-width:0}
 
@@ -614,23 +652,29 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 
 <section class="catalog-hero">
   <div class="hero-inner">
-    <span class="badge">Catalogue boutique</span>
+    <div>
+      <span class="badge">Catalogue boutique</span>
 
-    <h1 class="hero-title">
-      Parcourez les produits disponibles chez <span>STOOM</span>
-    </h1>
+      <h1 class="hero-title">
+        Le catalogue <span>STOOM</span>
+      </h1>
 
-    <p class="hero-lead">
-      Découvrez les nouveautés, les gammes, le DIY et les produits du moment.
-      L’achat se fait uniquement en boutique, avec conseil personnalisé.
-    </p>
+      <p class="hero-lead">
+        Liquides, nouveautés, DIY, matériel et conseils en boutique.
+        Pas de vente en ligne : ici, on vous guide vraiment.
+      </p>
 
-    <div class="hero-note">Catalogue vitrine · Aucun achat en ligne</div>
+      <div class="home-actions">
+        <a class="btn btn-primary" href="#catalogue">Voir le catalogue</a>
+        <a class="btn btn-ghost" href="nouveautes.html">Nouveautés</a>
+        <a class="btn btn-white" href="contact.html">Venir en boutique</a>
+      </div>
+    </div>
 
-    <div class="home-actions">
-      <a class="btn btn-primary" href="#catalogue">Voir le catalogue</a>
-      <a class="btn btn-ghost" href="nouveautes.html">Nouveautés</a>
-      <a class="btn btn-white" href="contact.html">Venir en boutique</a>
+    <div class="hero-side">
+      <strong>Conseil en magasin</strong>
+      <span>Un catalogue clair pour repérer les produits, puis un accompagnement personnalisé chez STOOM Clermont-Ferrand.</span>
+      <div class="hero-note">Catalogue vitrine · Achat en boutique</div>
     </div>
   </div>
 </section>
@@ -657,7 +701,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Nouveautés du moment</h2>
-      <p>Découvrez les nouveautés et les arrivage STOOM !.</p>
+      <p>Découvrez les nouveautés et les arrivages STOOM.</p>
     </div>
 
     <div class="card-grid" id="homeNewsGrid"></div>
