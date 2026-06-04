@@ -872,18 +872,25 @@ function renderProducts(targetId, items){
   }
 
   el.innerHTML = items.map(function(item){
+    const titre = item.titre || item.nom || '';
+    const description = item.description || item.saveurs || '';
+    const infos = [
+      item.saveurs,
+      item.format,
+      item.nicotine
+    ].filter(Boolean).join(' · ');
+
     return `
       <div class="small-product">
-        <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(item.titre || '')}">
+        <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(titre)}">
         <div>
-          <h3>${escapeHtml(item.titre || '')}</h3>
-          <p>${escapeHtml(item.description || '')}</p>
+          <h3>${escapeHtml(titre)}</h3>
+          <p>${escapeHtml(infos || description)}</p>
         </div>
       </div>
     `;
   }).join('');
 }
-
 const fallbackNews = [
   {
     "titre":"Vape City",
