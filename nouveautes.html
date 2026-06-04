@@ -104,7 +104,7 @@
     const list = document.getElementById('newsGrid');
 
     try{
-      const response = await fetch('data/nouveautes.json?v=6');
+      onst response = await fetch('data/home/nouveautes.json?v=99');
       const news = await response.json();
 
       if(!Array.isArray(news) || news.length === 0){
