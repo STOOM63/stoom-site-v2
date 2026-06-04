@@ -40,6 +40,14 @@
     "nicotine": "0mg"
   },
   {
+    "nom": "Sweet Dragon",
+    "saveurs": "Pitaya, Fraise, fruits tropicaux",
+    "description": "Un fruit du dragon accompagné de fraise et de fruits tropicaux pour une vape douce et exotique.",
+    "image": "uploads/sweetdragon.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
     "nom": "Mystic Cherry",
     "saveurs": "Double cerises",
     "description": "Une double cerise relevée par la framboise pour une vape rouge, intense et gourmande.",
