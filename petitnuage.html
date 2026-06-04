@@ -17,33 +17,12 @@
     html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
 
     .petitnuage-hero{
-      min-height:260px;
-      background:
-        radial-gradient(circle at 18% 22%, rgba(142,234,255,.35), transparent 28%),
-        radial-gradient(circle at 82% 18%, rgba(255,122,210,.28), transparent 30%),
-        linear-gradient(135deg,#06131d 0%,#0a2433 45%,#06131d 100%);
+      height:260px;
+      background:url("uploads/petitnuageambiance.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
       border-bottom:1px solid rgba(142,234,255,.18);
-      display:grid;
-      place-items:center;
-      text-align:center;
-      padding:34px 18px;
-    }
-
-    .petitnuage-hero h1{
-      color:white;
-      text-transform:uppercase;
-      font-size:clamp(2.1rem,6vw,4.8rem);
-      line-height:.95;
-      letter-spacing:-.04em;
-      margin-bottom:12px;
-    }
-
-    .petitnuage-hero p{
-      color:#d8f5ff;
-      font-weight:800;
-      max-width:760px;
-      line-height:1.45;
-      margin:auto;
     }
 
     .catalog-section{padding:38px 0 90px;background:#06131d}
@@ -100,6 +79,7 @@
     .product-card{
       display:flex;
       flex-direction:column;
+      height:100%;
       background:rgba(255,255,255,.055);
       border:1px solid rgba(142,234,255,.18);
       border-radius:24px;
@@ -144,6 +124,7 @@
       display:flex;
       flex-wrap:wrap;
       gap:8px;
+      margin-top:auto;
       margin-bottom:14px;
     }
 
@@ -226,7 +207,10 @@
     }
 
     @media(max-width:760px){
-      .petitnuage-hero{min-height:190px}
+      .petitnuage-hero{
+        height:180px;
+        background-position:center;
+      }
       .catalog-toolbar{grid-template-columns:1fr 1fr}
       .product-count{grid-column:1/-1;order:3}
       .sort-select{max-width:none}
@@ -291,12 +275,7 @@
 
 <main>
 
-<section class="petitnuage-hero">
-  <div>
-    <h1>Petit Nuage</h1>
-    <p>Des recettes fruitées, fraîches, exotiques et gourmandes à découvrir directement chez STOOM Clermont-Ferrand.</p>
-  </div>
-</section>
+<section class="petitnuage-hero"></section>
 
 <section class="catalog-section">
   <div class="container">
