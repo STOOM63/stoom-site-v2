@@ -1,0 +1,66 @@
+[
+  {
+    "nom": "Blue Confu",
+    "saveurs": "Myrtille Raisin",
+    "description": "Un mélange myrtille, raisin et framboise pour une vape fruitée, ronde et parfumée.",
+    "image": "uploads/blueconfu.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Blue Crystal",
+    "saveurs": "Myrtille, Framboise bleue",
+    "description": "Une myrtille glacée associée à la framboise bleue pour une vape fruitée et fraîche.",
+    "image": "uploads/bluecrystal.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Crazy Berry",
+    "saveurs": "Cassis, Mûre",
+    "description": "Un cassis et une mûre givrée pour une vape fruitée, profonde et glaciale.",
+    "image": "uploads/crazyberry.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Limo Frost",
+    "saveurs": "Limonade, baies rouges",
+    "description": "Une double limonade citron, pink lemonade et baies rouges pour une vape pétillante, acidulée et rafraîchissante.",
+    "image": "uploads/limofrost.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Melon Knight",
+    "saveurs": "Melon, Fraise, Passion",
+    "description": "Une alliance melon, fraise et passion pour une vape fruitée, juteuse et ensoleillée.",
+    "image": "uploads/melonknight.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Mystic Cherry",
+    "saveurs": "Double cerises",
+    "description": "Une double cerise relevée par la framboise pour une vape rouge, intense et gourmande.",
+    "image": "uploads/mysticcherry.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Red Fury",
+    "saveurs": "Fraise, Fruits rouges",
+    "description": "Une fraise aux fruits rouges frais pour une vape intense, sucrée et rafraîchissante.",
+    "image": "uploads/redfury.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Tropical Wave",
+    "saveurs": "Mangue, Ananas, Fruits tropicaux",
+    "description": "Un mélange mangue, ananas, fruits tropicaux et touche de bonbon pour une vape exotique et gourmande.",
+    "image": "uploads/tropicalwave.jpg",
+    "format": "50ml",
+    "nicotine": "0mg"
+  }
+]
