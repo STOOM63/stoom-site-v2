@@ -955,7 +955,7 @@ const fallbackProducts = [
 
 async function initHome(){
   const news = await loadJson('data/home/nouveautes.json?v=4', fallbackNews);
-  const ranges = await loadJson('data/home/gammes.json?v=4', fallbackRanges);
+  const ranges = await loadJson('data/home/gammes.json?v=5', fallbackRanges);
   const products = await loadJson('data/home/produits.json?v=4', fallbackProducts);
 
   renderCards('homeNewsGrid', news);
