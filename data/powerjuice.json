@@ -1,0 +1,56 @@
+[
+  {
+    "nom": "Exotik",
+    "image": "uploads/exotik.jpg",
+    "saveurs": "Mangue, fruit de la passion, ananas, boisson énergisante",
+    "description": "Un mélange exotique associant mangue, fruit de la passion et ananas sur une base de boisson énergisante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "versions": "🔥 Classique • ❄️ Fresh"
+  },
+  {
+    "nom": "Gorilla",
+    "image": "uploads/gorilla.jpg",
+    "saveurs": "Pomme verte, fleur de sureau, boisson énergisante",
+    "description": "Une pomme verte acidulée relevée par une touche de fleur de sureau et une base énergisante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "versions": "🔥 Classique • ❄️ Fresh"
+  },
+  {
+    "nom": "Grizzly",
+    "image": "uploads/grizzly.jpg",
+    "saveurs": "Raisin, amélanche, boisson énergisante",
+    "description": "Un mélange original de raisin et d'amélanche sur une base de boisson énergisante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "versions": "🔥 Classique • ❄️ Fresh"
+  },
+  {
+    "nom": "Original",
+    "image": "uploads/original.jpg",
+    "saveurs": "Boisson énergisante",
+    "description": "Toute l'intensité d'une boisson énergisante dans une recette simple et efficace.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "versions": "🔥 Classique • ❄️ Fresh"
+  },
+  {
+    "nom": "Purple",
+    "image": "uploads/purple.jpg",
+    "saveurs": "Framboise bleue, pastèque, boisson énergisante",
+    "description": "Une association fruitée de framboise bleue et de pastèque sur une base énergisante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "versions": "🔥 Classique • ❄️ Fresh"
+  },
+  {
+    "nom": "Rio",
+    "image": "uploads/rio.jpg",
+    "saveurs": "Fraise, baie d'açaï, noix de coco, boisson énergisante",
+    "description": "Une recette exotique mêlant fraise, açaï et noix de coco sur une base énergisante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "versions": "🔥 Classique • ❄️ Fresh"
+  }
+]
