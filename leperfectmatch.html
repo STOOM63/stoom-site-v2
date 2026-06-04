@@ -17,51 +17,12 @@
     html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
 
     .perfectmatch-hero{
-      min-height:310px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background:linear-gradient(180deg,rgba(6,19,29,.25),rgba(6,19,29,.92)),url("uploads/perfectmatchambiance.jpg");
+      height:260px;
+      background:url("uploads/perfectmatchambiance.jpg");
       background-size:cover;
       background-position:center;
+      background-repeat:no-repeat;
       border-bottom:1px solid rgba(142,234,255,.18);
-    }
-
-    .perfectmatch-hero-content{width:min(92%,900px);padding:56px 0}
-
-    .perfectmatch-hero h1{
-      color:white;
-      text-transform:uppercase;
-      font-size:clamp(3rem,7vw,6.5rem);
-      line-height:.9;
-      letter-spacing:-3px;
-      font-weight:900;
-      margin-bottom:18px;
-    }
-
-    .perfectmatch-hero h1 span{display:block;color:var(--blue2)}
-
-    .perfectmatch-hero p{
-      color:#d8f5ff;
-      font-size:1.05rem;
-      line-height:1.65;
-      font-weight:600;
-      max-width:650px;
-      margin:auto;
-    }
-
-    .shop-alert{
-      display:inline-flex;
-      margin-top:22px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(142,234,255,.14);
-      border:1px solid rgba(142,234,255,.28);
-      color:#d8f5ff;
-      font-weight:900;
-      text-transform:uppercase;
-      font-size:.72rem;
     }
 
     .catalog-section{padding:38px 0 90px;background:#06131d}
@@ -244,8 +205,10 @@
     }
 
     @media(max-width:760px){
-      .perfectmatch-hero{min-height:280px;background-position:center top}
-      .perfectmatch-hero h1{font-size:2.8rem;letter-spacing:-1.5px}
+      .perfectmatch-hero{
+        height:180px;
+        background-position:center;
+      }
 
       .catalog-toolbar{grid-template-columns:1fr 1fr}
       .product-count{grid-column:1/-1;order:3}
@@ -311,16 +274,7 @@
 
 <main>
 
-<section class="perfectmatch-hero">
-  <div class="perfectmatch-hero-content">
-    <h1>Nouveautés <span>Le Perfect Match</span></h1>
-    <p>
-      Découvrez la nouvelle gamme auvergnate Flavour Power Le Perfect Match,
-      des recettes fruitées originales conçues et fabriquées en Auvergne.
-    </p>
-    <div class="shop-alert">Catalogue vitrine · Aucun achat en ligne</div>
-  </div>
-</section>
+<section class="perfectmatch-hero"></section>
 
 <section class="catalog-section">
   <div class="container">
