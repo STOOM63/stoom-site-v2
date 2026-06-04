@@ -1,8 +1,11 @@
 [
   {
-    "titre": "Base STOOM 50/50",
-    "description": "500 ml · DIY",
-    "image": "uploads/base5050500.jpg"
+    "nom": "Le Flirt",
+    "saveurs": "Fraise, Melon, Kiwi",
+    "description": "Une association gourmande et fruitée mêlant fraise, melon et kiwi avec une fraîcheur légère.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/leflirt.jpg"
   },
   {
     "titre": "Base STOOM 50/50",
