@@ -8,18 +8,11 @@
     "image": "uploads/leflirt.jpg"
   },
   {
-    "titre": "Base STOOM 50/50",
-    "description": "1 litre · DIY",
-    "image": "uploads/base50501l.jpg"
-  },
-  {
-    "titre": "Base STOOM 30/70",
-    "description": "500 ml · DIY",
-    "image": "uploads/base3070500.jpg"
-  },
-  {
-    "titre": "Base STOOM 30/70",
-    "description": "1 litre · DIY",
-    "image": "uploads/base30701l.jpg"
+    "nom": "Purple",
+    "image": "uploads/purple.jpg",
+    "saveurs": "Framboise bleue, pastèque, boisson énergisante",
+    "description": "Une association fruitée de framboise bleue et de pastèque sur une base énergisante.",
+    "format": "50ml",
+    "nicotine": "0mg",
   }
 ]
