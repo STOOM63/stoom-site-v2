@@ -1,0 +1,18 @@
+[
+  {
+    "titre": "Vape City",
+    "categorie": "Nouveauté liquide",
+    "description": "Une gamme fruitée et fraîche à découvrir en boutique.",
+    "image": "uploads/vapecity-nouveaute.jpg",
+    "lien": "vapecity.html",
+    "bouton": "Découvrir"
+  },
+  {
+    "titre": "Le Perfect Match",
+    "categorie": "Nouveauté auvergnate",
+    "description": "Nouvelle gamme Flavour Power fabriquée en Auvergne.",
+    "image": "uploads/perfectmatch-nouveaute.jpg",
+    "lien": "leperfectmatch.html",
+    "bouton": "Découvrir"
+  }
+]
