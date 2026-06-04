@@ -17,18 +17,12 @@
     html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
 
     .petitnuage-hero{
-      width:100%;
-      line-height:0;
-      overflow:hidden;
+      height:260px;
+      background:url("uploads/petitnuageambiance.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
       border-bottom:1px solid rgba(142,234,255,.18);
-      background:#06131d;
-    }
-
-    .petitnuage-hero img{
-      width:100%;
-      height:auto;
-      display:block;
-      object-fit:contain;
     }
 
     .catalog-section{padding:38px 0 90px;background:#06131d}
@@ -109,7 +103,6 @@
       display:flex;
       flex-direction:column;
       flex:1;
-      min-height:260px;
     }
 
     .product-content h2{
@@ -150,10 +143,7 @@
       color:#d8f5ff;
       font-size:.9rem;
       font-weight:700;
-      margin-top:0;
-      min-height:34px;
-      display:flex;
-      align-items:flex-start;
+      margin-top:auto;
     }
 
     .available::before{
@@ -230,10 +220,7 @@
         gap:14px;
       }
 
-      .product-content{
-        padding:14px;
-        min-height:250px;
-      }
+      .product-content{padding:14px}
       .product-content h2{font-size:1rem}
       .product-content p{font-size:.86rem}
 
@@ -288,7 +275,7 @@
 
 <main>
 
-<section class="petitnuage-hero"><img src="uploads/petitnuageambiance.jpg" alt="Petit Nuage"></section>
+<section class="petitnuage-hero"></section>
 
 <section class="catalog-section">
   <div class="container">
