@@ -1,1 +1,130 @@
-
+[
+  {
+    "nom": "Caresse des Îles",
+    "image": "uploads/caressedesiles.jpg",
+    "saveurs": "Mangue, ananas",
+    "description": "Un mélange exotique et solaire, doux et fruité.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Cherry Chérie",
+    "image": "uploads/cherrycherie.jpg",
+    "saveurs": "Cerise, framboise bleue",
+    "description": "Une recette fruitée autour de la cerise et de la framboise bleue.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Coup de Cœur",
+    "image": "uploads/coupdecoeur.jpg",
+    "saveurs": "Fraise des bois, mûre, cassis, framboise",
+    "description": "Un cocktail de fruits rouges et fruits noirs, intense et gourmand.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Coup de Foudre",
+    "image": "uploads/coupdefoudre.jpg",
+    "saveurs": "Fruits rouges, violette",
+    "description": "Une association florale et fruitée, entre fruits rouges et violette.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Eau Tropicale",
+    "image": "uploads/eautropicale.jpg",
+    "saveurs": "Orange, mangue, fruit de la passion",
+    "description": "Une recette tropicale fraîche et très fruitée.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Étoiles Filantes",
+    "image": "uploads/etoilesfilantes.jpg",
+    "saveurs": "Mangue, pomme verte et fruit dudragon",
+    "description": "Découvrez un assortiment fruité de granny-smith combinées à la saveur d'une mangue et pour finir un fruit du dragon à la chair rosée.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Flocon Vanille",
+    "image": "uploads/floconvanille.jpg",
+    "saveurs": "Menthe blanche, vanille",
+    "description": "Une menthe douce accompagnée d'une touche vanillée.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Full Moon Party",
+    "image": "uploads/fullmoonparty.jpg",
+    "saveurs": "Fruit du dragon, fraise",
+    "description": "Une recette fruitée, douce et exotique.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Goyave Frappée",
+    "image": "uploads/goyavefrappee.jpg",
+    "saveurs": "Goyave, framboise fraîche",
+    "description": "Un duo fruité et frais autour de la goyave et de la framboise.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Grenade Pilée",
+    "image": "uploads/grenadepilee.jpg",
+    "saveurs": "Granité de grenade",
+    "description": "Une grenade façon boisson glacée, fruitée et rafraîchissante.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Myrtille Polaire",
+    "image": "uploads/myrtillepolaire.jpg",
+    "saveurs": "Myrtille, menthe fraîche",
+    "description": "Une myrtille fraîche relevée par une note mentholée.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Paris Bali",
+    "image": "uploads/parisbali.jpg",
+    "saveurs": "Corossol, fruit de la passion, pitaya, ananas",
+    "description": "Un voyage exotique entre fruits tropicaux et notes acidulées.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Péché Mignon",
+    "image": "uploads/pechemignon.jpg",
+    "saveurs": "Pêche, pastèque",
+    "description": "Une recette douce, juteuse et estivale.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Rêve Bleu",
+    "image": "uploads/revebleu.jpg",
+    "saveurs": "Baies bleues, framboise bleue",
+    "description": "Une recette bleue, fruitée et légèrement acidulée.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Sironade Dragon",
+    "image": "uploads/sironadedragon.jpg",
+    "saveurs": "Limonade, fruit du dragon",
+    "description": "Une limonade fruitée au fruit du dragon.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  },
+  {
+    "nom": "Sironade Violette",
+    "image": "uploads/sironadeviolette.jpg",
+    "saveurs": "Limonade, violette",
+    "description": "Une limonade florale et douce à la violette.",
+    "format": "50ml",
+    "nicotine": "0mg"
+  }
+]
