@@ -32,6 +32,14 @@
     "bouton": "Voir la gamme"
   },
   {
+    "titre": "Vape of Legend",
+    "categorie": "E-liquides",
+    "description": "Une explosion de saveurs et fraîcheur.",
+    "image": "uploads/vapeoflegendambiance.jpg",
+    "lien": "vapeoflegendambiance.html",
+    "bouton": "Voir la gamme"
+  },
+  {
     "titre": "DIY STOOM",
     "categorie": "DIY",
     "description": "Bases STOOM, boosters et calculateur de mélange.",
