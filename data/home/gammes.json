@@ -15,6 +15,23 @@
     "lien": "leperfectmatch.html",
     "bouton": "Voir la gamme"
   },
+  
+   {
+    "titre": "Petit Nuage",
+    "categorie": "Voyagez à chaque boufées",
+    "description": "Les eliquides Petit Nuage se distinguent par leur simplicité et leur légèreté.",
+    "image": "uploads/petitnuageambiance.jpg",
+    "lien": "petitnuage.html",
+    "bouton": "Voir la gamme"
+  },
+  {
+    "titre": "Power Juice",
+    "categorie": "E-liquides auvergnats",
+    "description": "La puissance des arômes sur une base boisson MONSTER, une recette qui boostera tes journées !",
+    "image": "uploads/powerjuiceambiance.jpg",
+    "lien": "powerjuice.html",
+    "bouton": "Voir la gamme"
+  },
   {
     "titre": "DIY STOOM",
     "categorie": "DIY",
@@ -23,12 +40,4 @@
     "lien": "diy.html",
     "bouton": "Voir le DIY"
   },
-   {
-    "titre": "Petit Nuage",
-    "categorie": "Voyagez à chaque boufées",
-    "description": "Les eliquides Petit Nuage se distinguent par leur simplicité et leur légèreté.",
-    "image": "uploads/petitnuageambiance.jpg",
-    "lien": "petitnuage.html",
-    "bouton": "Voir la gamme"
-  }
 ]
