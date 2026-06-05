@@ -1,1 +1,115 @@
+[
+  {
+    "nom": "USA Classics",
+    "saveurs": "Blond américain doux",
+    "description": "Un classic blond américain doux et équilibré.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/usa-classics-50-50.webp"
+  },
+  {
+    "nom": "USA Classics",
+    "saveurs": "Blond américain doux",
+    "description": "Un classic blond américain doux et équilibré.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/usa-classics-50-50-50ml.webp"
+  },
 
+  {
+    "nom": "Virginie Classics",
+    "saveurs": "Blond léger",
+    "description": "Un classic blond léger et discret.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/virginie-classics-50-50.webp"
+  },
+  {
+    "nom": "Virginie Classics",
+    "saveurs": "Blond léger",
+    "description": "Un classic blond léger et discret.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/virginie-classics-50-50-50ml.webp"
+  },
+
+  {
+    "nom": "Akkad",
+    "saveurs": "Tabac blond, noisette",
+    "description": "Un classic blond accompagné d'une note de noisette.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/akkad.webp"
+  },
+
+  {
+    "nom": "Menthol",
+    "saveurs": "Classic blond mentholé",
+    "description": "Un classic blond accompagné d'une menthe fraîche.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/menthol-classic.webp"
+  },
+  {
+    "nom": "Menthol",
+    "saveurs": "Classic blond mentholé",
+    "description": "Un classic blond accompagné d'une menthe fraîche.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/menthol-classic-50ml.webp"
+  },
+
+  {
+    "nom": "Classic Spirit",
+    "saveurs": "Classic blond aux notes fruitées",
+    "description": "Un classic blond légèrement fruité.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/classic-spirit.webp"
+  },
+
+  {
+    "nom": "USA Blend",
+    "saveurs": "Blond américain corsé",
+    "description": "Une version plus puissante du classic américain.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/usa-blend.webp"
+  },
+
+  {
+    "nom": "Le Brun",
+    "saveurs": "Tabac brun",
+    "description": "Un classic brun puissant et aromatique.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/le-brun.webp"
+  },
+
+  {
+    "nom": "Le Corsé",
+    "saveurs": "Classic puissant",
+    "description": "Un classic robuste destiné aux amateurs de saveurs marquées.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/le-corse.webp"
+  },
+
+  {
+    "nom": "Orient Classics",
+    "saveurs": "Tabac oriental épicé et caramélisé",
+    "description": "Un classic oriental aux notes épicées et légèrement caramélisées.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/orient-classics.webp"
+  },
+
+  {
+    "nom": "American Mix",
+    "saveurs": "Mélange de classics américains",
+    "description": "Une association de plusieurs classics américains.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/american-mix.webp"
+  }
+]
