@@ -1,1 +1,67 @@
 
+[
+  {
+    "nom": "Dragon Addict",
+    "saveurs": "Fruit du dragon, kiwi, poire, melon",
+    "description": "Un mélange exotique de fruit du dragon, kiwi, poire et melon.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/dragon-addict.webp"
+  },
+  {
+    "nom": "Dragon Addict",
+    "saveurs": "Fruit du dragon, kiwi, poire, melon",
+    "description": "Un mélange exotique de fruit du dragon, kiwi, poire et melon.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/dragon-addict-50ml.webp"
+  },
+  {
+    "nom": "Frais Addict",
+    "saveurs": "Fraise",
+    "description": "Une fraise gourmande accompagnée d'une sensation de fraîcheur.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/frais-addict.webp"
+  },
+  {
+    "nom": "Frais Addict",
+    "saveurs": "Fraise",
+    "description": "Une fraise gourmande accompagnée d'une sensation de fraîcheur.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/frais-addict-50ml.webp"
+  },
+  {
+    "nom": "Ceris' Addict",
+    "saveurs": "Cerise fraîche",
+    "description": "Une cerise fruitée et rafraîchissante.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/ceris-addict.webp"
+  },
+  {
+    "nom": "Ceris' Addict",
+    "saveurs": "Cerise fraîche",
+    "description": "Une cerise fruitée et rafraîchissante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/ceris-addict-50ml.webp"
+  },
+  {
+    "nom": "Nectar Addict",
+    "saveurs": "Mangue",
+    "description": "Une mangue mûre et généreuse aux notes exotiques.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/nectar-addict.webp"
+  },
+  {
+    "nom": "Nectar Addict",
+    "saveurs": "Mangue",
+    "description": "Une mangue mûre et généreuse aux notes exotiques.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/nectar-addict-50ml.webp"
+  }
+]
