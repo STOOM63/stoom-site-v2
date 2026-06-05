@@ -1,0 +1,42 @@
+[
+  {
+    "nom": "Angel Shojo",
+    "saveurs": "Fruit du dragon, Fraise, Frais",
+    "description": "Une association exotique de fruit du dragon et de fraise relevée par une fraîcheur intense.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/angel-shojo.webp"
+  },
+  {
+    "nom": "Aoi Shojo",
+    "saveurs": "Framboise bleue, Fruit du dragon, Frais",
+    "description": "Un mélange original de framboise bleue et de fruit du dragon accompagné d'une note fraîche.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/aoi-shojo.webp"
+  },
+  {
+    "nom": "Hana Shojo",
+    "saveurs": "Fraise, Framboise, Fruit du dragon, Frais",
+    "description": "Une recette fruitée mêlant fraise, framboise et fruit du dragon avec une touche de fraîcheur.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/hana-shojo.webp"
+  },
+  {
+    "nom": "Lina Shojo",
+    "saveurs": "Pastèque, Fraise, Mangue, Frais",
+    "description": "Un cocktail gourmand associant pastèque, fraise et mangue sur une base fraîche.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/lina-shojo.webp"
+  },
+  {
+    "nom": "Yume Shojo",
+    "saveurs": "Mangue, Fraise, Frais",
+    "description": "Une combinaison ensoleillée de mangue et de fraise sublimée par une fraîcheur légère.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/yume-shojo.webp"
+  }
+]
