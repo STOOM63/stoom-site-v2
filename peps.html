@@ -400,26 +400,26 @@
   }
 
   async function loadPeps(){
-    const grid = document.getElementById('productGrid');
-    const count = document.getElementById('productCount');
+  const grid = document.getElementById('productGrid');
+  const count = document.getElementById('productCount');
 
-    try{
-      const response = await fetch('data/peps.json?v=1');
-      allProducts = await response.json();
+  try{
+    const response = await fetch('data/peps.json?v=2');
+    allProducts = await response.json();
 
-      if(!Array.isArray(allProducts) || allProducts.length === 0){
-        grid.innerHTML = '<div class="empty">Aucun produit Pep\\'s n’est affiché pour le moment.</div>';
-        count.textContent = '0';
-        return;
-      }
-
-      renderProducts();
-
-    }catch(error){
-      grid.innerHTML = '<div class="empty">Impossible de charger les produits Pep\\'s pour le moment.</div>';
+    if(!Array.isArray(allProducts) || allProducts.length === 0){
+      grid.innerHTML = `<div class="empty">Aucun produit Peps n’est affiché pour le moment.</div>`;
       count.textContent = '0';
+      return;
     }
+
+    renderProducts();
+
+  }catch(error){
+    grid.innerHTML = `<div class="empty">Impossible de charger les produits Peps pour le moment.</div>`;
+    count.textContent = '0';
   }
+}
 
   document.getElementById('filterSelect').addEventListener('change', renderProducts);
   document.getElementById('sortSelect').addEventListener('change', renderProducts);
