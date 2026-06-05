@@ -16,28 +16,12 @@
     "image": "uploads/mojito.webp"
   },
   {
-    "nom": "Mojito",
-    "saveurs": "Citron vert, menthe",
-    "description": "L'incontournable cocktail cubain aux notes de citron vert et de menthe.",
-    "format": "50ml",
-    "nicotine": "0mg",
-    "image": "uploads/mojito-50ml.webp"
-  },
-  {
     "nom": "Pina Colada",
     "saveurs": "Ananas, coco, rhum",
     "description": "Une recette exotique mêlant ananas, noix de coco et rhum.",
     "format": "10ml",
     "nicotine": "Selon disponibilité en boutique",
     "image": "uploads/pina-colada.webp"
-  },
-  {
-    "nom": "Pina Colada",
-    "saveurs": "Ananas, coco, rhum",
-    "description": "Une recette exotique mêlant ananas, noix de coco et rhum.",
-    "format": "50ml",
-    "nicotine": "0mg",
-    "image": "uploads/pina-colada-50ml.webp"
   },
   {
     "nom": "Rhum Vanille",
