@@ -7,6 +7,14 @@
     "lien": "vapecity.html",
     "bouton": "Découvrir"
   },
+    {
+    "titre": "Six Vape",
+    "categorie": "Nouveauté liquide",
+    "description": "Bienvenue dans l'univers SIX VAPE, une gamme inspirée des plus belles destinations de la côte de Miami.",
+    "image": "uploads/header-brand-six-vape.webp",
+    "lien": "sixvape.html",
+    "bouton": "Découvrir"
+  },
   {
     "titre": "Le Perfect Match",
     "categorie": "Nouveauté auvergnate",
