@@ -31,6 +31,14 @@
     "lien": "powerjuice.html",
     "bouton": "Voir la gamme"
   },
+    {
+    "titre": "Six Vape",
+    "categorie": "Nouveauté liquide",
+    "description": "Bienvenue dans l'univers SIX VAPE, une gamme inspirée des plus belles destinations de la côte de Miami.",
+    "image": "uploads/sixvapeambiance.webp",
+    "lien": "sixvape.html",
+    "bouton": "Découvrir"
+  },
   {
     "titre": "Vape of Legend",
     "categorie": "E-liquides",
