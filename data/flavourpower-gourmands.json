@@ -40,14 +40,6 @@
     "image": "uploads/caramel.webp"
   },
   {
-    "nom": "Marron Glacé",
-    "saveurs": "Marron glacé",
-    "description": "Une saveur gourmande inspirée du marron glacé.",
-    "format": "10ml",
-    "nicotine": "Selon disponibilité en boutique",
-    "image": "uploads/marron-glace.webp"
-  },
-  {
     "nom": "Cookie",
     "saveurs": "Cookie chocolat",
     "description": "Un cookie gourmand accompagné de notes chocolatées.",
@@ -55,14 +47,7 @@
     "nicotine": "Selon disponibilité en boutique",
     "image": "uploads/cookie.webp"
   },
-  {
-    "nom": "Cookie",
-    "saveurs": "Cookie chocolat",
-    "description": "Un cookie gourmand accompagné de notes chocolatées.",
-    "format": "50ml",
-    "nicotine": "0mg",
-    "image": "uploads/cookie-50ml.webp"
-  },
+ 
   {
     "nom": "Le Gourmand",
     "saveurs": "Gâteau cœur caramel",
@@ -71,19 +56,12 @@
     "nicotine": "Selon disponibilité en boutique",
     "image": "uploads/le-gourmand.webp"
   },
-  {
-    "nom": "Le Gourmand",
-    "saveurs": "Gâteau cœur caramel",
-    "description": "Une pâtisserie gourmande relevée par un cœur caramel.",
-    "format": "50ml",
-    "nicotine": "0mg",
-    "image": "uploads/le-gourmand-50ml.webp"
-  },
+ 
   {
     "nom": "Le Petit Biscuit",
     "saveurs": "Biscuit gourmand",
     "description": "Une saveur biscuit douce et réconfortante.",
-    "format": "10ml",
+    "format": "50ml",
     "nicotine": "Selon disponibilité en boutique",
     "image": "uploads/le-petit-biscuit.webp"
   }
