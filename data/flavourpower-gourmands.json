@@ -8,14 +8,6 @@
     "image": "uploads/cafe-moka.webp"
   },
   {
-    "nom": "Bull Drink",
-    "saveurs": "Boisson énergisante",
-    "description": "Une saveur inspirée des boissons énergisantes.",
-    "format": "10ml",
-    "nicotine": "Selon disponibilité en boutique",
-    "image": "uploads/bull-drink.webp"
-  },
-  {
     "nom": "BB Gum",
     "saveurs": "Chewing-gum",
     "description": "Une saveur chewing-gum douce et sucrée.",
