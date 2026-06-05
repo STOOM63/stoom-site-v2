@@ -1,1 +1,170 @@
-
+[
+  {
+    "nom": "Kilwa",
+    "saveurs": "Pomme verte, fraise, abricot, pêche",
+    "description": "Un mélange fruité associant pomme verte, fraise, abricot et pêche.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/kilwa-50-50.webp"
+  },
+  {
+    "nom": "Kilwa",
+    "saveurs": "Pomme verte, fraise, abricot, pêche",
+    "description": "Un mélange fruité associant pomme verte, fraise, abricot et pêche.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/kilwa-50-50-50ml.webp"
+  },
+  {
+    "nom": "Smoothie",
+    "saveurs": "Pomme, banane, fraise",
+    "description": "Une recette douce et fruitée mêlant pomme, banane et fraise.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/smoothie-50-50.webp"
+  },
+  {
+    "nom": "Pêche Abricot",
+    "saveurs": "Pêche, abricot",
+    "description": "Une association fruitée et ronde entre la pêche et l’abricot.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/peche-abricot.webp"
+  },
+  {
+    "nom": "Pêche Abricot",
+    "saveurs": "Pêche, abricot",
+    "description": "Une association fruitée et ronde entre la pêche et l’abricot.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/peche-abricot-50-50-50ml.webp"
+  },
+  {
+    "nom": "Fruits Rouges",
+    "saveurs": "Fruits des bois",
+    "description": "Un mélange de fruits rouges et fruits des bois.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/fruits-rouges.webp"
+  },
+  {
+    "nom": "Fruits Rouges",
+    "saveurs": "Fruits des bois",
+    "description": "Un mélange de fruits rouges et fruits des bois.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/fruits-rouges-50-50-50ml.webp"
+  },
+  {
+    "nom": "Bells Beach",
+    "saveurs": "Pastèque, framboise, réglisse",
+    "description": "Une recette originale mêlant pastèque, framboise et une note de réglisse.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/bells-beach.webp"
+  },
+  {
+    "nom": "Melon Galia",
+    "saveurs": "Melon Galia",
+    "description": "Une saveur melon douce et parfumée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/melon-galia-50-50.webp"
+  },
+  {
+    "nom": "Cerise",
+    "saveurs": "Cerise",
+    "description": "Une saveur cerise simple, fruitée et gourmande.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/cerise.webp"
+  },
+  {
+    "nom": "Fraise",
+    "saveurs": "Fraise",
+    "description": "Une saveur fraise douce et fruitée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/fraise.webp"
+  },
+  {
+    "nom": "Fraise Basilic",
+    "saveurs": "Fraise, basilic",
+    "description": "Une fraise fruitée relevée par une touche végétale de basilic.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/fraise-basilic-50-50.webp"
+  },
+  {
+    "nom": "Fraise Basilic",
+    "saveurs": "Fraise, basilic",
+    "description": "Une fraise fruitée relevée par une touche végétale de basilic.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/fraise-basilic-50-50-50ml.webp"
+  },
+  {
+    "nom": "Framboise",
+    "saveurs": "Framboise",
+    "description": "Une saveur framboise fruitée et légèrement acidulée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/framboise.webp"
+  },
+  {
+    "nom": "Mûre",
+    "saveurs": "Mûre",
+    "description": "Une saveur mûre intense et fruitée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/mure.webp"
+  },
+  {
+    "nom": "Myrtille",
+    "saveurs": "Myrtille",
+    "description": "Une saveur myrtille douce et fruitée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/myrtille.webp"
+  },
+  {
+    "nom": "Citron Vert",
+    "saveurs": "Citron vert",
+    "description": "Une saveur citron vert vive et acidulée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/citron-vert.webp"
+  },
+  {
+    "nom": "Pomme",
+    "saveurs": "Pomme verte croquante",
+    "description": "Une pomme verte croquante, fruitée et légèrement acidulée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/pomme.webp"
+  },
+  {
+    "nom": "Pamplemousse",
+    "saveurs": "Pamplemousse rose",
+    "description": "Une saveur pamplemousse rose fraîchement acidulée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/pamplemousse-50-50.webp"
+  },
+  {
+    "nom": "Poire Williams",
+    "saveurs": "Poire Williams",
+    "description": "Une saveur poire douce et parfumée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/poire-williams.webp"
+  },
+  {
+    "nom": "Violette",
+    "saveurs": "Violette",
+    "description": "Une saveur florale douce autour de la violette.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/violette.webp"
+  }
+]
