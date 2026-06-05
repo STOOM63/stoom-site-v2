@@ -8,27 +8,11 @@
     "image": "uploads/bull-drink.webp"
   },
   {
-    "nom": "Bull Drink",
-    "saveurs": "Boisson énergisante",
-    "description": "Une saveur inspirée des célèbres boissons énergisantes.",
-    "format": "50ml",
-    "nicotine": "0mg",
-    "image": "uploads/bull-drink-50ml.webp"
-  },
-  {
     "nom": "Soda Cola",
     "saveurs": "Cola pétillant",
     "description": "Une saveur cola fidèle à la célèbre boisson gazeuse.",
     "format": "10ml",
     "nicotine": "Selon disponibilité en boutique",
     "image": "uploads/soda-cola.webp"
-  },
-  {
-    "nom": "Soda Cola",
-    "saveurs": "Cola pétillant",
-    "description": "Une saveur cola fidèle à la célèbre boisson gazeuse.",
-    "format": "50ml",
-    "nicotine": "0mg",
-    "image": "uploads/soda-cola-50ml.webp"
   }
 ]
