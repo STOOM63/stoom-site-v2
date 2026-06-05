@@ -1,0 +1,143 @@
+[
+  {
+    "nom": "Origin's Blond",
+    "saveurs": "Tabac blond classique",
+    "description": "Saveur tabac blond classique. Disponible en 50ml.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/origin-s-blond-50-ml.webp"
+  },
+  {
+    "nom": "Origin's Blond",
+    "saveurs": "Tabac blond classique",
+    "description": "Saveur tabac blond classique. Disponible en 3mg, 6mg, 12mg et 18mg.",
+    "format": "10ml",
+    "nicotine": "3/6/12/18mg",
+    "image": "uploads/blond10ml.webp"
+  },
+  {
+    "nom": "Origin's Blond Sel de Nicotine",
+    "saveurs": "Tabac blond classique",
+    "description": "Saveur tabac blond classique. Disponible en 10mg et 20mg de sels de nicotine.",
+    "format": "10ml",
+    "nicotine": "10/20mg",
+    "image": "uploads/blond-salt10ml.webp"
+  },
+
+  {
+    "nom": "Origin's Light",
+    "saveurs": "Tabac blond léger",
+    "description": "Saveur tabac blond léger. Disponible en 50ml.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/origin-s-light-50-ml.webp"
+  },
+  {
+    "nom": "Origin's Light",
+    "saveurs": "Tabac blond léger",
+    "description": "Saveur tabac blond léger. Disponible en 3mg, 6mg, 12mg et 18mg.",
+    "format": "10ml",
+    "nicotine": "3/6/12/18mg",
+    "image": "uploads/light10ml.webp"
+  },
+  {
+    "nom": "Origin's Light Sel de Nicotine",
+    "saveurs": "Tabac blond léger",
+    "description": "Saveur tabac blond léger. Disponible en 10mg et 20mg de sels de nicotine.",
+    "format": "10ml",
+    "nicotine": "10/20mg",
+    "image": "uploads/light-salt10ml.webp"
+  },
+
+  {
+    "nom": "Origin's Menthe",
+    "saveurs": "Tabac blond mentholé",
+    "description": "Saveur tabac blond mentholé. Disponible en 50ml.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/origin-s-menthe-50-ml.webp"
+  },
+  {
+    "nom": "Origin's Menthe",
+    "saveurs": "Tabac blond mentholé",
+    "description": "Saveur tabac blond mentholé. Disponible en 3mg, 6mg, 12mg et 18mg.",
+    "format": "10ml",
+    "nicotine": "3/6/12/18mg",
+    "image": "uploads/menthol10ml.webp"
+  },
+  {
+    "nom": "Origin's Menthe Sel de Nicotine",
+    "saveurs": "Tabac blond mentholé",
+    "description": "Saveur tabac blond mentholé. Disponible en 10mg et 20mg de sels de nicotine.",
+    "format": "10ml",
+    "nicotine": "10/20mg",
+    "image": "uploads/menthol-salt10ml.webp"
+  },
+
+  {
+    "nom": "Origin's Orient",
+    "saveurs": "Tabac blond oriental, épicé et légèrement miellé",
+    "description": "Saveur tabac oriental aux notes épicées et légèrement miellées. Disponible en 50ml.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/orient-50ml.webp"
+  },
+  {
+    "nom": "Origin's Orient",
+    "saveurs": "Tabac blond oriental, épicé et légèrement miellé",
+    "description": "Saveur tabac oriental aux notes épicées et légèrement miellées. Disponible en 3mg, 6mg, 12mg et 18mg.",
+    "format": "10ml",
+    "nicotine": "3/6/12/18mg",
+    "image": "uploads/orient10ml.webp"
+  },
+  {
+    "nom": "Origin's Orient Sel de Nicotine",
+    "saveurs": "Tabac blond oriental, épicé et légèrement miellé",
+    "description": "Saveur tabac oriental aux notes épicées et légèrement miellées. Disponible en 10mg et 20mg de sels de nicotine.",
+    "format": "10ml",
+    "nicotine": "10/20mg",
+    "image": "uploads/orient-salt10ml.webp"
+  },
+
+  {
+    "nom": "Origin's Vanille",
+    "saveurs": "Tabac blond vanillé",
+    "description": "Saveur tabac blond avec une légère touche de vanille. Disponible en 50ml.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/vanille-50ml.webp"
+  },
+  {
+    "nom": "Origin's Vanille",
+    "saveurs": "Tabac blond vanillé",
+    "description": "Saveur tabac blond avec une légère touche de vanille. Disponible en 3mg, 6mg, 12mg et 18mg.",
+    "format": "10ml",
+    "nicotine": "3/6/12/18mg",
+    "image": "uploads/vanille10ml.webp"
+  },
+  {
+    "nom": "Origin's Vanille Sel de Nicotine",
+    "saveurs": "Tabac blond vanillé",
+    "description": "Saveur tabac blond avec une légère touche de vanille. Disponible en 10mg et 20mg de sels de nicotine.",
+    "format": "10ml",
+    "nicotine": "10/20mg",
+    "image": "uploads/vanille-salt10ml.webp"
+  },
+
+  {
+    "nom": "Origin's Brun",
+    "saveurs": "Tabac aromatique et puissant",
+    "description": "Saveur tabac aromatique et puissante. Disponible en 3mg, 6mg, 12mg et 18mg.",
+    "format": "10ml",
+    "nicotine": "3/6/12/18mg",
+    "image": "uploads/brun10ml.webp"
+  },
+  {
+    "nom": "Origin's Brun Sel de Nicotine",
+    "saveurs": "Tabac aromatique et puissant",
+    "description": "Saveur tabac aromatique et puissante. Disponible en 10mg et 20mg de sels de nicotine.",
+    "format": "10ml",
+    "nicotine": "10/20mg",
+    "image": "uploads/brun-salt10ml.webp"
+  }
+]
