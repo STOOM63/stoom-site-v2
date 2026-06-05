@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavour Power | STOOM Clermont-Ferrand</title>
+  <meta name="description" content="Découvrez les gammes Flavour Power disponibles chez STOOM Clermont-Ferrand.">
+  <meta name="theme-color" content="#06131d">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
+
+    .fp-hero{
+      display:block!important;
+      width:100%!important;
+      height:360px!important;
+      min-height:360px!important;
+      background-image:url("uploads/flavourpowerhead.webp")!important;
+      background-size:cover!important;
+      background-position:center center!important;
+      background-repeat:no-repeat!important;
+      background-color:#06131d!important;
+      border-bottom:1px solid rgba(142,234,255,.18);
+    }
+
+    .home-section{padding:42px 0 90px;background:#06131d}
+
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:20px;
+      margin-bottom:24px;
+    }
+
+    .section-title h1{
+      color:white;
+      text-transform:uppercase;
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:.95;
+    }
+
+    .section-title p{
+      color:#c5e2ee;
+      font-weight:600;
+      line-height:1.6;
+      max-width:560px;
+    }
+
+    .card-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+    }
+
+    .catalog-card{
+      display:flex;
+      flex-direction:column;
+      background:rgba(255,255,255,.065);
+      border:1px solid rgba(142,234,255,.18);
+      border-radius:26px;
+      overflow:hidden;
+      color:inherit;
+      text-decoration:none;
+      box-shadow:0 18px 70px rgba(0,0,0,.22);
+      transition:.22s ease;
+    }
+
+    .catalog-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(142,234,255,.48);
+    }
+
+    .catalog-img{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      display:block;
+      background:#081923;
+    }
+
+    .catalog-content{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+
+    .catalog-badge{
+      display:inline-flex;
+      align-self:flex-start;
+      background:linear-gradient(135deg,var(--blue2),var(--cyan));
+      color:#06131d;
+      border-radius:999px;
+      padding:8px 12px;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:.7rem;
+      margin-bottom:14px;
+    }
+
+    .catalog-content h2{
+      color:white;
+      text-transform:uppercase;
+      font-size:1.35rem;
+      line-height:1.08;
+      margin-bottom:10px;
+    }
+
+    .catalog-content p{
+      color:#c5e2ee;
+      line-height:1.6;
+      font-weight:600;
+      margin-bottom:16px;
+    }
+
+    .catalog-button{
+      margin-top:auto;
+      min-height:46px;
+      border-radius:14px;
+      border:1px solid var(--cyan);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:.78rem;
+    }
+
+    @media(max-width:760px){
+      .fp-hero{
+        height:110px!important;
+        min-height:110px!important;
+        background-size:contain!important;
+        background-position:center center!important;
+      }
+
+      .section-title{display:block}
+      .section-title p{margin-top:12px}
+
+      .card-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+      }
+
+      .catalog-img{height:112px}
+      .catalog-content{padding:14px}
+      .catalog-badge{font-size:.56rem;padding:6px 8px}
+      .catalog-content h2{font-size:.95rem}
+      .catalog-content p{display:none}
+      .catalog-button{min-height:38px;font-size:.66rem}
+    }
+
+    @media(max-width:390px){
+      .fp-hero{
+        height:90px!important;
+        min-height:90px!important;
+      }
+    }
+  </style>
+</head>
+
+<body data-page="flavourpower">
+
+<div class="top">
+  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div>
+        <strong>STOOM</strong>
+        <span>Clermont-Ferrand</span>
+      </div>
+    </a>
+
+    <nav class="menu">
+      <a href="index.html">Catalogue</a>
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="diy.html">DIY</a>
+      <a href="concours.html">Concours</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-actions">
+  <a href="tel:0473273394">Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank">Itinéraire</a>
+  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank">Instagram</a>
+</div>
+
+<main>
+
+<section class="fp-hero"></section>
+
+<section class="home-section">
+  <div class="container">
+    <div class="section-title">
+      <h1>Flavour Power</h1>
+      <p>Découvrez les différentes familles de saveurs Flavour Power disponibles chez STOOM Clermont-Ferrand.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <a class="catalog-card" href="flavourpower-fruites.html">
+        <img class="catalog-img" src="uploads/fp-fruites.webp" alt="Flavour Power Fruités">
+        <div class="catalog-content">
+          <div class="catalog-badge">Fruités</div>
+          <h2>Fruités</h2>
+          <p>Fraise, pomme, pêche, abricot, fruits rouges et autres recettes fruitées.</p>
+          <div class="catalog-button">Voir les produits</div>
+        </div>
+      </a>
+
+      <a class="catalog-card" href="flavourpower-frais.html">
+        <img class="catalog-img" src="uploads/fp-frais.webp" alt="Flavour Power Frais">
+        <div class="catalog-content">
+          <div class="catalog-badge">Frais</div>
+          <h2>Frais & Menthes</h2>
+          <p>Menthes, fruits frais et recettes rafraîchissantes.</p>
+          <div class="catalog-button">Voir les produits</div>
+        </div>
+      </a>
+
+      <a class="catalog-card" href="flavourpower-addict.html">
+        <img class="catalog-img" src="uploads/fp-addict.webp" alt="Flavour Power Addict">
+        <div class="catalog-content">
+          <div class="catalog-badge">Addict</div>
+          <h2>Addict</h2>
+          <p>Des recettes fruitées intenses autour de la mangue, cerise, fraise et fruit du dragon.</p>
+          <div class="catalog-button">Voir les produits</div>
+        </div>
+      </a>
+
+      <a class="catalog-card" href="flavourpower-gourmands.html">
+        <img class="catalog-img" src="uploads/fp-gourmands.webp" alt="Flavour Power Gourmands">
+        <div class="catalog-content">
+          <div class="catalog-badge">Gourmands</div>
+          <h2>Gourmands</h2>
+          <p>Cookie, caramel, café moka, biscuit et saveurs gourmandes.</p>
+          <div class="catalog-button">Voir les produits</div>
+        </div>
+      </a>
+
+      <a class="catalog-card" href="flavourpower-classiques.html">
+        <img class="catalog-img" src="uploads/fp-classiques.webp" alt="Flavour Power Classiques">
+        <div class="catalog-content">
+          <div class="catalog-badge">Classiques</div>
+          <h2>Classiques</h2>
+          <p>Classiques blonds, bruns, mentholés et saveurs tabac.</p>
+          <div class="catalog-button">Voir les produits</div>
+        </div>
+      </a>
+
+      <a class="catalog-card" href="flavourpower-ivresse.html">
+        <img class="catalog-img" src="uploads/fp-ivresse.webp" alt="Flavour Power Ivresse">
+        <div class="catalog-content">
+          <div class="catalog-badge">Ivresse</div>
+          <h2>Ivresse</h2>
+          <p>Mojito, pina colada, rhum vanille, anis et inspirations cocktail.</p>
+          <div class="catalog-button">Voir les produits</div>
+        </div>
+      </a>
+
+      <a class="catalog-card" href="flavourpower-energy.html">
+        <img class="catalog-img" src="uploads/fp-energy.webp" alt="Flavour Power E-Nergy">
+        <div class="catalog-content">
+          <div class="catalog-badge">E-Nergy</div>
+          <h2>E-Nergy</h2>
+          <p>Boisson énergisante et soda cola.</p>
+          <div class="catalog-button">Voir les produits</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© STOOM Clermont-Ferrand</span>
+    <span>Catalogue vitrine · Conseil en boutique · Pas de vente en ligne</span>
+  </div>
+</footer>
+
+</body>
+</html>
