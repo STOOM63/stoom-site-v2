@@ -1,0 +1,34 @@
+[
+  {
+    "nom": "Cherry Pep's",
+    "saveurs": "Cola, Cerise, Frais",
+    "description": "Une recette pétillante associant un cola intense à une cerise gourmande et une fraîcheur désaltérante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/cherrypeps.webp"
+  },
+  {
+    "nom": "Holy Pep's",
+    "saveurs": "Cola, Boisson énergisante, Frais",
+    "description": "L'alliance d'un cola pétillant et d'une boisson énergisante avec une touche de fraîcheur.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/holypeps.webp"
+  },
+  {
+    "nom": "Vanilla Pep's",
+    "saveurs": "Cola, Vanille, Frais",
+    "description": "Un cola doux et gourmand sublimé par une délicieuse note de vanille et une fraîcheur légère.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/vanillapeps.webp"
+  },
+  {
+    "nom": "Wiki Pep's",
+    "saveurs": "Cola, Kiwi, Fruit du dragon, Frais",
+    "description": "Un cola revisité avec un mélange exotique de kiwi et de fruit du dragon sur une base fraîche.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/wikipeps.webp"
+  }
+]
