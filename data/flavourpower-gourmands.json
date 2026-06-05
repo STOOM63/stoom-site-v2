@@ -1,1 +1,90 @@
-
+[
+  {
+    "nom": "Café Moka",
+    "saveurs": "Café, noisette, moka",
+    "description": "Une recette gourmande mêlant café, noisette et moka.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/cafe-moka.webp"
+  },
+  {
+    "nom": "Bull Drink",
+    "saveurs": "Boisson énergisante",
+    "description": "Une saveur inspirée des boissons énergisantes.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/bull-drink.webp"
+  },
+  {
+    "nom": "BB Gum",
+    "saveurs": "Chewing-gum",
+    "description": "Une saveur chewing-gum douce et sucrée.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/bb-gum.webp"
+  },
+  {
+    "nom": "BB Gum",
+    "saveurs": "Chewing-gum",
+    "description": "Une saveur chewing-gum douce et sucrée.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/bb-gum-50ml.webp"
+  },
+  {
+    "nom": "Caramel",
+    "saveurs": "Caramel",
+    "description": "Un caramel gourmand aux notes douces et généreuses.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/caramel.webp"
+  },
+  {
+    "nom": "Marron Glacé",
+    "saveurs": "Marron glacé",
+    "description": "Une saveur gourmande inspirée du marron glacé.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/marron-glace.webp"
+  },
+  {
+    "nom": "Cookie",
+    "saveurs": "Cookie chocolat",
+    "description": "Un cookie gourmand accompagné de notes chocolatées.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/cookie.webp"
+  },
+  {
+    "nom": "Cookie",
+    "saveurs": "Cookie chocolat",
+    "description": "Un cookie gourmand accompagné de notes chocolatées.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/cookie-50ml.webp"
+  },
+  {
+    "nom": "Le Gourmand",
+    "saveurs": "Gâteau cœur caramel",
+    "description": "Une pâtisserie gourmande relevée par un cœur caramel.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/le-gourmand.webp"
+  },
+  {
+    "nom": "Le Gourmand",
+    "saveurs": "Gâteau cœur caramel",
+    "description": "Une pâtisserie gourmande relevée par un cœur caramel.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/le-gourmand-50ml.webp"
+  },
+  {
+    "nom": "Le Petit Biscuit",
+    "saveurs": "Biscuit gourmand",
+    "description": "Une saveur biscuit douce et réconfortante.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/le-petit-biscuit.webp"
+  }
+]
