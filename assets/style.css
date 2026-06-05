@@ -47,3 +47,54 @@ footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);font-w
 .diy-line b{color:var(--cyan);font-size:1.35rem}
 .warning{margin-top:18px;border-radius:22px;padding:18px;background:rgba(255,255,255,.08);border:1px solid rgba(142,234,255,.2);color:#d8f5ff;line-height:1.65;font-weight:600}
 @media(max-width:980px){.diy-layout{grid-template-columns:1fr}}
+/* ===== FIX IPHONE / SAFARI ===== */
+
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+.container,
+.hero,
+.hero-grid,
+.showcase,
+.stats,
+.news-grid,
+.calc-box,
+.contact-grid,
+section,
+main,
+header,
+footer{
+  max-width:100%;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Empêche les dépassements Safari */
+.hero:after{
+  overflow:hidden;
+  pointer-events:none;
+}
+
+/* Sécurisation des bandeaux */
+[class*="hero"]{
+  width:100% !important;
+  max-width:100% !important;
+}
+
+/* Sécurisation des grilles */
+.product-grid,
+.card-grid,
+.grid3,
+.grid4,
+.news-grid{
+  max-width:100%;
+  overflow:hidden;
+}
