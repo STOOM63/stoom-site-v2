@@ -1,1 +1,98 @@
-
+[
+  {
+    "nom": "Menthe Chlorophylle",
+    "saveurs": "Menthe verte chlorophylle",
+    "description": "Une menthe verte douce aux notes chlorophyllées.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/menthe-chlorophylle.webp"
+  },
+  {
+    "nom": "Menthe Chlorophylle",
+    "saveurs": "Menthe verte chlorophylle",
+    "description": "Une menthe verte douce aux notes chlorophyllées.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/menthe-chlorophylle-50ml.webp"
+  },
+  {
+    "nom": "Menthe Fraîche",
+    "saveurs": "Menthe fraîche",
+    "description": "Une menthe fraîche équilibrée et rafraîchissante.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/menthe-fraiche.webp"
+  },
+  {
+    "nom": "Menthe Fraîche",
+    "saveurs": "Menthe fraîche",
+    "description": "Une menthe fraîche équilibrée et rafraîchissante.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/menthe-fraiche-50-50-50ml.webp"
+  },
+  {
+    "nom": "Menthe X-Trem",
+    "saveurs": "Menthe glaciale",
+    "description": "Une menthe extrêmement fraîche pour les amateurs de sensations intenses.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/menthe-x-trem.webp"
+  },
+  {
+    "nom": "Menthe X-Trem",
+    "saveurs": "Menthe glaciale",
+    "description": "Une menthe extrêmement fraîche pour les amateurs de sensations intenses.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/menthe-x-trem-50-50-50ml.webp"
+  },
+  {
+    "nom": "Regli'Fresh",
+    "saveurs": "Réglisse, menthe",
+    "description": "L'association classique de la réglisse et d'une menthe fraîche.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/reglifresh-50-50.webp"
+  },
+  {
+    "nom": "Miami",
+    "saveurs": "Pêche, fraise, menthe",
+    "description": "Un mélange fruité de pêche et de fraise accompagné d'une fraîcheur mentholée.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/miami-50-50.webp"
+  },
+  {
+    "nom": "Maverick",
+    "saveurs": "Fruits rouges, menthe",
+    "description": "Une recette fruits rouges relevée par une touche de menthe.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/maverick-10ml.webp"
+  },
+  {
+    "nom": "Maverick",
+    "saveurs": "Fruits rouges, menthe",
+    "description": "Une recette fruits rouges relevée par une touche de menthe.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/maverick-50-50-50ml.webp"
+  },
+  {
+    "nom": "The Wedge",
+    "saveurs": "Citron vert frais",
+    "description": "Un citron vert intense accompagné d'une fraîcheur désaltérante.",
+    "format": "10ml",
+    "nicotine": "Selon disponibilité en boutique",
+    "image": "uploads/the-wedge.webp"
+  },
+  {
+    "nom": "Coba",
+    "saveurs": "Pêche, chlorophylle, abricot",
+    "description": "Une association originale de pêche, d'abricot et de chlorophylle.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/coba-50-50.webp"
+  }
+]
