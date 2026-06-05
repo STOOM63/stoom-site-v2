@@ -40,6 +40,14 @@
     "bouton": "Découvrir"
   },
   {
+  "titre": "Pep's",
+  "categorie": "E-liquides",
+  "description": "Des recettes cola originales déclinées en plusieurs versions fraîches et gourmandes.",
+  "image": "uploads/e-liquide-peps-maison-fuel.webp",
+  "lien": "peps.html",
+  "bouton": "Voir la gamme"
+},
+  {
     "titre": "Vape of Legend",
     "categorie": "E-liquides",
     "description": "Une explosion de saveurs et fraîcheur.",
