@@ -51,15 +51,6 @@
     "image": "uploads/menthol-classic.webp"
   },
   {
-    "nom": "Menthol",
-    "saveurs": "Classic blond mentholé",
-    "description": "Un classic blond accompagné d'une menthe fraîche.",
-    "format": "50ml",
-    "nicotine": "0mg",
-    "image": "uploads/menthol-classic-50ml.webp"
-  },
-
-  {
     "nom": "Classic Spirit",
     "saveurs": "Classic blond aux notes fruitées",
     "description": "Un classic blond légèrement fruité.",
