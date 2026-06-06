@@ -17,7 +17,7 @@
 },
   {
     "titre": "Vape City",
-    "categorie": "E-liquides",
+    "categorie": "E-liquides Fruités Frais",
     "description": "Fruités intenses et recettes fraîches.",
     "image": "uploads/vapecityambiance.webp",
     "lien": "vapecity.html",
@@ -25,7 +25,7 @@
   },
   {
     "titre": "Le Perfect Match",
-    "categorie": "E-liquides auvergnats",
+    "categorie": "E-liquides auvergnats non frais",
     "description": "Gamme Flavour Power fabriquée en Auvergne.",
     "image": "uploads/perfectmatchambiance.webp",
     "lien": "leperfectmatch.html",
@@ -33,7 +33,7 @@
   },
   {
     "titre": "Petit Nuage",
-    "categorie": "E-liquides",
+    "categorie": "E-liquides Fruités Frais",
     "description": "Les eliquides Petit Nuage se distinguent par leur simplicité et leur légèreté.",
     "image": "uploads/petitnuagebandeau2.webp",
     "lien": "petitnuage.html",
@@ -41,7 +41,7 @@
   },
   {
     "titre": "Power Juice",
-    "categorie": "E-liquides auvergnats",
+    "categorie": "E-liquides auvergnats frais et non frais",
     "description": "La puissance des arômes sur une base boisson MONSTER, une recette qui boostera tes journées !",
     "image": "uploads/powerjuiceambiance.webp",
     "lien": "powerjuice.html",
@@ -57,7 +57,7 @@
   },
   {
   "titre": "Pep's",
-  "categorie": "E-liquides",
+  "categorie": "E-liquides Boissons",
   "description": "Des recettes cola originales déclinées en plusieurs versions fraîches et gourmandes.",
   "image": "uploads/pepsambiance.webp",
   "lien": "peps.html",
@@ -65,7 +65,7 @@
 },
   {
     "titre": "Vape of Legend",
-    "categorie": "E-liquides",
+    "categorie": "E-liquides Fruités Frais",
     "description": "Une explosion de saveurs et fraîcheur.",
     "image": "uploads/vapeoflegendambiance.webp",
     "lien": "vapeoflegend.html",
@@ -73,7 +73,7 @@
   },
   {
     "titre": "Shojo",
-    "categorie": "E-liquides",
+    "categorie": "E-liquides Fruités Frais",
     "description": "La marque Shojo propose des e-liquides fruités frais inspirés de l'univers du manga et du gaming.",
     "image": "uploads/shojoambiance.webp",
     "lien": "shojo.html",
@@ -81,7 +81,7 @@
   },
   {
   "titre": "Cebueno",
-  "categorie": "Gourmands",
+  "categorie": "E-Liquides Gourmands",
   "description": "Desserts, biscuits, crèmes et recettes gourmandes : une collection riche en saveurs pour les vapoteurs à la recherche de plaisir et de douceur au quotidien.",
   "image": "uploads/cebuenoambiance.webp",
   "lien": "cebueno.html",
