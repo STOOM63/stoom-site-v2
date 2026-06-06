@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculateur d'économies STOOM</title>
+<title>Calculateur d'économies | STOOM Clermont-Ferrand</title>
 <meta name="description" content="Calculez votre budget tabac et découvrez ce que vous pourriez vous offrir en passant à la vape avec STOOM Clermont-Ferrand.">
 <meta name="theme-color" content="#06131d">
 
@@ -14,105 +14,53 @@
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
-html,body{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-  background:#06131d;
-}
-
-body{
-  color:white;
-}
+html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
+body{color:white}
 
 .eco-hero{
-  position:relative;
-  padding:76px 0 54px;
-  overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(6,19,29,.94),rgba(6,19,29,.74),rgba(6,19,29,.96)),
-    url("uploads/hero-economies.webp") center/cover no-repeat;
+  display:block!important;
+  width:100%!important;
+  height:420px!important;
+  min-height:420px!important;
+  background-image:url("uploads/hero-economies.webp")!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  background-color:#06131d!important;
+  border-bottom:1px solid rgba(142,234,255,.18);
 }
 
-.eco-hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 18% 20%,rgba(53,185,238,.28),transparent 32%),
-    radial-gradient(circle at 78% 28%,rgba(142,234,255,.16),transparent 30%);
-  pointer-events:none;
-}
+.eco-section{padding:46px 0 80px;background:#06131d}
 
-.eco-hero .container{
-  position:relative;
-  z-index:1;
-}
-
-.eco-hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:30px;
-  align-items:center;
-}
-
-.eco-title{
-  text-transform:uppercase;
-  font-size:clamp(3rem,7vw,6.8rem);
-  line-height:.84;
-  letter-spacing:-3px;
-  font-weight:900;
-  margin:22px 0;
-}
-
-.eco-title span{
-  color:var(--cyan);
-  display:block;
-}
-
-.eco-lead{
-  max-width:760px;
-  color:#d8f5ff;
-  font-size:1.08rem;
-  line-height:1.75;
-  font-weight:650;
-}
-
-.hero-stat{
-  border-radius:34px;
+.intro-card{
+  margin-bottom:28px;
   padding:26px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(142,234,255,.22);
-  box-shadow:0 25px 90px rgba(0,0,0,.34);
-  backdrop-filter:blur(12px);
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(53,185,238,.20),transparent 34%),
+    rgba(255,255,255,.06);
+  border:1px solid rgba(142,234,255,.18);
+  box-shadow:0 18px 70px rgba(0,0,0,.22);
+  text-align:center;
 }
 
-.hero-stat small{
-  display:block;
-  color:#c5e2ee;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.7px;
-}
-
-.hero-stat strong{
-  display:block;
-  color:var(--cyan);
-  font-size:clamp(3.2rem,7vw,5.8rem);
-  line-height:1;
-  margin:12px 0;
-  font-weight:900;
-}
-
-.hero-stat p{
+.intro-card h1{
   color:white;
-  font-weight:800;
-  line-height:1.45;
+  text-transform:uppercase;
+  font-size:clamp(2.1rem,5vw,4.2rem);
+  line-height:.95;
+  letter-spacing:-1.5px;
+  margin-bottom:14px;
 }
 
-.eco-section{
-  padding:46px 0 80px;
-  background:#06131d;
+.intro-card h1 span{color:var(--cyan)}
+
+.intro-card p{
+  color:#c5e2ee;
+  line-height:1.7;
+  font-weight:700;
+  max-width:880px;
+  margin:auto;
 }
 
 .eco-layout{
@@ -130,32 +78,23 @@ body{
   box-shadow:0 18px 70px rgba(0,0,0,.22);
 }
 
-.eco-panel h2,
-.eco-panel h3{
+.eco-panel h2,.eco-panel h3{
+  color:white;
   text-transform:uppercase;
   line-height:1;
   margin:12px 0 16px;
 }
 
-.eco-panel h2{
-  font-size:2.2rem;
-}
-
-.eco-panel h3{
-  font-size:1.55rem;
-}
+.eco-panel h2{font-size:2.15rem}
+.eco-panel h3{font-size:1.55rem}
 
 .eco-panel p{
   color:#c5e2ee;
   line-height:1.65;
-  font-weight:600;
+  font-weight:650;
 }
 
-.control-box{
-  display:grid;
-  gap:18px;
-  margin-top:24px;
-}
+.control-box{display:grid;gap:18px;margin-top:24px}
 
 .control-line{
   display:flex;
@@ -191,10 +130,7 @@ body{
   gap:14px;
 }
 
-.field{
-  display:grid;
-  gap:8px;
-}
+.field{display:grid;gap:8px}
 
 .field label{
   color:#d8f5ff;
@@ -203,8 +139,7 @@ body{
   font-weight:900;
 }
 
-.field input,
-.field select{
+.field input,.field select{
   min-height:54px;
   border-radius:16px;
   border:1px solid rgba(142,234,255,.18);
@@ -238,7 +173,7 @@ body{
 .big-result b{
   display:block;
   color:var(--cyan);
-  font-size:clamp(3.2rem,10vw,6rem);
+  font-size:clamp(3rem,8vw,5.2rem);
   line-height:1;
   margin:10px 0;
   font-weight:900;
@@ -275,7 +210,7 @@ body{
   display:block;
   margin-top:8px;
   color:white;
-  font-size:1.45rem;
+  font-size:1.42rem;
 }
 
 .compare{
@@ -309,13 +244,11 @@ body{
 .compare-box b{
   display:block;
   color:white;
-  font-size:1.55rem;
+  font-size:1.45rem;
   margin-top:8px;
 }
 
-.compare-box.highlight b{
-  color:var(--cyan);
-}
+.compare-box.highlight b{color:var(--cyan)}
 
 .progress-wrap{
   margin-top:18px;
@@ -351,21 +284,16 @@ body{
   transition:.25s ease;
 }
 
-.dream-section{
-  padding:0 0 80px;
-  background:#06131d;
-}
+.dream-section{padding:0 0 80px;background:#06131d}
 
-.section-head{
-  margin-bottom:24px;
-}
+.section-head{margin-bottom:24px}
 
 .section-head h2{
   color:white;
   text-transform:uppercase;
-  font-size:clamp(2.3rem,5vw,4.5rem);
+  font-size:clamp(2.2rem,5vw,4rem);
   line-height:.94;
-  letter-spacing:-1.7px;
+  letter-spacing:-1.5px;
   margin:14px 0;
 }
 
@@ -398,9 +326,7 @@ body{
   background:#0b2a3a;
 }
 
-.dream-content{
-  padding:18px;
-}
+.dream-content{padding:18px}
 
 .dream-content h3{
   color:white;
@@ -418,7 +344,7 @@ body{
 .dream-content b{
   display:block;
   color:var(--cyan);
-  font-size:1.45rem;
+  font-size:1.4rem;
   margin-top:10px;
 }
 
@@ -467,9 +393,7 @@ body{
   display:block;
 }
 
-.goal-result-content{
-  padding:24px;
-}
+.goal-result-content{padding:24px}
 
 .goal-result-content h3{
   color:white;
@@ -484,9 +408,7 @@ body{
   font-weight:650;
 }
 
-.goal-result-content strong{
-  color:var(--cyan);
-}
+.goal-result-content strong{color:var(--cyan)}
 
 .punchline{
   margin-top:34px;
@@ -502,15 +424,13 @@ body{
 .punchline h2{
   color:white;
   text-transform:uppercase;
-  font-size:clamp(2rem,5vw,4rem);
+  font-size:clamp(2rem,5vw,3.7rem);
   line-height:.96;
   letter-spacing:-1.5px;
   margin-bottom:16px;
 }
 
-.punchline h2 span{
-  color:var(--cyan);
-}
+.punchline h2 span{color:var(--cyan)}
 
 .punchline p{
   color:#d8f5ff;
@@ -533,58 +453,34 @@ body{
 }
 
 @media(max-width:1050px){
-  .eco-hero-grid,
-  .eco-layout,
-  .goal-zone{
-    grid-template-columns:1fr;
-  }
-
-  .dream-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .eco-layout,.goal-zone{grid-template-columns:1fr}
+  .dream-grid{grid-template-columns:repeat(2,1fr)}
 }
 
-@media(max-width:700px){
+@media(max-width:760px){
   .eco-hero{
-    padding:54px 0 34px;
+    height:170px!important;
+    min-height:170px!important;
+    background-size:cover!important;
+    background-position:center center!important;
   }
 
-  .eco-title{
-    font-size:3.2rem;
-    letter-spacing:-1.8px;
-  }
+  .eco-section{padding:28px 0 60px}
+  .eco-panel{padding:22px;border-radius:24px}
 
-  .eco-panel{
-    padding:22px;
-    border-radius:24px;
-  }
-
-  .select-row,
-  .results-grid,
-  .compare,
-  .dream-grid,
-  .goal-buttons{
+  .select-row,.results-grid,.compare,.dream-grid,.goal-buttons{
     grid-template-columns:1fr;
   }
 
-  .hero-stat strong{
-    font-size:3.6rem;
-  }
+  .dream-card img,.goal-result img{height:220px}
+  .control-line{align-items:flex-start;flex-direction:column}
+  .btn{width:100%;justify-content:center;text-align:center}
+}
 
-  .dream-card img,
-  .goal-result img{
-    height:220px;
-  }
-
-  .control-line{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-
-  .btn{
-    width:100%;
-    justify-content:center;
-    text-align:center;
+@media(max-width:390px){
+  .eco-hero{
+    height:145px!important;
+    min-height:145px!important;
   }
 }
 </style>
@@ -626,125 +522,118 @@ body{
 
 <main>
 
-<section class="eco-hero">
-  <div class="container eco-hero-grid">
-    <div>
-      <span class="badge">Calculateur économies</span>
-      <h1 class="eco-title">Et si votre tabac finançait <span>vos projets ?</span></h1>
-      <p class="eco-lead">
-        Entrez votre consommation, comparez le budget tabac avec une estimation vape,
-        puis découvrez ce que cette somme représente concrètement : voyages, téléphone,
-        console, moto, voiture, loisirs ou projets famille.
-      </p>
-    </div>
-
-    <div class="hero-stat">
-      <small>Budget tabac annuel estimé</small>
-      <strong id="heroYearly">4 563 €</strong>
-      <p id="heroSentence">À 20 cigarettes par jour, c’est presque un beau voyage ou plusieurs gros plaisirs qui partent en fumée chaque année.</p>
-    </div>
-  </div>
-</section>
+<section class="eco-hero"></section>
 
 <section class="eco-section">
-  <div class="container eco-layout">
+  <div class="container">
 
-    <div class="eco-panel">
-      <span class="badge">Votre consommation</span>
-      <h2>Faites le test</h2>
+    <div class="intro-card">
+      <h1>Votre budget tabac peut devenir <span>un vrai projet.</span></h1>
       <p>
-        Ajustez les curseurs. Le calcul est volontairement simple pour donner un ordre d’idée clair.
-        En boutique, on affine ensuite selon votre profil, votre dosage et votre matériel.
+        Calculez votre consommation, comparez avec une estimation vape, puis découvrez concrètement
+        ce que cet argent pourrait représenter : voyages, téléphone, console, moto, voiture, loisirs ou maison.
       </p>
-
-      <div class="control-box">
-        <div class="control-line">
-          <span>Cigarettes par jour</span>
-          <b><span id="cigsValue">20</span> / jour</b>
-        </div>
-        <input id="cigs" class="range" type="range" min="1" max="50" value="20">
-
-        <div class="select-row">
-          <div class="field">
-            <label for="packPrice">Prix du paquet</label>
-            <select id="packPrice">
-              <option value="11.5">11,50 €</option>
-              <option value="12">12,00 €</option>
-              <option value="12.5" selected>12,50 €</option>
-              <option value="13">13,00 €</option>
-              <option value="13.5">13,50 €</option>
-              <option value="14">14,00 €</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="vapeMonthly">Budget vape estimé / mois</label>
-            <select id="vapeMonthly">
-              <option value="45">45 €</option>
-              <option value="60">60 €</option>
-              <option value="75" selected>75 €</option>
-              <option value="90">90 €</option>
-              <option value="110">110 €</option>
-              <option value="130">130 €</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="notice">
-        Cette page n’est pas une promesse médicale ni une garantie d’arrêt. Elle sert à visualiser le budget
-        et à ouvrir la discussion pour trouver une solution adaptée.
-      </div>
     </div>
 
-    <div class="eco-panel">
-      <div class="big-result">
-        <span>Budget tabac annuel</span>
-        <b id="yearly">4 563 €</b>
-        <p id="burnText">qui partent en fumée chaque année.</p>
+    <div class="eco-layout">
+
+      <div class="eco-panel">
+        <span class="badge">Votre consommation</span>
+        <h2>Faites le test</h2>
+        <p>
+          Ajustez les curseurs. Le calcul donne un ordre d’idée simple et parlant.
+          En boutique, on affine selon votre profil, votre dosage et votre matériel.
+        </p>
+
+        <div class="control-box">
+          <div class="control-line">
+            <span>Cigarettes par jour</span>
+            <b><span id="cigsValue">20</span> / jour</b>
+          </div>
+
+          <input id="cigs" class="range" type="range" min="1" max="50" value="20">
+
+          <div class="select-row">
+            <div class="field">
+              <label for="packPrice">Prix du paquet</label>
+              <select id="packPrice">
+                <option value="11.5">11,50 €</option>
+                <option value="12">12,00 €</option>
+                <option value="12.5" selected>12,50 €</option>
+                <option value="13">13,00 €</option>
+                <option value="13.5">13,50 €</option>
+                <option value="14">14,00 €</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="vapeMonthly">Budget vape estimé / mois</label>
+              <select id="vapeMonthly">
+                <option value="45">45 €</option>
+                <option value="60">60 €</option>
+                <option value="75" selected>75 €</option>
+                <option value="90">90 €</option>
+                <option value="110">110 €</option>
+                <option value="130">130 €</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice">
+          Estimation indicative. La vape n’est pas magique : le bon matériel, le bon dosage et le bon accompagnement changent tout.
+        </div>
       </div>
 
-      <div class="results-grid">
-        <div class="result-card">
-          <span>Par mois</span>
-          <b id="monthly">380 €</b>
+      <div class="eco-panel">
+        <div class="big-result">
+          <span>Budget tabac annuel</span>
+          <b id="yearly">4 563 €</b>
+          <p id="burnText">qui partent en fumée chaque année.</p>
         </div>
-        <div class="result-card">
-          <span>Sur 5 ans</span>
-          <b id="fiveyears">22 813 €</b>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <span>Par mois</span>
+            <b id="monthly">380 €</b>
+          </div>
+          <div class="result-card">
+            <span>Sur 5 ans</span>
+            <b id="fiveyears">22 813 €</b>
+          </div>
+          <div class="result-card">
+            <span>Sur 10 ans</span>
+            <b id="tenyears">45 625 €</b>
+          </div>
         </div>
-        <div class="result-card">
-          <span>Sur 10 ans</span>
-          <b id="tenyears">45 625 €</b>
+
+        <div class="compare">
+          <div class="compare-box">
+            <span>Tabac / an</span>
+            <b id="tobaccoAnnual">4 563 €</b>
+          </div>
+          <div class="compare-box">
+            <span>Vape / an</span>
+            <b id="vapeAnnual">900 €</b>
+          </div>
+          <div class="compare-box highlight">
+            <span>Économie possible</span>
+            <b id="savingAnnual">3 663 €</b>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-head">
+            <span>Impact budget</span>
+            <span id="impactLabel">Très élevé</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="impactFill"></div>
+          </div>
         </div>
       </div>
 
-      <div class="compare">
-        <div class="compare-box">
-          <span>Tabac / an</span>
-          <b id="tobaccoAnnual">4 563 €</b>
-        </div>
-        <div class="compare-box">
-          <span>Vape / an</span>
-          <b id="vapeAnnual">900 €</b>
-        </div>
-        <div class="compare-box highlight">
-          <span>Économie possible</span>
-          <b id="savingAnnual">3 663 €</b>
-        </div>
-      </div>
-
-      <div class="progress-wrap">
-        <div class="progress-head">
-          <span>Impact budget</span>
-          <span id="impactLabel">Très élevé</span>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-fill" id="impactFill"></div>
-        </div>
-      </div>
     </div>
-
   </div>
 </section>
 
@@ -756,7 +645,7 @@ body{
       <h2>Ce que votre budget tabac pourrait représenter</h2>
       <p>
         Les chiffres seuls parlent peu. Les projets parlent beaucoup plus.
-        Voici des exemples concrets calculés à partir de votre budget tabac annuel.
+        Ces exemples se mettent à jour automatiquement selon votre consommation.
       </p>
     </div>
 
@@ -765,8 +654,8 @@ body{
         <img src="uploads/iphone.webp" alt="Smartphone haut de gamme">
         <div class="dream-content">
           <h3>Smartphone</h3>
-          <p>En équivalent téléphone haut de gamme.</p>
-          <b id="iphoneCount">3</b>
+          <p>Équivalent téléphone haut de gamme.</p>
+          <b id="iphoneCount">3 possible(s)</b>
         </div>
       </article>
 
@@ -774,8 +663,8 @@ body{
         <img src="uploads/ps5.webp" alt="Console de jeux">
         <div class="dream-content">
           <h3>Console</h3>
-          <p>En équivalent console de jeux.</p>
-          <b id="ps5Count">8</b>
+          <p>Équivalent console de jeux.</p>
+          <b id="ps5Count">8 possible(s)</b>
         </div>
       </article>
 
@@ -783,8 +672,8 @@ body{
         <img src="uploads/voyage.webp" alt="Voyage au soleil">
         <div class="dream-content">
           <h3>Voyage</h3>
-          <p>En budget vacances ou escapade.</p>
-          <b id="travelCount">2</b>
+          <p>Budget vacances ou escapade.</p>
+          <b id="travelCount">2 possible(s)</b>
         </div>
       </article>
 
@@ -792,8 +681,8 @@ body{
         <img src="uploads/moto.webp" alt="Moto d'occasion">
         <div class="dream-content">
           <h3>Moto</h3>
-          <p>En apport ou achat d’occasion.</p>
-          <b id="motoCount">1</b>
+          <p>Apport ou achat d’occasion.</p>
+          <b id="motoCount">Oui</b>
         </div>
       </article>
 
@@ -801,17 +690,17 @@ body{
         <img src="uploads/voiture.webp" alt="Voiture">
         <div class="dream-content">
           <h3>Voiture</h3>
-          <p>En apport pour changer de véhicule.</p>
-          <b id="carCount">45%</b>
+          <p>Apport pour changer de véhicule.</p>
+          <b id="carCount">57%</b>
         </div>
       </article>
 
       <article class="dream-card">
-        <img src="uploads/disney.webp" alt="Parc d'attractions">
+        <img src="uploads/disney.webp" alt="Loisirs famille">
         <div class="dream-content">
           <h3>Loisirs famille</h3>
-          <p>En week-ends ou sorties mémorables.</p>
-          <b id="funCount">6</b>
+          <p>Week-ends, sorties ou parc d’attractions.</p>
+          <b id="funCount">6 sortie(s)</b>
         </div>
       </article>
 
@@ -819,17 +708,17 @@ body{
         <img src="uploads/velo.webp" alt="Vélo électrique">
         <div class="dream-content">
           <h3>Vélo électrique</h3>
-          <p>En mobilité plaisir ou trajet quotidien.</p>
-          <b id="bikeCount">2</b>
+          <p>Mobilité plaisir ou trajet quotidien.</p>
+          <b id="bikeCount">2 possible(s)</b>
         </div>
       </article>
 
       <article class="dream-card">
-        <img src="uploads/salon.webp" alt="Salon maison">
+        <img src="uploads/salon.webp" alt="Projet maison">
         <div class="dream-content">
           <h3>Maison</h3>
-          <p>En canapé, déco, électroménager ou travaux.</p>
-          <b id="homeCount">3</b>
+          <p>Canapé, déco, électroménager ou travaux.</p>
+          <b id="homeCount">3 projet(s)</b>
         </div>
       </article>
     </div>
@@ -858,9 +747,7 @@ body{
         <div class="goal-result-content">
           <h3 id="goalTitle">Voyage au soleil</h3>
           <p id="goalText">
-            Avec votre budget tabac actuel, ce projet représente environ
-            <strong>5 mois de cigarettes</strong>. En réduisant fortement le tabac avec une solution adaptée,
-            cette somme peut redevenir un budget plaisir.
+            Un beau voyage peut représenter seulement quelques mois de cigarettes.
           </p>
         </div>
       </div>
@@ -898,8 +785,6 @@ body{
   const monthly = document.getElementById("monthly");
   const fiveyears = document.getElementById("fiveyears");
   const tenyears = document.getElementById("tenyears");
-  const heroYearly = document.getElementById("heroYearly");
-  const heroSentence = document.getElementById("heroSentence");
   const burnText = document.getElementById("burnText");
 
   const tobaccoAnnual = document.getElementById("tobaccoAnnual");
@@ -974,6 +859,18 @@ body{
     return Math.max(1, Math.ceil(price / (annual / 12)));
   }
 
+  function updateGoal(annual){
+    const g = goals[currentGoal];
+    const months = monthsFor(g.price, annual);
+
+    goalImage.src = g.image;
+    goalImage.alt = g.title;
+    goalTitle.textContent = g.title;
+    goalText.innerHTML =
+      g.text + " Avec votre consommation actuelle, cet objectif représente environ <strong>" +
+      months + " mois de cigarettes</strong>.";
+  }
+
   function update(){
     const cigarettes = Number(cigs.value);
     const packet = Number(packPrice.value);
@@ -990,7 +887,6 @@ body{
     monthly.textContent = euro(month);
     fiveyears.textContent = euro(annual * 5);
     tenyears.textContent = euro(annual * 10);
-    heroYearly.textContent = euro(annual);
 
     tobaccoAnnual.textContent = euro(annual);
     vapeAnnual.textContent = euro(vapeYear);
@@ -1022,27 +918,11 @@ body{
       burnText.textContent = "c’est un projet entier qui part en fumée chaque année.";
     }
 
-    heroSentence.textContent =
-      "À " + cigarettes + " cigarettes par jour, votre budget tabac peut représenter " +
-      euro(annual) + " par an, soit " + euro(annual * 5) + " sur 5 ans.";
-
     finalSentence.textContent =
       "À " + cigarettes + " cigarettes par jour, le tabac peut représenter " +
       euro(annual * 5) + " sur 5 ans. Chez STOOM, l’objectif est de vous aider à trouver une alternative adaptée, confortable et suivie.";
 
     updateGoal(annual);
-  }
-
-  function updateGoal(annual){
-    const g = goals[currentGoal];
-    const months = monthsFor(g.price, annual);
-
-    goalImage.src = g.image;
-    goalImage.alt = g.title;
-    goalTitle.textContent = g.title;
-    goalText.innerHTML =
-      g.text + " Avec votre consommation actuelle, cet objectif représente environ <strong>" +
-      months + " mois de cigarettes</strong>.";
   }
 
   goalButtons.forEach(function(btn){
