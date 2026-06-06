@@ -1,13 +1,10 @@
-<!-- CONTACT STOOM - VERSION MEGA WOW -->
-<!-- Image conseillée : assets/images/contact-hero.jpg -->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact & horaires | STOOM Clermont-Ferrand</title>
-<meta name="description" content="STOOM Clermont-Ferrand : horaires, adresse, parking facile, itinéraire, téléphone et accès boutique. 650 avis Google, note 4,9/5.">
+<meta name="description" content="STOOM Clermont-Ferrand : horaires, adresse, parking facile, itinéraire, téléphone, commerces à proximité. 650 avis Google, note 4,9/5.">
 <meta name="theme-color" content="#06131d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,33 +16,48 @@
 :root{
   --bg:#06131d;
   --bg2:#081923;
-  --blue:#19b7ff;
   --cyan:#6ee7ff;
+  --blue:#19b7ff;
   --green:#6dffb7;
   --gold:#ffd36e;
   --text:#f4fbff;
   --muted:#b8cad6;
   --border:rgba(255,255,255,.14);
   --glass:rgba(255,255,255,.08);
-  --shadow:0 28px 90px rgba(0,0,0,.35);
+  --shadow:0 28px 90px rgba(0,0,0,.36);
 }
 
 *{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
   font-family:Montserrat,sans-serif;
   color:var(--text);
   background:
-    radial-gradient(circle at 10% 0%,rgba(25,183,255,.30),transparent 34%),
-    radial-gradient(circle at 90% 20%,rgba(109,255,183,.18),transparent 32%),
+    radial-gradient(circle at 8% 0%,rgba(25,183,255,.34),transparent 35%),
+    radial-gradient(circle at 92% 18%,rgba(109,255,183,.18),transparent 32%),
     linear-gradient(180deg,#06131d,#081923 52%,#06131d);
   overflow-x:hidden;
 }
 
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 75%);
+  z-index:-1;
+}
+
 .container{
   width:min(1180px,calc(100% - 32px));
-  margin:auto;
+  margin:0 auto;
 }
 
 .top{
@@ -53,7 +65,7 @@ body{
   padding:9px 12px;
   font-size:12px;
   color:#dff8ff;
-  background:rgba(0,0,0,.35);
+  background:rgba(0,0,0,.36);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
@@ -71,12 +83,13 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
   display:flex;
-  gap:12px;
   align-items:center;
+  gap:12px;
   color:white;
   text-decoration:none;
 }
@@ -90,6 +103,7 @@ header{
   font-weight:900;
   color:#04121b;
   background:linear-gradient(135deg,var(--cyan),var(--green));
+  box-shadow:0 14px 32px rgba(25,183,255,.26);
 }
 
 .logo strong{display:block;font-size:18px}
@@ -97,8 +111,8 @@ header{
 
 .menu{
   display:flex;
-  gap:18px;
   align-items:center;
+  gap:18px;
 }
 
 .menu a{
@@ -108,7 +122,8 @@ header{
   font-weight:800;
 }
 
-.menu a.active{color:white}
+.menu a.active,
+.menu a:hover{color:white}
 
 .menu .cta{
   padding:12px 16px;
@@ -117,10 +132,17 @@ header{
   background:linear-gradient(135deg,var(--cyan),var(--green));
 }
 
+.mobile-actions{display:none}
+
+/* HERO */
+
 .contact-hero{
   position:relative;
+  min-height:calc(100vh - 120px);
   overflow:hidden;
-  padding:88px 0 54px;
+  display:flex;
+  align-items:center;
+  padding:82px 0 58px;
 }
 
 .contact-hero::before{
@@ -128,30 +150,44 @@ header{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.96),rgba(6,19,29,.70),rgba(6,19,29,.90)),
-    url("assets/images/contact-hero.jpg") center/cover no-repeat;
-  z-index:-2;
+    linear-gradient(90deg,rgba(6,19,29,.97),rgba(6,19,29,.70),rgba(6,19,29,.92)),
+    url("assets/images/contact-hero.webp") center/cover no-repeat;
+  z-index:-3;
 }
 
 .contact-hero::after{
   content:"";
   position:absolute;
   inset:auto -20% -35% -20%;
-  height:320px;
-  background:radial-gradient(circle,rgba(25,183,255,.45),transparent 65%);
-  filter:blur(50px);
+  height:340px;
+  background:radial-gradient(circle,rgba(25,183,255,.48),transparent 65%);
+  filter:blur(52px);
+  z-index:-2;
+}
+
+.hero-glow{
+  position:absolute;
+  right:8%;
+  top:14%;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(109,255,183,.34),transparent 68%);
+  filter:blur(18px);
   z-index:-1;
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.08fr .92fr;
+  grid-template-columns:1.05fr .95fr;
   gap:34px;
   align-items:center;
 }
 
 .kicker{
   display:inline-flex;
+  align-items:center;
+  gap:8px;
   padding:10px 15px;
   border-radius:999px;
   color:var(--cyan);
@@ -162,21 +198,26 @@ header{
 }
 
 h1{
-  font-size:clamp(40px,6vw,78px);
-  line-height:.94;
-  letter-spacing:-2.5px;
-  margin:0 0 18px;
+  font-size:clamp(40px,6.2vw,82px);
+  line-height:.92;
+  letter-spacing:-2.8px;
+  margin:0 0 20px;
 }
 
 h1 span{
-  color:var(--green);
+  display:block;
+  background:linear-gradient(135deg,var(--cyan),var(--green),var(--gold));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
 .hero-text{
   max-width:720px;
   font-size:18px;
-  line-height:1.72;
+  line-height:1.75;
   color:var(--muted);
+  margin:0;
 }
 
 .hero-text strong{color:white}
@@ -197,6 +238,7 @@ h1 span{
   border-radius:17px;
   font-weight:900;
   text-decoration:none;
+  transition:.22s ease;
 }
 
 .btn-wow{
@@ -211,65 +253,21 @@ h1 span{
   border:1px solid var(--border);
 }
 
-.review-card{
-  position:relative;
-  overflow:hidden;
-  border-radius:34px;
-  padding:30px;
-  background:
-    radial-gradient(circle at top right,rgba(255,211,110,.25),transparent 42%),
-    linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.06));
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-
-.review-card .stars{
-  font-size:30px;
-  color:var(--gold);
-  letter-spacing:2px;
-}
-
-.review-score{
-  display:flex;
-  align-items:flex-end;
-  gap:14px;
-  margin:14px 0 8px;
-}
-
-.review-score strong{
-  font-size:72px;
-  line-height:.85;
-}
-
-.review-score span{
-  font-size:24px;
-  font-weight:900;
-  color:var(--muted);
-}
-
-.review-card h2{
-  margin:0 0 10px;
-  font-size:28px;
-}
-
-.review-card p{
-  color:var(--muted);
-  line-height:1.65;
-  margin:0;
-}
+.btn-wow:hover,.btn-soft:hover{transform:translateY(-3px)}
 
 .quick-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:16px;
-  margin-top:30px;
+  gap:12px;
+  margin-top:28px;
 }
 
 .quick-card{
-  padding:18px;
-  border-radius:24px;
+  padding:16px;
+  border-radius:22px;
   background:rgba(255,255,255,.08);
   border:1px solid rgba(255,255,255,.11);
+  backdrop-filter:blur(12px);
 }
 
 .quick-card strong{
@@ -285,13 +283,107 @@ h1 span{
   line-height:1.45;
 }
 
+/* REVIEW */
+
+.review-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:36px;
+  padding:32px;
+  background:
+    radial-gradient(circle at top right,rgba(255,211,110,.28),transparent 42%),
+    linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.06));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(18px);
+}
+
+.review-card::before{
+  content:"";
+  position:absolute;
+  inset:-80px -80px auto auto;
+  width:220px;
+  height:220px;
+  background:radial-gradient(circle,rgba(255,211,110,.34),transparent 70%);
+}
+
+.stars{
+  position:relative;
+  font-size:32px;
+  color:var(--gold);
+  letter-spacing:2px;
+}
+
+.review-score{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  gap:14px;
+  margin:16px 0 8px;
+}
+
+.review-score strong{
+  font-size:78px;
+  line-height:.85;
+  letter-spacing:-3px;
+}
+
+.review-score span{
+  font-size:25px;
+  font-weight:900;
+  color:var(--muted);
+}
+
+.review-card h2{
+  position:relative;
+  margin:0 0 10px;
+  font-size:30px;
+}
+
+.review-card p{
+  position:relative;
+  color:var(--muted);
+  line-height:1.68;
+  margin:0;
+}
+
+.review-badges{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:22px;
+}
+
+.review-badges div{
+  padding:14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.review-badges strong{
+  display:block;
+  color:white;
+  font-size:18px;
+}
+
+.review-badges span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
+
+/* SECTIONS */
+
 .section{
-  padding:56px 0;
+  padding:58px 0;
 }
 
 .section-title{
   text-align:center;
-  max-width:760px;
+  max-width:780px;
   margin:0 auto 34px;
 }
 
@@ -301,21 +393,24 @@ h1 span{
   border-radius:999px;
   color:#04121b;
   background:linear-gradient(135deg,var(--cyan),var(--green));
-  font-weight:900;
   font-size:12px;
+  font-weight:900;
   text-transform:uppercase;
 }
 
 .section-title h2{
-  font-size:clamp(30px,4.5vw,54px);
+  font-size:clamp(30px,4.7vw,56px);
   line-height:1;
   margin:16px 0 12px;
+  letter-spacing:-1.4px;
 }
 
 .section-title p{
   color:var(--muted);
   line-height:1.7;
 }
+
+/* CONTACT INFOS */
 
 .contact-main{
   display:grid;
@@ -324,9 +419,11 @@ h1 span{
 }
 
 .hours-box,.address-box{
-  border-radius:34px;
+  border-radius:36px;
   padding:30px;
-  background:rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at top left,rgba(25,183,255,.16),transparent 35%),
+    rgba(255,255,255,.08);
   border:1px solid var(--border);
   box-shadow:var(--shadow);
 }
@@ -334,6 +431,7 @@ h1 span{
 .hours-box h3,.address-box h3{
   font-size:34px;
   margin:0 0 18px;
+  letter-spacing:-.8px;
 }
 
 .hours-line{
@@ -364,13 +462,28 @@ h1 span{
   background:rgba(0,0,0,.15);
 }
 
+.address-photo{
+  height:190px;
+  border-radius:24px;
+  overflow:hidden;
+  margin-bottom:16px;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.address-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
 .address-list{
   display:grid;
   gap:12px;
 }
 
 .address-item{
-  padding:17px;
+  padding:16px;
   border-radius:20px;
   background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.1);
@@ -388,9 +501,11 @@ h1 span{
   line-height:1.5;
 }
 
+/* MAP */
+
 .map-wrap{
   overflow:hidden;
-  border-radius:36px;
+  border-radius:38px;
   border:1px solid var(--border);
   box-shadow:var(--shadow);
   background:rgba(255,255,255,.08);
@@ -398,10 +513,12 @@ h1 span{
 
 .map-wrap iframe{
   width:100%;
-  height:420px;
+  height:440px;
   border:0;
   display:block;
 }
+
+/* WHY */
 
 .why-grid{
   display:grid;
@@ -410,15 +527,24 @@ h1 span{
 }
 
 .why-card{
-  min-height:190px;
+  min-height:200px;
   padding:22px;
-  border-radius:28px;
-  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
+  border-radius:30px;
+  background:
+    radial-gradient(circle at top right,rgba(25,183,255,.16),transparent 42%),
+    linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
   border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 16px 46px rgba(0,0,0,.18);
+}
+
+.why-card.gold{
+  background:
+    radial-gradient(circle at top right,rgba(255,211,110,.25),transparent 42%),
+    linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.055));
 }
 
 .why-card .icon{
-  font-size:34px;
+  font-size:36px;
   margin-bottom:16px;
 }
 
@@ -431,59 +557,78 @@ h1 span{
   margin:0;
   color:var(--muted);
   font-size:14px;
-  line-height:1.55;
+  line-height:1.56;
 }
+
+/* NEARBY */
 
 .nearby-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  gap:18px;
 }
 
 .nearby-card{
   display:block;
-  min-height:170px;
-  padding:22px;
-  border-radius:28px;
+  overflow:hidden;
+  border-radius:30px;
   text-decoration:none;
   color:white;
-  background:
-    radial-gradient(circle at top right,rgba(25,183,255,.18),transparent 42%),
-    linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
   border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 16px 46px rgba(0,0,0,.18);
   transition:.22s ease;
 }
 
 .nearby-card:hover{
-  transform:translateY(-4px);
+  transform:translateY(-5px);
+  border-color:rgba(110,231,255,.32);
 }
 
-.nearby-card .icon{
-  font-size:34px;
-  margin-bottom:16px;
+.nearby-img{
+  height:160px;
+  overflow:hidden;
 }
 
-.nearby-card strong{
+.nearby-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:.35s ease;
+}
+
+.nearby-card:hover img{
+  transform:scale(1.05);
+}
+
+.nearby-content{
+  padding:20px;
+}
+
+.nearby-content strong{
   display:block;
   font-size:19px;
   margin-bottom:7px;
 }
 
-.nearby-card span{
+.nearby-content span{
   display:block;
   color:var(--muted);
   font-size:14px;
   line-height:1.45;
 }
 
+/* FINAL */
+
 .final{
-  padding:20px 0 80px;
+  padding:22px 0 84px;
 }
 
 .final-card{
   text-align:center;
-  border-radius:40px;
-  padding:46px 28px;
+  border-radius:42px;
+  padding:50px 28px;
   background:
     radial-gradient(circle at top,rgba(25,183,255,.28),transparent 45%),
     radial-gradient(circle at bottom right,rgba(109,255,183,.18),transparent 40%),
@@ -493,16 +638,17 @@ h1 span{
 }
 
 .final-card h2{
-  font-size:clamp(32px,5vw,60px);
-  line-height:.98;
+  font-size:clamp(34px,5vw,62px);
+  line-height:.96;
   margin:16px 0;
+  letter-spacing:-1.8px;
 }
 
 .final-card p{
-  max-width:760px;
-  margin:0 auto 26px;
+  max-width:780px;
+  margin:0 auto 28px;
   color:var(--muted);
-  line-height:1.7;
+  line-height:1.72;
 }
 
 footer{
@@ -520,9 +666,7 @@ footer{
   font-size:13px;
 }
 
-.mobile-actions{
-  display:none;
-}
+/* MOBILE */
 
 @media(max-width:980px){
   .menu{display:none}
@@ -538,9 +682,10 @@ footer{
     gap:8px;
     padding:8px;
     border-radius:22px;
-    background:rgba(6,19,29,.86);
+    background:rgba(6,19,29,.88);
     border:1px solid rgba(255,255,255,.13);
     backdrop-filter:blur(18px);
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
   }
 
   .mobile-actions a{
@@ -556,32 +701,44 @@ footer{
     background:linear-gradient(135deg,var(--cyan),var(--green));
   }
 
+  .contact-hero{
+    min-height:auto;
+    padding:64px 0 42px;
+  }
+
   .hero-grid,
   .contact-main{
     grid-template-columns:1fr;
   }
 
   .quick-grid,
-  .why-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
+  .why-grid,
   .nearby-grid{
     grid-template-columns:1fr 1fr;
   }
 }
 
 @media(max-width:640px){
-  .container{
-    width:min(100% - 24px,1180px);
+  .container{width:min(100% - 24px,1180px)}
+
+  .top{
+    font-size:11px;
+    line-height:1.45;
   }
 
-  .contact-hero{
-    padding:62px 0 34px;
+  .nav{min-height:68px}
+
+  .logo-mark{
+    width:40px;
+    height:40px;
   }
 
   h1{
     letter-spacing:-1.4px;
+  }
+
+  .hero-text{
+    font-size:16px;
   }
 
   .hero-actions a{
@@ -590,8 +747,13 @@ footer{
 
   .quick-grid,
   .why-grid,
-  .nearby-grid{
+  .nearby-grid,
+  .review-badges{
     grid-template-columns:1fr;
+  }
+
+  .review-score strong{
+    font-size:62px;
   }
 
   .hours-line{
@@ -603,16 +765,24 @@ footer{
     text-align:left;
   }
 
-  .review-score strong{
-    font-size:60px;
-  }
-
   .hours-box,
   .address-box,
   .review-card,
   .final-card{
     border-radius:28px;
     padding:22px;
+  }
+
+  .map-wrap{
+    border-radius:28px;
+  }
+
+  .map-wrap iframe{
+    height:360px;
+  }
+
+  .nearby-img{
+    height:180px;
   }
 
   .footer-inner{
@@ -661,8 +831,9 @@ footer{
 <main>
 
 <section class="contact-hero">
-  <div class="container hero-grid">
+  <div class="hero-glow"></div>
 
+  <div class="container hero-grid">
     <div>
       <div class="kicker">📍 Contact · Horaires · Accès boutique</div>
 
@@ -672,9 +843,11 @@ footer{
       </h1>
 
       <p class="hero-text">
-        Retrouvez STOOM Clermont-Ferrand au <strong>109 avenue Édouard Michelin</strong>,
-        avec un accès simple, un parking facile et des horaires pensés pour les clients actifs :
-        <strong>ouverture dès 8h30</strong> et journée <strong>non-stop jusqu’à 19h</strong>.
+        Retrouvez <strong>STOOM Clermont-Ferrand</strong> au
+        <strong>109 avenue Édouard Michelin</strong>, avec un accès simple,
+        un parking facile et des horaires pensés pour les clients actifs :
+        <strong>ouverture dès 8h30</strong> et journée
+        <strong>non-stop jusqu’à 19h</strong>.
       </p>
 
       <div class="hero-actions">
@@ -705,11 +878,21 @@ footer{
         Des centaines d’avis pour une boutique locale, accessible et reconnue à Clermont-Ferrand.
       </p>
 
+      <div class="review-badges">
+        <div>
+          <strong>650+</strong>
+          <span>avis clients</span>
+        </div>
+        <div>
+          <strong>4,9/5</strong>
+          <span>note moyenne</span>
+        </div>
+      </div>
+
       <div class="hero-actions">
         <a class="btn-wow" href="https://www.google.com/search?q=STOOM+Clermont-Ferrand+avis" target="_blank" rel="noopener">Voir les avis Google</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -746,6 +929,10 @@ footer{
       </div>
 
       <div class="address-box">
+        <div class="address-photo">
+          <img src="assets/images/boutique-interieur.webp" alt="Intérieur de la boutique STOOM Clermont-Ferrand" loading="lazy">
+        </div>
+
         <h3>Nous trouver</h3>
 
         <div class="address-list">
@@ -819,7 +1006,7 @@ footer{
         <p>Ouvert en continu jusqu’à 19h.</p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card gold">
         <div class="icon">⭐</div>
         <h3>650 avis Google</h3>
         <p>Une note de 4,9/5 et une vraie reconnaissance locale.</p>
@@ -843,39 +1030,63 @@ footer{
     <div class="nearby-grid">
 
       <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Picard%20133%20Rue%20Anatole%20France%2063000%20Clermont-Ferrand" target="_blank" rel="noopener">
-        <div class="icon">❄️</div>
-        <strong>Picard</strong>
-        <span>Courses alimentaires à proximité.</span>
+        <div class="nearby-img">
+          <img src="assets/images/picard.webp" alt="Picard Clermont-Ferrand à proximité de STOOM" loading="lazy">
+        </div>
+        <div class="nearby-content">
+          <strong>Picard</strong>
+          <span>Courses alimentaires à proximité.</span>
+        </div>
       </a>
 
       <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=CDV%20Le%20Coteau%20des%20Vignes%20109%20Avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">
-        <div class="icon">🍷</div>
-        <strong>CDV - Le Coteau des Vignes</strong>
-        <span>Caviste juste à côté de la boutique.</span>
+        <div class="nearby-img">
+          <img src="assets/images/cdv.webp" alt="CDV Le Coteau des Vignes proche de STOOM Clermont-Ferrand" loading="lazy">
+        </div>
+        <div class="nearby-content">
+          <strong>CDV - Le Coteau des Vignes</strong>
+          <span>Caviste juste à côté de la boutique.</span>
+        </div>
       </a>
 
       <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Pharmacie%20de%20la%20Colonne%20133%20Rue%20Anatole%20France%2063000%20Clermont-Ferrand" target="_blank" rel="noopener">
-        <div class="icon">💊</div>
-        <strong>Pharmacie de la Colonne</strong>
-        <span>Pratique pour regrouper vos achats santé.</span>
+        <div class="nearby-img">
+          <img src="assets/images/pharmacie.webp" alt="Pharmacie de la Colonne proche de STOOM Clermont-Ferrand" loading="lazy">
+        </div>
+        <div class="nearby-content">
+          <strong>Pharmacie de la Colonne</strong>
+          <span>Pratique pour regrouper vos achats santé.</span>
+        </div>
       </a>
 
       <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Shine%20Coiffeurs%20Clermont-Ferrand%20133%20Rue%20Anatole%20France" target="_blank" rel="noopener">
-        <div class="icon">✂️</div>
-        <strong>Shine Coiffeurs</strong>
-        <span>Salon de coiffure dans la même zone.</span>
+        <div class="nearby-img">
+          <img src="assets/images/shine.webp" alt="Shine Coiffeurs proche de STOOM Clermont-Ferrand" loading="lazy">
+        </div>
+        <div class="nearby-content">
+          <strong>Shine Coiffeurs</strong>
+          <span>Salon de coiffure dans la même zone.</span>
+        </div>
       </a>
 
       <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=DUCHER%20Restaurant%20133%20Rue%20Anatole%20France%2063000%20Clermont-Ferrand" target="_blank" rel="noopener">
-        <div class="icon">🍽️</div>
-        <strong>DUCHER Restaurant</strong>
-        <span>Pause déjeuner ou repas après votre passage.</span>
+        <div class="nearby-img">
+          <img src="assets/images/ducher.webp" alt="Restaurant Ducher proche de STOOM Clermont-Ferrand" loading="lazy">
+        </div>
+        <div class="nearby-content">
+          <strong>DUCHER Restaurant</strong>
+          <span>Pause déjeuner ou repas après votre passage.</span>
+        </div>
       </a>
 
       <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=BestDrive%205%20Rue%20du%20Charolais%2063000%20Clermont-Ferrand" target="_blank" rel="noopener">
-        <div class="icon">🚗</div>
-        <strong>BestDrive</strong>
-        <span>Garage et entretien automobile à proximité.</span>
+        <div class="nearby-img">
+          <img src="assets/images/bestdrive.webp" alt="BestDrive proche de STOOM Clermont-Ferrand" loading="lazy">
+        </div>
+        <div class="nearby-content">
+          <strong>BestDrive</strong>
+          <span>Garage et entretien automobile à proximité.</span>
+        </div>
       </a>
 
     </div>
