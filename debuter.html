@@ -1,9 +1,535 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Débuter la vape | STOOM Clermont-Ferrand</title><meta name="description" content="Conseils pour débuter la cigarette électronique avec STOOM Clermont-Ferrand."><meta name="theme-color" content="#06131d">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Débuter la vape | STOOM Clermont-Ferrand</title>
+<meta name="description" content="Débuter la cigarette électronique avec STOOM Clermont-Ferrand : méthode, dosage, matériel et accompagnement personnalisé.">
+<meta name="theme-color" content="#06131d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+:root{
+  --bg:#06131d;
+  --bg2:#0b2233;
+  --blue:#19b7ff;
+  --cyan:#6ee7ff;
+  --green:#6dffb7;
+  --text:#f4fbff;
+  --muted:#b8cad6;
+  --card:rgba(255,255,255,.08);
+  --border:rgba(255,255,255,.14);
+}
+
+body{
+  background:
+    radial-gradient(circle at top left, rgba(25,183,255,.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(109,255,183,.18), transparent 35%),
+    linear-gradient(180deg,#06131d,#081923 55%,#06131d);
+  color:var(--text);
+  font-family:Montserrat,sans-serif;
+}
+
+.start-hero{
+  position:relative;
+  overflow:hidden;
+  padding:80px 0 55px;
+}
+
+.start-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(6,19,29,.92),rgba(6,19,29,.55)),
+    url("assets/images/debuter-hero.jpg") center/cover no-repeat;
+  z-index:-2;
+}
+
+.start-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto -20% -35% -20%;
+  height:260px;
+  background:radial-gradient(circle,rgba(25,183,255,.35),transparent 65%);
+  filter:blur(40px);
+  z-index:-1;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:34px;
+  align-items:center;
+}
+
+.hero-kicker{
+  display:inline-flex;
+  padding:9px 14px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+  font-weight:800;
+  color:var(--cyan);
+  margin-bottom:18px;
+}
+
+.start-hero h1{
+  font-size:clamp(38px,6vw,76px);
+  line-height:.95;
+  margin:0 0 18px;
+  letter-spacing:-2px;
+}
+
+.start-hero h1 span{
+  color:var(--blue);
+}
+
+.start-hero p{
+  max-width:680px;
+  font-size:18px;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn-wow{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 22px;
+  border-radius:16px;
+  font-weight:900;
+  text-decoration:none;
+  color:#04121b;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  box-shadow:0 18px 40px rgba(25,183,255,.25);
+}
+
+.btn-soft{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 22px;
+  border-radius:16px;
+  font-weight:800;
+  text-decoration:none;
+  color:var(--text);
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+
+.diagnostic-box{
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(18px);
+  border-radius:30px;
+  padding:26px;
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
+}
+
+.diagnostic-box h2{
+  margin:0 0 16px;
+  font-size:24px;
+}
+
+.check-list{
+  display:grid;
+  gap:12px;
+}
+
+.check-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.check-item strong{
+  display:block;
+  color:white;
+}
+
+.check-item span{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.method-section{
+  padding:55px 0;
+}
+
+.method-title{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 36px;
+}
+
+.method-title h2{
+  font-size:clamp(30px,4vw,48px);
+  margin:0 0 12px;
+}
+
+.method-title p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.steps-wow{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.step-wow{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.05));
+  border-radius:26px;
+  padding:24px;
+  min-height:230px;
+  box-shadow:0 18px 50px rgba(0,0,0,.18);
+}
+
+.step-wow::before{
+  content:"";
+  position:absolute;
+  right:-40px;
+  top:-40px;
+  width:120px;
+  height:120px;
+  background:radial-gradient(circle,rgba(25,183,255,.38),transparent 70%);
+}
+
+.step-number{
+  width:48px;
+  height:48px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font-size:22px;
+  font-weight:900;
+  color:#04121b;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  margin-bottom:18px;
+}
+
+.step-wow h3{
+  margin:0 0 10px;
+  font-size:20px;
+}
+
+.step-wow p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.55;
+  font-size:15px;
+}
+
+.dosage-panel{
+  margin-top:40px;
+  border-radius:34px;
+  border:1px solid var(--border);
+  background:
+    linear-gradient(135deg,rgba(25,183,255,.16),rgba(109,255,183,.08)),
+    rgba(255,255,255,.07);
+  padding:30px;
+}
+
+.dosage-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:center;
+}
+
+.dosage-panel h2{
+  font-size:34px;
+  margin:0 0 12px;
+}
+
+.dosage-panel p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.dosage-list{
+  display:grid;
+  gap:12px;
+}
+
+.dosage-line{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:15px 17px;
+  border-radius:18px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.dosage-line strong{
+  color:#fff;
+}
+
+.dosage-line span{
+  color:var(--cyan);
+  font-weight:900;
+}
+
+.warning-box{
+  margin-top:22px;
+  padding:18px;
+  border-radius:22px;
+  background:rgba(255,255,255,.08);
+  border:1px dashed rgba(110,231,255,.45);
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.start-final{
+  padding:60px 0 80px;
+}
+
+.final-card{
+  text-align:center;
+  border-radius:36px;
+  padding:40px 26px;
+  background:
+    radial-gradient(circle at top,rgba(25,183,255,.25),transparent 45%),
+    rgba(255,255,255,.08);
+  border:1px solid var(--border);
+}
+
+.final-card h2{
+  font-size:clamp(30px,4vw,52px);
+  margin:0 0 14px;
+}
+
+.final-card p{
+  max-width:720px;
+  margin:0 auto 26px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+@media(max-width:900px){
+  .hero-grid,
+  .dosage-grid{
+    grid-template-columns:1fr;
+  }
+
+  .steps-wow{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .start-hero{
+    padding:62px 0 42px;
+  }
+
+  .diagnostic-box{
+    border-radius:24px;
+  }
+}
+
+@media(max-width:620px){
+  .steps-wow{
+    grid-template-columns:1fr;
+  }
+
+  .start-hero h1{
+    letter-spacing:-1px;
+  }
+
+  .hero-actions a{
+    width:100%;
+  }
+
+  .dosage-line{
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .dosage-panel{
+    padding:22px;
+    border-radius:26px;
+  }
+}
+</style>
+</head>
+
 <body data-page="start">
+
 <div class="top">STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne</div>
-<header><div class="container nav"><a href="index.html" class="logo"><div class="logo-mark">S</div><div><strong>STOOM</strong><span>Clermont-Ferrand</span></div></a><nav class="menu"><a href="nouveautes.html" class="">Nouveautés</a><a href="economies.html" class="">Économies</a><a href="diy.html" class="">DIY</a><a href="concours.html" class="">Concours</a><a href="debuter.html" class="active">Débuter</a><a href="contact.html" class="">Contact</a><a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a></nav></div></header>
-<div class="mobile-actions"><a href="tel:0473273394">Appeler</a><a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a></div>
-<main><section><div class="container"><div class="section-head"><div><span class="badge">Méthode STOOM</span><h2>Débuter sérieusement</h2></div><p>Arrêter ou réduire le tabac ne se résume pas à acheter un kit. Il faut une logique, un dosage et un accompagnement.</p></div><div class="grid4"><div class="card"><div class="card-icon">1</div><h3>Profil fumeur</h3><p>Nombre de cigarettes, habitudes, moments importants et tentatives précédentes.</p></div><div class="card"><div class="card-icon">2</div><h3>Matériel simple</h3><p>Un pod ou kit adapté, sans puissance excessive, pour une transition confortable.</p></div><div class="card"><div class="card-icon">3</div><h3>Bon dosage</h3><p>Éviter le manque, le hit trop fort et la rechute avec un taux cohérent.</p></div><div class="card"><div class="card-icon">4</div><h3>Suivi</h3><p>Ajustement du liquide, résistance, tirage et conseils après l'achat.</p></div></div></div></section></main><footer><div class="container footer-inner"><span>© STOOM Clermont-Ferrand</span><span>Conseil en boutique · Pas de vente en ligne</span></div></footer><script src="assets/app.js"></script></body></html>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div><strong>STOOM</strong><span>Clermont-Ferrand</span></div>
+    </a>
+
+    <nav class="menu">
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="economies.html">Économies</a>
+      <a href="diy.html">DIY</a>
+      <a href="concours.html">Concours</a>
+      <a href="debuter.html" class="active">Débuter</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-actions">
+  <a href="tel:0473273394">Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+<main>
+
+<section class="start-hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-kicker">Méthode STOOM · Conseil en boutique</div>
+      <h1>Débuter la vape, <span>sans se tromper.</span></h1>
+      <p>
+        Arrêter ou réduire le tabac ne se résume pas à acheter une cigarette électronique.
+        Chez STOOM, on part de votre profil fumeur pour choisir le bon matériel,
+        le bon dosage et une transition confortable.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-wow" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Venir en boutique</a>
+        <a class="btn-soft" href="tel:0473273394">Appeler STOOM</a>
+      </div>
+    </div>
+
+    <div class="diagnostic-box">
+      <h2>On commence par vous.</h2>
+      <div class="check-list">
+        <div class="check-item">
+          <div>🚬</div>
+          <div><strong>Votre consommation</strong><span>Nombre de cigarettes, moments clés, habitudes.</span></div>
+        </div>
+        <div class="check-item">
+          <div>⚡</div>
+          <div><strong>Votre besoin en nicotine</strong><span>Éviter le manque, le hit trop fort et la rechute.</span></div>
+        </div>
+        <div class="check-item">
+          <div>💨</div>
+          <div><strong>Votre tirage</strong><span>Serré, doux, simple et adapté à votre façon de fumer.</span></div>
+        </div>
+        <div class="check-item">
+          <div>🤝</div>
+          <div><strong>Votre suivi</strong><span>On ajuste après l’achat si besoin.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="method-section">
+  <div class="container">
+    <div class="method-title">
+      <span class="badge">Notre méthode</span>
+      <h2>Une transition en 4 étapes</h2>
+      <p>Le bon départ, c’est celui qui évite la frustration. On choisit un matériel simple, un liquide cohérent et un dosage réaliste.</p>
+    </div>
+
+    <div class="steps-wow">
+      <div class="step-wow">
+        <div class="step-number">1</div>
+        <h3>Profil fumeur</h3>
+        <p>On regarde votre consommation, vos cigarettes habituelles, les moments importants et vos anciennes tentatives.</p>
+      </div>
+
+      <div class="step-wow">
+        <div class="step-number">2</div>
+        <h3>Matériel simple</h3>
+        <p>Un pod ou un kit facile, sans réglage compliqué, avec un tirage proche de la cigarette.</p>
+      </div>
+
+      <div class="step-wow">
+        <div class="step-number">3</div>
+        <h3>Bon dosage</h3>
+        <p>La nicotine est adaptée à votre besoin pour limiter le manque et sécuriser la transition.</p>
+      </div>
+
+      <div class="step-wow">
+        <div class="step-number">4</div>
+        <h3>Suivi boutique</h3>
+        <p>Résistance, liquide, puissance, sensation : on ajuste avec vous après l’achat.</p>
+      </div>
+    </div>
+
+    <div class="dosage-panel">
+      <div class="dosage-grid">
+        <div>
+          <h2>Le dosage change tout.</h2>
+          <p>
+            Trop faible, vous risquez d’avoir envie de refumer.
+            Trop fort avec un matériel puissant, le hit peut devenir désagréable.
+            L’objectif : trouver le bon équilibre.
+          </p>
+
+          <div class="warning-box">
+            Plus le taux de nicotine est élevé, plus le matériel doit rester doux et peu puissant.
+            Plus le taux est faible, plus le matériel peut être puissant.
+          </div>
+        </div>
+
+        <div class="dosage-list">
+          <div class="dosage-line"><strong>5 à 10 cigarettes / jour</strong><span>3 mg ou 6 mg</span></div>
+          <div class="dosage-line"><strong>10 à 15 cigarettes / jour</strong><span>6 mg ou 12 mg</span></div>
+          <div class="dosage-line"><strong>15 à 20 cigarettes / jour</strong><span>10 mg sel de nicotine</span></div>
+          <div class="dosage-line"><strong>25+ cigarettes / jour</strong><span>20 mg sel de nicotine</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="start-final">
+  <div class="container">
+    <div class="final-card">
+      <span class="badge">Pas de vente en ligne</span>
+      <h2>Le conseil se fait en boutique.</h2>
+      <p>
+        STOOM Clermont-Ferrand privilégie l’accompagnement humain :
+        comprendre votre besoin, vous équiper correctement et vous aider à tenir dans le temps.
+      </p>
+      <a class="btn-wow" href="contact.html">Voir les horaires et l’adresse</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© STOOM Clermont-Ferrand</span>
+    <span>Conseil en boutique · Pas de vente en ligne</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
