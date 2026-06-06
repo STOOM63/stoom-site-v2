@@ -1,0 +1,42 @@
+[
+  {
+    "nom": "Cebueno",
+    "saveurs": "Crème chocolatée, noisette",
+    "description": "Une recette gourmande inspirée d'une célèbre pâte à tartiner.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/cebueno-50ml.webp"
+  },
+  {
+    "nom": "Dubai Choco Vape",
+    "saveurs": "Chocolat Dubaï, pistache",
+    "description": "Une recette inspirée de la célèbre tablette Dubaï, associant chocolat fondant et pistache gourmande.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/dubaichocovape-50ml.webp"
+  },
+  {
+    "nom": "Dubai Choco Vape White",
+    "saveurs": "Chocolat blanc, pistache",
+    "description": "Une interprétation douce et crémeuse du chocolat Dubaï avec une généreuse note de pistache.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/dubaichocovapewhite-50ml.webp"
+  },
+  {
+    "nom": "Rocher",
+    "saveurs": "Chocolat, noisette",
+    "description": "Une recette inspirée d'une célèbre confiserie chocolat-noisette.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/rocher-50ml.webp"
+  },
+  {
+    "nom": "Vapoff",
+    "saveurs": "Créme de speculoos",
+    "description": "Une recette chaleureuse aux notes de cannelle et de gourmandise.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/vapoff-50ml.webp"
+  }
+]
