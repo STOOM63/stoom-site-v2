@@ -14,21 +14,9 @@
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
-html,body{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-  background:#06131d;
-}
-
-body{
-  color:white;
-  -webkit-text-size-adjust:100%;
-}
-
-*{
-  box-sizing:border-box;
-}
+html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
+body{color:white;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
 
 .diy-hero{
   position:relative;
@@ -42,18 +30,6 @@ body{
     linear-gradient(135deg,#06131d 0%,#082231 52%,#06131d 100%);
   border-bottom:1px solid rgba(142,234,255,.18);
 }
-
-.diy-hero:before{
-  content:"";
-  position:absolute;
-  inset:-80px;
-  background:
-    linear-gradient(115deg,transparent 0%,rgba(255,255,255,.06) 45%,transparent 58%),
-    radial-gradient(circle at center,rgba(142,234,255,.12),transparent 36%);
-  transform:rotate(-8deg);
-  pointer-events:none;
-}
-
 .diy-hero:after{
   content:"DIY";
   position:absolute;
@@ -66,29 +42,15 @@ body{
   line-height:.8;
   pointer-events:none;
 }
-
-.diy-hero-inner{
-  position:relative;
-  z-index:2;
-  width:100%;
-  padding:54px 0;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:26px;
-  align-items:center;
-}
-
-.hero-copy{
-  padding:30px;
+.diy-hero-inner{position:relative;z-index:2;width:100%;padding:54px 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}
+.hero-copy,.lab-card,.diy-panel,.diy-intro,.choice-card{
   border-radius:34px;
   background:rgba(255,255,255,.055);
   border:1px solid rgba(142,234,255,.18);
   box-shadow:0 22px 80px rgba(0,0,0,.26);
 }
-
+.hero-copy{padding:30px}
 .hero-copy h1{
   margin:14px 0 18px;
   color:white;
@@ -97,25 +59,13 @@ body{
   line-height:.9;
   letter-spacing:-2px;
 }
-
-.hero-copy h1 span{
-  color:var(--cyan);
-}
-
-.hero-copy p{
+.hero-copy h1 span,.diy-intro h2 span,.section-head h2 span,.choice-card h3 span,.punchline h2 span{color:var(--cyan)}
+.hero-copy p,.diy-intro p,.diy-panel p,.section-head p,.choice-card p,.choice-card li{
   color:#c5e2ee;
   line-height:1.7;
-  font-weight:700;
-  max-width:760px;
+  font-weight:650;
 }
-
-.hero-pills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:22px;
-}
-
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .hero-pill{
   padding:10px 13px;
   border-radius:999px;
@@ -130,31 +80,14 @@ body{
 .lab-card{
   position:relative;
   overflow:hidden;
-  border-radius:34px;
   min-height:330px;
   padding:28px;
   background:
     radial-gradient(circle at 50% 20%,rgba(53,185,238,.30),transparent 38%),
     linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.045));
-  border:1px solid rgba(142,234,255,.24);
-  box-shadow:0 22px 80px rgba(0,0,0,.28);
 }
-
-.lab-card:before{
-  content:"";
-  position:absolute;
-  width:240px;
-  height:240px;
-  border-radius:50%;
-  right:-60px;
-  top:-60px;
-  background:rgba(142,234,255,.12);
-  border:1px solid rgba(142,234,255,.18);
-}
-
 .lab-bottle{
   position:relative;
-  z-index:2;
   width:138px;
   height:245px;
   margin:10px auto 18px;
@@ -165,7 +98,6 @@ body{
   border:1px solid rgba(216,245,255,.40);
   box-shadow:0 24px 60px rgba(53,185,238,.20);
 }
-
 .lab-bottle:before{
   content:"";
   position:absolute;
@@ -175,9 +107,7 @@ body{
   height:42px;
   border-radius:16px 16px 8px 8px;
   background:#d8f5ff;
-  box-shadow:0 0 32px rgba(142,234,255,.22);
 }
-
 .lab-bottle:after{
   content:"STOOM\A DIY";
   white-space:pre;
@@ -188,129 +118,49 @@ body{
   padding:18px 8px;
   border-radius:18px;
   background:rgba(6,19,29,.78);
-  color:white;
   text-align:center;
   font-weight:900;
-  letter-spacing:.8px;
-  line-height:1.05;
 }
+.lab-caption{text-align:center}
+.lab-caption b{display:block;color:var(--cyan);font-size:1.9rem;font-weight:900}
+.lab-caption span{display:block;margin-top:8px;color:#c5e2ee;font-weight:800}
 
-.lab-caption{
-  position:relative;
-  z-index:2;
-  text-align:center;
-}
-
-.lab-caption b{
-  display:block;
-  color:var(--cyan);
-  font-size:1.9rem;
-  font-weight:900;
-  line-height:1;
-}
-
-.lab-caption span{
-  display:block;
-  margin-top:8px;
-  color:#c5e2ee;
-  font-weight:800;
-}
-
-.diy-section{
-  background:#06131d;
-  padding:46px 0 80px;
-}
-
+.diy-section{background:#06131d;padding:46px 0 80px}
 .diy-intro{
   text-align:center;
   margin-bottom:28px;
   padding:28px;
-  border-radius:32px;
   background:
     radial-gradient(circle at 50% 0%,rgba(53,185,238,.20),transparent 36%),
     rgba(255,255,255,.055);
-  border:1px solid rgba(142,234,255,.18);
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
 }
-
-.diy-intro h2{
-  margin:12px 0 14px;
+.diy-intro h2,.section-head h2,.punchline h2{
   color:white;
   text-transform:uppercase;
   font-size:clamp(2.1rem,5vw,4.2rem);
   line-height:.95;
   letter-spacing:-1.5px;
+  margin:14px 0;
 }
-
-.diy-intro h2 span{
-  color:var(--cyan);
-}
-
-.diy-intro p{
-  color:#c5e2ee;
-  line-height:1.7;
-  font-weight:700;
-  max-width:900px;
-  margin:auto;
-}
-
-.diy-layout{
-  display:grid;
-  grid-template-columns:.95fr 1.05fr;
-  gap:22px;
-  align-items:start;
-}
-
-.diy-panel{
-  border-radius:30px;
-  padding:28px;
-  background:rgba(255,255,255,.065);
-  border:1px solid rgba(142,234,255,.16);
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
-}
-
-.diy-panel h2,
-.diy-panel h3{
+.diy-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px;align-items:start}
+.diy-panel{padding:28px}
+.diy-panel h2,.diy-panel h3{
   color:white;
   text-transform:uppercase;
   line-height:1;
   margin:12px 0 16px;
 }
-
-.diy-panel h2{
-  font-size:2.15rem;
-}
-
-.diy-panel h3{
-  font-size:1.45rem;
-}
-
-.diy-panel p{
-  color:#c5e2ee;
-  line-height:1.65;
-  font-weight:650;
-}
-
-.diy-fields{
-  display:grid;
-  gap:16px;
-  margin-top:22px;
-}
-
-.field{
-  display:grid;
-  gap:8px;
-}
-
+.diy-panel h2{font-size:2.15rem}
+.diy-fields{display:grid;gap:16px;margin-top:22px}
+.two-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:grid;gap:8px}
 .field label{
   color:#d8f5ff;
   text-transform:uppercase;
   font-weight:900;
   font-size:.76rem;
 }
-
-.field input,
-.field select{
+.field input,.field select{
   width:100%;
   min-height:56px;
   border-radius:16px;
@@ -324,50 +174,16 @@ body{
   -webkit-appearance:none;
   appearance:none;
 }
-
-.field input:focus,
-.field select:focus{
-  border-color:rgba(142,234,255,.55);
-  box-shadow:0 0 0 4px rgba(53,185,238,.12);
-}
-
-.two-cols{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-
 .range-wrap{
   padding:16px;
   border-radius:22px;
   background:rgba(142,234,255,.08);
   border:1px solid rgba(142,234,255,.16);
 }
-
-.range-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  margin-bottom:12px;
-}
-
-.range-head span{
-  color:#d8f5ff;
-  text-transform:uppercase;
-  font-weight:900;
-  font-size:.78rem;
-}
-
-.range-head b{
-  color:var(--cyan);
-  font-size:1.45rem;
-}
-
-.range{
-  width:100%;
-  accent-color:#35b9ee;
-}
+.range-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.range-head span{color:#d8f5ff;text-transform:uppercase;font-weight:900;font-size:.78rem}
+.range-head b{color:var(--cyan);font-size:1.45rem}
+.range{width:100%;accent-color:#35b9ee}
 
 .recipe-main{
   text-align:center;
@@ -379,37 +195,10 @@ body{
   border:1px solid rgba(142,234,255,.24);
   margin-bottom:16px;
 }
-
-.recipe-main span{
-  display:block;
-  color:#c5e2ee;
-  text-transform:uppercase;
-  font-size:.8rem;
-  font-weight:900;
-  letter-spacing:.6px;
-}
-
-.recipe-main b{
-  display:block;
-  margin:10px 0;
-  color:var(--cyan);
-  font-size:clamp(3rem,8vw,5.4rem);
-  line-height:1;
-  font-weight:900;
-}
-
-.recipe-main p{
-  color:white;
-  font-weight:900;
-  margin:0;
-}
-
-.result-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
-
+.recipe-main span{display:block;color:#c5e2ee;text-transform:uppercase;font-size:.8rem;font-weight:900;letter-spacing:.6px}
+.recipe-main b{display:block;margin:10px 0;color:var(--cyan);font-size:clamp(3rem,8vw,5.4rem);line-height:1;font-weight:900}
+.recipe-main p{color:white;font-weight:900;margin:0}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .result-card{
   min-height:126px;
   padding:18px 12px;
@@ -418,228 +207,72 @@ body{
   border:1px solid rgba(142,234,255,.14);
   text-align:center;
 }
+.result-card span{display:block;color:#c5e2ee;font-size:.74rem;font-weight:900;text-transform:uppercase}
+.result-card b{display:block;margin-top:10px;color:white;font-size:1.75rem;line-height:1}
+.result-card small{display:block;margin-top:8px;color:#9fc6d4;font-weight:700}
 
-.result-card span{
-  display:block;
-  color:#c5e2ee;
-  font-size:.74rem;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-.result-card b{
-  display:block;
-  margin-top:10px;
-  color:white;
-  font-size:1.75rem;
-  line-height:1;
-}
-
-.result-card small{
-  display:block;
-  margin-top:8px;
-  color:#9fc6d4;
-  font-weight:700;
-}
-
-.mix-bar{
+.mix-bar,.notice{
   margin-top:16px;
   padding:18px;
   border-radius:22px;
   background:rgba(255,255,255,.045);
   border:1px solid rgba(142,234,255,.14);
 }
-
-.mix-head{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  color:#d8f5ff;
-  font-weight:900;
-  font-size:.82rem;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-
-.stack{
-  overflow:hidden;
-  display:flex;
-  height:18px;
-  border-radius:999px;
-  background:rgba(255,255,255,.10);
-}
-
-.stack div{
-  height:100%;
-  transition:.25s ease;
-}
-
+.mix-head{display:flex;justify-content:space-between;gap:12px;color:#d8f5ff;font-weight:900;font-size:.82rem;text-transform:uppercase;margin-bottom:12px}
+.stack{overflow:hidden;display:flex;height:18px;border-radius:999px;background:rgba(255,255,255,.10)}
+.stack div{height:100%;transition:.25s ease}
 .stack-aroma{background:#8eeaff}
 .stack-booster{background:#35b9ee}
 .stack-base{background:#1b5f82}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.legend span{color:#c5e2ee;font-size:.72rem;font-weight:800;text-align:center}
+.notice{color:#c5e2ee;font-size:.92rem;line-height:1.6;font-weight:650}
 
-.legend{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-  margin-top:12px;
-}
-
-.legend span{
-  color:#c5e2ee;
-  font-size:.72rem;
-  font-weight:800;
-  text-align:center;
-}
-
-.notice{
-  margin-top:18px;
-  padding:16px;
-  border-radius:20px;
-  background:rgba(255,255,255,.045);
-  border:1px solid rgba(142,234,255,.14);
-  color:#c5e2ee;
-  font-size:.92rem;
-  line-height:1.6;
-  font-weight:650;
-}
-
-.base-section{
-  padding:0 0 80px;
-  background:#06131d;
-}
-
-.section-head{
-  margin-bottom:24px;
-}
-
-.section-head h2{
-  color:white;
-  text-transform:uppercase;
-  font-size:clamp(2.1rem,5vw,4rem);
-  line-height:.95;
-  letter-spacing:-1.5px;
-  margin:14px 0;
-}
-
-.section-head h2 span{
-  color:var(--cyan);
-}
-
-.section-head p{
-  color:#c5e2ee;
-  line-height:1.7;
-  font-weight:650;
-  max-width:860px;
-}
-
-.base-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
+.base-section{padding:0 0 80px;background:#06131d}
+.section-head{margin-bottom:24px}
+.base-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 
 .base-card{
   position:relative;
   overflow:hidden;
-  min-height:250px;
+  min-height:360px;
   border-radius:28px;
-  padding:22px;
+  padding:18px;
   background:
-    radial-gradient(circle at 50% 0%,rgba(53,185,238,.18),transparent 40%),
+    radial-gradient(circle at 50% 0%,rgba(53,185,238,.20),transparent 40%),
     rgba(255,255,255,.06);
   border:1px solid rgba(142,234,255,.16);
   box-shadow:0 18px 70px rgba(0,0,0,.22);
 }
-
-.base-card:after{
-  content:"";
-  position:absolute;
-  right:-45px;
-  bottom:-45px;
-  width:130px;
-  height:130px;
-  border-radius:50%;
-  background:rgba(142,234,255,.08);
-  border:1px solid rgba(142,234,255,.14);
-}
-
-.base-card strong{
+.base-img-wrap{
   position:relative;
-  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:190px;
+  margin-bottom:16px;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(142,234,255,.22),transparent 45%),
+    rgba(255,255,255,.045);
+  border:1px solid rgba(142,234,255,.12);
+}
+.base-img-wrap img{
+  width:100%;
+  height:170px;
+  object-fit:contain;
   display:block;
-  color:var(--cyan);
-  font-size:.82rem;
-  text-transform:uppercase;
-  font-weight:900;
-  margin-bottom:10px;
+  filter:drop-shadow(0 18px 24px rgba(0,0,0,.35));
 }
+.base-card strong{display:block;color:var(--cyan);font-size:.82rem;text-transform:uppercase;font-weight:900;margin-bottom:10px}
+.base-card h3{color:white;text-transform:uppercase;line-height:1;font-size:1.22rem;margin-bottom:12px}
+.base-card p{color:#c5e2ee;line-height:1.55;font-weight:650}
+.base-card b{display:block;color:white;font-size:1.6rem;margin-top:16px}
 
-.base-card h3{
-  position:relative;
-  z-index:2;
-  color:white;
-  text-transform:uppercase;
-  line-height:1;
-  font-size:1.35rem;
-  margin-bottom:12px;
-}
-
-.base-card p{
-  position:relative;
-  z-index:2;
-  color:#c5e2ee;
-  line-height:1.55;
-  font-weight:650;
-}
-
-.base-card b{
-  position:relative;
-  z-index:2;
-  display:block;
-  color:white;
-  font-size:1.6rem;
-  margin-top:18px;
-}
-
-.choice-zone{
-  margin-top:24px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
-}
-
-.choice-card{
-  border-radius:30px;
-  padding:28px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(142,234,255,.16);
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
-}
-
-.choice-card h3{
-  color:white;
-  text-transform:uppercase;
-  font-size:1.9rem;
-  line-height:1;
-  margin-bottom:14px;
-}
-
-.choice-card h3 span{
-  color:var(--cyan);
-}
-
-.choice-card p,
-.choice-card li{
-  color:#c5e2ee;
-  line-height:1.65;
-  font-weight:650;
-}
-
-.choice-card ul{
-  padding-left:18px;
-  margin:14px 0 0;
-}
+.choice-zone{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.choice-card{padding:28px}
+.choice-card h3{color:white;text-transform:uppercase;font-size:1.9rem;line-height:1;margin-bottom:14px}
+.choice-card ul{padding-left:18px;margin:14px 0 0}
 
 .punchline{
   margin-top:34px;
@@ -651,20 +284,6 @@ body{
     linear-gradient(135deg,rgba(53,185,238,.15),rgba(255,255,255,.045));
   border:1px solid rgba(142,234,255,.22);
 }
-
-.punchline h2{
-  color:white;
-  text-transform:uppercase;
-  font-size:clamp(2rem,5vw,3.7rem);
-  line-height:.96;
-  letter-spacing:-1.5px;
-  margin-bottom:16px;
-}
-
-.punchline h2 span{
-  color:var(--cyan);
-}
-
 .punchline p{
   color:#d8f5ff;
   font-weight:750;
@@ -674,103 +293,31 @@ body{
 }
 
 @media(max-width:1050px){
-  .hero-grid,
-  .diy-layout,
-  .choice-zone{
-    grid-template-columns:1fr;
-  }
-
-  .base-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+  .hero-grid,.diy-layout,.choice-zone{grid-template-columns:1fr}
+  .base-grid{grid-template-columns:repeat(2,1fr)}
 }
-
 @media(max-width:760px){
-  .diy-hero{
-    min-height:auto;
-  }
-
-  .diy-hero-inner{
-    padding:28px 0;
-  }
-
-  .hero-copy,
-  .lab-card,
-  .diy-panel,
-  .diy-intro,
-  .choice-card{
-    border-radius:24px;
-    padding:22px;
-  }
-
-  .hero-copy h1{
-    font-size:clamp(2.25rem,14vw,3.7rem);
-  }
-
-  .lab-card{
-    min-height:auto;
-  }
-
-  .lab-bottle{
-    width:108px;
-    height:198px;
-  }
-
-  .lab-bottle:before{
-    left:29px;
-    width:50px;
-  }
-
-  .lab-bottle:after{
-    top:65px;
-    left:12px;
-    right:12px;
-    font-size:.88rem;
-  }
-
-  .diy-section{
-    padding:28px 0 60px;
-  }
-
-  .two-cols,
-  .result-grid,
-  .base-grid,
-  .choice-zone,
-  .legend{
-    grid-template-columns:1fr;
-  }
-
-  .recipe-main{
-    padding:22px 16px;
-  }
-
-  .result-card{
-    min-height:auto;
-  }
-
-  .base-section{
-    padding-bottom:60px;
-  }
-
-  .btn{
-    width:100%;
-    justify-content:center;
-    text-align:center;
-  }
+  .diy-hero{min-height:auto}
+  .diy-hero-inner{padding:28px 0}
+  .hero-copy,.lab-card,.diy-panel,.diy-intro,.choice-card{border-radius:24px;padding:22px}
+  .hero-copy h1{font-size:clamp(2.25rem,14vw,3.7rem)}
+  .lab-card{min-height:auto}
+  .lab-bottle{width:108px;height:198px}
+  .lab-bottle:before{left:29px;width:50px}
+  .lab-bottle:after{top:65px;left:12px;right:12px;font-size:.88rem}
+  .diy-section{padding:28px 0 60px}
+  .two-cols,.result-grid,.base-grid,.choice-zone,.legend{grid-template-columns:1fr}
+  .recipe-main{padding:22px 16px}
+  .result-card{min-height:auto}
+  .base-card{min-height:auto}
+  .base-img-wrap{height:210px}
+  .base-img-wrap img{height:185px}
+  .base-section{padding-bottom:60px}
+  .btn{width:100%;justify-content:center;text-align:center}
 }
-
 @media(max-width:390px){
-  .hero-copy h1,
-  .diy-intro h2,
-  .section-head h2,
-  .punchline h2{
-    letter-spacing:-1px;
-  }
-
-  .hero-pill{
-    width:100%;
-    text-align:center;
-  }
+  .hero-copy h1,.diy-intro h2,.section-head h2,.punchline h2{letter-spacing:-1px}
+  .hero-pill{width:100%;text-align:center}
 }
 </style>
 </head>
@@ -821,7 +368,6 @@ body{
           Dosage de nicotine, pourcentage d’arôme, quantité finale, base 50/50 ou 30/70 :
           calculez votre recette en quelques secondes, puis venez l’affiner en boutique avec nos conseils.
         </p>
-
         <div class="hero-pills">
           <span class="hero-pill">Base</span>
           <span class="hero-pill">Arôme</span>
@@ -864,7 +410,6 @@ body{
         </p>
 
         <div class="diy-fields">
-
           <div class="two-cols">
             <div class="field">
               <label for="totalMl">Quantité finale</label>
@@ -911,7 +456,6 @@ body{
               <option value="18">Booster 18 mg/ml</option>
             </select>
           </div>
-
         </div>
 
         <div class="notice">
@@ -933,13 +477,11 @@ body{
             <b id="aromaMl">15 ml</b>
             <small id="aromaInfo">15% du mélange</small>
           </div>
-
           <div class="result-card">
             <span>Booster</span>
             <b id="boosterMl">15 ml</b>
             <small id="boosterInfo">1,5 booster(s)</small>
           </div>
-
           <div class="result-card">
             <span>Base neutre</span>
             <b id="baseMl">70 ml</b>
@@ -952,13 +494,11 @@ body{
             <span>Répartition du mélange</span>
             <span id="mixLabel">Équilibré</span>
           </div>
-
           <div class="stack">
             <div class="stack-aroma" id="barAroma"></div>
             <div class="stack-booster" id="barBooster"></div>
             <div class="stack-base" id="barBase"></div>
           </div>
-
           <div class="legend">
             <span>Arôme</span>
             <span>Booster</span>
@@ -989,6 +529,9 @@ body{
 
     <div class="base-grid">
       <article class="base-card">
+        <div class="base-img-wrap">
+          <img src="uploads/base-5050-500.webp" alt="Base STOOM 50/50 500 ml" loading="lazy">
+        </div>
         <strong>Polyvalente</strong>
         <h3>Base STOOM 50/50</h3>
         <p>Équilibre entre saveur, hit et vapeur. Idéale pour beaucoup de cigarettes électroniques classiques.</p>
@@ -996,6 +539,9 @@ body{
       </article>
 
       <article class="base-card">
+        <div class="base-img-wrap">
+          <img src="uploads/base-5050-1l.webp" alt="Base STOOM 50/50 1 litre" loading="lazy">
+        </div>
         <strong>Grand format</strong>
         <h3>Base STOOM 50/50</h3>
         <p>Pour les habitués du DIY qui veulent préparer plus longtemps avec une base équilibrée.</p>
@@ -1003,6 +549,9 @@ body{
       </article>
 
       <article class="base-card">
+        <div class="base-img-wrap">
+          <img src="uploads/base-3070-500.webp" alt="Base STOOM 30/70 500 ml" loading="lazy">
+        </div>
         <strong>Vapeur</strong>
         <h3>Base STOOM 30/70</h3>
         <p>Plus de glycérine végétale, plus de rondeur et plus de vapeur selon le matériel utilisé.</p>
@@ -1010,6 +559,9 @@ body{
       </article>
 
       <article class="base-card">
+        <div class="base-img-wrap">
+          <img src="uploads/base-3070-1l.webp" alt="Base STOOM 30/70 1 litre" loading="lazy">
+        </div>
         <strong>Stock confort</strong>
         <h3>Base STOOM 30/70</h3>
         <p>Format pratique pour les vapoteurs réguliers qui utilisent du matériel plus aérien.</p>
@@ -1096,10 +648,7 @@ body{
   const warningText = document.getElementById("warningText");
 
   function clean(value){
-    const rounded = Math.round(value * 10) / 10;
-    return rounded.toLocaleString("fr-FR", {
-      maximumFractionDigits: 1
-    });
+    return (Math.round(value * 10) / 10).toLocaleString("fr-FR", {maximumFractionDigits:1});
   }
 
   function update(){
@@ -1116,11 +665,11 @@ body{
 
     if(baseVolume < 0){
       baseVolume = 0;
-      warning = "Attention : avec ces réglages, le taux de nicotine et/ou l’arôme prennent trop de place dans le flacon. Réduisez le taux ou augmentez le volume final.";
+      warning = "Attention : avec ces réglages, le taux de nicotine et/ou l’arôme prennent trop de place dans le flacon.";
     }else if(nicotine >= 9){
-      warning = "Attention : un taux élevé demande souvent un matériel peu puissant et un tirage serré pour rester confortable.";
+      warning = "Attention : un taux élevé demande souvent un matériel peu puissant et un tirage serré.";
     }else if(aromaPercent >= 20){
-      warning = "Dosage arôme élevé : le rendu peut être puissant. En boutique, on vérifie selon la marque et le type de saveur.";
+      warning = "Dosage arôme élevé : le rendu peut être puissant. En boutique, on vérifie selon la marque.";
     }else if(baseType.value === "30/70"){
       warning = "Base 30/70 : vérifiez que votre résistance accepte les liquides plus épais.";
     }
@@ -1128,13 +677,10 @@ body{
     const boosterCount = boosterVolume / 10;
 
     aromaValue.textContent = aromaPercent;
-    nicoValue.textContent = nicotine.toLocaleString("fr-FR", { maximumFractionDigits: 1 });
+    nicoValue.textContent = nicotine.toLocaleString("fr-FR", {maximumFractionDigits:1});
 
     finalMl.textContent = clean(total) + " ml";
-    summaryText.textContent =
-      "Pour un liquide en " +
-      nicotine.toLocaleString("fr-FR", { maximumFractionDigits: 1 }) +
-      " mg avec " + aromaPercent + "% d’arôme.";
+    summaryText.textContent = "Pour un liquide en " + nicotine.toLocaleString("fr-FR", {maximumFractionDigits:1}) + " mg avec " + aromaPercent + "% d’arôme.";
 
     aromaMl.textContent = clean(aromaVolume) + " ml";
     boosterMl.textContent = clean(boosterVolume) + " ml";
@@ -1144,23 +690,14 @@ body{
     boosterInfo.textContent = nicotine === 0 ? "Sans nicotine" : clean(boosterCount) + " booster(s)";
     baseInfo.textContent = "Base " + baseType.value;
 
-    const aromaWidth = Math.max(0, aromaVolume / total * 100);
-    const boosterWidth = Math.max(0, boosterVolume / total * 100);
-    const baseWidth = Math.max(0, baseVolume / total * 100);
+    barAroma.style.width = Math.max(0, aromaVolume / total * 100) + "%";
+    barBooster.style.width = Math.max(0, boosterVolume / total * 100) + "%";
+    barBase.style.width = Math.max(0, baseVolume / total * 100) + "%";
 
-    barAroma.style.width = aromaWidth + "%";
-    barBooster.style.width = boosterWidth + "%";
-    barBase.style.width = baseWidth + "%";
-
-    if(nicotine === 0){
-      mixLabel.textContent = "Sans nicotine";
-    }else if(nicotine <= 3){
-      mixLabel.textContent = "Léger";
-    }else if(nicotine <= 6){
-      mixLabel.textContent = "Intermédiaire";
-    }else{
-      mixLabel.textContent = "Fort";
-    }
+    if(nicotine === 0) mixLabel.textContent = "Sans nicotine";
+    else if(nicotine <= 3) mixLabel.textContent = "Léger";
+    else if(nicotine <= 6) mixLabel.textContent = "Intermédiaire";
+    else mixLabel.textContent = "Fort";
 
     warningText.textContent = warning;
   }
