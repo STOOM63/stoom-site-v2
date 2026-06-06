@@ -39,7 +39,7 @@
     "lien": "petitnuage.html",
     "bouton": "Voir la gamme"
   },
-  {
+ {
     "titre": "Power Juice",
     "categorie": "E-liquides auvergnats frais et non frais",
     "description": "La puissance des arômes sur une base boisson MONSTER, une recette qui boostera tes journées !",
@@ -86,6 +86,14 @@
   "image": "uploads/cebuenoambiance.webp",
   "lien": "cebueno.html",
   "bouton": "Découvrir"
+},
+    {
+  "titre": "Fruity Fuel",
+  "categorie": "E-liquides fruités non frais",
+  "description": "Des recettes fruitées pour une vape pleine de peps.",
+  "image": "uploads/fruityfuelambiance.webp",
+  "lien": "fruityfuel.html",
+  "bouton": "Voir la gamme"
 },
   {
     "titre": "DIY STOOM",
