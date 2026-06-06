@@ -1,0 +1,34 @@
+[
+  {
+    "nom": "The White Oil",
+    "saveurs": "Citron, citron vert, fraîcheur",
+    "description": "Une association acidulée de citron et citron vert relevée par une belle fraîcheur.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/the-white-oil-100ml.webp"
+  },
+  {
+    "nom": "The Wooky Oil",
+    "saveurs": "Pastèque, kiwi",
+    "description": "Une recette fruitée et désaltérante mêlant pastèque juteuse et kiwi.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/the-wooky-oil-100ml.webp"
+  },
+  {
+    "nom": "The Diabolo Oil",
+    "saveurs": "Fraise, citron, glaçons",
+    "description": "Une recette fraîche inspirée d'une limonade fruitée à la fraise.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/the-diabolo-oil100ml.webp"
+  },
+  {
+    "nom": "The Red Oil",
+    "saveurs": "Fraise, grenade",
+    "description": "Une association gourmande et fruitée de fraise et de grenade.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/the-red-oil-100ml.webp"
+  }
+]
