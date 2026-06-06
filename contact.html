@@ -23,12 +23,10 @@
   --text:#f4fbff;
   --muted:#b8cad6;
   --border:rgba(255,255,255,.14);
-  --glass:rgba(255,255,255,.08);
   --shadow:0 28px 90px rgba(0,0,0,.36);
 }
 
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
 
 body{
@@ -283,7 +281,7 @@ h1 span{
   line-height:1.45;
 }
 
-/* REVIEW */
+/* GOOGLE REVIEW CARD */
 
 .review-card{
   position:relative;
@@ -375,6 +373,99 @@ h1 span{
   margin-top:4px;
 }
 
+/* MEGA HORAIRES */
+
+.hours-mega{
+  padding:34px 0 18px;
+}
+
+.hours-mega-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:42px;
+  padding:36px;
+  background:
+    radial-gradient(circle at top left,rgba(255,211,110,.24),transparent 34%),
+    radial-gradient(circle at bottom right,rgba(25,183,255,.25),transparent 38%),
+    linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.06));
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.hours-mega-title{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:flex-end;
+  margin-bottom:24px;
+}
+
+.hours-mega-title h2{
+  margin:14px 0 0;
+  font-size:clamp(36px,5.4vw,68px);
+  line-height:.92;
+  letter-spacing:-2.4px;
+}
+
+.hours-mega-title p{
+  max-width:430px;
+  margin:0;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.hours-mega-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.hours-mega-line{
+  position:relative;
+  overflow:hidden;
+  padding:28px;
+  border-radius:30px;
+  background:rgba(255,255,255,.105);
+  border:1px solid rgba(255,255,255,.13);
+}
+
+.hours-mega-line::after{
+  content:"";
+  position:absolute;
+  right:-50px;
+  top:-50px;
+  width:150px;
+  height:150px;
+  background:radial-gradient(circle,rgba(110,231,255,.28),transparent 68%);
+}
+
+.hours-mega-line strong{
+  position:relative;
+  display:block;
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.hours-mega-line span{
+  position:relative;
+  display:block;
+  font-size:clamp(34px,5vw,58px);
+  line-height:1;
+  font-weight:900;
+  color:var(--cyan);
+  letter-spacing:-2px;
+}
+
+.hours-mega-note{
+  margin-top:20px;
+  padding:18px;
+  border-radius:22px;
+  color:#04121b;
+  font-weight:900;
+  text-align:center;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+}
+
 /* SECTIONS */
 
 .section{
@@ -410,15 +501,17 @@ h1 span{
   line-height:1.7;
 }
 
-/* CONTACT INFOS */
+/* ADDRESS */
 
-.contact-main{
+.address-layout{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:.9fr 1.1fr;
   gap:22px;
+  align-items:stretch;
 }
 
-.hours-box,.address-box{
+.address-box,
+.contact-extra{
   border-radius:36px;
   padding:30px;
   background:
@@ -428,45 +521,11 @@ h1 span{
   box-shadow:var(--shadow);
 }
 
-.hours-box h3,.address-box h3{
-  font-size:34px;
-  margin:0 0 18px;
-  letter-spacing:-.8px;
-}
-
-.hours-line{
-  display:flex;
-  justify-content:space-between;
-  gap:18px;
-  padding:18px;
-  border-radius:20px;
-  background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.1);
-  margin-bottom:12px;
-}
-
-.hours-line strong{color:white}
-.hours-line span{
-  color:var(--cyan);
-  font-weight:900;
-  text-align:right;
-}
-
-.note{
-  margin-top:18px;
-  padding:18px;
-  border-radius:22px;
-  color:var(--muted);
-  line-height:1.65;
-  border:1px dashed rgba(110,231,255,.38);
-  background:rgba(0,0,0,.15);
-}
-
 .address-photo{
-  height:190px;
-  border-radius:24px;
+  height:260px;
+  border-radius:26px;
   overflow:hidden;
-  margin-bottom:16px;
+  margin-bottom:18px;
   border:1px solid rgba(255,255,255,.12);
 }
 
@@ -475,6 +534,13 @@ h1 span{
   height:100%;
   object-fit:cover;
   display:block;
+}
+
+.address-box h3,
+.contact-extra h3{
+  font-size:34px;
+  margin:0 0 18px;
+  letter-spacing:-.8px;
 }
 
 .address-list{
@@ -498,6 +564,35 @@ h1 span{
 .address-item a{
   color:var(--muted);
   text-decoration:none;
+  line-height:1.5;
+}
+
+.contact-extra p{
+  color:var(--muted);
+  line-height:1.7;
+  margin:0 0 18px;
+}
+
+.contact-chips{
+  display:grid;
+  gap:12px;
+}
+
+.contact-chip{
+  padding:17px;
+  border-radius:20px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.contact-chip strong{
+  display:block;
+  font-size:18px;
+  margin-bottom:6px;
+}
+
+.contact-chip span{
+  color:var(--muted);
   line-height:1.5;
 }
 
@@ -562,6 +657,10 @@ h1 span{
 
 /* NEARBY */
 
+.nearby-section{
+  padding:58px 0 20px;
+}
+
 .nearby-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -622,7 +721,7 @@ h1 span{
 /* FINAL */
 
 .final{
-  padding:22px 0 84px;
+  padding:42px 0 84px;
 }
 
 .final-card{
@@ -707,7 +806,7 @@ footer{
   }
 
   .hero-grid,
-  .contact-main{
+  .address-layout{
     grid-template-columns:1fr;
   }
 
@@ -715,6 +814,14 @@ footer{
   .why-grid,
   .nearby-grid{
     grid-template-columns:1fr 1fr;
+  }
+
+  .hours-mega-title{
+    display:block;
+  }
+
+  .hours-mega-title p{
+    margin-top:14px;
   }
 }
 
@@ -748,7 +855,8 @@ footer{
   .quick-grid,
   .why-grid,
   .nearby-grid,
-  .review-badges{
+  .review-badges,
+  .hours-mega-grid{
     grid-template-columns:1fr;
   }
 
@@ -756,21 +864,22 @@ footer{
     font-size:62px;
   }
 
-  .hours-line{
-    flex-direction:column;
-    gap:6px;
-  }
-
-  .hours-line span{
-    text-align:left;
-  }
-
-  .hours-box,
+  .hours-mega-card,
   .address-box,
+  .contact-extra,
   .review-card,
   .final-card{
     border-radius:28px;
     padding:22px;
+  }
+
+  .hours-mega-line{
+    padding:22px;
+    border-radius:24px;
+  }
+
+  .hours-mega-line span{
+    font-size:38px;
   }
 
   .map-wrap{
@@ -896,49 +1005,64 @@ footer{
   </div>
 </section>
 
-<section class="section" id="horaires">
+<section class="hours-mega" id="horaires">
+  <div class="container">
+    <div class="hours-mega-card">
+
+      <div class="hours-mega-title">
+        <div>
+          <span class="badge">Nos horaires</span>
+          <h2>Ouvert tôt.<br>Ouvert non-stop.</h2>
+        </div>
+
+        <p>
+          Nous avons choisi d’ouvrir dès le matin pour faciliter les achats avant le travail,
+          pendant la pause ou en fin de journée.
+        </p>
+      </div>
+
+      <div class="hours-mega-grid">
+        <div class="hours-mega-line">
+          <strong>Lundi au vendredi</strong>
+          <span>8h30 → 19h</span>
+        </div>
+
+        <div class="hours-mega-line">
+          <strong>Samedi</strong>
+          <span>9h → 19h</span>
+        </div>
+      </div>
+
+      <div class="hours-mega-note">
+        Parking facile · Boutique accessible · Horaires en continu
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container">
 
     <div class="section-title">
-      <span class="badge">Horaires & contact</span>
-      <h2>Simple, clair, pratique.</h2>
-      <p>
-        Nous avons choisi d’ouvrir tôt pour faciliter les achats de nos clients avant leur journée de travail.
-      </p>
+      <span class="badge">Adresse & contact</span>
+      <h2>Nous trouver facilement.</h2>
+      <p>Adresse, téléphone, Instagram et informations pratiques pour venir à la boutique.</p>
     </div>
 
-    <div class="contact-main">
-
-      <div class="hours-box">
-        <h3>Nos horaires</h3>
-
-        <div class="hours-line">
-          <strong>Lundi au vendredi</strong>
-          <span>8h30 - 19h00 non-stop</span>
-        </div>
-
-        <div class="hours-line">
-          <strong>Samedi</strong>
-          <span>9h00 - 19h00 non-stop</span>
-        </div>
-
-        <div class="note">
-          Ouverture matinale, journée continue et passage rapide :
-          tout est pensé pour rendre votre visite plus simple.
-        </div>
-      </div>
+    <div class="address-layout">
 
       <div class="address-box">
         <div class="address-photo">
           <img src="uploads/boutique-interieur.webp" alt="Intérieur de la boutique STOOM Clermont-Ferrand" loading="lazy">
         </div>
 
-        <h3>Nous trouver</h3>
+        <h3>STOOM Clermont-Ferrand</h3>
 
         <div class="address-list">
           <div class="address-item">
             <strong>📍 Adresse</strong>
-            <span>STOOM Clermont-Ferrand<br>109 avenue Édouard Michelin<br>63100 Clermont-Ferrand</span>
+            <span>109 avenue Édouard Michelin<br>63100 Clermont-Ferrand</span>
           </div>
 
           <div class="address-item">
@@ -950,6 +1074,36 @@ footer{
             <strong>📷 Instagram</strong>
             <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">@stoomclermontferrand</a>
           </div>
+        </div>
+      </div>
+
+      <div class="contact-extra">
+        <h3>Un passage simple.</h3>
+        <p>
+          La boutique est pensée pour être pratique : accès facile, parking simple,
+          horaires larges et possibilité de venir rapidement sans perdre de temps.
+        </p>
+
+        <div class="contact-chips">
+          <div class="contact-chip">
+            <strong>🚗 Parking facile</strong>
+            <span>Idéal pour un passage rapide en voiture.</span>
+          </div>
+
+          <div class="contact-chip">
+            <strong>⭐ 650 avis Google</strong>
+            <span>Une note de 4,9/5 qui reflète la confiance de nos clients.</span>
+          </div>
+
+          <div class="contact-chip">
+            <strong>🕖 Ouvert non-stop</strong>
+            <span>Pas besoin de viser la bonne pause : nous sommes ouverts en continu.</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-wow" href="https://www.google.com/maps/search/?api=1&query=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin" target="_blank" rel="noopener">Lancer l’itinéraire</a>
+          <a class="btn-soft" href="tel:0473273394">Appeler</a>
         </div>
       </div>
 
@@ -1016,7 +1170,7 @@ footer{
   </div>
 </section>
 
-<section class="section">
+<section class="nearby-section">
   <div class="container">
 
     <div class="section-title">
@@ -1051,7 +1205,7 @@ footer{
 
       <a class="nearby-card" href="https://www.google.com/maps/search/?api=1&query=Pharmacie%20de%20la%20Colonne%20133%20Rue%20Anatole%20France%2063000%20Clermont-Ferrand" target="_blank" rel="noopener">
         <div class="nearby-img">
-          <img src="upload/pharmacie.webp" alt="Pharmacie de la Colonne proche de STOOM Clermont-Ferrand" loading="lazy">
+          <img src="uploads/pharmacie.webp" alt="Pharmacie de la Colonne proche de STOOM Clermont-Ferrand" loading="lazy">
         </div>
         <div class="nearby-content">
           <strong>Pharmacie de la Colonne</strong>
