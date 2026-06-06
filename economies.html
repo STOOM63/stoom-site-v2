@@ -20,14 +20,33 @@ body{color:white}
 .eco-hero{
   display:block!important;
   width:100%!important;
-  height:420px!important;
-  min-height:420px!important;
+  max-width:100%!important;
+  height:360px!important;
+  min-height:360px!important;
+
   background-image:url("uploads/hero-economies.webp")!important;
   background-size:cover!important;
   background-position:center center!important;
   background-repeat:no-repeat!important;
+
   background-color:#06131d!important;
   border-bottom:1px solid rgba(142,234,255,.18);
+}
+
+@media(max-width:760px){
+  .eco-hero{
+    height:110px!important;
+    min-height:110px!important;
+    background-size:contain!important;
+    background-position:center center!important;
+  }
+}
+
+@media(max-width:390px){
+  .eco-hero{
+    height:90px!important;
+    min-height:90px!important;
+  }
 }
 
 .eco-section{padding:46px 0 80px;background:#06131d}
