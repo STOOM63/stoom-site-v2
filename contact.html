@@ -1,9 +1,1261 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact STOOM Clermont-Ferrand</title><meta name="description" content="Adresse, téléphone, Instagram et itinéraire vers STOOM Clermont-Ferrand."><meta name="theme-color" content="#06131d">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/style.css"></head>
-<body data-page="contact">
-<div class="top">STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne</div>
-<header><div class="container nav"><a href="index.html" class="logo"><div class="logo-mark">S</div><div><strong>STOOM</strong><span>Clermont-Ferrand</span></div></a><nav class="menu"><a href="nouveautes.html" class="">Nouveautés</a><a href="economies.html" class="">Économies</a><a href="diy.html" class="">DIY</a><a href="concours.html" class="">Concours</a><a href="debuter.html" class="">Débuter</a><a href="contact.html" class="active">Contact</a><a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a></nav></div></header>
-<div class="mobile-actions"><a href="tel:0473273394">Appeler</a><a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a></div>
-<main><section><div class="container contact-grid"><div class="panel"><span class="badge">STOOM Clermont-Ferrand</span><h2>Nous trouver</h2><div class="info"><div><strong>Adresse</strong><span>109 avenue Édouard Michelin<br>63100 Clermont-Ferrand</span></div><div><strong>Téléphone</strong><a href="tel:0473273394">04 73 27 33 94</a></div><div><strong>Instagram</strong><a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">@stoomclermontferrand</a></div><div><strong>Important</strong><span>Produits de vapotage réservés aux majeurs. Pas de vente aux mineurs.</span></div></div><div class="actions"><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Lancer l'itinéraire</a></div></div><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand&output=embed" title="Carte STOOM Clermont-Ferrand"></iframe></div></section></main><footer><div class="container footer-inner"><span>© STOOM Clermont-Ferrand</span><span>Conseil en boutique · Pas de vente en ligne</span></div></footer><script src="assets/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Débuter la vape | STOOM Clermont-Ferrand</title>
+<meta name="description" content="Débuter la cigarette électronique avec STOOM Clermont-Ferrand : conseil, parking facile, horaires non-stop, dosage nicotine et accompagnement personnalisé.">
+<meta name="theme-color" content="#06131d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+:root{
+  --bg:#06131d;
+  --bg2:#0b2233;
+  --blue:#19b7ff;
+  --cyan:#6ee7ff;
+  --green:#6dffb7;
+  --orange:#ffb86b;
+  --pink:#ff6bd6;
+  --text:#f4fbff;
+  --muted:#b8cad6;
+  --card:rgba(255,255,255,.08);
+  --border:rgba(255,255,255,.14);
+  --shadow:0 24px 80px rgba(0,0,0,.32);
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(25,183,255,.28), transparent 34%),
+    radial-gradient(circle at 90% 20%, rgba(255,107,214,.16), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(109,255,183,.16), transparent 36%),
+    linear-gradient(180deg,#06131d,#081923 48%,#06131d);
+  color:var(--text);
+  font-family:Montserrat,sans-serif;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 72%);
+  z-index:-1;
+}
+
+.container{
+  width:min(1180px, calc(100% - 32px));
+  margin:0 auto;
+}
+
+.top{
+  text-align:center;
+  padding:9px 12px;
+  font-size:12px;
+  color:#d9f6ff;
+  background:rgba(0,0,0,.32);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(18px);
+  background:rgba(6,19,29,.72);
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+
+.nav{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:white;
+}
+
+.logo-mark{
+  width:44px;
+  height:44px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  color:#04121b;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  box-shadow:0 12px 30px rgba(25,183,255,.28);
+}
+
+.logo strong{
+  display:block;
+  font-size:18px;
+  letter-spacing:.4px;
+}
+
+.logo span{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.menu{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.menu a{
+  color:#dceef7;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:700;
+  opacity:.88;
+}
+
+.menu a.active,
+.menu a:hover{
+  color:white;
+  opacity:1;
+}
+
+.menu .cta{
+  padding:12px 16px;
+  border-radius:999px;
+  color:#04121b;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  box-shadow:0 12px 28px rgba(25,183,255,.22);
+}
+
+.mobile-actions{
+  display:none;
+}
+
+/* HERO */
+
+.start-hero{
+  position:relative;
+  overflow:hidden;
+  padding:92px 0 58px;
+}
+
+.start-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(6,19,29,.96),rgba(6,19,29,.68),rgba(6,19,29,.88)),
+    url("assets/images/debuter-hero.jpg") center/cover no-repeat;
+  z-index:-3;
+}
+
+.start-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto -20% -35% -20%;
+  height:330px;
+  background:radial-gradient(circle,rgba(25,183,255,.45),transparent 64%);
+  filter:blur(48px);
+  z-index:-2;
+}
+
+.hero-orb{
+  position:absolute;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  right:8%;
+  top:90px;
+  background:radial-gradient(circle,rgba(109,255,183,.34),transparent 65%);
+  filter:blur(14px);
+  opacity:.9;
+  z-index:-1;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:34px;
+  align-items:center;
+}
+
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 15px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+  font-weight:900;
+  color:var(--cyan);
+  margin-bottom:20px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.start-hero h1{
+  font-size:clamp(38px,6.2vw,82px);
+  line-height:.93;
+  margin:0 0 20px;
+  letter-spacing:-2.8px;
+}
+
+.start-hero h1 span{
+  display:block;
+  background:linear-gradient(135deg,var(--cyan),var(--green),var(--orange));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero-text{
+  max-width:710px;
+  font-size:18px;
+  line-height:1.72;
+  color:var(--muted);
+}
+
+.hero-text strong{
+  color:white;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.btn-wow,
+.btn-soft{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:15px 22px;
+  border-radius:17px;
+  font-weight:900;
+  text-decoration:none;
+  transition:.22s ease;
+}
+
+.btn-wow{
+  color:#04121b;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  box-shadow:0 18px 40px rgba(25,183,255,.25);
+}
+
+.btn-soft{
+  color:var(--text);
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+
+.btn-wow:hover,
+.btn-soft:hover{
+  transform:translateY(-3px);
+}
+
+.hero-mini{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:28px;
+}
+
+.hero-mini div{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.07);
+  border-radius:20px;
+  padding:15px;
+}
+
+.hero-mini strong{
+  display:block;
+  font-size:19px;
+  color:white;
+}
+
+.hero-mini span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:5px;
+  line-height:1.35;
+}
+
+/* DIAGNOSTIC */
+
+.diagnostic-box{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.06));
+  backdrop-filter:blur(18px);
+  border-radius:32px;
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+
+.diagnostic-box::before{
+  content:"";
+  position:absolute;
+  inset:-80px -80px auto auto;
+  width:210px;
+  height:210px;
+  background:radial-gradient(circle,rgba(25,183,255,.42),transparent 66%);
+}
+
+.diagnostic-box h2{
+  position:relative;
+  margin:0 0 10px;
+  font-size:28px;
+}
+
+.diagnostic-box > p{
+  position:relative;
+  margin:0 0 18px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.check-list{
+  position:relative;
+  display:grid;
+  gap:12px;
+}
+
+.check-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:15px;
+  border-radius:20px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.check-item .emoji{
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:rgba(255,255,255,.09);
+}
+
+.check-item strong{
+  display:block;
+  color:white;
+  margin-bottom:3px;
+}
+
+.check-item span{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.45;
+}
+
+/* ACCESS */
+
+.access-section{
+  padding:34px 0 18px;
+}
+
+.access-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:20px;
+  align-items:stretch;
+}
+
+.access-main{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--border);
+  border-radius:34px;
+  padding:30px;
+  background:
+    radial-gradient(circle at top left,rgba(109,255,183,.18),transparent 34%),
+    linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
+  box-shadow:var(--shadow);
+}
+
+.access-main h2,
+.hours-card h2{
+  font-size:clamp(28px,4vw,46px);
+  line-height:1;
+  margin:0 0 14px;
+}
+
+.access-main p{
+  color:var(--muted);
+  line-height:1.75;
+  max-width:720px;
+  margin:0 0 20px;
+}
+
+.access-points{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:20px;
+}
+
+.access-point{
+  padding:17px;
+  border-radius:22px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.access-point b{
+  display:block;
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.access-point span{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+}
+
+.hours-card{
+  border:1px solid var(--border);
+  border-radius:34px;
+  padding:28px;
+  background:
+    radial-gradient(circle at top right,rgba(25,183,255,.22),transparent 42%),
+    rgba(255,255,255,.08);
+  box-shadow:var(--shadow);
+}
+
+.hours-list{
+  display:grid;
+  gap:12px;
+  margin-top:18px;
+}
+
+.hours-line{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:17px;
+  border-radius:20px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.hours-line strong{
+  color:white;
+}
+
+.hours-line span{
+  color:var(--cyan);
+  font-weight:900;
+  text-align:right;
+}
+
+.hours-note{
+  margin-top:16px;
+  padding:16px;
+  border-radius:20px;
+  color:var(--muted);
+  line-height:1.6;
+  background:rgba(0,0,0,.14);
+  border:1px dashed rgba(110,231,255,.38);
+}
+
+/* TITLES */
+
+.method-section{
+  padding:56px 0;
+}
+
+.method-title{
+  text-align:center;
+  max-width:780px;
+  margin:0 auto 36px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 13px;
+  border-radius:999px;
+  color:#04121b;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+}
+
+.method-title h2{
+  font-size:clamp(30px,4.6vw,54px);
+  line-height:1;
+  margin:16px 0 12px;
+}
+
+.method-title p{
+  color:var(--muted);
+  line-height:1.75;
+}
+
+/* STEPS */
+
+.steps-wow{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.step-wow{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:linear-gradient(180deg,rgba(255,255,255,.115),rgba(255,255,255,.05));
+  border-radius:28px;
+  padding:24px;
+  min-height:240px;
+  box-shadow:0 18px 50px rgba(0,0,0,.18);
+  transition:.22s ease;
+}
+
+.step-wow:hover{
+  transform:translateY(-5px);
+  border-color:rgba(110,231,255,.32);
+}
+
+.step-wow::before{
+  content:"";
+  position:absolute;
+  right:-42px;
+  top:-42px;
+  width:130px;
+  height:130px;
+  background:radial-gradient(circle,rgba(25,183,255,.38),transparent 70%);
+}
+
+.step-number{
+  position:relative;
+  width:50px;
+  height:50px;
+  border-radius:17px;
+  display:grid;
+  place-items:center;
+  font-size:22px;
+  font-weight:900;
+  color:#04121b;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  margin-bottom:18px;
+}
+
+.step-wow h3{
+  position:relative;
+  margin:0 0 10px;
+  font-size:20px;
+}
+
+.step-wow p{
+  position:relative;
+  margin:0;
+  color:var(--muted);
+  line-height:1.58;
+  font-size:15px;
+}
+
+/* DOSAGE */
+
+.dosage-panel{
+  margin-top:40px;
+  border-radius:36px;
+  border:1px solid var(--border);
+  background:
+    linear-gradient(135deg,rgba(25,183,255,.17),rgba(109,255,183,.08)),
+    rgba(255,255,255,.07);
+  padding:32px;
+  box-shadow:var(--shadow);
+}
+
+.dosage-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:center;
+}
+
+.dosage-panel h2{
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.03;
+  margin:0 0 12px;
+}
+
+.dosage-panel p{
+  color:var(--muted);
+  line-height:1.75;
+}
+
+.dosage-list{
+  display:grid;
+  gap:12px;
+}
+
+.dosage-line{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:16px 18px;
+  border-radius:20px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.dosage-line strong{
+  color:#fff;
+}
+
+.dosage-line span{
+  color:var(--cyan);
+  font-weight:900;
+  text-align:right;
+}
+
+.warning-box{
+  margin-top:22px;
+  padding:18px;
+  border-radius:22px;
+  background:rgba(255,255,255,.08);
+  border:1px dashed rgba(110,231,255,.45);
+  color:var(--muted);
+  line-height:1.65;
+}
+
+/* QUARTIER */
+
+.nearby-section{
+  padding:14px 0 58px;
+}
+
+.nearby-card{
+  border:1px solid var(--border);
+  border-radius:36px;
+  padding:30px;
+  background:
+    radial-gradient(circle at left,rgba(255,184,107,.16),transparent 36%),
+    rgba(255,255,255,.075);
+  box-shadow:var(--shadow);
+}
+
+.nearby-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  margin-bottom:22px;
+}
+
+.nearby-head h2{
+  font-size:clamp(28px,4vw,46px);
+  line-height:1;
+  margin:0;
+}
+
+.nearby-head p{
+  margin:0;
+  max-width:520px;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.nearby-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.nearby-link{
+  display:block;
+  min-height:150px;
+  padding:20px;
+  border-radius:26px;
+  color:white;
+  text-decoration:none;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
+  border:1px solid rgba(255,255,255,.12);
+  transition:.22s ease;
+}
+
+.nearby-link:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,184,107,.38);
+}
+
+.nearby-link .big{
+  display:block;
+  font-size:30px;
+  margin-bottom:14px;
+}
+
+.nearby-link strong{
+  display:block;
+  font-size:17px;
+  margin-bottom:6px;
+}
+
+.nearby-link span{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+}
+
+/* FINAL */
+
+.start-final{
+  padding:0 0 86px;
+}
+
+.final-card{
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  border-radius:40px;
+  padding:46px 28px;
+  background:
+    radial-gradient(circle at top,rgba(25,183,255,.28),transparent 45%),
+    radial-gradient(circle at bottom right,rgba(109,255,183,.18),transparent 40%),
+    rgba(255,255,255,.08);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+.final-card h2{
+  font-size:clamp(32px,5vw,60px);
+  line-height:.98;
+  margin:18px 0 16px;
+  letter-spacing:-1.8px;
+}
+
+.final-card p{
+  max-width:760px;
+  margin:0 auto 28px;
+  color:var(--muted);
+  line-height:1.75;
+}
+
+.final-actions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid rgba(255,255,255,.09);
+  background:rgba(0,0,0,.22);
+}
+
+.footer-inner{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+  .menu{
+    display:none;
+  }
+
+  .mobile-actions{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:80;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    padding:8px;
+    border-radius:22px;
+    background:rgba(6,19,29,.84);
+    border:1px solid rgba(255,255,255,.13);
+    backdrop-filter:blur(18px);
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
+  }
+
+  .mobile-actions a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:44px;
+    border-radius:16px;
+    text-decoration:none;
+    color:#04121b;
+    font-weight:900;
+    font-size:13px;
+    background:linear-gradient(135deg,var(--cyan),var(--green));
+  }
+
+  .hero-grid,
+  .access-grid,
+  .dosage-grid{
+    grid-template-columns:1fr;
+  }
+
+  .steps-wow,
+  .nearby-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .start-hero{
+    padding:64px 0 38px;
+  }
+
+  .start-hero h1{
+    letter-spacing:-1.5px;
+  }
+}
+
+@media(max-width:680px){
+  .container{
+    width:min(100% - 24px,1180px);
+  }
+
+  .top{
+    font-size:11px;
+    line-height:1.45;
+  }
+
+  .nav{
+    min-height:68px;
+  }
+
+  .logo-mark{
+    width:40px;
+    height:40px;
+  }
+
+  .hero-actions a,
+  .final-actions a{
+    width:100%;
+  }
+
+  .hero-mini{
+    grid-template-columns:1fr;
+  }
+
+  .access-points,
+  .steps-wow,
+  .nearby-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nearby-head{
+    display:block;
+  }
+
+  .nearby-head p{
+    margin-top:12px;
+  }
+
+  .hours-line,
+  .dosage-line{
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .hours-line span,
+  .dosage-line span{
+    text-align:left;
+  }
+
+  .diagnostic-box,
+  .access-main,
+  .hours-card,
+  .dosage-panel,
+  .nearby-card,
+  .final-card{
+    border-radius:28px;
+    padding:22px;
+  }
+
+  .footer-inner{
+    padding:18px 0 86px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+</style>
+</head>
+
+<body data-page="start">
+
+<div class="top">
+  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Parking facile · Produits de vapotage réservés aux majeurs · Pas de vente en ligne
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">S</div>
+      <div>
+        <strong>STOOM</strong>
+        <span>Clermont-Ferrand</span>
+      </div>
+    </a>
+
+    <nav class="menu">
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="economies.html">Économies</a>
+      <a href="diy.html">DIY</a>
+      <a href="concours.html">Concours</a>
+      <a href="debuter.html" class="active">Débuter</a>
+      <a href="contact.html">Contact</a>
+      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin" target="_blank" rel="noopener">Itinéraire</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-actions">
+  <a href="tel:0473273394">Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="contact.html">Horaires</a>
+</div>
+
+<main>
+
+<section class="start-hero">
+  <div class="hero-orb"></div>
+
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-kicker">⚡ Méthode STOOM · Conseil en boutique</div>
+
+      <h1>
+        Débuter la vape,
+        <span>sans se tromper.</span>
+      </h1>
+
+      <p class="hero-text">
+        Arrêter ou réduire le tabac ne se résume pas à acheter une cigarette électronique.
+        Chez <strong>STOOM Clermont-Ferrand</strong>, on part de votre profil fumeur pour choisir
+        le bon matériel, le bon dosage et une transition confortable.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-wow" href="https://www.google.com/maps/search/?api=1&query=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin" target="_blank" rel="noopener">Venir en boutique</a>
+        <a class="btn-soft" href="tel:0473273394">Appeler STOOM</a>
+      </div>
+
+      <div class="hero-mini">
+        <div>
+          <strong>8h30</strong>
+          <span>Ouverture dès le matin en semaine</span>
+        </div>
+        <div>
+          <strong>Non-stop</strong>
+          <span>Pratique avant, pendant ou après le travail</span>
+        </div>
+        <div>
+          <strong>Parking</strong>
+          <span>Accès simple, arrêt rapide, achat facile</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="diagnostic-box">
+      <h2>On commence par vous.</h2>
+      <p>Pas par une boîte, pas par une promo, pas par un hasard. Par votre vraie façon de fumer.</p>
+
+      <div class="check-list">
+        <div class="check-item">
+          <div class="emoji">🚬</div>
+          <div>
+            <strong>Votre consommation</strong>
+            <span>Nombre de cigarettes, type de tabac, moments clés et habitudes.</span>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="emoji">⚡</div>
+          <div>
+            <strong>Votre besoin en nicotine</strong>
+            <span>Pour éviter le manque, le hit trop fort et le retour à la cigarette.</span>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="emoji">💨</div>
+          <div>
+            <strong>Votre tirage</strong>
+            <span>Serré, doux, simple et adapté à votre façon de fumer.</span>
+          </div>
+        </div>
+
+        <div class="check-item">
+          <div class="emoji">🤝</div>
+          <div>
+            <strong>Votre suivi</strong>
+            <span>On ajuste après l’achat si besoin : résistance, liquide, dosage, sensation.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="access-section">
+  <div class="container access-grid">
+
+    <div class="access-main">
+      <span class="badge">Accès facile</span>
+      <h2>Une boutique pensée pour les vrais clients.</h2>
+      <p>
+        Nous avons choisi d’ouvrir tôt et en non-stop pour faciliter les achats de nos clients :
+        avant le travail, pendant la pause, entre deux rendez-vous ou en fin de journée.
+        L’objectif est simple : vous permettre de passer sans contrainte.
+      </p>
+
+      <div class="access-points">
+        <div class="access-point">
+          <b>🚗 Parking facile</b>
+          <span>Un accès pratique pour venir rapidement en boutique.</span>
+        </div>
+
+        <div class="access-point">
+          <b>🌅 Ouverture tôt</b>
+          <span>Dès 8h30 du lundi au vendredi pour les achats avant la journée.</span>
+        </div>
+
+        <div class="access-point">
+          <b>🧭 Bien placé</b>
+          <span>109 avenue Édouard Michelin, à Clermont-Ferrand.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hours-card">
+      <span class="badge">Horaires</span>
+      <h2>Ouvert non-stop.</h2>
+
+      <div class="hours-list">
+        <div class="hours-line">
+          <strong>Lundi au vendredi</strong>
+          <span>8h30 - 19h00</span>
+        </div>
+
+        <div class="hours-line">
+          <strong>Samedi</strong>
+          <span>9h00 - 19h00</span>
+        </div>
+      </div>
+
+      <div class="hours-note">
+        Nous avons volontairement choisi une ouverture matinale pour permettre aux clients
+        de s’équiper avant leur journée de travail.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="method-section">
+  <div class="container">
+
+    <div class="method-title">
+      <span class="badge">Notre méthode</span>
+      <h2>Une transition en 4 étapes</h2>
+      <p>
+        Le bon départ, c’est celui qui évite la frustration.
+        On choisit un matériel simple, un liquide cohérent et un dosage réaliste.
+      </p>
+    </div>
+
+    <div class="steps-wow">
+      <div class="step-wow">
+        <div class="step-number">1</div>
+        <h3>Profil fumeur</h3>
+        <p>On regarde votre consommation, vos cigarettes habituelles, les moments importants et vos anciennes tentatives.</p>
+      </div>
+
+      <div class="step-wow">
+        <div class="step-number">2</div>
+        <h3>Matériel simple</h3>
+        <p>Un pod ou un kit facile, sans réglage compliqué, avec un tirage proche de la cigarette.</p>
+      </div>
+
+      <div class="step-wow">
+        <div class="step-number">3</div>
+        <h3>Bon dosage</h3>
+        <p>La nicotine est adaptée à votre besoin pour limiter le manque et sécuriser la transition.</p>
+      </div>
+
+      <div class="step-wow">
+        <div class="step-number">4</div>
+        <h3>Suivi boutique</h3>
+        <p>Résistance, liquide, puissance, sensation : on ajuste avec vous après l’achat.</p>
+      </div>
+    </div>
+
+    <div class="dosage-panel">
+      <div class="dosage-grid">
+        <div>
+          <h2>Le dosage change tout.</h2>
+          <p>
+            Trop faible, vous risquez d’avoir envie de refumer.
+            Trop fort avec un matériel puissant, le hit peut devenir désagréable.
+            L’objectif : trouver le bon équilibre.
+          </p>
+
+          <div class="warning-box">
+            Plus le taux de nicotine est élevé, plus le matériel doit rester doux et peu puissant.
+            Plus le taux est faible, plus le matériel peut être puissant.
+          </div>
+        </div>
+
+        <div class="dosage-list">
+          <div class="dosage-line">
+            <strong>5 à 10 cigarettes / jour</strong>
+            <span>3 mg ou 6 mg</span>
+          </div>
+
+          <div class="dosage-line">
+            <strong>10 à 15 cigarettes / jour</strong>
+            <span>6 mg ou 12 mg</span>
+          </div>
+
+          <div class="dosage-line">
+            <strong>15 à 20 cigarettes / jour</strong>
+            <span>10 mg sel de nicotine</span>
+          </div>
+
+          <div class="dosage-line">
+            <strong>25+ cigarettes / jour</strong>
+            <span>20 mg sel de nicotine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="nearby-section">
+  <div class="container">
+    <div class="nearby-card">
+
+      <div class="nearby-head">
+        <div>
+          <span class="badge">Dans le quartier</span>
+          <h2>Profitez du passage.</h2>
+        </div>
+
+        <p>
+          STOOM est situé avenue Édouard Michelin, dans un secteur pratique pour regrouper plusieurs achats
+          ou faire un arrêt rapide.
+        </p>
+      </div>
+
+      <div class="nearby-grid">
+
+        <a class="nearby-link" href="https://www.google.com/maps/search/?api=1&query=Le%20Coteau%20des%20Vignes%20109%20avenue%20Edouard%20Michelin%20Clermont-Ferrand" target="_blank" rel="noopener">
+          <span class="big">🍷</span>
+          <strong>Le Coteau des Vignes</strong>
+          <span>Caviste situé au 109 avenue Édouard Michelin.</span>
+        </a>
+
+        <a class="nearby-link" href="https://www.google.com/maps/search/?api=1&query=Tendance%20Vins%20109%20avenue%20Edouard%20Michelin%20Clermont-Ferrand" target="_blank" rel="noopener">
+          <span class="big">🥂</span>
+          <strong>Tendance Vins</strong>
+          <span>Adresse référencée au 109 avenue Édouard Michelin.</span>
+        </a>
+
+        <a class="nearby-link" href="https://www.google.com/maps/search/?api=1&query=commerces%20avenue%20Edouard%20Michelin%20Clermont-Ferrand" target="_blank" rel="noopener">
+          <span class="big">🛍️</span>
+          <strong>Commerces autour</strong>
+          <span>Voir les commerces à proximité immédiate sur Google Maps.</span>
+        </a>
+
+        <a class="nearby-link" href="https://www.google.com/maps/search/?api=1&query=restaurants%20avenue%20Edouard%20Michelin%20Clermont-Ferrand" target="_blank" rel="noopener">
+          <span class="big">🍽️</span>
+          <strong>Restaurants proches</strong>
+          <span>Pratique pour passer pendant une pause ou avant un repas.</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="start-final">
+  <div class="container">
+    <div class="final-card">
+      <span class="badge">Pas de vente en ligne</span>
+
+      <h2>Votre prochaine cigarette peut être la dernière.</h2>
+
+      <p>
+        Chaque semaine, des fumeurs franchissent la porte de STOOM avec des doutes.
+        Quelques minutes plus tard, ils repartent avec une solution adaptée,
+        un accompagnement personnalisé et un plan clair.
+        Le conseil se fait en boutique, parce qu’un bon départ se construit avec vous.
+      </p>
+
+      <div class="final-actions">
+        <a class="btn-wow" href="https://www.google.com/maps/search/?api=1&query=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin" target="_blank" rel="noopener">Me rendre chez STOOM</a>
+        <a class="btn-soft" href="contact.html">Voir contact et horaires</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© STOOM Clermont-Ferrand</span>
+    <span>Conseil en boutique · Parking facile · Pas de vente en ligne</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
