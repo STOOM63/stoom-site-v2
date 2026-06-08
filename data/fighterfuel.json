@@ -1,0 +1,138 @@
+[
+  {
+    "nom": "Bloody Shigeri",
+    "saveurs": "Fruit du dragon, grenade, fraise, frais",
+    "description": "Une recette fruitée et intense mêlant fruit du dragon, grenade et fraise avec une fraîcheur marquée.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/bloody-shigeri-fighter-fuel.webp"
+  },
+  {
+    "nom": "Freed",
+    "saveurs": "Pétillant, marshmallow",
+    "description": "Une recette originale associant une note pétillante à la douceur du marshmallow.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/freed-fighter-fuel.webp"
+  },
+  {
+    "nom": "Hogano",
+    "saveurs": "Grenade, fraise, mangue, frais",
+    "description": "Un mélange exotique de grenade, fraise et mangue relevé d'une touche de fraîcheur.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/hogano-fighter-fuel.webp"
+  },
+  {
+    "nom": "Kansetsu",
+    "saveurs": "Pêche, abricot, frais",
+    "description": "Une association douce et fruitée de pêche et d'abricot accompagnée d'une fraîcheur légère.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/kansetsu-fighter-fuel.webp"
+  },
+  {
+    "nom": "Katana X Enfer",
+    "saveurs": "Fruit du dragon, fruits rouges, cerise, frais",
+    "description": "Une recette puissante mêlant fruit du dragon, fruits rouges et cerise dans une version X Enfer.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/katana-fighter-fuel-x-enfer.webp"
+  },
+  {
+    "nom": "Kobura",
+    "saveurs": "Myrtille, groseille, fruit du serpent, frais",
+    "description": "Une combinaison originale de fruits rouges et fruit du serpent avec une fraîcheur agréable.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/kobura-fighter-fuel.webp"
+  },
+  {
+    "nom": "Kuroko",
+    "saveurs": "Fruit du dragon, grenade, cédrat, frais",
+    "description": "Une recette complexe mariant fruit du dragon, grenade et cédrat.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/kuroko-fighter-fuel.webp"
+  },
+  {
+    "nom": "Lady Shigeri",
+    "saveurs": "Pastèque, fraise, grenade, frais",
+    "description": "Une recette fruitée et fraîche associant pastèque, fraise et grenade.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/lady-shigeri-fighter-fuel.webp"
+  },
+  {
+    "nom": "Mawashi",
+    "saveurs": "Fruit du dragon, fraise, frais",
+    "description": "Une association simple et efficace de fruit du dragon et fraise avec une belle fraîcheur.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/mawashi-fighter-fuel.webp"
+  },
+  {
+    "nom": "Minasawa",
+    "saveurs": "Poire, pomme, cactus, frais",
+    "description": "Une recette fraîche et végétale mêlant poire, pomme et cactus.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/minasawa-fighter-fuel.webp"
+  },
+  {
+    "nom": "Nagashi",
+    "saveurs": "Fruits rouges, frais",
+    "description": "Une recette gourmande de fruits rouges accompagnée d'une touche glacée.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/nagashi-fighter-fuel.webp"
+  },
+  {
+    "nom": "Paloma X Enfer",
+    "saveurs": "Limonade, framboise bleue, très frais",
+    "description": "Une limonade fruitée à la framboise bleue dans une version ultra fraîche.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/paloma-fighter-fuel-x-enfer-100ml.webp"
+  },
+  {
+    "nom": "Seiryuto",
+    "saveurs": "Fruits rouges, frais",
+    "description": "Une recette fraîche aux notes intenses de fruits rouges.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/seiryuto-fighter-fuel.webp"
+  },
+  {
+    "nom": "Shaken",
+    "saveurs": "Fruit du dragon jaune, melon, pastèque, frais",
+    "description": "Une recette exotique et rafraîchissante autour du fruit du dragon jaune.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/shaken-fighter-fuel.webp"
+  },
+  {
+    "nom": "Shigeri",
+    "saveurs": "Fruits rouges, grenade, kiwi, frais",
+    "description": "La recette emblématique mêlant fruits rouges, grenade et kiwi.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/shigeri-fighter-fuel.webp"
+  },
+  {
+    "nom": "Uraken",
+    "saveurs": "Fraise, arbouse, frais",
+    "description": "Une recette originale associant fraise et arbouse avec une fraîcheur équilibrée.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/uraken-fighter-fuel.webp"
+  },
+  {
+    "nom": "Yuko X Enfer",
+    "saveurs": "Fraise, cassis, extra frais",
+    "description": "Une recette intense de fraise et cassis dans une version X Enfer particulièrement fraîche.",
+    "format": "100ml",
+    "nicotine": "0mg",
+    "image": "uploads/yuko-fighter-fuel-x-enfer.webp"
+  }
+]
