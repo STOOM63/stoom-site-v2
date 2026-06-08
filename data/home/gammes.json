@@ -56,6 +56,14 @@
     "bouton": "Découvrir"
   },
   {
+  "titre": "Fighter Fuel",
+  "categorie": "Fruités frais",
+  "description": "Fruit du dragon, grenade, fruits rouges, pêche, ananas, kiwi et recettes X Enfer ultra fraîches. Une des gammes les plus emblématiques de la vape fruitée.",
+  "image": "uploads/fighterfuelambiance.webp",
+  "lien": "fighterfuel.html",
+  "bouton": "Découvrir"
+},
+  {
   "titre": "Pep's",
   "categorie": "E-liquides Boissons",
   "description": "Des recettes cola originales déclinées en plusieurs versions fraîches et gourmandes.",
