@@ -1,6 +1,6 @@
 [
   {
-    "nom": "Pêche Coco",
+    "nom": "Ananas Pêche Coco",
     "saveurs": "Ananas, Pêche, Coco",
     "description": "Une recette exotique mêlant ananas, pêche juteuse et noix de coco.",
     "image": "uploads/ananas-peche-coco-mexican-cartel-50ml100ml.webp",
@@ -8,7 +8,7 @@
     "nicotine": "0mg"
   },
   {
-    "nom": "Mangue Passion",
+    "nom": "Limonade Mangue Passion",
     "saveurs": "Limonade, Mangue, Fruit de la Passion",
     "description": "Une limonade pétillante sublimée par la mangue et le fruit de la passion.",
     "image": "uploads/limonade-mangue-passion-mexican-cartel.webp",
