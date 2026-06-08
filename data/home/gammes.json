@@ -80,6 +80,14 @@
     "bouton": "Voir la gamme"
   },
   {
+  "titre": "Mexican Cartel",
+  "categorie": "E-liquides Fruités",
+  "description": "Des recettes fruitées explosives mêlant fruits exotiques, limonade, cactus et fruits rouges dans un univers coloré inspiré du Mexique.",
+  "image": "uploads/mexicancartelambiance.webp",
+  "lien": "mexicancartel.html",
+  "bouton": "Voir la gamme"
+},
+  {
     "titre": "Shojo",
     "categorie": "E-liquides Fruités Frais",
     "description": "La marque Shojo propose des e-liquides fruités frais inspirés de l'univers du manga et du gaming.",
