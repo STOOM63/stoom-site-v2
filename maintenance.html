@@ -4,207 +4,286 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maintenance | STOOM Clermont-Ferrand</title>
+<title>Page en maintenance | STOOM Clermont-Ferrand</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-    box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 body{
-    margin:0;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    font-family:'Montserrat',sans-serif;
-
-    background:
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  font-family:Montserrat,sans-serif;
+  color:white;
+  background:
     radial-gradient(circle at top left,rgba(85,212,255,.35),transparent 35%),
-    radial-gradient(circle at bottom right,rgba(109,255,183,.15),transparent 35%),
+    radial-gradient(circle at bottom right,rgba(109,255,183,.16),transparent 35%),
     linear-gradient(135deg,#06131d,#0b2230);
 }
 
 .card{
-
-    width:min(900px,100%);
-    text-align:center;
-
-    background:rgba(255,255,255,.07);
-    backdrop-filter:blur(10px);
-
-    border:1px solid rgba(142,234,255,.25);
-
-    border-radius:36px;
-
-    overflow:hidden;
-
-    box-shadow:0 25px 80px rgba(0,0,0,.4);
+  width:min(920px,100%);
+  text-align:center;
+  border-radius:36px;
+  overflow:hidden;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(142,234,255,.25);
+  box-shadow:0 25px 80px rgba(0,0,0,.4);
 }
 
 .hero-image{
-
-    width:100%;
-    display:block;
-    max-height:420px;
-    object-fit:cover;
+  width:100%;
+  max-height:430px;
+  object-fit:cover;
+  display:block;
 }
 
 .content{
-
-    padding:40px 30px;
+  padding:38px 28px;
 }
 
 .badge{
-
-    display:inline-flex;
-    padding:10px 18px;
-
-    border-radius:999px;
-
-    background:rgba(142,234,255,.12);
-
-    border:1px solid rgba(142,234,255,.25);
-
-    color:#8eeaff;
-
-    font-weight:900;
-
-    text-transform:uppercase;
-
-    font-size:.72rem;
+  display:inline-flex;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(142,234,255,.12);
+  border:1px solid rgba(142,234,255,.25);
+  color:#8eeaff;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.72rem;
 }
 
 h1{
-
-    margin:22px 0;
-
-    color:white;
-
-    font-size:clamp(2.5rem,7vw,5rem);
-
-    line-height:.9;
-
-    text-transform:uppercase;
+  margin:22px 0;
+  font-size:clamp(2.3rem,7vw,5rem);
+  line-height:.9;
+  text-transform:uppercase;
 }
 
 h1 span{
-    color:#8eeaff;
+  color:#8eeaff;
 }
 
 p{
-
-    max-width:650px;
-
-    margin:auto;
-
-    color:#c5e2ee;
-
-    line-height:1.8;
-
-    font-weight:600;
+  max-width:650px;
+  margin:0 auto 24px;
+  color:#c5e2ee;
+  line-height:1.75;
+  font-weight:600;
 }
 
 .quote{
-
-    margin-top:25px;
-
-    padding:18px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.05);
-
-    color:#8eeaff;
-
-    font-weight:800;
+  margin:24px auto 0;
+  max-width:650px;
+  padding:18px;
+  border-radius:20px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(142,234,255,.18);
+  color:#8eeaff;
+  font-weight:800;
+  line-height:1.5;
 }
 
-.button{
+.maintenance-status{
+  margin-top:30px;
+}
 
-    display:inline-flex;
+.status-text{
+  color:#8eeaff;
+  font-weight:800;
+  margin-bottom:15px;
+  line-height:1.5;
+}
 
-    margin-top:30px;
+.progress-bar{
+  width:100%;
+  max-width:500px;
+  height:20px;
+  margin:auto;
+  border-radius:999px;
+  overflow:hidden;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(142,234,255,.2);
+}
 
-    min-height:54px;
+.progress-fill{
+  height:100%;
+  width:0%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#55d4ff,#8eeaff,#6dffb7);
+  animation:repairProgress 12s infinite;
+}
 
-    padding:0 24px;
+.progress-label{
+  margin-top:12px;
+  color:#c5e2ee;
+  font-size:.85rem;
+  font-weight:800;
+}
 
-    align-items:center;
+@keyframes repairProgress{
+  0%{width:7%}
+  15%{width:24%}
+  30%{width:42%}
+  45%{width:63%}
+  60%{width:58%}
+  75%{width:81%}
+  90%{width:96%}
+  100%{width:12%}
+}
 
-    justify-content:center;
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
 
-    border-radius:16px;
+a{
+  min-height:50px;
+  padding:0 20px;
+  border-radius:16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.75rem;
+}
 
-    text-decoration:none;
+.primary{
+  background:linear-gradient(135deg,#55d4ff,#8eeaff);
+  color:#06131d;
+}
 
-    background:linear-gradient(135deg,#55d4ff,#8eeaff);
-
-    color:#06131d;
-
-    font-weight:900;
-
-    text-transform:uppercase;
+.secondary{
+  color:white;
+  border:1px solid rgba(142,234,255,.35);
+  background:rgba(255,255,255,.08);
 }
 
 .small{
-
-    margin-top:25px;
-
-    font-size:.8rem;
-
-    color:#8ea4b2;
+  margin-top:24px;
+  color:#8ea4b2;
+  font-size:.78rem;
+  font-weight:700;
 }
 
+@media(max-width:560px){
+  body{
+    padding:12px;
+  }
+
+  .card{
+    border-radius:28px;
+  }
+
+  .content{
+    padding:28px 18px;
+  }
+
+  .hero-image{
+    max-height:300px;
+  }
+
+  a{
+    width:100%;
+  }
+}
 </style>
 </head>
+
 <body>
 
 <div class="card">
 
-    <img
-        src="uploads/maintenance.webp"
-        alt="Maintenance STOOM"
-        class="hero-image">
+  <img
+    src="uploads/maintenance.webp"
+    alt="Page en maintenance STOOM Clermont-Ferrand"
+    class="hero-image">
 
-    <div class="content">
+  <div class="content">
 
-        <div class="badge">
-            🚧 Maintenance en cours
-        </div>
+    <div class="badge">
+      🚧 Page en maintenance
+    </div>
 
-        <h1>
-            Nos accus sont<br>
-            <span>en charge...</span>
-        </h1>
+    <h1>
+      Oups…<br>
+      <span>on bricole !</span>
+    </h1>
 
-        <p>
-            Cette page est temporairement indisponible.
-            Un technicien STOOM est actuellement alimenté
-            à 100% au café et travaille dessus.
-        </p>
+    <p>
+      Cette page est temporairement en préparation chez STOOM Clermont-Ferrand.
+      On ajuste deux trois réglages, on recharge les accus et on revient très vite.
+    </p>
 
-        <div class="quote">
-            💨 Dernières nouvelles :<br>
-            le stagiaire a encore essayé de souffler dans le port USB-C pour le réparer...
-        </div>
+    <div class="quote">
+      💨 Dernières nouvelles :<br>
+      la page devrait revenir avant que votre résistance ne soit à changer.
+    </div>
 
-        <a href="index.html" class="button">
-            Retour au site
-        </a>
+    <div class="maintenance-status">
 
-        <div class="small">
-            Temps estimé avant réparation :
-            entre 5 minutes et 3 cafés.
-        </div>
+      <div class="status-text">
+        Niveau de réparation estimé :
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="progress-label" id="maintenanceMessage">
+        Chargement du café...
+      </div>
 
     </div>
 
+    <div class="buttons">
+      <a href="index.html" class="primary">Retour au catalogue</a>
+      <a href="contact.html" class="secondary">Venir en boutique</a>
+    </div>
+
+    <div class="small">
+      Temps estimé : entre 5 minutes, 3 cafés et une mise à jour qui fait semblant d’être finie.
+    </div>
+
+  </div>
+
 </div>
+
+<script>
+const messages = [
+  "Chargement du café...",
+  "Recherche du tournevis...",
+  "Le technicien fait semblant de comprendre...",
+  "Redémarrage de l'univers...",
+  "Test scientifique du bouton ON/OFF...",
+  "Consultation d'un collègue imaginaire...",
+  "Ça avance, promis...",
+  "Encore un petit nuage et c’est bon..."
+];
+
+let index = 0;
+
+setInterval(() => {
+  document.getElementById("maintenanceMessage").textContent = messages[index];
+  index++;
+  if(index >= messages.length){
+    index = 0;
+  }
+}, 2500);
+</script>
 
 </body>
 </html>
