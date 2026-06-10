@@ -16,7 +16,6 @@
 
 <style>
 :root{
-  --bg:#06131d;
   --cyan:#6ee7ff;
   --green:#6dffb7;
   --gold:#ffd36e;
@@ -101,7 +100,6 @@ header{
   font-weight:900;
   color:#04121b;
   background:linear-gradient(135deg,var(--cyan),var(--green));
-  box-shadow:0 14px 32px rgba(25,183,255,.26);
 }
 
 .logo strong{display:block;font-size:18px}
@@ -148,16 +146,6 @@ header{
     linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.72),rgba(6,19,29,.94)),
     url("uploads/contact-hero.webp") center/cover no-repeat;
   z-index:-3;
-}
-
-.contact-hero::after{
-  content:"";
-  position:absolute;
-  inset:auto -20% -35% -20%;
-  height:340px;
-  background:radial-gradient(circle,rgba(25,183,255,.48),transparent 65%);
-  filter:blur(52px);
-  z-index:-2;
 }
 
 .hero-grid{
@@ -211,8 +199,6 @@ h1 span{
 }
 
 .hero-hours-card{
-  position:relative;
-  overflow:hidden;
   padding:24px;
   border-radius:28px;
   background:rgba(255,255,255,.11);
@@ -221,18 +207,7 @@ h1 span{
   box-shadow:0 18px 46px rgba(0,0,0,.22);
 }
 
-.hero-hours-card::after{
-  content:"";
-  position:absolute;
-  right:-40px;
-  top:-40px;
-  width:130px;
-  height:130px;
-  background:radial-gradient(circle,rgba(110,231,255,.35),transparent 70%);
-}
-
 .hero-hours-card strong{
-  position:relative;
   display:block;
   margin-bottom:12px;
   color:white;
@@ -240,7 +215,6 @@ h1 span{
 }
 
 .hero-hours-card span{
-  position:relative;
   display:block;
   font-size:clamp(34px,4vw,48px);
   font-weight:900;
@@ -281,7 +255,6 @@ h1 span{
 .btn-wow{
   color:#04121b;
   background:linear-gradient(135deg,var(--cyan),var(--green));
-  box-shadow:0 18px 40px rgba(25,183,255,.25);
 }
 
 .btn-soft{
@@ -293,8 +266,6 @@ h1 span{
 .btn-wow:hover,.btn-soft:hover{transform:translateY(-3px)}
 
 .review-card{
-  position:relative;
-  overflow:hidden;
   border-radius:36px;
   padding:32px;
   background:
@@ -302,7 +273,6 @@ h1 span{
     linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.06));
   border:1px solid var(--border);
   box-shadow:var(--shadow);
-  backdrop-filter:blur(18px);
 }
 
 .stars{
@@ -441,7 +411,6 @@ h1 span{
 .contact-extra h3{
   font-size:34px;
   margin:0 0 18px;
-  letter-spacing:-.8px;
 }
 
 .address-list,
@@ -510,7 +479,6 @@ h1 span{
     radial-gradient(circle at top right,rgba(25,183,255,.16),transparent 42%),
     linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
   border:1px solid rgba(255,255,255,.12);
-  box-shadow:0 16px 46px rgba(0,0,0,.18);
 }
 
 .why-card.gold{
@@ -536,7 +504,7 @@ h1 span{
   line-height:1.56;
 }
 
-/* NEARBY */
+/* NEARBY LOGOS NON COUPÉS */
 
 .nearby-section{
   padding:58px 0 20px;
@@ -549,7 +517,8 @@ h1 span{
 }
 
 .nearby-card{
-  display:block;
+  display:flex;
+  flex-direction:column;
   overflow:hidden;
   border-radius:30px;
   text-decoration:none;
@@ -566,24 +535,27 @@ h1 span{
 }
 
 .nearby-img{
-  height:160px;
+  height:220px;
+  padding:24px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   overflow:hidden;
 }
 
 .nearby-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+  max-width:100%;
+  max-height:170px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
   display:block;
-  transition:.35s ease;
-}
-
-.nearby-card:hover img{
-  transform:scale(1.05);
 }
 
 .nearby-content{
   padding:20px;
+  background:rgba(6,19,29,.76);
 }
 
 .nearby-content strong{
@@ -621,7 +593,6 @@ h1 span{
   font-size:clamp(34px,5vw,62px);
   line-height:.96;
   margin:16px 0;
-  letter-spacing:-1.8px;
 }
 
 .final-card p{
@@ -665,7 +636,6 @@ footer{
     background:rgba(6,19,29,.88);
     border:1px solid rgba(255,255,255,.13);
     backdrop-filter:blur(18px);
-    box-shadow:0 18px 50px rgba(0,0,0,.35);
   }
 
   .mobile-actions a{
@@ -746,16 +716,21 @@ footer{
     padding:22px;
   }
 
+  .nearby-img{
+    height:190px;
+    padding:18px;
+  }
+
+  .nearby-img img{
+    max-height:145px;
+  }
+
   .map-wrap{
     border-radius:28px;
   }
 
   .map-wrap iframe{
     height:360px;
-  }
-
-  .nearby-img{
-    height:180px;
   }
 
   .footer-inner{
@@ -784,7 +759,7 @@ footer{
     </a>
 
     <nav class="menu">
-      <a href="nouveautes.html">Nouveautés</a>
+     
       <a href="economies.html">Économies</a>
       <a href="diy.html">DIY</a>
       <a href="concours.html">Concours</a>
