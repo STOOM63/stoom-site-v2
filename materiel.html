@@ -4,21 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Matériel disponible | STOOM Clermont-Ferrand</title>
+<title>Matériel vape disponible | STOOM Clermont-Ferrand</title>
+<meta name="description" content="Catalogue matériel STOOM Clermont-Ferrand : pods, kits, box, clearomiseurs, résistances, accus, chargeurs et accessoires disponibles en boutique.">
+<meta name="theme-color" content="#06131d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
+:root{
+  --bg:#06131d;
+  --bg2:#081923;
+  --cyan:#8eeaff;
+  --blue:#55d4ff;
+  --green:#6dffb7;
+  --text:#f4fbff;
+  --muted:#b8cad6;
+  --line:rgba(142,234,255,.20);
+  --soft:rgba(255,255,255,.07);
+  --shadow:0 22px 80px rgba(0,0,0,.32);
+}
+
 *{box-sizing:border-box}
 
-body{
+html,body{
   margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
   font-family:Montserrat,sans-serif;
-  background:#06131d;
-  color:white;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 0%,rgba(85,212,255,.28),transparent 34%),
+    radial-gradient(circle at 92% 12%,rgba(109,255,183,.13),transparent 30%),
+    linear-gradient(180deg,#06131d,#081923 58%,#06131d);
 }
 
 .container{
@@ -30,15 +57,21 @@ body{
   text-align:center;
   padding:8px 14px;
   font-size:.72rem;
+  line-height:1.35;
   color:#d8f5ff;
   font-weight:800;
-  background:#06131d;
-  border-bottom:1px solid rgba(255,255,255,.1);
+  background:rgba(0,0,0,.22);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 header{
-  background:#06131d;
-  border-bottom:1px solid rgba(255,255,255,.12);
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(6,19,29,.88);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.10);
 }
 
 .nav{
@@ -63,7 +96,7 @@ header{
   border-radius:16px;
   display:grid;
   place-items:center;
-  background:linear-gradient(135deg,#55d4ff,#8eeaff);
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
   font-weight:900;
 }
@@ -72,20 +105,23 @@ header{
   display:block;
   font-size:1.7rem;
   line-height:.9;
+  letter-spacing:2px;
 }
 
 .logo span{
   display:block;
-  color:#8eeaff;
+  color:var(--cyan);
   font-size:.72rem;
   font-weight:900;
   text-transform:uppercase;
   letter-spacing:2px;
+  margin-top:4px;
 }
 
 .menu{
   display:flex;
   gap:22px;
+  align-items:center;
 }
 
 .menu a{
@@ -98,22 +134,38 @@ header{
 
 .menu a.active,
 .menu a:hover{
-  color:#8eeaff;
+  color:var(--cyan);
 }
 
+/* HERO */
+
 .hero{
-  padding:60px 0 36px;
+  position:relative;
+  padding:70px 0 42px;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.97),rgba(6,19,29,.82)),
+    linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.72),rgba(6,19,29,.90)),
     url("uploads/materiel.webp") center/cover no-repeat;
-  border-bottom:1px solid rgba(142,234,255,.18);
+  z-index:0;
+}
+
+.hero .container{
+  position:relative;
+  z-index:1;
 }
 
 .badge{
   display:inline-flex;
   padding:9px 14px;
   border-radius:999px;
-  background:linear-gradient(135deg,#55d4ff,#8eeaff);
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
   font-weight:900;
   font-size:.72rem;
@@ -121,38 +173,87 @@ header{
 }
 
 .hero h1{
-  max-width:780px;
+  max-width:850px;
   margin:18px 0 16px;
-  font-size:clamp(2.4rem,6vw,5.2rem);
-  line-height:.9;
+  font-size:clamp(2.35rem,6vw,5.3rem);
+  line-height:.88;
+  letter-spacing:-2px;
   text-transform:uppercase;
 }
 
 .hero h1 span{
-  color:#8eeaff;
+  color:var(--cyan);
 }
 
 .hero p{
-  max-width:680px;
+  max-width:720px;
   color:#c5e2ee;
   font-weight:650;
   line-height:1.7;
+  font-size:1rem;
 }
 
-.filters-section{
-  padding:32px 0;
-  background:#06131d;
-  position:sticky;
-  top:0;
-  z-index:10;
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px;
+}
+
+.hero-btn{
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 18px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.72rem;
+  transition:.22s ease;
+}
+
+.hero-btn:hover{
+  transform:translateY(-2px);
+}
+
+.hero-btn.primary{
+  color:#06131d;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+}
+
+.hero-btn.soft{
+  color:white;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.13);
+}
+
+/* FILTERS */
+
+.filters-zone{
+  background:rgba(6,19,29,.95);
   border-bottom:1px solid rgba(255,255,255,.08);
+  position:sticky;
+  top:74px;
+  z-index:40;
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
 }
 
-.search-box{
-  margin-bottom:18px;
+.filters-inner{
+  padding:18px 0 16px;
 }
 
-.search-box input{
+.search-line{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+.search-line input{
   width:100%;
   min-height:54px;
   border-radius:18px;
@@ -161,57 +262,130 @@ header{
   color:white;
   padding:0 18px;
   font-size:1rem;
-  font-weight:700;
+  font-weight:800;
   outline:none;
+  -webkit-appearance:none;
+  appearance:none;
 }
 
-.search-box input::placeholder{
-  color:#92aebc;
+.search-line input::placeholder{
+  color:#91aebb;
 }
 
-.filter-group{
-  margin-top:14px;
-}
-
-.filter-title{
-  color:#8eeaff;
-  text-transform:uppercase;
-  font-size:.72rem;
-  font-weight:900;
-  margin-bottom:10px;
-}
-
-.filter-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.filter-btn{
+.reset-btn{
+  min-height:54px;
   border:1px solid rgba(142,234,255,.25);
   background:rgba(255,255,255,.07);
   color:#d8f5ff;
-  border-radius:999px;
-  padding:10px 14px;
+  border-radius:18px;
+  padding:0 18px;
   font-weight:900;
-  font-size:.72rem;
   text-transform:uppercase;
   cursor:pointer;
 }
 
-.filter-btn.active{
-  background:linear-gradient(135deg,#55d4ff,#8eeaff);
+.category-strip{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding:2px 0 12px;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+
+.category-strip::-webkit-scrollbar{display:none}
+
+.category-pill{
+  flex:0 0 auto;
+  border:1px solid rgba(142,234,255,.25);
+  background:rgba(255,255,255,.07);
+  color:#d8f5ff;
+  border-radius:999px;
+  padding:12px 16px;
+  font-weight:900;
+  font-size:.72rem;
+  text-transform:uppercase;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.category-pill.active{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
 }
 
-.results-info{
-  padding:20px 0 0;
-  color:#c5e2ee;
-  font-weight:800;
+.secondary-filters{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:4px;
 }
 
+.select-wrap label{
+  display:block;
+  color:var(--cyan);
+  text-transform:uppercase;
+  font-size:.62rem;
+  font-weight:900;
+  margin-bottom:7px;
+}
+
+.select-wrap select{
+  width:100%;
+  min-height:46px;
+  border-radius:15px;
+  border:1px solid rgba(142,234,255,.22);
+  background:#0a1d29;
+  color:white;
+  padding:0 12px;
+  font-weight:800;
+  outline:none;
+}
+
+.results-info{
+  margin-top:12px;
+  color:#c5e2ee;
+  font-weight:800;
+  font-size:.82rem;
+}
+
+/* GUIDE */
+
+.guide-section{
+  padding:30px 0 0;
+}
+
+.guide-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.guide-card{
+  padding:18px;
+  border-radius:24px;
+  background:rgba(255,255,255,.055);
+  border:1px solid var(--line);
+}
+
+.guide-card strong{
+  display:block;
+  color:white;
+  margin-bottom:7px;
+  font-size:1rem;
+}
+
+.guide-card span{
+  color:#c5e2ee;
+  font-weight:650;
+  line-height:1.45;
+  font-size:.82rem;
+}
+
+/* PRODUCTS */
+
 .catalog{
-  padding:28px 0 70px;
+  padding:32px 0 76px;
 }
 
 .material-grid{
@@ -221,30 +395,47 @@ header{
 }
 
 .material-card{
-  background:rgba(255,255,255,.065);
-  border:1px solid rgba(142,234,255,.18);
-  border-radius:28px;
+  display:flex;
+  flex-direction:column;
   overflow:hidden;
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
+  border-radius:28px;
+  background:rgba(255,255,255,.065);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  min-height:100%;
 }
 
 .material-img{
-  height:250px;
-  background:#0b1c27;
+  height:245px;
+  background:
+    radial-gradient(circle at center,rgba(142,234,255,.14),transparent 60%),
+    #0b1c27;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:16px;
+  padding:18px;
 }
 
 .material-img img{
   max-width:100%;
-  max-height:220px;
+  max-height:215px;
   object-fit:contain;
+  display:block;
 }
 
 .material-content{
   padding:20px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.material-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:12px;
 }
 
 .material-badge{
@@ -253,21 +444,41 @@ header{
   border-radius:999px;
   background:rgba(142,234,255,.12);
   border:1px solid rgba(142,234,255,.22);
-  color:#8eeaff;
-  font-size:.66rem;
+  color:var(--cyan);
+  font-size:.64rem;
   font-weight:900;
   text-transform:uppercase;
-  margin-bottom:12px;
+}
+
+.stock-dot{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:#6dffb7;
+  font-size:.64rem;
+  font-weight:900;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+.stock-dot::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#6dffb7;
 }
 
 .material-content h2{
   margin:0 0 8px;
-  font-size:1.25rem;
+  font-size:1.24rem;
+  line-height:1.05;
   text-transform:uppercase;
+  color:white;
 }
 
-.material-meta{
-  color:#8eeaff;
+.material-brand{
+  color:var(--cyan);
   font-weight:900;
   font-size:.78rem;
   margin-bottom:12px;
@@ -278,6 +489,7 @@ header{
   line-height:1.55;
   font-weight:600;
   font-size:.9rem;
+  margin:0;
 }
 
 .material-tags{
@@ -293,8 +505,26 @@ header{
   background:rgba(255,255,255,.07);
   border:1px solid rgba(255,255,255,.1);
   color:#d8f5ff;
-  font-size:.65rem;
+  font-size:.62rem;
   font-weight:900;
+}
+
+.card-cta{
+  margin-top:auto;
+  padding-top:18px;
+}
+
+.card-cta span{
+  min-height:42px;
+  border-radius:14px;
+  border:1px solid var(--cyan);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.70rem;
 }
 
 .empty{
@@ -302,23 +532,104 @@ header{
   padding:28px;
   border-radius:24px;
   background:rgba(255,255,255,.06);
-  border:1px solid rgba(142,234,255,.18);
+  border:1px solid var(--line);
   color:#c5e2ee;
   font-weight:800;
+  line-height:1.5;
+}
+
+/* FINAL */
+
+.final-panel{
+  padding:0 0 72px;
+}
+
+.final-card{
+  padding:34px;
+  border-radius:34px;
+  background:
+    radial-gradient(circle at top left,rgba(142,234,255,.20),transparent 38%),
+    rgba(255,255,255,.06);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.final-card h2{
+  color:white;
+  text-transform:uppercase;
+  font-size:clamp(1.8rem,4vw,3.6rem);
+  line-height:.95;
+  margin:14px 0;
+}
+
+.final-card p{
+  max-width:760px;
+  margin:0 auto 22px;
+  color:#c5e2ee;
+  line-height:1.7;
+  font-weight:650;
 }
 
 footer{
   border-top:1px solid rgba(255,255,255,.09);
-  padding:26px 0;
+  padding:24px 0;
   color:#c5e2ee;
   font-size:.8rem;
 }
 
-@media(max-width:800px){
+/* MOBILE */
+
+.mobile-actions{
+  display:none;
+}
+
+@media(max-width:900px){
   .menu{display:none}
 
-  .filters-section{
+  .mobile-actions{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:90;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    padding:8px;
+    border-radius:22px;
+    background:rgba(6,19,29,.90);
+    border:1px solid rgba(255,255,255,.13);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
+  }
+
+  .mobile-actions a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+    border-radius:16px;
+    text-decoration:none;
+    color:#06131d;
+    font-weight:900;
+    font-size:.72rem;
+    text-transform:uppercase;
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+  }
+
+  .filters-zone{
     position:relative;
+    top:auto;
+  }
+
+  .secondary-filters{
+    grid-template-columns:1fr;
+  }
+
+  .guide-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
   .material-grid{
@@ -327,11 +638,12 @@ footer{
   }
 
   .material-img{
-    height:170px;
+    height:168px;
+    padding:12px;
   }
 
   .material-img img{
-    max-height:145px;
+    max-height:142px;
   }
 
   .material-content{
@@ -339,17 +651,103 @@ footer{
   }
 
   .material-content h2{
-    font-size:.95rem;
+    font-size:.93rem;
   }
 
   .material-content p{
     display:none;
   }
+
+  .material-brand{
+    font-size:.68rem;
+  }
+
+  .material-tags span{
+    font-size:.56rem;
+    padding:6px 7px;
+  }
+
+  .card-cta span{
+    min-height:38px;
+    font-size:.62rem;
+  }
+
+  footer{
+    padding-bottom:88px;
+  }
 }
 
-@media(max-width:420px){
+@media(max-width:520px){
+  .container{
+    width:min(100% - 22px,1180px);
+  }
+
+  .nav{
+    min-height:68px;
+  }
+
+  .logo-mark{
+    width:40px;
+    height:40px;
+  }
+
+  .logo strong{
+    font-size:1.5rem;
+  }
+
+  .hero{
+    padding:46px 0 30px;
+  }
+
   .hero h1{
-    font-size:2.3rem;
+    font-size:2.45rem;
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:.9rem;
+  }
+
+  .hero-actions a{
+    width:100%;
+  }
+
+  .search-line{
+    grid-template-columns:1fr;
+  }
+
+  .reset-btn{
+    min-height:46px;
+  }
+
+  .category-pill{
+    padding:11px 14px;
+    font-size:.68rem;
+  }
+
+  .guide-grid{
+    grid-template-columns:1fr;
+  }
+
+  .guide-card{
+    padding:16px;
+  }
+
+  .material-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .material-top{
+    display:block;
+  }
+
+  .stock-dot{
+    margin-top:8px;
+  }
+
+  .final-card{
+    padding:24px;
+    border-radius:28px;
   }
 }
 </style>
@@ -358,7 +756,7 @@ footer{
 <body>
 
 <div class="top">
-STOOM Clermont-Ferrand · Matériel disponible en boutique · Pas de vente en ligne
+STOOM Clermont-Ferrand · Matériel disponible en boutique · Produits réservés aux majeurs · Pas de vente en ligne
 </div>
 
 <header>
@@ -376,10 +774,17 @@ STOOM Clermont-Ferrand · Matériel disponible en boutique · Pas de vente en li
       <a href="materiel.html" class="active">Matériel</a>
       <a href="diy.html">DIY</a>
       <a href="concours.html">Concours</a>
+      <a href="economies.html">Économies</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
+
+<div class="mobile-actions">
+  <a href="tel:0473273394">Appeler</a>
+  <a href="contact.html">Venir</a>
+  <a href="#catalogue">Catalogue</a>
+</div>
 
 <main>
 
@@ -388,41 +793,77 @@ STOOM Clermont-Ferrand · Matériel disponible en boutique · Pas de vente en li
     <span class="badge">Matériel STOOM</span>
 
     <h1>
-      Matériel disponible
+      Le matériel disponible
       <span>en boutique</span>
     </h1>
 
     <p>
-      Retrouvez ici les pods, kits, clearomiseurs, box, accus, chargeurs et accessoires disponibles chez STOOM Clermont-Ferrand.
-      Ce catalogue est une vitrine : le conseil et l’achat se font directement en boutique.
+      Pods, kits complets, box, clearomiseurs, résistances, accus, chargeurs et accessoires :
+      retrouvez notre sélection de matériel en vitrine avant de venir en boutique pour être conseillé.
     </p>
+
+    <div class="hero-actions">
+      <a class="hero-btn primary" href="#catalogue">Voir le catalogue</a>
+      <a class="hero-btn soft" href="contact.html">Venir en boutique</a>
+    </div>
   </div>
 </section>
 
-<section class="filters-section">
-  <div class="container">
+<section class="filters-zone" id="catalogue">
+  <div class="container filters-inner">
 
-    <div class="search-box">
-      <input type="search" id="searchInput" placeholder="Rechercher un produit, une marque, 18650, pod, clearomiseur...">
+    <div class="search-line">
+      <input type="search" id="searchInput" placeholder="Rechercher : XROS, box, 18650, clearomiseur, accu, chargeur...">
+      <button class="reset-btn" id="resetBtn">Réinitialiser</button>
     </div>
 
-    <div class="filter-group">
-      <div class="filter-title">Catégorie</div>
-      <div class="filter-buttons" id="categoryFilters"></div>
-    </div>
+    <div class="category-strip" id="categoryStrip"></div>
 
-    <div class="filter-group">
-      <div class="filter-title">Type</div>
-      <div class="filter-buttons" id="subCategoryFilters"></div>
-    </div>
+    <div class="secondary-filters">
+      <div class="select-wrap">
+        <label for="typeFilter">Type</label>
+        <select id="typeFilter"></select>
+      </div>
 
-    <div class="filter-group">
-      <div class="filter-title">Profil</div>
-      <div class="filter-buttons" id="levelFilters"></div>
+      <div class="select-wrap">
+        <label for="profilFilter">Profil</label>
+        <select id="profilFilter"></select>
+      </div>
+
+      <div class="select-wrap">
+        <label for="usageFilter">Usage</label>
+        <select id="usageFilter"></select>
+      </div>
     </div>
 
     <div class="results-info" id="resultsInfo"></div>
 
+  </div>
+</section>
+
+<section class="guide-section">
+  <div class="container">
+    <div class="guide-grid">
+      <div class="guide-card">
+        <strong>🚬 Débuter / sevrage</strong>
+        <span>Pods et kits simples pour retrouver un tirage proche cigarette.</span>
+      </div>
+
+      <div class="guide-card">
+        <strong>🔋 Autonomie</strong>
+        <span>Box accu 21700 ou double accus pour tenir plus longtemps.</span>
+      </div>
+
+      <div class="guide-card">
+        <strong>💨 Tirage & vapeur</strong>
+        <span>Clearomiseurs MTL, RDL ou DL selon votre façon de vapoter.</span>
+      </div>
+
+      <div class="guide-card">
+        <strong>🛠 Accessoires</strong>
+        <span>Accus, chargeurs, pyrex, drip tips et pièces utiles en boutique.</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -432,11 +873,28 @@ STOOM Clermont-Ferrand · Matériel disponible en boutique · Pas de vente en li
   </div>
 </section>
 
+<section class="final-panel">
+  <div class="container">
+    <div class="final-card">
+      <span class="badge">Conseil STOOM</span>
+      <h2>Un doute sur le matériel ?</h2>
+      <p>
+        Cette page vous permet de repérer les produits. En boutique, nous vous aidons à choisir selon votre consommation,
+        votre taux de nicotine, votre tirage et votre besoin d’autonomie.
+      </p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="hero-btn primary" href="contact.html">Venir chez STOOM</a>
+        <a class="hero-btn soft" href="tel:0473273394">Appeler la boutique</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="container">
-    © STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs
+    © STOOM Clermont-Ferrand · Catalogue vitrine · Achat uniquement en boutique avec conseil
   </div>
 </footer>
 
@@ -447,112 +905,182 @@ function escapeHtml(str){
   });
 }
 
+const categoryOrder = [
+  "Tous",
+  "Pods",
+  "Kits complets",
+  "Box",
+  "Clearomiseurs",
+  "Résistances",
+  "Accus",
+  "Chargeurs",
+  "Accessoires"
+];
+
 let allMaterials = [];
 let selectedCategory = "Tous";
-let selectedSubCategory = "Tous";
-let selectedLevel = "Tous";
 
 const fallbackMaterials = [
   {
     "nom":"Exemple Pod rechargeable",
     "marque":"STOOM",
     "categorie":"Pods",
-    "sousCategorie":"Pod rechargeable",
-    "niveau":"Débutant",
-    "usage":"Idéal sevrage",
+    "type":"Pod rechargeable",
+    "profil":"Débutant",
+    "usage":"Sevrage tabagique",
     "description":"Exemple de produit. Remplacez ce produit dans data/materiel.json.",
     "image":"uploads/materiel.webp",
-    "badge":"Exemple"
+    "badge":"Exemple",
+    "stock":"Disponible",
+    "ordre":9999
   }
 ];
 
 async function loadMaterials(){
   try{
-    const response = await fetch("data/materiel.json?v=1");
+    const response = await fetch("data/materiel.json?v=3");
     if(!response.ok) throw new Error("JSON introuvable");
     allMaterials = await response.json();
   }catch(e){
     allMaterials = fallbackMaterials;
   }
 
-  buildFilters();
+  if(!Array.isArray(allMaterials)){
+    allMaterials = fallbackMaterials;
+  }
+
+  buildCategoryStrip();
+  buildSelectFilters();
   renderMaterials();
 }
 
-function uniqueValues(key){
-  return [...new Set(allMaterials.map(item => item[key]).filter(Boolean))];
+function uniqueValues(key, baseItems){
+  return [...new Set(baseItems.map(item => item[key]).filter(Boolean))].sort();
 }
 
-function createButtons(containerId, values, activeValue, onClick){
-  const container = document.getElementById(containerId);
-  container.innerHTML = "";
+function getBaseFilteredByCategory(){
+  if(selectedCategory === "Tous") return allMaterials;
+  return allMaterials.filter(item => item.categorie === selectedCategory);
+}
+
+function buildCategoryStrip(){
+  const strip = document.getElementById("categoryStrip");
+  strip.innerHTML = "";
+
+  const existingCategories = new Set(allMaterials.map(item => item.categorie).filter(Boolean));
+  const ordered = categoryOrder.filter(cat => cat === "Tous" || existingCategories.has(cat));
+  const extra = [...existingCategories].filter(cat => !categoryOrder.includes(cat)).sort();
+  const categories = [...ordered, ...extra];
+
+  categories.forEach(category => {
+    const btn = document.createElement("button");
+    btn.className = "category-pill" + (category === selectedCategory ? " active" : "");
+    btn.type = "button";
+    btn.textContent = category;
+
+    btn.addEventListener("click", () => {
+      selectedCategory = category;
+      setSelectValue("typeFilter", "Tous");
+      setSelectValue("profilFilter", "Tous");
+      setSelectValue("usageFilter", "Tous");
+      buildCategoryStrip();
+      buildSelectFilters();
+      renderMaterials();
+    });
+
+    strip.appendChild(btn);
+  });
+}
+
+function setSelectValue(id, value){
+  const select = document.getElementById(id);
+  if(select) select.value = value;
+}
+
+function fillSelect(selectId, values, currentValue){
+  const select = document.getElementById(selectId);
+  select.innerHTML = "";
 
   ["Tous", ...values].forEach(value => {
-    const btn = document.createElement("button");
-    btn.className = "filter-btn" + (value === activeValue ? " active" : "");
-    btn.textContent = value;
-    btn.addEventListener("click", () => onClick(value));
-    container.appendChild(btn);
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = value;
+    select.appendChild(option);
   });
+
+  select.value = values.includes(currentValue) ? currentValue : "Tous";
 }
 
-function buildFilters(){
-  createButtons("categoryFilters", uniqueValues("categorie"), selectedCategory, value => {
-    selectedCategory = value;
-    selectedSubCategory = "Tous";
-    buildFilters();
-    renderMaterials();
-  });
+function buildSelectFilters(){
+  const base = getBaseFilteredByCategory();
 
-  const subValues = selectedCategory === "Tous"
-    ? uniqueValues("sousCategorie")
-    : [...new Set(allMaterials
-        .filter(item => item.categorie === selectedCategory)
-        .map(item => item.sousCategorie)
-        .filter(Boolean))];
+  const currentType = document.getElementById("typeFilter").value || "Tous";
+  const currentProfil = document.getElementById("profilFilter").value || "Tous";
+  const currentUsage = document.getElementById("usageFilter").value || "Tous";
 
-  createButtons("subCategoryFilters", subValues, selectedSubCategory, value => {
-    selectedSubCategory = value;
-    renderMaterials();
-    buildFilters();
-  });
+  fillSelect("typeFilter", uniqueValues("type", base), currentType);
+  fillSelect("profilFilter", uniqueValues("profil", base), currentProfil);
+  fillSelect("usageFilter", uniqueValues("usage", base), currentUsage);
+}
 
-  createButtons("levelFilters", uniqueValues("niveau"), selectedLevel, value => {
-    selectedLevel = value;
-    renderMaterials();
-    buildFilters();
+function getFilteredMaterials(){
+  const search = document.getElementById("searchInput").value.toLowerCase().trim();
+
+  const selectedType = document.getElementById("typeFilter").value;
+  const selectedProfil = document.getElementById("profilFilter").value;
+  const selectedUsage = document.getElementById("usageFilter").value;
+
+  return allMaterials.filter(item => {
+    const text = [
+      item.nom,
+      item.marque,
+      item.categorie,
+      item.type,
+      item.profil,
+      item.usage,
+      item.description,
+      item.badge,
+      item.stock
+    ].join(" ").toLowerCase();
+
+    const matchSearch = !search || text.includes(search);
+    const matchCategory = selectedCategory === "Tous" || item.categorie === selectedCategory;
+    const matchType = selectedType === "Tous" || item.type === selectedType;
+    const matchProfil = selectedProfil === "Tous" || item.profil === selectedProfil;
+    const matchUsage = selectedUsage === "Tous" || item.usage === selectedUsage;
+
+    return matchSearch && matchCategory && matchType && matchProfil && matchUsage;
+  }).sort((a,b) => {
+    const orderA = Number.isFinite(Number(a.ordre)) ? Number(a.ordre) : 9999;
+    const orderB = Number.isFinite(Number(b.ordre)) ? Number(b.ordre) : 9999;
+
+    if(orderA !== orderB) return orderA - orderB;
+
+    const catA = categoryOrder.indexOf(a.categorie);
+    const catB = categoryOrder.indexOf(b.categorie);
+
+    const safeCatA = catA === -1 ? 999 : catA;
+    const safeCatB = catB === -1 ? 999 : catB;
+
+    if(safeCatA !== safeCatB) return safeCatA - safeCatB;
+
+    return String(a.nom || "").localeCompare(String(b.nom || ""), "fr");
   });
 }
 
 function renderMaterials(){
   const grid = document.getElementById("materialGrid");
-  const search = document.getElementById("searchInput").value.toLowerCase().trim();
-
-  const filtered = allMaterials.filter(item => {
-    const text = [
-      item.nom,
-      item.marque,
-      item.categorie,
-      item.sousCategorie,
-      item.niveau,
-      item.usage,
-      item.description,
-      item.badge
-    ].join(" ").toLowerCase();
-
-    const matchSearch = !search || text.includes(search);
-    const matchCategory = selectedCategory === "Tous" || item.categorie === selectedCategory;
-    const matchSub = selectedSubCategory === "Tous" || item.sousCategorie === selectedSubCategory;
-    const matchLevel = selectedLevel === "Tous" || item.niveau === selectedLevel;
-
-    return matchSearch && matchCategory && matchSub && matchLevel;
-  });
+  const filtered = getFilteredMaterials();
 
   document.getElementById("resultsInfo").textContent =
     filtered.length + " produit" + (filtered.length > 1 ? "s" : "") + " affiché" + (filtered.length > 1 ? "s" : "");
 
   if(filtered.length === 0){
-    grid.innerHTML = `<div class="empty">Aucun matériel ne correspond à votre recherche.</div>`;
+    grid.innerHTML = `
+      <div class="empty">
+        Aucun matériel ne correspond à votre recherche. Essayez de retirer un filtre ou de chercher une marque plus générale.
+      </div>
+    `;
     return;
   }
 
@@ -563,11 +1091,14 @@ function renderMaterials(){
       </div>
 
       <div class="material-content">
-        <div class="material-badge">${escapeHtml(item.badge || item.categorie || 'Matériel')}</div>
+        <div class="material-top">
+          <div class="material-badge">${escapeHtml(item.badge || item.categorie || 'Matériel')}</div>
+          <div class="stock-dot">${escapeHtml(item.stock || 'Boutique')}</div>
+        </div>
 
         <h2>${escapeHtml(item.nom || '')}</h2>
 
-        <div class="material-meta">
+        <div class="material-brand">
           ${escapeHtml(item.marque || '')}
         </div>
 
@@ -575,9 +1106,13 @@ function renderMaterials(){
 
         <div class="material-tags">
           ${item.categorie ? `<span>${escapeHtml(item.categorie)}</span>` : ''}
-          ${item.sousCategorie ? `<span>${escapeHtml(item.sousCategorie)}</span>` : ''}
-          ${item.niveau ? `<span>${escapeHtml(item.niveau)}</span>` : ''}
+          ${item.type ? `<span>${escapeHtml(item.type)}</span>` : ''}
+          ${item.profil ? `<span>${escapeHtml(item.profil)}</span>` : ''}
           ${item.usage ? `<span>${escapeHtml(item.usage)}</span>` : ''}
+        </div>
+
+        <div class="card-cta">
+          <span>Conseil en boutique</span>
         </div>
       </div>
     </article>
@@ -585,6 +1120,21 @@ function renderMaterials(){
 }
 
 document.getElementById("searchInput").addEventListener("input", renderMaterials);
+
+["typeFilter","profilFilter","usageFilter"].forEach(id => {
+  document.getElementById(id).addEventListener("change", renderMaterials);
+});
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  selectedCategory = "Tous";
+  document.getElementById("searchInput").value = "";
+  buildCategoryStrip();
+  buildSelectFilters();
+  setSelectValue("typeFilter", "Tous");
+  setSelectValue("profilFilter", "Tous");
+  setSelectValue("usageFilter", "Tous");
+  renderMaterials();
+});
 
 loadMaterials();
 </script>
