@@ -1,11 +1,11 @@
 [
   {
-    "jour": "05",
-    "mois": "Juin",
-    "Année": "2026",
-    "titre": "Tirage Jeux concours SIX VAPE",
-    "description": "Qui sera le grand gagnant de la box 6 Liquides + Pod OXVA en collaboration avec SIX VAPE !",
-    "statut": "À venir",
-    "image": "uploads/sixvape.webp"
+    "jour": "10",
+    "mois": "JUIN",
+    "titre": "Tirage au sort Six Vape",
+    "description": "Merci à tous les participants pour ce concours organisé en boutique.",
+    "statut": "Concours terminé",
+    "image": "uploads/concours-six-vape.webp",
+    "gagnant": "Monsieur GORNY Johann"
   }
 ]
