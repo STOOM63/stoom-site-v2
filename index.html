@@ -486,7 +486,99 @@ header .container.nav{
   color:#c5e2ee;
   font-weight:700;
 }
+.material-banner{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:0;
+  overflow:hidden;
+  border-radius:34px;
+  background:
+    radial-gradient(circle at top left,rgba(142,234,255,.20),transparent 38%),
+    linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.045));
+  border:1px solid rgba(142,234,255,.22);
+  box-shadow:0 22px 80px rgba(0,0,0,.28);
+  text-decoration:none;
+  color:inherit;
+}
 
+.material-content{
+  padding:38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.material-content h2{
+  color:white;
+  text-transform:uppercase;
+  font-size:clamp(2rem,4vw,4rem);
+  line-height:.92;
+  margin:16px 0;
+}
+
+.material-content p{
+  color:#c5e2ee;
+  line-height:1.7;
+  font-weight:650;
+  margin-bottom:18px;
+}
+
+.material-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:22px;
+}
+
+.material-tags span{
+  padding:9px 12px;
+  border-radius:999px;
+  background:rgba(142,234,255,.10);
+  border:1px solid rgba(142,234,255,.22);
+  color:#d8f5ff;
+  font-weight:900;
+  font-size:.72rem;
+  text-transform:uppercase;
+}
+
+.material-visual{
+  min-height:330px;
+  background:
+    radial-gradient(circle at center,rgba(142,234,255,.20),transparent 58%),
+    #081923;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+.material-visual img{
+  max-width:100%;
+  max-height:290px;
+  object-fit:contain;
+}
+
+@media(max-width:900px){
+  .material-banner{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:640px){
+
+  .material-content{
+    padding:26px;
+  }
+
+  .material-visual{
+    min-height:220px;
+  }
+
+  .material-visual img{
+    max-height:180px;
+  }
+
+}
 @media(max-width:1100px){
   header .container.nav{
     grid-template-columns:230px 1fr 160px;
@@ -675,6 +767,54 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
     </div>
 
     <div class="card-grid" id="homeRangesGrid"></div>
+  </div>
+</section>
+  <section class="home-section" id="materiel">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Matériel disponible en boutique</h2>
+      <p>
+        Découvrez les box, pods, batteries intégrées, accus 18650, accus 21700,
+        doubles accus et accessoires disponibles chez STOOM Clermont-Ferrand.
+      </p>
+    </div>
+
+    <a class="material-banner" href="materiel.html">
+
+      <div class="material-content">
+
+        <span class="badge">Matériel STOOM</span>
+
+        <h2>Voir le matériel disponible</h2>
+
+        <p>
+          Consultez notre sélection de matériel classée par catégorie
+          et trouvez facilement la box ou l'accessoire adapté à vos besoins.
+        </p>
+
+        <div class="material-tags">
+          <span>Batteries intégrées</span>
+          <span>18650</span>
+          <span>21700</span>
+          <span>Double accus</span>
+          <span>Accessoires</span>
+        </div>
+
+        <div class="catalog-button">
+          Voir le matériel
+        </div>
+
+      </div>
+
+      <div class="material-visual">
+        <img
+          src="uploads/materiel-boutique.webp"
+          alt="Matériel disponible en boutique STOOM">
+      </div>
+
+    </a>
+
   </div>
 </section>
 
