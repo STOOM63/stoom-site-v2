@@ -9,9 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -68,9 +66,7 @@ h1{
   text-transform:uppercase;
 }
 
-h1 span{
-  color:#8eeaff;
-}
+h1 span{color:#8eeaff}
 
 p{
   max-width:650px;
@@ -98,15 +94,14 @@ p{
 
 .status-text{
   color:#8eeaff;
-  font-weight:800;
+  font-weight:900;
   margin-bottom:15px;
-  line-height:1.5;
 }
 
 .progress-bar{
   width:100%;
   max-width:500px;
-  height:20px;
+  height:22px;
   margin:auto;
   border-radius:999px;
   overflow:hidden;
@@ -127,6 +122,13 @@ p{
   color:#c5e2ee;
   font-size:.85rem;
   font-weight:800;
+}
+
+.fake-percent{
+  margin-top:8px;
+  color:#8eeaff;
+  font-size:.82rem;
+  font-weight:900;
 }
 
 @keyframes repairProgress{
@@ -180,25 +182,11 @@ a{
 }
 
 @media(max-width:560px){
-  body{
-    padding:12px;
-  }
-
-  .card{
-    border-radius:28px;
-  }
-
-  .content{
-    padding:28px 18px;
-  }
-
-  .hero-image{
-    max-height:300px;
-  }
-
-  a{
-    width:100%;
-  }
+  body{padding:12px}
+  .card{border-radius:28px}
+  .content{padding:28px 18px}
+  .hero-image{max-height:300px}
+  a{width:100%}
 }
 </style>
 </head>
@@ -244,7 +232,11 @@ a{
       </div>
 
       <div class="progress-label" id="maintenanceMessage">
-        Chargement du café...
+        ☕ Chargement du premier café...
+      </div>
+
+      <div class="fake-percent" id="fakePercent">
+        Réparation : 37%
       </div>
 
     </div>
@@ -264,25 +256,61 @@ a{
 
 <script>
 const messages = [
-  "Chargement du café...",
-  "Recherche du tournevis...",
-  "Le technicien fait semblant de comprendre...",
-  "Redémarrage de l'univers...",
-  "Test scientifique du bouton ON/OFF...",
-  "Consultation d'un collègue imaginaire...",
-  "Ça avance, promis...",
-  "Encore un petit nuage et c’est bon..."
+  "☕ Chargement du premier café...",
+  "☕☕ Chargement du deuxième café...",
+  "🔍 Recherche de la panne...",
+  "🤔 Le technicien pense avoir trouvé...",
+  "😐 Ah non.",
+  "🔌 Débrancher puis rebrancher...",
+  "🚬 Pause stratégique...",
+  "🧠 Consultation du manuel...",
+  "📖 Le manuel est écrit en très petit.",
+  "🛠️ Tentative n°1...",
+  "🛠️ Tentative n°2 parce que la n°1 n’a pas osé fonctionner.",
+  "😎 Cette fois c'est la bonne.",
+  "🤨 Non plus.",
+  "👨‍🔬 Analyse scientifique très sérieuse...",
+  "📈 Niveau de confiance : 3%",
+  "📈 Niveau de confiance : 112%",
+  "⚠️ Excès de confiance détecté.",
+  "🧹 Suppression du bug...",
+  "😱 Le bug s'est caché derrière un autre bug.",
+  "🔨 Négociation avec le bug...",
+  "🤝 Le bug refuse de coopérer.",
+  "💨 Test avec davantage de vapeur...",
+  "🔋 Vérification des accus...",
+  "☕ Recharge du technicien...",
+  "🧠 Réinstallation du cerveau...",
+  "📡 Recherche d'un expert...",
+  "📡 L'expert recherche un autre expert...",
+  "📡 Le deuxième expert cherche sur Google...",
+  "🌍 Redémarrage de l'internet...",
+  "🚀 Presque terminé...",
+  "🚀 Vraiment presque...",
+  "🚀 Cette fois c'est sûr...",
+  "😅 Bon... presque.",
+  "🏁 Dernière ligne droite...",
+  "💨 La page devrait revenir avant que votre résistance ne soit à changer."
 ];
 
 let index = 0;
 
 setInterval(() => {
   document.getElementById("maintenanceMessage").textContent = messages[index];
+
   index++;
+
   if(index >= messages.length){
     index = 0;
   }
-}, 2500);
+}, 2400);
+
+setInterval(() => {
+  const randomPercent = Math.floor(Math.random() * 35) + 65;
+
+  document.getElementById("fakePercent").textContent =
+    "Réparation : " + randomPercent + "%";
+}, 3000);
 </script>
 
 </body>
