@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contact & horaires | STOOM Clermont-Ferrand</title>
 <meta name="description" content="STOOM Clermont-Ferrand : horaires, adresse, parking facile, itinéraire, téléphone, commerces à proximité. 650 avis Google, note 4,9/5.">
 <meta name="theme-color" content="#06131d">
@@ -10,14 +11,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
 :root{
   --bg:#06131d;
-  --bg2:#081923;
   --cyan:#6ee7ff;
-  --blue:#19b7ff;
   --green:#6dffb7;
   --gold:#ffd36e;
   --text:#f4fbff;
@@ -136,11 +136,8 @@ header{
 
 .contact-hero{
   position:relative;
-  min-height:calc(100vh - 120px);
   overflow:hidden;
-  display:flex;
-  align-items:center;
-  padding:82px 0 58px;
+  padding:74px 0 54px;
 }
 
 .contact-hero::before{
@@ -148,7 +145,7 @@ header{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.97),rgba(6,19,29,.70),rgba(6,19,29,.92)),
+    linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.72),rgba(6,19,29,.94)),
     url("uploads/contact-hero.webp") center/cover no-repeat;
   z-index:-3;
 }
@@ -163,29 +160,15 @@ header{
   z-index:-2;
 }
 
-.hero-glow{
-  position:absolute;
-  right:8%;
-  top:14%;
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(109,255,183,.34),transparent 68%);
-  filter:blur(18px);
-  z-index:-1;
-}
-
 .hero-grid{
   display:grid;
   grid-template-columns:1.05fr .95fr;
   gap:34px;
-  align-items:center;
+  align-items:stretch;
 }
 
 .kicker{
   display:inline-flex;
-  align-items:center;
-  gap:8px;
   padding:10px 15px;
   border-radius:999px;
   color:var(--cyan);
@@ -196,10 +179,10 @@ header{
 }
 
 h1{
-  font-size:clamp(40px,6.2vw,82px);
-  line-height:.92;
+  font-size:clamp(42px,6.4vw,86px);
+  line-height:.9;
   letter-spacing:-2.8px;
-  margin:0 0 20px;
+  margin:0 0 22px;
 }
 
 h1 span{
@@ -213,18 +196,74 @@ h1 span{
 .hero-text{
   max-width:720px;
   font-size:18px;
-  line-height:1.75;
+  line-height:1.72;
   color:var(--muted);
   margin:0;
 }
 
 .hero-text strong{color:white}
 
+.hero-hours{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin:28px 0;
+}
+
+.hero-hours-card{
+  position:relative;
+  overflow:hidden;
+  padding:24px;
+  border-radius:28px;
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(14px);
+  box-shadow:0 18px 46px rgba(0,0,0,.22);
+}
+
+.hero-hours-card::after{
+  content:"";
+  position:absolute;
+  right:-40px;
+  top:-40px;
+  width:130px;
+  height:130px;
+  background:radial-gradient(circle,rgba(110,231,255,.35),transparent 70%);
+}
+
+.hero-hours-card strong{
+  position:relative;
+  display:block;
+  margin-bottom:12px;
+  color:white;
+  font-size:15px;
+}
+
+.hero-hours-card span{
+  position:relative;
+  display:block;
+  font-size:clamp(34px,4vw,48px);
+  font-weight:900;
+  color:var(--cyan);
+  line-height:1;
+  letter-spacing:-1.8px;
+}
+
+.hero-hours-note{
+  padding:18px;
+  border-radius:22px;
+  color:#04121b;
+  font-weight:900;
+  text-align:center;
+  background:linear-gradient(135deg,var(--cyan),var(--green));
+  margin-bottom:24px;
+}
+
 .hero-actions{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-  margin-top:28px;
+  margin-top:26px;
 }
 
 .btn-wow,.btn-soft{
@@ -253,36 +292,6 @@ h1 span{
 
 .btn-wow:hover,.btn-soft:hover{transform:translateY(-3px)}
 
-.quick-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:28px;
-}
-
-.quick-card{
-  padding:16px;
-  border-radius:22px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.11);
-  backdrop-filter:blur(12px);
-}
-
-.quick-card strong{
-  display:block;
-  font-size:18px;
-  margin-bottom:6px;
-}
-
-.quick-card span{
-  display:block;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.45;
-}
-
-/* GOOGLE REVIEW CARD */
-
 .review-card{
   position:relative;
   overflow:hidden;
@@ -296,24 +305,13 @@ h1 span{
   backdrop-filter:blur(18px);
 }
 
-.review-card::before{
-  content:"";
-  position:absolute;
-  inset:-80px -80px auto auto;
-  width:220px;
-  height:220px;
-  background:radial-gradient(circle,rgba(255,211,110,.34),transparent 70%);
-}
-
 .stars{
-  position:relative;
   font-size:32px;
   color:var(--gold);
   letter-spacing:2px;
 }
 
 .review-score{
-  position:relative;
   display:flex;
   align-items:flex-end;
   gap:14px;
@@ -333,20 +331,17 @@ h1 span{
 }
 
 .review-card h2{
-  position:relative;
   margin:0 0 10px;
   font-size:30px;
 }
 
 .review-card p{
-  position:relative;
   color:var(--muted);
   line-height:1.68;
   margin:0;
 }
 
 .review-badges{
-  position:relative;
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
@@ -371,99 +366,6 @@ h1 span{
   color:var(--muted);
   font-size:12px;
   margin-top:4px;
-}
-
-/* MEGA HORAIRES */
-
-.hours-mega{
-  padding:34px 0 18px;
-}
-
-.hours-mega-card{
-  position:relative;
-  overflow:hidden;
-  border-radius:42px;
-  padding:36px;
-  background:
-    radial-gradient(circle at top left,rgba(255,211,110,.24),transparent 34%),
-    radial-gradient(circle at bottom right,rgba(25,183,255,.25),transparent 38%),
-    linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.06));
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-
-.hours-mega-title{
-  display:flex;
-  justify-content:space-between;
-  gap:24px;
-  align-items:flex-end;
-  margin-bottom:24px;
-}
-
-.hours-mega-title h2{
-  margin:14px 0 0;
-  font-size:clamp(36px,5.4vw,68px);
-  line-height:.92;
-  letter-spacing:-2.4px;
-}
-
-.hours-mega-title p{
-  max-width:430px;
-  margin:0;
-  color:var(--muted);
-  line-height:1.65;
-}
-
-.hours-mega-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.hours-mega-line{
-  position:relative;
-  overflow:hidden;
-  padding:28px;
-  border-radius:30px;
-  background:rgba(255,255,255,.105);
-  border:1px solid rgba(255,255,255,.13);
-}
-
-.hours-mega-line::after{
-  content:"";
-  position:absolute;
-  right:-50px;
-  top:-50px;
-  width:150px;
-  height:150px;
-  background:radial-gradient(circle,rgba(110,231,255,.28),transparent 68%);
-}
-
-.hours-mega-line strong{
-  position:relative;
-  display:block;
-  font-size:20px;
-  margin-bottom:12px;
-}
-
-.hours-mega-line span{
-  position:relative;
-  display:block;
-  font-size:clamp(34px,5vw,58px);
-  line-height:1;
-  font-weight:900;
-  color:var(--cyan);
-  letter-spacing:-2px;
-}
-
-.hours-mega-note{
-  margin-top:20px;
-  padding:18px;
-  border-radius:22px;
-  color:#04121b;
-  font-weight:900;
-  text-align:center;
-  background:linear-gradient(135deg,var(--cyan),var(--green));
 }
 
 /* SECTIONS */
@@ -507,7 +409,6 @@ h1 span{
   display:grid;
   grid-template-columns:.9fr 1.1fr;
   gap:22px;
-  align-items:stretch;
 }
 
 .address-box,
@@ -543,57 +444,37 @@ h1 span{
   letter-spacing:-.8px;
 }
 
-.address-list{
+.address-list,
+.contact-chips{
   display:grid;
   gap:12px;
 }
 
-.address-item{
+.address-item,
+.contact-chip{
   padding:16px;
   border-radius:20px;
   background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.1);
 }
 
-.address-item strong{
-  display:block;
-  margin-bottom:5px;
-}
-
-.address-item span,
-.address-item a{
-  color:var(--muted);
-  text-decoration:none;
-  line-height:1.5;
-}
-
-.contact-extra p{
-  color:var(--muted);
-  line-height:1.7;
-  margin:0 0 18px;
-}
-
-.contact-chips{
-  display:grid;
-  gap:12px;
-}
-
-.contact-chip{
-  padding:17px;
-  border-radius:20px;
-  background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.1);
-}
-
+.address-item strong,
 .contact-chip strong{
   display:block;
-  font-size:18px;
   margin-bottom:6px;
 }
 
-.contact-chip span{
+.address-item span,
+.address-item a,
+.contact-chip span,
+.contact-extra p{
   color:var(--muted);
-  line-height:1.5;
+  text-decoration:none;
+  line-height:1.6;
+}
+
+.contact-extra p{
+  margin:0 0 18px;
 }
 
 /* MAP */
@@ -800,28 +681,14 @@ footer{
     background:linear-gradient(135deg,var(--cyan),var(--green));
   }
 
-  .contact-hero{
-    min-height:auto;
-    padding:64px 0 42px;
-  }
-
   .hero-grid,
   .address-layout{
     grid-template-columns:1fr;
   }
 
-  .quick-grid,
   .why-grid,
   .nearby-grid{
     grid-template-columns:1fr 1fr;
-  }
-
-  .hours-mega-title{
-    display:block;
-  }
-
-  .hours-mega-title p{
-    margin-top:14px;
   }
 }
 
@@ -840,6 +707,10 @@ footer{
     height:40px;
   }
 
+  .contact-hero{
+    padding:46px 0 38px;
+  }
+
   h1{
     letter-spacing:-1.4px;
   }
@@ -848,38 +719,31 @@ footer{
     font-size:16px;
   }
 
-  .hero-actions a{
-    width:100%;
-  }
-
-  .quick-grid,
+  .hero-hours,
   .why-grid,
   .nearby-grid,
-  .review-badges,
-  .hours-mega-grid{
+  .review-badges{
     grid-template-columns:1fr;
+  }
+
+  .hero-hours-card span{
+    font-size:40px;
+  }
+
+  .hero-actions a{
+    width:100%;
   }
 
   .review-score strong{
     font-size:62px;
   }
 
-  .hours-mega-card,
   .address-box,
   .contact-extra,
   .review-card,
   .final-card{
     border-radius:28px;
     padding:22px;
-  }
-
-  .hours-mega-line{
-    padding:22px;
-    border-radius:24px;
-  }
-
-  .hours-mega-line span{
-    font-size:38px;
   }
 
   .map-wrap{
@@ -906,7 +770,7 @@ footer{
 <body data-page="contact">
 
 <div class="top">
-  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Parking facile · 650 avis Google · Note 4,9/5
+  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Ouvert non-stop · Parking facile · 650 avis Google · Note 4,9/5
 </div>
 
 <header>
@@ -934,41 +798,47 @@ footer{
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
   <a href="https://www.google.com/maps/search/?api=1&query=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin" target="_blank" rel="noopener">Itinéraire</a>
-  <a href="#horaires">Horaires</a>
+  <a href="#adresse">Adresse</a>
 </div>
 
 <main>
 
 <section class="contact-hero">
-  <div class="hero-glow"></div>
-
   <div class="container hero-grid">
+
     <div>
-      <div class="kicker">📍 Contact · Horaires · Accès boutique</div>
+      <div class="kicker">🕒 Horaires · Contact · Accès boutique</div>
 
       <h1>
-        Nous sommes ouverts
-        <span>quand vous en avez besoin.</span>
+        Ouvert tôt.
+        <span>Ouvert non-stop.</span>
       </h1>
+
+      <div class="hero-hours">
+        <div class="hero-hours-card">
+          <strong>Lundi au vendredi</strong>
+          <span>8h30 → 19h</span>
+        </div>
+
+        <div class="hero-hours-card">
+          <strong>Samedi</strong>
+          <span>9h → 19h</span>
+        </div>
+      </div>
+
+      <div class="hero-hours-note">
+        Parking facile · Boutique accessible · Horaires en continu
+      </div>
 
       <p class="hero-text">
         Retrouvez <strong>STOOM Clermont-Ferrand</strong> au
-        <strong>109 avenue Édouard Michelin</strong>, avec un accès simple,
-        un parking facile et des horaires pensés pour les clients actifs :
-        <strong>ouverture dès 8h30</strong> et journée
-        <strong>non-stop jusqu’à 19h</strong>.
+        <strong>109 avenue Édouard Michelin</strong>. Une boutique facile d’accès,
+        pratique pour passer avant le travail, pendant la pause ou en fin de journée.
       </p>
 
       <div class="hero-actions">
         <a class="btn-wow" href="https://www.google.com/maps/search/?api=1&query=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin" target="_blank" rel="noopener">Lancer l’itinéraire</a>
         <a class="btn-soft" href="tel:0473273394">Appeler la boutique</a>
-      </div>
-
-      <div class="quick-grid">
-        <div class="quick-card"><strong>🚗 Parking</strong><span>Accès facile pour un passage rapide.</span></div>
-        <div class="quick-card"><strong>8h30</strong><span>Ouverture tôt du lundi au vendredi.</span></div>
-        <div class="quick-card"><strong>Non-stop</strong><span>Pas de coupure entre midi et deux.</span></div>
-        <div class="quick-card"><strong>650 avis</strong><span>Note Google 4,9/5.</span></div>
       </div>
     </div>
 
@@ -1002,46 +872,11 @@ footer{
         <a class="btn-wow" href="https://www.google.com/search?q=STOOM+Clermont-Ferrand+avis" target="_blank" rel="noopener">Voir les avis Google</a>
       </div>
     </div>
+
   </div>
 </section>
 
-<section class="hours-mega" id="horaires">
-  <div class="container">
-    <div class="hours-mega-card">
-
-      <div class="hours-mega-title">
-        <div>
-          <span class="badge">Nos horaires</span>
-          <h2>Ouvert tôt.<br>Ouvert non-stop.</h2>
-        </div>
-
-        <p>
-          Nous avons choisi d’ouvrir dès le matin pour faciliter les achats avant le travail,
-          pendant la pause ou en fin de journée.
-        </p>
-      </div>
-
-      <div class="hours-mega-grid">
-        <div class="hours-mega-line">
-          <strong>Lundi au vendredi</strong>
-          <span>8h30 → 19h</span>
-        </div>
-
-        <div class="hours-mega-line">
-          <strong>Samedi</strong>
-          <span>9h → 19h</span>
-        </div>
-      </div>
-
-      <div class="hours-mega-note">
-        Parking facile · Boutique accessible · Horaires en continu
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
+<section class="section" id="adresse">
   <div class="container">
 
     <div class="section-title">
@@ -1079,12 +914,18 @@ footer{
 
       <div class="contact-extra">
         <h3>Un passage simple.</h3>
+
         <p>
           La boutique est pensée pour être pratique : accès facile, parking simple,
           horaires larges et possibilité de venir rapidement sans perdre de temps.
         </p>
 
         <div class="contact-chips">
+          <div class="contact-chip">
+            <strong>🕒 Horaires en continu</strong>
+            <span>Lundi au vendredi 8h30-19h, samedi 9h-19h.</span>
+          </div>
+
           <div class="contact-chip">
             <strong>🚗 Parking facile</strong>
             <span>Idéal pour un passage rapide en voiture.</span>
@@ -1093,11 +934,6 @@ footer{
           <div class="contact-chip">
             <strong>⭐ 650 avis Google</strong>
             <span>Une note de 4,9/5 qui reflète la confiance de nos clients.</span>
-          </div>
-
-          <div class="contact-chip">
-            <strong>🕖 Ouvert non-stop</strong>
-            <span>Pas besoin de viser la bonne pause : nous sommes ouverts en continu.</span>
           </div>
         </div>
 
@@ -1143,12 +979,6 @@ footer{
 
     <div class="why-grid">
       <div class="why-card">
-        <div class="icon">🚗</div>
-        <h3>Parking facile</h3>
-        <p>Un arrêt rapide sans galère de stationnement.</p>
-      </div>
-
-      <div class="why-card">
         <div class="icon">🌅</div>
         <h3>Ouvert tôt</h3>
         <p>Dès 8h30 en semaine pour passer avant le travail.</p>
@@ -1158,6 +988,12 @@ footer{
         <div class="icon">🕖</div>
         <h3>Non-stop</h3>
         <p>Ouvert en continu jusqu’à 19h.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">🚗</div>
+        <h3>Parking facile</h3>
+        <p>Un arrêt rapide sans galère de stationnement.</p>
       </div>
 
       <div class="why-card gold">
@@ -1256,7 +1092,7 @@ footer{
       <h2>Passez quand c’est pratique pour vous.</h2>
 
       <p>
-        Parking facile, horaires non-stop, ouverture dès 8h30, quartier pratique
+        Ouverture dès 8h30, horaires non-stop, parking facile, quartier pratique
         et plus de 650 avis Google avec une note de 4,9/5.
       </p>
 
@@ -1273,10 +1109,11 @@ footer{
 <footer>
   <div class="container footer-inner">
     <span>© STOOM Clermont-Ferrand</span>
-    <span>109 avenue Édouard Michelin · 04 73 27 33 94 · 650 avis Google · 4,9/5</span>
+    <span>109 avenue Édouard Michelin · 04 73 27 33 94 · Ouvert non-stop · 650 avis Google · 4,9/5</span>
   </div>
 </footer>
 
 <script src="assets/app.js"></script>
+
 </body>
 </html>
