@@ -1,1 +1,14 @@
-
+[
+  {
+    "nom": "XROS 5 Mini",
+    "marque": "Vaporesso",
+    "categorie": "Pods",
+    "type": "Pod rechargeable",
+    "profil": "Débutant",
+    "usage": "Sevrage tabagique",
+    "description": "Pod compact, simple d'utilisation et parfaitement adapté aux clients qui souhaitent arrêter de fumer avec un matériel discret et efficace.",
+    "image": "uploads/xros-5-mini.webp",
+    "badge": "Recommandé STOOM",
+    "stock": "Disponible"
+  }
+]
