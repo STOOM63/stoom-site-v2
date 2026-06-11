@@ -11,15 +11,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
 :root{
   --bg:#06131d;
-  --bg2:#081923;
-  --panel:rgba(255,255,255,.072);
-  --panel2:rgba(255,255,255,.105);
   --cyan:#8eeaff;
   --blue:#55d4ff;
   --green:#6dffb7;
@@ -28,8 +24,7 @@
   --text:#f4fbff;
   --muted:#b8cad6;
   --line:rgba(142,234,255,.20);
-  --line2:rgba(255,255,255,.12);
-  --shadow:0 22px 80px rgba(0,0,0,.36);
+  --shadow:0 22px 80px rgba(0,0,0,.34);
 }
 
 *{box-sizing:border-box}
@@ -48,8 +43,8 @@ html,body{
 
 body{
   background:
-    radial-gradient(circle at 8% 0%,rgba(85,212,255,.26),transparent 34%),
-    radial-gradient(circle at 92% 12%,rgba(109,255,183,.12),transparent 31%),
+    radial-gradient(circle at 8% 0%,rgba(85,212,255,.24),transparent 34%),
+    radial-gradient(circle at 92% 12%,rgba(109,255,183,.11),transparent 31%),
     linear-gradient(180deg,#06131d,#081923 54%,#06131d);
 }
 
@@ -75,7 +70,7 @@ header{
   position:sticky;
   top:0;
   z-index:60;
-  background:rgba(6,19,29,.88);
+  background:rgba(6,19,29,.90);
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(255,255,255,.10);
@@ -145,7 +140,7 @@ header{
 
 .hero{
   position:relative;
-  padding:58px 0 34px;
+  padding:54px 0 32px;
   overflow:hidden;
   border-bottom:1px solid var(--line);
 }
@@ -155,7 +150,7 @@ header{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.73),rgba(6,19,29,.92)),
+    linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.72),rgba(6,19,29,.92)),
     url("uploads/materiel.webp") center/cover no-repeat;
   z-index:0;
 }
@@ -234,7 +229,7 @@ header{
 }
 
 .filters-zone{
-  background:rgba(6,19,29,.92);
+  background:rgba(6,19,29,.93);
   border-bottom:1px solid rgba(255,255,255,.08);
   position:sticky;
   top:74px;
@@ -325,6 +320,11 @@ header{
   cursor:pointer;
   white-space:nowrap;
   transition:.18s ease;
+}
+
+.category-pill:hover{
+  border-color:rgba(142,234,255,.55);
+  transform:translateY(-1px);
 }
 
 .category-pill.active{
@@ -420,20 +420,15 @@ header{
   background:linear-gradient(180deg,rgba(255,255,255,.115),rgba(255,255,255,.065));
 }
 
-/* CORRECTION IMAGE ENTIÈRE */
 .material-img{
   position:relative;
-  height:360px;
+  height:285px;
   background:#f7fbfe;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:18px;
+  padding:12px;
   overflow:hidden;
-}
-
-.material-img::after{
-  display:none;
 }
 
 .material-img img{
@@ -450,7 +445,7 @@ header{
 }
 
 .material-card:hover .material-img img{
-  transform:scale(1.015);
+  transform:scale(1.012);
 }
 
 .floating-badge{
@@ -462,10 +457,10 @@ header{
   max-width:calc(100% - 24px);
   padding:8px 10px;
   border-radius:999px;
-  background:rgba(6,19,29,.90);
+  background:rgba(6,19,29,.92);
   border:1px solid rgba(142,234,255,.30);
   color:var(--cyan);
-  font-size:.62rem;
+  font-size:.60rem;
   font-weight:900;
   text-transform:uppercase;
   backdrop-filter:blur(12px);
@@ -499,7 +494,7 @@ header{
   align-items:center;
   gap:6px;
   color:#6dffb7;
-  font-size:.62rem;
+  font-size:.60rem;
   font-weight:900;
   text-transform:uppercase;
   white-space:nowrap;
@@ -521,7 +516,7 @@ header{
 
 .material-content h2{
   margin:0 0 9px;
-  font-size:1.12rem;
+  font-size:1.10rem;
   line-height:1.08;
   text-transform:uppercase;
   color:white;
@@ -548,7 +543,7 @@ header{
   background:rgba(255,255,255,.07);
   border:1px solid rgba(255,255,255,.10);
   color:#d8f5ff;
-  font-size:.58rem;
+  font-size:.56rem;
   font-weight:900;
   text-transform:uppercase;
 }
@@ -568,7 +563,7 @@ header{
   background:linear-gradient(135deg,var(--blue),var(--cyan));
   font-weight:900;
   text-transform:uppercase;
-  font-size:.68rem;
+  font-size:.66rem;
 }
 
 .empty{
@@ -643,8 +638,8 @@ footer{
   }
 
   .material-img{
-    height:245px;
-    padding:12px;
+    height:210px;
+    padding:9px;
   }
 
   .material-content{padding:13px}
@@ -658,13 +653,13 @@ footer{
   }
 
   .material-tags span{
-    font-size:.53rem;
+    font-size:.51rem;
     padding:6px 7px;
   }
 
   .card-cta span{
     min-height:38px;
-    font-size:.60rem;
+    font-size:.58rem;
   }
 
   footer{padding-bottom:88px}
@@ -710,34 +705,34 @@ footer{
   .material-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 
   .material-img{
-    height:210px;
-    padding:10px;
+    height:175px;
+    padding:8px;
   }
 
   .floating-badge{
     left:8px;
     top:8px;
     padding:6px 8px;
-    font-size:.52rem;
+    font-size:.50rem;
   }
 
   .material-top{display:block}
 
   .stock-dot{
     margin-top:7px;
-    font-size:.55rem;
+    font-size:.53rem;
   }
 }
 
 @media(max-width:390px){
   .material-img{
-    height:190px;
-    padding:8px;
+    height:160px;
+    padding:7px;
   }
 
   .material-content{padding:11px}
   .material-content h2{font-size:.84rem}
-  .material-tags span{font-size:.50rem}
+  .material-tags span{font-size:.48rem}
 }
 </style>
 </head>
@@ -931,7 +926,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 
   async function loadMaterials(){
     try{
-      const response = await fetch("data/materiel.json?v=13", {cache:"no-store"});
+      const response = await fetch("data/materiel.json?v=15", {cache:"no-store"});
       if(!response.ok) throw new Error("JSON introuvable");
       const data = await response.json();
       allMaterials = Array.isArray(data) ? data : fallbackMaterials;
