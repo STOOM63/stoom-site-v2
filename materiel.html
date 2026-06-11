@@ -30,7 +30,6 @@
   --line:rgba(142,234,255,.20);
   --line2:rgba(255,255,255,.12);
   --shadow:0 22px 80px rgba(0,0,0,.36);
-  --radius:28px;
 }
 
 *{box-sizing:border-box}
@@ -54,9 +53,7 @@ body{
     linear-gradient(180deg,#06131d,#081923 54%,#06131d);
 }
 
-button,input,select{
-  font-family:inherit;
-}
+button,input,select{font-family:inherit}
 
 .container{
   width:min(1220px,calc(100% - 28px));
@@ -144,9 +141,7 @@ header{
 }
 
 .menu a.active,
-.menu a:hover{
-  color:var(--cyan);
-}
+.menu a:hover{color:var(--cyan)}
 
 .hero{
   position:relative;
@@ -163,15 +158,6 @@ header{
     linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.73),rgba(6,19,29,.92)),
     url("uploads/materiel.webp") center/cover no-repeat;
   z-index:0;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:auto -10% -35% -10%;
-  height:180px;
-  background:radial-gradient(circle,rgba(142,234,255,.20),transparent 62%);
-  filter:blur(18px);
 }
 
 .hero .container{
@@ -202,9 +188,7 @@ header{
   text-transform:uppercase;
 }
 
-.hero h1 span{
-  color:var(--cyan);
-}
+.hero h1 span{color:var(--cyan)}
 
 .hero p{
   max-width:720px;
@@ -236,9 +220,7 @@ header{
   transition:.22s ease;
 }
 
-.hero-btn:hover{
-  transform:translateY(-2px);
-}
+.hero-btn:hover{transform:translateY(-2px)}
 
 .hero-btn.primary{
   color:#06131d;
@@ -261,9 +243,7 @@ header{
   -webkit-backdrop-filter:blur(18px);
 }
 
-.filters-inner{
-  padding:16px 0;
-}
+.filters-inner{padding:16px 0}
 
 .search-line{
   display:grid;
@@ -273,9 +253,7 @@ header{
   margin-bottom:12px;
 }
 
-.search-box{
-  position:relative;
-}
+.search-box{position:relative}
 
 .search-box::before{
   content:"⌕";
@@ -302,7 +280,6 @@ header{
   outline:none;
   -webkit-appearance:none;
   appearance:none;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
 }
 
 .search-line input:focus{
@@ -310,9 +287,7 @@ header{
   box-shadow:0 0 0 4px rgba(142,234,255,.10);
 }
 
-.search-line input::placeholder{
-  color:#91aebb;
-}
+.search-line input::placeholder{color:#91aebb}
 
 .reset-btn{
   min-height:56px;
@@ -352,11 +327,6 @@ header{
   transition:.18s ease;
 }
 
-.category-pill:hover{
-  transform:translateY(-1px);
-  border-color:rgba(142,234,255,.55);
-}
-
 .category-pill.active{
   background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
@@ -377,7 +347,6 @@ header{
   font-size:.60rem;
   font-weight:900;
   margin-bottom:6px;
-  letter-spacing:.4px;
 }
 
 .select-wrap select{
@@ -392,10 +361,6 @@ header{
   outline:none;
   -webkit-appearance:none;
   appearance:none;
-  background-image:linear-gradient(45deg,transparent 50%,var(--cyan) 50%),linear-gradient(135deg,var(--cyan) 50%,transparent 50%);
-  background-position:calc(100% - 17px) 19px,calc(100% - 11px) 19px;
-  background-size:6px 6px,6px 6px;
-  background-repeat:no-repeat;
 }
 
 .results-row{
@@ -427,9 +392,7 @@ header{
   text-transform:uppercase;
 }
 
-.catalog{
-  padding:28px 0 64px;
-}
+.catalog{padding:28px 0 64px}
 
 .material-grid{
   display:grid;
@@ -444,8 +407,7 @@ header{
   flex-direction:column;
   overflow:hidden;
   border-radius:28px;
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.055));
+  background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.055));
   border:1px solid var(--line);
   box-shadow:var(--shadow);
   min-height:100%;
@@ -455,32 +417,23 @@ header{
 .material-card:hover{
   transform:translateY(-4px);
   border-color:rgba(142,234,255,.45);
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.115),rgba(255,255,255,.065));
+  background:linear-gradient(180deg,rgba(255,255,255,.115),rgba(255,255,255,.065));
 }
 
+/* CORRECTION IMAGE ENTIÈRE */
 .material-img{
   position:relative;
-  height:330px;
-  background:
-    radial-gradient(circle at 50% 42%,#ffffff 0%,#f5fbff 52%,#eaf4f8 100%);
+  height:360px;
+  background:#f7fbfe;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:12px;
+  padding:18px;
   overflow:hidden;
 }
 
 .material-img::after{
-  content:"";
-  position:absolute;
-  left:12%;
-  right:12%;
-  bottom:16px;
-  height:24px;
-  border-radius:50%;
-  background:rgba(0,0,0,.10);
-  filter:blur(12px);
+  display:none;
 }
 
 .material-img img{
@@ -488,13 +441,16 @@ header{
   z-index:1;
   width:100%;
   height:100%;
+  max-width:100%;
+  max-height:100%;
   object-fit:contain;
+  object-position:center;
   display:block;
   transition:transform .25s ease;
 }
 
 .material-card:hover .material-img img{
-  transform:scale(1.035);
+  transform:scale(1.015);
 }
 
 .floating-badge{
@@ -536,7 +492,6 @@ header{
   font-weight:900;
   font-size:.76rem;
   text-transform:uppercase;
-  letter-spacing:.3px;
 }
 
 .stock-dot{
@@ -548,7 +503,6 @@ header{
   font-weight:900;
   text-transform:uppercase;
   white-space:nowrap;
-  text-align:right;
 }
 
 .stock-dot::before{
@@ -560,23 +514,10 @@ header{
   box-shadow:0 0 18px rgba(109,255,183,.70);
 }
 
-.stock-dot.warning{
-  color:var(--orange);
-}
-
-.stock-dot.warning::before{
-  background:var(--orange);
-  box-shadow:0 0 18px rgba(255,207,122,.70);
-}
-
-.stock-dot.off{
-  color:var(--red);
-}
-
-.stock-dot.off::before{
-  background:var(--red);
-  box-shadow:0 0 18px rgba(255,139,139,.70);
-}
+.stock-dot.warning{color:var(--orange)}
+.stock-dot.warning::before{background:var(--orange)}
+.stock-dot.off{color:var(--red)}
+.stock-dot.off::before{background:var(--red)}
 
 .material-content h2{
   margin:0 0 9px;
@@ -584,7 +525,6 @@ header{
   line-height:1.08;
   text-transform:uppercase;
   color:white;
-  letter-spacing:-.4px;
 }
 
 .material-content p{
@@ -650,18 +590,11 @@ footer{
   font-size:.78rem;
 }
 
-.mobile-actions{
-  display:none;
-}
+.mobile-actions{display:none}
 
 @media(max-width:1180px){
-  .material-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr));
-  }
-
-  .secondary-filters{
-    grid-template-columns:repeat(3,1fr);
-  }
+  .material-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .secondary-filters{grid-template-columns:repeat(3,1fr)}
 }
 
 @media(max-width:900px){
@@ -710,25 +643,14 @@ footer{
   }
 
   .material-img{
-    height:225px;
-    padding:8px;
+    height:245px;
+    padding:12px;
   }
 
-  .material-content{
-    padding:13px;
-  }
-
-  .material-content h2{
-    font-size:.92rem;
-  }
-
-  .material-content p{
-    display:none;
-  }
-
-  .material-brand{
-    font-size:.66rem;
-  }
+  .material-content{padding:13px}
+  .material-content h2{font-size:.92rem}
+  .material-content p{display:none}
+  .material-brand{font-size:.66rem}
 
   .material-tags{
     gap:6px;
@@ -745,74 +667,33 @@ footer{
     font-size:.60rem;
   }
 
-  footer{
-    padding-bottom:88px;
-  }
+  footer{padding-bottom:88px}
 }
 
 @media(max-width:620px){
-  .container{
-    width:min(100% - 22px,1220px);
-  }
+  .container{width:min(100% - 22px,1220px)}
+  .top{font-size:.66rem}
+  .nav{min-height:68px}
+  .logo-mark{width:40px;height:40px}
+  .logo strong{font-size:1.5rem}
+  .logo span{font-size:.62rem}
 
-  .top{
-    font-size:.66rem;
-  }
-
-  .nav{
-    min-height:68px;
-  }
-
-  .logo-mark{
-    width:40px;
-    height:40px;
-  }
-
-  .logo strong{
-    font-size:1.5rem;
-  }
-
-  .logo span{
-    font-size:.62rem;
-  }
-
-  .hero{
-    padding:42px 0 26px;
-  }
+  .hero{padding:42px 0 26px}
 
   .hero h1{
     font-size:2.35rem;
     letter-spacing:-1px;
   }
 
-  .hero p{
-    font-size:.88rem;
-  }
+  .hero p{font-size:.88rem}
+  .hero-actions a{width:100%}
 
-  .hero-actions a{
-    width:100%;
-  }
+  .search-line{grid-template-columns:1fr}
+  .search-line input{min-height:52px;font-size:.88rem}
+  .reset-btn{min-height:46px}
+  .secondary-filters{grid-template-columns:1fr}
 
-  .search-line{
-    grid-template-columns:1fr;
-  }
-
-  .search-line input{
-    min-height:52px;
-    font-size:.88rem;
-  }
-
-  .reset-btn{
-    min-height:46px;
-  }
-
-  .secondary-filters{
-    grid-template-columns:1fr;
-  }
-
-  .results-row{
-    display:block;
-  }
+  .results-row{display:block}
 
   .active-filters{
     justify-content:flex-start;
@@ -824,16 +705,13 @@ footer{
     font-size:.66rem;
   }
 
-  .catalog{
-    padding-top:18px;
-  }
+  .catalog{padding-top:18px}
 
-  .material-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
+  .material-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 
   .material-img{
-    height:188px;
+    height:210px;
+    padding:10px;
   }
 
   .floating-badge{
@@ -843,9 +721,7 @@ footer{
     font-size:.52rem;
   }
 
-  .material-top{
-    display:block;
-  }
+  .material-top{display:block}
 
   .stock-dot{
     margin-top:7px;
@@ -855,20 +731,13 @@ footer{
 
 @media(max-width:390px){
   .material-img{
-    height:170px;
+    height:190px;
+    padding:8px;
   }
 
-  .material-content{
-    padding:11px;
-  }
-
-  .material-content h2{
-    font-size:.84rem;
-  }
-
-  .material-tags span{
-    font-size:.50rem;
-  }
+  .material-content{padding:11px}
+  .material-content h2{font-size:.84rem}
+  .material-tags span{font-size:.50rem}
 }
 </style>
 </head>
@@ -1062,7 +931,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 
   async function loadMaterials(){
     try{
-      const response = await fetch("data/materiel.json?v=12", {cache:"no-store"});
+      const response = await fetch("data/materiel.json?v=13", {cache:"no-store"});
       if(!response.ok) throw new Error("JSON introuvable");
       const data = await response.json();
       allMaterials = Array.isArray(data) ? data : fallbackMaterials;
@@ -1157,21 +1026,11 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
   function getStockClass(stock){
     const s = normalize(stock);
 
-    if(
-      s.includes("rupture") ||
-      s.includes("indisponible") ||
-      s.includes("epuise") ||
-      s.includes("épuisé")
-    ){
+    if(s.includes("rupture") || s.includes("indisponible") || s.includes("epuise") || s.includes("épuisé")){
       return " off";
     }
 
-    if(
-      s.includes("limite") ||
-      s.includes("faible") ||
-      s.includes("commande") ||
-      s.includes("arrivage")
-    ){
+    if(s.includes("limite") || s.includes("faible") || s.includes("commande") || s.includes("arrivage")){
       return " warning";
     }
 
@@ -1211,7 +1070,6 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     });
 
     filtered.sort(sortMaterials);
-
     return filtered;
   }
 
@@ -1228,13 +1086,8 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
   function sortMaterials(a,b){
     const sort = els.sort.value;
 
-    if(sort === "az"){
-      return String(a.nom || "").localeCompare(String(b.nom || ""),"fr");
-    }
-
-    if(sort === "za"){
-      return String(b.nom || "").localeCompare(String(a.nom || ""),"fr");
-    }
+    if(sort === "az") return String(a.nom || "").localeCompare(String(b.nom || ""),"fr");
+    if(sort === "za") return String(b.nom || "").localeCompare(String(a.nom || ""),"fr");
 
     if(sort === "marque"){
       const brand = String(a.marque || "").localeCompare(String(b.marque || ""),"fr");
