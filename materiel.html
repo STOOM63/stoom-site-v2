@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Matériel vape disponible | STOOM Clermont-Ferrand</title>
-<meta name="description" content="Catalogue matériel STOOM Clermont-Ferrand : pods, kits, box, clearomiseurs, résistances, accus, chargeurs et accessoires disponibles en boutique.">
+<meta name="description" content="Catalogue matériel STOOM Clermont-Ferrand : pods, kits, box, clearomiseurs, résistances, accus, chargeurs et accessoires disponibles en boutique avec conseil personnalisé.">
 <meta name="theme-color" content="#06131d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +18,19 @@
 :root{
   --bg:#06131d;
   --bg2:#081923;
+  --panel:rgba(255,255,255,.072);
+  --panel2:rgba(255,255,255,.105);
   --cyan:#8eeaff;
   --blue:#55d4ff;
   --green:#6dffb7;
+  --orange:#ffcf7a;
+  --red:#ff8b8b;
   --text:#f4fbff;
   --muted:#b8cad6;
   --line:rgba(142,234,255,.20);
-  --soft:rgba(255,255,255,.07);
-  --shadow:0 22px 80px rgba(0,0,0,.32);
+  --line2:rgba(255,255,255,.12);
+  --shadow:0 22px 80px rgba(0,0,0,.36);
+  --radius:28px;
 }
 
 *{box-sizing:border-box}
@@ -37,19 +42,24 @@ html,body{
   overflow-x:hidden;
   background:var(--bg);
   color:var(--text);
-  font-family:Montserrat,sans-serif;
+  font-family:Montserrat,Arial,sans-serif;
   scroll-behavior:smooth;
+  -webkit-font-smoothing:antialiased;
 }
 
 body{
   background:
-    radial-gradient(circle at 8% 0%,rgba(85,212,255,.28),transparent 34%),
-    radial-gradient(circle at 92% 12%,rgba(109,255,183,.13),transparent 30%),
-    linear-gradient(180deg,#06131d,#081923 58%,#06131d);
+    radial-gradient(circle at 8% 0%,rgba(85,212,255,.26),transparent 34%),
+    radial-gradient(circle at 92% 12%,rgba(109,255,183,.12),transparent 31%),
+    linear-gradient(180deg,#06131d,#081923 54%,#06131d);
+}
+
+button,input,select{
+  font-family:inherit;
 }
 
 .container{
-  width:min(1180px,calc(100% - 28px));
+  width:min(1220px,calc(100% - 28px));
   margin:auto;
 }
 
@@ -67,7 +77,7 @@ body{
 header{
   position:sticky;
   top:0;
-  z-index:50;
+  z-index:60;
   background:rgba(6,19,29,.88);
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
@@ -99,6 +109,7 @@ header{
   background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
   font-weight:900;
+  box-shadow:0 14px 36px rgba(85,212,255,.24);
 }
 
 .logo strong{
@@ -137,11 +148,9 @@ header{
   color:var(--cyan);
 }
 
-/* HERO */
-
 .hero{
   position:relative;
-  padding:70px 0 42px;
+  padding:58px 0 34px;
   overflow:hidden;
   border-bottom:1px solid var(--line);
 }
@@ -151,9 +160,18 @@ header{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.72),rgba(6,19,29,.90)),
+    linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.73),rgba(6,19,29,.92)),
     url("uploads/materiel.webp") center/cover no-repeat;
   z-index:0;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:auto -10% -35% -10%;
+  height:180px;
+  background:radial-gradient(circle,rgba(142,234,255,.20),transparent 62%);
+  filter:blur(18px);
 }
 
 .hero .container{
@@ -163,6 +181,8 @@ header{
 
 .badge{
   display:inline-flex;
+  align-items:center;
+  gap:8px;
   padding:9px 14px;
   border-radius:999px;
   background:linear-gradient(135deg,var(--blue),var(--cyan));
@@ -170,13 +190,14 @@ header{
   font-weight:900;
   font-size:.72rem;
   text-transform:uppercase;
+  box-shadow:0 16px 42px rgba(85,212,255,.23);
 }
 
 .hero h1{
-  max-width:850px;
-  margin:18px 0 16px;
-  font-size:clamp(2.35rem,6vw,5.3rem);
-  line-height:.88;
+  max-width:920px;
+  margin:18px 0 14px;
+  font-size:clamp(2.15rem,5.6vw,5rem);
+  line-height:.9;
   letter-spacing:-2px;
   text-transform:uppercase;
 }
@@ -189,15 +210,16 @@ header{
   max-width:720px;
   color:#c5e2ee;
   font-weight:650;
-  line-height:1.7;
-  font-size:1rem;
+  line-height:1.65;
+  font-size:.98rem;
+  margin:0;
 }
 
 .hero-actions{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-  margin-top:24px;
+  margin-top:22px;
 }
 
 .hero-btn{
@@ -229,20 +251,18 @@ header{
   border:1px solid rgba(255,255,255,.13);
 }
 
-/* FILTERS */
-
 .filters-zone{
-  background:rgba(6,19,29,.95);
+  background:rgba(6,19,29,.92);
   border-bottom:1px solid rgba(255,255,255,.08);
   position:sticky;
   top:74px;
-  z-index:40;
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
+  z-index:50;
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
 }
 
 .filters-inner{
-  padding:18px 0 16px;
+  padding:16px 0;
 }
 
 .search-line{
@@ -250,22 +270,44 @@ header{
   grid-template-columns:1fr auto;
   gap:12px;
   align-items:center;
-  margin-bottom:14px;
+  margin-bottom:12px;
+}
+
+.search-box{
+  position:relative;
+}
+
+.search-box::before{
+  content:"⌕";
+  position:absolute;
+  left:17px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--cyan);
+  font-weight:900;
+  font-size:1.25rem;
+  pointer-events:none;
 }
 
 .search-line input{
   width:100%;
-  min-height:54px;
+  min-height:56px;
   border-radius:18px;
-  border:1px solid rgba(142,234,255,.25);
-  background:rgba(255,255,255,.07);
+  border:1px solid rgba(142,234,255,.26);
+  background:rgba(255,255,255,.075);
   color:white;
-  padding:0 18px;
+  padding:0 18px 0 46px;
   font-size:1rem;
   font-weight:800;
   outline:none;
   -webkit-appearance:none;
   appearance:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+}
+
+.search-line input:focus{
+  border-color:rgba(142,234,255,.72);
+  box-shadow:0 0 0 4px rgba(142,234,255,.10);
 }
 
 .search-line input::placeholder{
@@ -273,9 +315,9 @@ header{
 }
 
 .reset-btn{
-  min-height:54px;
+  min-height:56px;
   border:1px solid rgba(142,234,255,.25);
-  background:rgba(255,255,255,.07);
+  background:rgba(255,255,255,.075);
   color:#d8f5ff;
   border-radius:18px;
   padding:0 18px;
@@ -297,42 +339,50 @@ header{
 
 .category-pill{
   flex:0 0 auto;
-  border:1px solid rgba(142,234,255,.25);
+  border:1px solid rgba(142,234,255,.23);
   background:rgba(255,255,255,.07);
   color:#d8f5ff;
   border-radius:999px;
-  padding:12px 16px;
+  padding:12px 15px;
   font-weight:900;
-  font-size:.72rem;
+  font-size:.70rem;
   text-transform:uppercase;
   cursor:pointer;
   white-space:nowrap;
+  transition:.18s ease;
+}
+
+.category-pill:hover{
+  transform:translateY(-1px);
+  border-color:rgba(142,234,255,.55);
 }
 
 .category-pill.active{
   background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
+  border-color:transparent;
 }
 
 .secondary-filters{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-top:4px;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-top:2px;
 }
 
 .select-wrap label{
   display:block;
   color:var(--cyan);
   text-transform:uppercase;
-  font-size:.62rem;
+  font-size:.60rem;
   font-weight:900;
-  margin-bottom:7px;
+  margin-bottom:6px;
+  letter-spacing:.4px;
 }
 
 .select-wrap select{
   width:100%;
-  min-height:46px;
+  min-height:45px;
   border-radius:15px;
   border:1px solid rgba(142,234,255,.22);
   background:#0a1d29;
@@ -340,91 +390,134 @@ header{
   padding:0 12px;
   font-weight:800;
   outline:none;
+  -webkit-appearance:none;
+  appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--cyan) 50%),linear-gradient(135deg,var(--cyan) 50%,transparent 50%);
+  background-position:calc(100% - 17px) 19px,calc(100% - 11px) 19px;
+  background-size:6px 6px,6px 6px;
+  background-repeat:no-repeat;
 }
 
-.results-info{
+.results-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
   margin-top:12px;
   color:#c5e2ee;
   font-weight:800;
   font-size:.82rem;
 }
 
-/* GUIDE */
-
-.guide-section{
-  padding:30px 0 0;
+.active-filters{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
 }
 
-.guide-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
+.active-filters span{
+  border-radius:999px;
+  padding:6px 9px;
+  background:rgba(142,234,255,.10);
+  border:1px solid rgba(142,234,255,.17);
+  color:#d8f5ff;
+  font-size:.64rem;
+  font-weight:900;
+  text-transform:uppercase;
 }
-
-.guide-card{
-  padding:18px;
-  border-radius:24px;
-  background:rgba(255,255,255,.055);
-  border:1px solid var(--line);
-}
-
-.guide-card strong{
-  display:block;
-  color:white;
-  margin-bottom:7px;
-  font-size:1rem;
-}
-
-.guide-card span{
-  color:#c5e2ee;
-  font-weight:650;
-  line-height:1.45;
-  font-size:.82rem;
-}
-
-/* PRODUCTS */
 
 .catalog{
-  padding:32px 0 76px;
+  padding:28px 0 64px;
 }
 
 .material-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
+  align-items:stretch;
 }
 
 .material-card{
+  position:relative;
   display:flex;
   flex-direction:column;
   overflow:hidden;
   border-radius:28px;
-  background:rgba(255,255,255,.065);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.055));
   border:1px solid var(--line);
   box-shadow:var(--shadow);
   min-height:100%;
+  transition:transform .22s ease,border-color .22s ease,background .22s ease;
 }
 
-/* Images produits agrandies */
+.material-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(142,234,255,.45);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.115),rgba(255,255,255,.065));
+}
+
 .material-img{
-  height:300px;
-  background:#fff;
+  position:relative;
+  height:330px;
+  background:
+    radial-gradient(circle at 50% 42%,#ffffff 0%,#f5fbff 52%,#eaf4f8 100%);
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:8px;
+  padding:12px;
   overflow:hidden;
 }
 
+.material-img::after{
+  content:"";
+  position:absolute;
+  left:12%;
+  right:12%;
+  bottom:16px;
+  height:24px;
+  border-radius:50%;
+  background:rgba(0,0,0,.10);
+  filter:blur(12px);
+}
+
 .material-img img{
+  position:relative;
+  z-index:1;
   width:100%;
   height:100%;
   object-fit:contain;
   display:block;
+  transition:transform .25s ease;
+}
+
+.material-card:hover .material-img img{
+  transform:scale(1.035);
+}
+
+.floating-badge{
+  position:absolute;
+  z-index:3;
+  left:12px;
+  top:12px;
+  display:inline-flex;
+  max-width:calc(100% - 24px);
+  padding:8px 10px;
+  border-radius:999px;
+  background:rgba(6,19,29,.90);
+  border:1px solid rgba(142,234,255,.30);
+  color:var(--cyan);
+  font-size:.62rem;
+  font-weight:900;
+  text-transform:uppercase;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
 }
 
 .material-content{
-  padding:20px;
+  padding:18px;
   display:flex;
   flex-direction:column;
   flex:1;
@@ -432,22 +525,18 @@ header{
 
 .material-top{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content:space-between;
   gap:10px;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
-.material-badge{
-  display:inline-flex;
-  padding:7px 10px;
-  border-radius:999px;
-  background:rgba(142,234,255,.12);
-  border:1px solid rgba(142,234,255,.22);
+.material-brand{
   color:var(--cyan);
-  font-size:.64rem;
   font-weight:900;
+  font-size:.76rem;
   text-transform:uppercase;
+  letter-spacing:.3px;
 }
 
 .stock-dot{
@@ -455,10 +544,11 @@ header{
   align-items:center;
   gap:6px;
   color:#6dffb7;
-  font-size:.64rem;
+  font-size:.62rem;
   font-weight:900;
   text-transform:uppercase;
   white-space:nowrap;
+  text-align:right;
 }
 
 .stock-dot::before{
@@ -467,64 +557,78 @@ header{
   height:7px;
   border-radius:50%;
   background:#6dffb7;
+  box-shadow:0 0 18px rgba(109,255,183,.70);
+}
+
+.stock-dot.warning{
+  color:var(--orange);
+}
+
+.stock-dot.warning::before{
+  background:var(--orange);
+  box-shadow:0 0 18px rgba(255,207,122,.70);
+}
+
+.stock-dot.off{
+  color:var(--red);
+}
+
+.stock-dot.off::before{
+  background:var(--red);
+  box-shadow:0 0 18px rgba(255,139,139,.70);
 }
 
 .material-content h2{
-  margin:0 0 8px;
-  font-size:1.24rem;
-  line-height:1.05;
+  margin:0 0 9px;
+  font-size:1.12rem;
+  line-height:1.08;
   text-transform:uppercase;
   color:white;
-}
-
-.material-brand{
-  color:var(--cyan);
-  font-weight:900;
-  font-size:.78rem;
-  margin-bottom:12px;
+  letter-spacing:-.4px;
 }
 
 .material-content p{
   color:#c5e2ee;
-  line-height:1.55;
+  line-height:1.5;
   font-weight:600;
-  font-size:.9rem;
+  font-size:.84rem;
   margin:0;
 }
 
 .material-tags{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;
-  margin-top:16px;
+  gap:7px;
+  margin-top:15px;
 }
 
 .material-tags span{
   padding:7px 9px;
   border-radius:999px;
   background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.10);
   color:#d8f5ff;
-  font-size:.62rem;
+  font-size:.58rem;
   font-weight:900;
+  text-transform:uppercase;
 }
 
 .card-cta{
   margin-top:auto;
-  padding-top:18px;
+  padding-top:16px;
 }
 
 .card-cta span{
   min-height:42px;
   border-radius:14px;
-  border:1px solid var(--cyan);
   display:flex;
   align-items:center;
   justify-content:center;
-  color:white;
+  color:#06131d;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   font-weight:900;
   text-transform:uppercase;
-  font-size:.70rem;
+  font-size:.68rem;
 }
 
 .empty{
@@ -536,52 +640,28 @@ header{
   color:#c5e2ee;
   font-weight:800;
   line-height:1.5;
-}
-
-/* FINAL */
-
-.final-panel{
-  padding:0 0 72px;
-}
-
-.final-card{
-  padding:34px;
-  border-radius:34px;
-  background:
-    radial-gradient(circle at top left,rgba(142,234,255,.20),transparent 38%),
-    rgba(255,255,255,.06);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow);
   text-align:center;
-}
-
-.final-card h2{
-  color:white;
-  text-transform:uppercase;
-  font-size:clamp(1.8rem,4vw,3.6rem);
-  line-height:.95;
-  margin:14px 0;
-}
-
-.final-card p{
-  max-width:760px;
-  margin:0 auto 22px;
-  color:#c5e2ee;
-  line-height:1.7;
-  font-weight:650;
 }
 
 footer{
   border-top:1px solid rgba(255,255,255,.09);
-  padding:24px 0;
+  padding:22px 0;
   color:#c5e2ee;
-  font-size:.8rem;
+  font-size:.78rem;
 }
-
-/* MOBILE */
 
 .mobile-actions{
   display:none;
+}
+
+@media(max-width:1180px){
+  .material-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .secondary-filters{
+    grid-template-columns:repeat(3,1fr);
+  }
 }
 
 @media(max-width:900px){
@@ -598,7 +678,7 @@ footer{
     gap:8px;
     padding:8px;
     border-radius:22px;
-    background:rgba(6,19,29,.90);
+    background:rgba(6,19,29,.91);
     border:1px solid rgba(255,255,255,.13);
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
@@ -624,37 +704,22 @@ footer{
     top:auto;
   }
 
-  .secondary-filters{
-    grid-template-columns:1fr;
-  }
-
-  .guide-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
   .material-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
     gap:12px;
   }
 
   .material-img{
-    height:205px;
-    padding:6px;
-    background:#fff;
-  }
-
-  .material-img img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
+    height:225px;
+    padding:8px;
   }
 
   .material-content{
-    padding:14px;
+    padding:13px;
   }
 
   .material-content h2{
-    font-size:.93rem;
+    font-size:.92rem;
   }
 
   .material-content p{
@@ -662,17 +727,22 @@ footer{
   }
 
   .material-brand{
-    font-size:.68rem;
+    font-size:.66rem;
+  }
+
+  .material-tags{
+    gap:6px;
+    margin-top:12px;
   }
 
   .material-tags span{
-    font-size:.56rem;
+    font-size:.53rem;
     padding:6px 7px;
   }
 
   .card-cta span{
     min-height:38px;
-    font-size:.62rem;
+    font-size:.60rem;
   }
 
   footer{
@@ -680,9 +750,13 @@ footer{
   }
 }
 
-@media(max-width:520px){
+@media(max-width:620px){
   .container{
-    width:min(100% - 22px,1180px);
+    width:min(100% - 22px,1220px);
+  }
+
+  .top{
+    font-size:.66rem;
   }
 
   .nav{
@@ -698,17 +772,21 @@ footer{
     font-size:1.5rem;
   }
 
+  .logo span{
+    font-size:.62rem;
+  }
+
   .hero{
-    padding:46px 0 30px;
+    padding:42px 0 26px;
   }
 
   .hero h1{
-    font-size:2.45rem;
+    font-size:2.35rem;
     letter-spacing:-1px;
   }
 
   .hero p{
-    font-size:.9rem;
+    font-size:.88rem;
   }
 
   .hero-actions a{
@@ -719,30 +797,50 @@ footer{
     grid-template-columns:1fr;
   }
 
+  .search-line input{
+    min-height:52px;
+    font-size:.88rem;
+  }
+
   .reset-btn{
     min-height:46px;
   }
 
-  .category-pill{
-    padding:11px 14px;
-    font-size:.68rem;
-  }
-
-  .guide-grid{
+  .secondary-filters{
     grid-template-columns:1fr;
   }
 
-  .guide-card{
-    padding:16px;
+  .results-row{
+    display:block;
+  }
+
+  .active-filters{
+    justify-content:flex-start;
+    margin-top:8px;
+  }
+
+  .category-pill{
+    padding:11px 13px;
+    font-size:.66rem;
+  }
+
+  .catalog{
+    padding-top:18px;
   }
 
   .material-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,minmax(0,1fr));
   }
 
   .material-img{
-    height:185px;
-    padding:6px;
+    height:188px;
+  }
+
+  .floating-badge{
+    left:8px;
+    top:8px;
+    padding:6px 8px;
+    font-size:.52rem;
   }
 
   .material-top{
@@ -750,12 +848,26 @@ footer{
   }
 
   .stock-dot{
-    margin-top:8px;
+    margin-top:7px;
+    font-size:.55rem;
+  }
+}
+
+@media(max-width:390px){
+  .material-img{
+    height:170px;
   }
 
-  .final-card{
-    padding:24px;
-    border-radius:28px;
+  .material-content{
+    padding:11px;
+  }
+
+  .material-content h2{
+    font-size:.84rem;
+  }
+
+  .material-tags span{
+    font-size:.50rem;
   }
 }
 </style>
@@ -764,7 +876,7 @@ footer{
 <body>
 
 <div class="top">
-STOOM Clermont-Ferrand · Matériel disponible en boutique · Produits réservés aux majeurs · Pas de vente en ligne
+STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs · Achat uniquement en boutique
 </div>
 
 <header>
@@ -806,8 +918,8 @@ STOOM Clermont-Ferrand · Matériel disponible en boutique · Produits réservé
     </h1>
 
     <p>
-      Pods, kits complets, box, clearomiseurs, résistances, accus, chargeurs et accessoires :
-      retrouvez notre sélection de matériel en vitrine avant de venir en boutique pour être conseillé.
+      Pods, kits, box, clearomiseurs, résistances, accus, chargeurs et accessoires :
+      consultez la sélection avant votre passage en boutique.
     </p>
 
     <div class="hero-actions">
@@ -821,13 +933,20 @@ STOOM Clermont-Ferrand · Matériel disponible en boutique · Produits réservé
   <div class="container filters-inner">
 
     <div class="search-line">
-      <input type="search" id="searchInput" placeholder="Rechercher : XROS, box, 18650, clearomiseur, accu, chargeur...">
-      <button class="reset-btn" id="resetBtn">Réinitialiser</button>
+      <div class="search-box">
+        <input type="search" id="searchInput" autocomplete="off" placeholder="Rechercher : XROS, box, 18650, résistance, accu, chargeur...">
+      </div>
+      <button class="reset-btn" id="resetBtn" type="button">Réinitialiser</button>
     </div>
 
-    <div class="category-strip" id="categoryStrip"></div>
+    <div class="category-strip" id="categoryStrip" aria-label="Catégories matériel"></div>
 
     <div class="secondary-filters">
+      <div class="select-wrap">
+        <label for="brandFilter">Marque</label>
+        <select id="brandFilter"></select>
+      </div>
+
       <div class="select-wrap">
         <label for="typeFilter">Type</label>
         <select id="typeFilter"></select>
@@ -842,14 +961,25 @@ STOOM Clermont-Ferrand · Matériel disponible en boutique · Produits réservé
         <label for="usageFilter">Usage</label>
         <select id="usageFilter"></select>
       </div>
+
+      <div class="select-wrap">
+        <label for="sortFilter">Tri</label>
+        <select id="sortFilter">
+          <option value="ordre">Recommandé</option>
+          <option value="az">Nom A-Z</option>
+          <option value="za">Nom Z-A</option>
+          <option value="marque">Marque A-Z</option>
+          <option value="categorie">Catégorie</option>
+        </select>
+      </div>
     </div>
 
-    <div class="results-info" id="resultsInfo"></div>
+    <div class="results-row">
+      <div id="resultsInfo"></div>
+      <div class="active-filters" id="activeFilters"></div>
+    </div>
 
   </div>
-</section>
-
-
 </section>
 
 <section class="catalog">
@@ -858,254 +988,371 @@ STOOM Clermont-Ferrand · Matériel disponible en boutique · Produits réservé
   </div>
 </section>
 
-
 </main>
 
 <footer>
   <div class="container">
-    © STOOM Clermont-Ferrand · Catalogue vitrine · Achat uniquement en boutique avec conseil
+    © STOOM Clermont-Ferrand · Catalogue vitrine · Pas de vente en ligne · Conseil et achat en boutique
   </div>
 </footer>
 
 <script>
-function escapeHtml(str){
-  return String(str ?? '').replace(/[&<>"']/g,function(m){
-    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];
-  });
-}
+(function(){
+  "use strict";
 
-const categoryOrder = [
-  "Tous",
-  "Pods",
-  "Kits complets",
-  "Box",
-  "Clearomiseurs",
-  "Résistances",
-  "Accus",
-  "Chargeurs",
-  "Accessoires"
-];
-
-let allMaterials = [];
-let selectedCategory = "Tous";
-
-const fallbackMaterials = [
-  {
-    "nom":"Exemple Pod rechargeable",
-    "marque":"STOOM",
-    "categorie":"Pods",
-    "type":"Pod rechargeable",
-    "profil":"Débutant",
-    "usage":"Sevrage tabagique",
-    "description":"Exemple de produit. Remplacez ce produit dans data/materiel.json.",
-    "image":"uploads/materiel.webp",
-    "badge":"Exemple",
-    "stock":"Disponible",
-    "ordre":9999
-  }
-];
-
-async function loadMaterials(){
-  try{
-    const response = await fetch("data/materiel.json?v=5");
-    if(!response.ok) throw new Error("JSON introuvable");
-    allMaterials = await response.json();
-  }catch(e){
-    allMaterials = fallbackMaterials;
+  function escapeHtml(str){
+    return String(str ?? "").replace(/[&<>"']/g,function(m){
+      return {
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#039;"
+      }[m];
+    });
   }
 
-  if(!Array.isArray(allMaterials)){
-    allMaterials = fallbackMaterials;
+  const categoryOrder = [
+    "Tous",
+    "Pods",
+    "Kits complets",
+    "Box simple accu 18650",
+    "Box simple accu 21700",
+    "Box double accus",
+    "Clearomiseurs",
+    "Cartouches",
+    "Résistances",
+    "Accus",
+    "Chargeurs",
+    "Accessoires"
+  ];
+
+  let allMaterials = [];
+  let selectedCategory = "Tous";
+
+  const fallbackMaterials = [
+    {
+      "nom":"Catalogue matériel STOOM",
+      "marque":"STOOM",
+      "categorie":"Accessoires",
+      "type":"Catalogue",
+      "profil":"Boutique",
+      "usage":"Conseil",
+      "description":"Le fichier data/materiel.json n'a pas pu être chargé. Vérifiez le chemin du fichier.",
+      "image":"uploads/materiel.webp",
+      "badge":"Catalogue",
+      "stock":"Boutique",
+      "ordre":9999
+    }
+  ];
+
+  const els = {
+    grid:document.getElementById("materialGrid"),
+    search:document.getElementById("searchInput"),
+    reset:document.getElementById("resetBtn"),
+    strip:document.getElementById("categoryStrip"),
+    brand:document.getElementById("brandFilter"),
+    type:document.getElementById("typeFilter"),
+    profil:document.getElementById("profilFilter"),
+    usage:document.getElementById("usageFilter"),
+    sort:document.getElementById("sortFilter"),
+    results:document.getElementById("resultsInfo"),
+    active:document.getElementById("activeFilters")
+  };
+
+  async function loadMaterials(){
+    try{
+      const response = await fetch("data/materiel.json?v=12", {cache:"no-store"});
+      if(!response.ok) throw new Error("JSON introuvable");
+      const data = await response.json();
+      allMaterials = Array.isArray(data) ? data : fallbackMaterials;
+    }catch(e){
+      allMaterials = fallbackMaterials;
+    }
+
+    buildCategoryStrip();
+    buildSelectFilters();
+    renderMaterials();
   }
 
-  buildCategoryStrip();
-  buildSelectFilters();
-  renderMaterials();
-}
+  function normalize(str){
+    return String(str ?? "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g,"")
+      .trim();
+  }
 
-function uniqueValues(key, baseItems){
-  return [...new Set(baseItems.map(item => item[key]).filter(Boolean))].sort();
-}
+  function uniqueValues(key, baseItems){
+    return [...new Set(baseItems.map(item => item[key]).filter(Boolean))]
+      .sort((a,b) => String(a).localeCompare(String(b),"fr"));
+  }
 
-function getBaseFilteredByCategory(){
-  if(selectedCategory === "Tous") return allMaterials;
-  return allMaterials.filter(item => item.categorie === selectedCategory);
-}
+  function getBaseFilteredByCategory(){
+    if(selectedCategory === "Tous") return allMaterials;
+    return allMaterials.filter(item => item.categorie === selectedCategory);
+  }
 
-function buildCategoryStrip(){
-  const strip = document.getElementById("categoryStrip");
-  strip.innerHTML = "";
+  function buildCategoryStrip(){
+    els.strip.innerHTML = "";
 
-  const existingCategories = new Set(allMaterials.map(item => item.categorie).filter(Boolean));
-  const ordered = categoryOrder.filter(cat => cat === "Tous" || existingCategories.has(cat));
-  const extra = [...existingCategories].filter(cat => !categoryOrder.includes(cat)).sort();
-  const categories = [...ordered, ...extra];
+    const existingCategories = new Set(allMaterials.map(item => item.categorie).filter(Boolean));
+    const ordered = categoryOrder.filter(cat => cat === "Tous" || existingCategories.has(cat));
+    const extra = [...existingCategories].filter(cat => !categoryOrder.includes(cat)).sort();
+    const categories = [...ordered, ...extra];
 
-  categories.forEach(category => {
-    const btn = document.createElement("button");
-    btn.className = "category-pill" + (category === selectedCategory ? " active" : "");
-    btn.type = "button";
-    btn.textContent = category;
+    categories.forEach(category => {
+      const count = category === "Tous"
+        ? allMaterials.length
+        : allMaterials.filter(item => item.categorie === category).length;
 
-    btn.addEventListener("click", () => {
-      selectedCategory = category;
-      setSelectValue("typeFilter", "Tous");
-      setSelectValue("profilFilter", "Tous");
-      setSelectValue("usageFilter", "Tous");
-      buildCategoryStrip();
-      buildSelectFilters();
-      renderMaterials();
+      const btn = document.createElement("button");
+      btn.className = "category-pill" + (category === selectedCategory ? " active" : "");
+      btn.type = "button";
+      btn.textContent = category + " · " + count;
+
+      btn.addEventListener("click", function(){
+        selectedCategory = category;
+        setSelectValue("brandFilter", "Tous");
+        setSelectValue("typeFilter", "Tous");
+        setSelectValue("profilFilter", "Tous");
+        setSelectValue("usageFilter", "Tous");
+        buildCategoryStrip();
+        buildSelectFilters();
+        renderMaterials();
+      });
+
+      els.strip.appendChild(btn);
+    });
+  }
+
+  function setSelectValue(id, value){
+    const select = document.getElementById(id);
+    if(select) select.value = value;
+  }
+
+  function fillSelect(selectId, values, currentValue){
+    const select = document.getElementById(selectId);
+    select.innerHTML = "";
+
+    ["Tous", ...values].forEach(value => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+      select.appendChild(option);
     });
 
-    strip.appendChild(btn);
-  });
-}
-
-function setSelectValue(id, value){
-  const select = document.getElementById(id);
-  if(select) select.value = value;
-}
-
-function fillSelect(selectId, values, currentValue){
-  const select = document.getElementById(selectId);
-  select.innerHTML = "";
-
-  ["Tous", ...values].forEach(value => {
-    const option = document.createElement("option");
-    option.value = value;
-    option.textContent = value;
-    select.appendChild(option);
-  });
-
-  select.value = values.includes(currentValue) ? currentValue : "Tous";
-}
-
-function buildSelectFilters(){
-  const base = getBaseFilteredByCategory();
-
-  const currentType = document.getElementById("typeFilter").value || "Tous";
-  const currentProfil = document.getElementById("profilFilter").value || "Tous";
-  const currentUsage = document.getElementById("usageFilter").value || "Tous";
-
-  fillSelect("typeFilter", uniqueValues("type", base), currentType);
-  fillSelect("profilFilter", uniqueValues("profil", base), currentProfil);
-  fillSelect("usageFilter", uniqueValues("usage", base), currentUsage);
-}
-
-function getFilteredMaterials(){
-  const search = document.getElementById("searchInput").value.toLowerCase().trim();
-
-  const selectedType = document.getElementById("typeFilter").value;
-  const selectedProfil = document.getElementById("profilFilter").value;
-  const selectedUsage = document.getElementById("usageFilter").value;
-
-  return allMaterials.filter(item => {
-    const text = [
-      item.nom,
-      item.marque,
-      item.categorie,
-      item.type,
-      item.profil,
-      item.usage,
-      item.description,
-      item.badge,
-      item.stock
-    ].join(" ").toLowerCase();
-
-    const matchSearch = !search || text.includes(search);
-    const matchCategory = selectedCategory === "Tous" || item.categorie === selectedCategory;
-    const matchType = selectedType === "Tous" || item.type === selectedType;
-    const matchProfil = selectedProfil === "Tous" || item.profil === selectedProfil;
-    const matchUsage = selectedUsage === "Tous" || item.usage === selectedUsage;
-
-    return matchSearch && matchCategory && matchType && matchProfil && matchUsage;
-  }).sort((a,b) => {
-    const orderA = Number.isFinite(Number(a.ordre)) ? Number(a.ordre) : 9999;
-    const orderB = Number.isFinite(Number(b.ordre)) ? Number(b.ordre) : 9999;
-
-    if(orderA !== orderB) return orderA - orderB;
-
-    const catA = categoryOrder.indexOf(a.categorie);
-    const catB = categoryOrder.indexOf(b.categorie);
-
-    const safeCatA = catA === -1 ? 999 : catA;
-    const safeCatB = catB === -1 ? 999 : catB;
-
-    if(safeCatA !== safeCatB) return safeCatA - safeCatB;
-
-    return String(a.nom || "").localeCompare(String(b.nom || ""), "fr");
-  });
-}
-
-function renderMaterials(){
-  const grid = document.getElementById("materialGrid");
-  const filtered = getFilteredMaterials();
-
-  document.getElementById("resultsInfo").textContent =
-    filtered.length + " produit" + (filtered.length > 1 ? "s" : "") + " affiché" + (filtered.length > 1 ? "s" : "");
-
-  if(filtered.length === 0){
-    grid.innerHTML = `
-      <div class="empty">
-        Aucun matériel ne correspond à votre recherche. Essayez de retirer un filtre ou de chercher une marque plus générale.
-      </div>
-    `;
-    return;
+    select.value = values.includes(currentValue) ? currentValue : "Tous";
   }
 
-  grid.innerHTML = filtered.map(item => `
-    <article class="material-card">
-      <div class="material-img">
-        <img src="${escapeHtml(item.image || 'uploads/materiel.webp')}" alt="${escapeHtml(item.nom || '')}" loading="lazy">
-      </div>
+  function buildSelectFilters(){
+    const base = getBaseFilteredByCategory();
 
-      <div class="material-content">
-        <div class="material-top">
-          <div class="material-badge">${escapeHtml(item.badge || item.categorie || 'Matériel')}</div>
-          <div class="stock-dot">${escapeHtml(item.stock || 'Boutique')}</div>
+    fillSelect("brandFilter", uniqueValues("marque", base), els.brand.value || "Tous");
+    fillSelect("typeFilter", uniqueValues("type", base), els.type.value || "Tous");
+    fillSelect("profilFilter", uniqueValues("profil", base), els.profil.value || "Tous");
+    fillSelect("usageFilter", uniqueValues("usage", base), els.usage.value || "Tous");
+  }
+
+  function getStockClass(stock){
+    const s = normalize(stock);
+
+    if(
+      s.includes("rupture") ||
+      s.includes("indisponible") ||
+      s.includes("epuise") ||
+      s.includes("épuisé")
+    ){
+      return " off";
+    }
+
+    if(
+      s.includes("limite") ||
+      s.includes("faible") ||
+      s.includes("commande") ||
+      s.includes("arrivage")
+    ){
+      return " warning";
+    }
+
+    return "";
+  }
+
+  function getFilteredMaterials(){
+    const search = normalize(els.search.value);
+    const words = search.split(/\s+/).filter(Boolean);
+
+    const selectedBrand = els.brand.value;
+    const selectedType = els.type.value;
+    const selectedProfil = els.profil.value;
+    const selectedUsage = els.usage.value;
+
+    let filtered = allMaterials.filter(item => {
+      const text = normalize([
+        item.nom,
+        item.marque,
+        item.categorie,
+        item.type,
+        item.profil,
+        item.usage,
+        item.description,
+        item.badge,
+        item.stock
+      ].join(" "));
+
+      const matchSearch = words.length === 0 || words.every(word => text.includes(word));
+      const matchCategory = selectedCategory === "Tous" || item.categorie === selectedCategory;
+      const matchBrand = selectedBrand === "Tous" || item.marque === selectedBrand;
+      const matchType = selectedType === "Tous" || item.type === selectedType;
+      const matchProfil = selectedProfil === "Tous" || item.profil === selectedProfil;
+      const matchUsage = selectedUsage === "Tous" || item.usage === selectedUsage;
+
+      return matchSearch && matchCategory && matchBrand && matchType && matchProfil && matchUsage;
+    });
+
+    filtered.sort(sortMaterials);
+
+    return filtered;
+  }
+
+  function getCategoryIndex(category){
+    const index = categoryOrder.indexOf(category);
+    return index === -1 ? 999 : index;
+  }
+
+  function getOrder(item){
+    const order = Number(item.ordre);
+    return Number.isFinite(order) ? order : 9999;
+  }
+
+  function sortMaterials(a,b){
+    const sort = els.sort.value;
+
+    if(sort === "az"){
+      return String(a.nom || "").localeCompare(String(b.nom || ""),"fr");
+    }
+
+    if(sort === "za"){
+      return String(b.nom || "").localeCompare(String(a.nom || ""),"fr");
+    }
+
+    if(sort === "marque"){
+      const brand = String(a.marque || "").localeCompare(String(b.marque || ""),"fr");
+      if(brand !== 0) return brand;
+      return String(a.nom || "").localeCompare(String(b.nom || ""),"fr");
+    }
+
+    if(sort === "categorie"){
+      const cat = getCategoryIndex(a.categorie) - getCategoryIndex(b.categorie);
+      if(cat !== 0) return cat;
+      return getOrder(a) - getOrder(b);
+    }
+
+    const order = getOrder(a) - getOrder(b);
+    if(order !== 0) return order;
+
+    const cat = getCategoryIndex(a.categorie) - getCategoryIndex(b.categorie);
+    if(cat !== 0) return cat;
+
+    return String(a.nom || "").localeCompare(String(b.nom || ""),"fr");
+  }
+
+  function updateActiveFilters(count){
+    const tags = [];
+
+    if(selectedCategory !== "Tous") tags.push(selectedCategory);
+    if(els.brand.value !== "Tous") tags.push(els.brand.value);
+    if(els.type.value !== "Tous") tags.push(els.type.value);
+    if(els.profil.value !== "Tous") tags.push(els.profil.value);
+    if(els.usage.value !== "Tous") tags.push(els.usage.value);
+    if(els.search.value.trim()) tags.push("Recherche active");
+
+    els.results.textContent =
+      count + " produit" + (count > 1 ? "s" : "") + " affiché" + (count > 1 ? "s" : "");
+
+    els.active.innerHTML = tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("");
+  }
+
+  function renderMaterials(){
+    const filtered = getFilteredMaterials();
+    updateActiveFilters(filtered.length);
+
+    if(filtered.length === 0){
+      els.grid.innerHTML = `
+        <div class="empty">
+          Aucun matériel ne correspond à votre recherche. Essayez de retirer un filtre ou de chercher une marque plus générale.
         </div>
+      `;
+      return;
+    }
 
-        <h2>${escapeHtml(item.nom || '')}</h2>
+    els.grid.innerHTML = filtered.map(item => {
+      const image = item.image || "uploads/materiel.webp";
+      const badge = item.badge || item.categorie || "Matériel";
+      const stock = item.stock || "Boutique";
+      const stockClass = getStockClass(stock);
 
-        <div class="material-brand">
-          ${escapeHtml(item.marque || '')}
-        </div>
+      return `
+        <article class="material-card">
+          <div class="material-img">
+            <div class="floating-badge">${escapeHtml(badge)}</div>
+            <img src="${escapeHtml(image)}" alt="${escapeHtml(item.nom || "Matériel vape STOOM")}" loading="lazy" decoding="async">
+          </div>
 
-        <p>${escapeHtml(item.description || '')}</p>
+          <div class="material-content">
+            <div class="material-top">
+              <div class="material-brand">${escapeHtml(item.marque || "STOOM")}</div>
+              <div class="stock-dot${stockClass}">${escapeHtml(stock)}</div>
+            </div>
 
-        <div class="material-tags">
-          ${item.categorie ? `<span>${escapeHtml(item.categorie)}</span>` : ''}
-          ${item.type ? `<span>${escapeHtml(item.type)}</span>` : ''}
-          ${item.profil ? `<span>${escapeHtml(item.profil)}</span>` : ''}
-          ${item.usage ? `<span>${escapeHtml(item.usage)}</span>` : ''}
-        </div>
+            <h2>${escapeHtml(item.nom || "")}</h2>
 
-        <div class="card-cta">
-          <span>Conseil en boutique</span>
-        </div>
-      </div>
-    </article>
-  `).join("");
-}
+            <p>${escapeHtml(item.description || "")}</p>
 
-document.getElementById("searchInput").addEventListener("input", renderMaterials);
+            <div class="material-tags">
+              ${item.categorie ? `<span>${escapeHtml(item.categorie)}</span>` : ""}
+              ${item.type ? `<span>${escapeHtml(item.type)}</span>` : ""}
+              ${item.profil ? `<span>${escapeHtml(item.profil)}</span>` : ""}
+              ${item.usage ? `<span>${escapeHtml(item.usage)}</span>` : ""}
+            </div>
 
-["typeFilter","profilFilter","usageFilter"].forEach(id => {
-  document.getElementById(id).addEventListener("change", renderMaterials);
-});
+            <div class="card-cta">
+              <span>Conseil en boutique</span>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
 
-document.getElementById("resetBtn").addEventListener("click", () => {
-  selectedCategory = "Tous";
-  document.getElementById("searchInput").value = "";
-  buildCategoryStrip();
-  buildSelectFilters();
-  setSelectValue("typeFilter", "Tous");
-  setSelectValue("profilFilter", "Tous");
-  setSelectValue("usageFilter", "Tous");
-  renderMaterials();
-});
+  function resetFilters(){
+    selectedCategory = "Tous";
+    els.search.value = "";
+    els.sort.value = "ordre";
+    buildCategoryStrip();
+    buildSelectFilters();
+    setSelectValue("brandFilter", "Tous");
+    setSelectValue("typeFilter", "Tous");
+    setSelectValue("profilFilter", "Tous");
+    setSelectValue("usageFilter", "Tous");
+    renderMaterials();
+  }
 
-loadMaterials();
+  let searchTimer = null;
+
+  els.search.addEventListener("input", function(){
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(renderMaterials, 80);
+  });
+
+  ["brandFilter","typeFilter","profilFilter","usageFilter","sortFilter"].forEach(id => {
+    document.getElementById(id).addEventListener("change", renderMaterials);
+  });
+
+  els.reset.addEventListener("click", resetFilters);
+
+  loadMaterials();
+})();
 </script>
 
 <script src="assets/age-check.js"></script>
