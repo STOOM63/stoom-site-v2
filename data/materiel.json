@@ -39,14 +39,14 @@
     "ordre": 3
   },
   {
-    "nom": "Vibe SE 2",
+    "nom": "Vibe SE",
     "marque": "Vaporesso",
     "categorie": "Pods",
     "type": "Pod rechargeable",
     "profil": "Débutant",
     "usage": "Sevrage tabagique",
     "description": "Matériel simple et intuitif qui propose deux mode de puissance pour vous suivre dans n'importe quelle situation, batterie 1100mAH.",
-    "image": "uploads/vibese2.webp",
+    "image": "uploads/vibese.webp",
     "badge": "Premier prix",
     "stock": "Disponible",
     "ordre": 4
