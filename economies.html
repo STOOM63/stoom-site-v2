@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Calculateur d'économies | STOOM Clermont-Ferrand</title>
-<meta name="description" content="Calculez votre budget tabac et découvrez ce que vous pourriez vous offrir en passant à la vape avec STOOM Clermont-Ferrand.">
+<meta name="description" content="Calculez votre budget tabac, comparez avec une estimation vape et découvrez les économies possibles avec STOOM Clermont-Ferrand.">
 <meta name="theme-color" content="#06131d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,72 +14,329 @@
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
-html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
-body{color:white}
-
-.eco-hero{
-  display:block!important;
-  width:100%!important;
-  max-width:100%!important;
-  height:360px!important;
-  min-height:360px!important;
-
-  background-image:url("uploads/hero-economies.webp")!important;
-  background-size:cover!important;
-  background-position:center center!important;
-  background-repeat:no-repeat!important;
-
-  background-color:#06131d!important;
-  border-bottom:1px solid rgba(142,234,255,.18);
+:root{
+  --bg:#06131d;
+  --cyan:#8eeaff;
+  --blue:#55d4ff;
+  --green:#6dffb7;
+  --orange:#ffcf7a;
+  --text:#f4fbff;
+  --muted:#c5e2ee;
+  --line:rgba(142,234,255,.20);
+  --shadow:0 24px 90px rgba(0,0,0,.34);
 }
 
-@media(max-width:760px){
-  .eco-hero{
-    height:110px!important;
-    min-height:110px!important;
-    background-size:contain!important;
-    background-position:center center!important;
-  }
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Montserrat,Arial,sans-serif;
+  scroll-behavior:smooth;
+  -webkit-font-smoothing:antialiased;
 }
 
-@media(max-width:390px){
-  .eco-hero{
-    height:90px!important;
-    min-height:90px!important;
-  }
-}
-
-.eco-section{padding:46px 0 80px;background:#06131d}
-
-.intro-card{
-  margin-bottom:28px;
-  padding:26px;
-  border-radius:30px;
+body{
   background:
-    radial-gradient(circle at 10% 10%,rgba(53,185,238,.20),transparent 34%),
-    rgba(255,255,255,.06);
-  border:1px solid rgba(142,234,255,.18);
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
-  text-align:center;
+    radial-gradient(circle at 8% 0%,rgba(85,212,255,.25),transparent 34%),
+    radial-gradient(circle at 92% 12%,rgba(109,255,183,.10),transparent 31%),
+    linear-gradient(180deg,#06131d,#081923 55%,#06131d);
 }
 
-.intro-card h1{
+a{text-decoration:none;color:inherit}
+button,input,select{font-family:inherit}
+
+.container{
+  width:min(1220px,calc(100% - 28px));
+  margin:auto;
+}
+
+.top{
+  text-align:center;
+  padding:8px 14px;
+  font-size:.72rem;
+  line-height:1.35;
+  color:#d8f5ff;
+  font-weight:800;
+  background:rgba(0,0,0,.22);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* HEADER IDENTIQUE INDEX */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:rgba(6,19,29,.90);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+
+.nav{
+  min-height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:white;
+}
+
+.logo-mark{
+  width:44px;
+  height:44px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
+  font-weight:900;
+  box-shadow:0 14px 36px rgba(85,212,255,.24);
+}
+
+.logo strong{
+  display:block;
+  color:white;
+  font-size:1.7rem;
+  line-height:.9;
+  letter-spacing:2px;
+}
+
+.logo span{
+  display:block;
+  color:var(--cyan);
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:.70rem;
+  letter-spacing:2.4px;
+  margin-top:4px;
+}
+
+.menu{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.menu a{
+  color:#d8f5ff;
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:.74rem;
+}
+
+.menu a:hover,
+.menu a.active{
+  color:var(--cyan);
+}
+
+.nav-cta{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:.74rem;
+  white-space:nowrap;
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  padding:58px 0 42px;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 78% 18%,rgba(142,234,255,.20),transparent 30%),
+    linear-gradient(90deg,rgba(6,19,29,.99),rgba(6,19,29,.76),rgba(6,19,29,.94)),
+    url("uploads/hero-economies.webp") center/cover no-repeat;
+  z-index:0;
+}
+
+.hero .container{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:26px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 14px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
+  font-weight:900;
+  font-size:.72rem;
+  text-transform:uppercase;
+  box-shadow:0 16px 42px rgba(85,212,255,.23);
+}
+
+.hero h1{
+  max-width:850px;
+  margin:18px 0 14px;
+  font-size:clamp(2.2rem,5.6vw,5rem);
+  line-height:.9;
+  letter-spacing:-2px;
+  text-transform:uppercase;
+}
+
+.hero h1 span{color:var(--cyan)}
+
+.hero p{
+  max-width:700px;
+  color:#c5e2ee;
+  font-weight:650;
+  line-height:1.65;
+  font-size:.98rem;
+  margin:0;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:22px;
+}
+
+.btn{
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 18px;
+  border-radius:16px;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.72rem;
+  transition:.22s ease;
+  border:0;
+  cursor:pointer;
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+.btn-primary{
+  color:#06131d;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+}
+
+.btn-soft{
+  color:white;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.13);
+}
+
+.hero-card{
+  border-radius:34px;
+  padding:26px;
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(142,234,255,.20);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+.hero-card h2{
+  margin:14px 0 10px;
   color:white;
   text-transform:uppercase;
-  font-size:clamp(2.1rem,5vw,4.2rem);
+  font-size:clamp(1.7rem,3vw,3rem);
   line-height:.95;
-  letter-spacing:-1.5px;
-  margin-bottom:14px;
 }
 
-.intro-card h1 span{color:var(--cyan)}
-
-.intro-card p{
+.hero-card p{
   color:#c5e2ee;
-  line-height:1.7;
-  font-weight:700;
-  max-width:880px;
-  margin:auto;
+  line-height:1.6;
+  font-weight:650;
+}
+
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:18px;
+}
+
+.hero-stat{
+  padding:15px;
+  border-radius:20px;
+  background:rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+.hero-stat b{
+  display:block;
+  color:var(--cyan);
+  font-size:1.35rem;
+  margin-bottom:4px;
+}
+
+.hero-stat small{
+  color:#d8f5ff;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.60rem;
+}
+
+/* CALCULATEUR */
+
+.section{
+  padding:44px 0;
+}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  margin-bottom:24px;
+}
+
+.section-title h2{
+  margin:0;
+  color:white;
+  text-transform:uppercase;
+  font-size:clamp(1.9rem,4vw,3.8rem);
+  line-height:.95;
+  letter-spacing:-1.4px;
+}
+
+.section-title h2 span{color:var(--cyan)}
+
+.section-title p{
+  max-width:560px;
+  margin:0;
+  color:#c5e2ee;
+  line-height:1.6;
+  font-weight:650;
 }
 
 .eco-layout{
@@ -89,31 +346,33 @@ body{color:white}
   align-items:start;
 }
 
-.eco-panel{
-  background:rgba(255,255,255,.065);
-  border:1px solid rgba(142,234,255,.16);
+.panel{
   border-radius:30px;
-  padding:28px;
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
+  padding:26px;
+  background:rgba(255,255,255,.065);
+  border:1px solid rgba(142,234,255,.18);
+  box-shadow:var(--shadow);
 }
 
-.eco-panel h2,.eco-panel h3{
+.panel h3{
+  margin:14px 0 10px;
   color:white;
   text-transform:uppercase;
+  font-size:1.8rem;
   line-height:1;
-  margin:12px 0 16px;
 }
 
-.eco-panel h2{font-size:2.15rem}
-.eco-panel h3{font-size:1.55rem}
-
-.eco-panel p{
+.panel p{
   color:#c5e2ee;
-  line-height:1.65;
+  line-height:1.6;
   font-weight:650;
 }
 
-.control-box{display:grid;gap:18px;margin-top:24px}
+.controls{
+  display:grid;
+  gap:16px;
+  margin-top:20px;
+}
 
 .control-line{
   display:flex;
@@ -130,69 +389,74 @@ body{color:white}
   color:#d8f5ff;
   font-weight:900;
   text-transform:uppercase;
-  font-size:.82rem;
+  font-size:.78rem;
 }
 
 .control-line b{
   color:var(--cyan);
-  font-size:1.65rem;
+  font-size:1.55rem;
 }
 
 .range{
   width:100%;
-  accent-color:#35b9ee;
+  accent-color:#55d4ff;
 }
 
 .select-row{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:14px;
+  gap:12px;
 }
 
-.field{display:grid;gap:8px}
+.field{
+  display:grid;
+  gap:7px;
+}
 
 .field label{
   color:#d8f5ff;
-  font-size:.76rem;
+  font-size:.72rem;
   text-transform:uppercase;
   font-weight:900;
 }
 
-.field input,.field select{
+.field select{
+  width:100%;
   min-height:54px;
   border-radius:16px;
-  border:1px solid rgba(142,234,255,.18);
+  border:1px solid rgba(142,234,255,.20);
   background:#081923;
   color:white;
+  font-size:16px;
   font-weight:850;
-  padding:0 15px;
+  padding:0 14px;
   outline:none;
-  width:100%;
+  -webkit-appearance:none;
+  appearance:none;
 }
 
 .big-result{
   text-align:center;
-  padding:24px;
-  border-radius:26px;
+  padding:26px;
+  border-radius:28px;
   background:
-    radial-gradient(circle at 50% 20%,rgba(53,185,238,.28),transparent 40%),
-    linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
+    radial-gradient(circle at 50% 20%,rgba(85,212,255,.28),transparent 42%),
+    linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.045));
   border:1px solid rgba(142,234,255,.24);
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .big-result span{
   color:#c5e2ee;
   text-transform:uppercase;
-  font-size:.82rem;
+  font-size:.78rem;
   font-weight:900;
-  letter-spacing:.6px;
 }
 
 .big-result b{
   display:block;
   color:var(--cyan);
-  font-size:clamp(3rem,8vw,5.2rem);
+  font-size:clamp(3rem,8vw,5.3rem);
   line-height:1;
   margin:10px 0;
   font-weight:900;
@@ -201,6 +465,7 @@ body{color:white}
 .big-result p{
   color:white;
   font-weight:900;
+  margin:0;
 }
 
 .results-grid{
@@ -209,68 +474,49 @@ body{color:white}
   gap:12px;
 }
 
-.result-card{
+.result-card,
+.compare-box{
   padding:16px;
   border-radius:20px;
-  background:rgba(255,255,255,.06);
+  background:rgba(255,255,255,.055);
   border:1px solid rgba(142,234,255,.14);
   text-align:center;
 }
 
-.result-card span{
-  display:block;
-  color:#c5e2ee;
-  font-size:.78rem;
-  font-weight:900;
-  text-transform:uppercase;
-}
-
-.result-card b{
-  display:block;
-  margin-top:8px;
-  color:white;
-  font-size:1.42rem;
-}
-
-.compare{
-  margin-top:18px;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:12px;
-}
-
-.compare-box{
-  border-radius:22px;
-  padding:18px;
-  text-align:center;
-  border:1px solid rgba(142,234,255,.16);
-  background:rgba(255,255,255,.055);
-}
-
-.compare-box.highlight{
-  background:linear-gradient(135deg,rgba(53,185,238,.24),rgba(142,234,255,.10));
-  border-color:rgba(142,234,255,.34);
-}
-
+.result-card span,
 .compare-box span{
   display:block;
   color:#c5e2ee;
-  font-size:.75rem;
+  font-size:.70rem;
   font-weight:900;
   text-transform:uppercase;
 }
 
+.result-card b,
 .compare-box b{
   display:block;
-  color:white;
-  font-size:1.45rem;
   margin-top:8px;
+  color:white;
+  font-size:1.35rem;
+}
+
+.compare{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.compare-box.highlight{
+  background:linear-gradient(135deg,rgba(85,212,255,.24),rgba(142,234,255,.10));
+  border-color:rgba(142,234,255,.34);
 }
 
 .compare-box.highlight b{color:var(--cyan)}
 
-.progress-wrap{
-  margin-top:18px;
+.progress-wrap,
+.notice{
+  margin-top:16px;
   padding:18px;
   border-radius:22px;
   background:rgba(255,255,255,.045);
@@ -283,7 +529,7 @@ body{color:white}
   gap:14px;
   color:#d8f5ff;
   font-weight:900;
-  font-size:.85rem;
+  font-size:.78rem;
   text-transform:uppercase;
   margin-bottom:12px;
 }
@@ -299,29 +545,18 @@ body{color:white}
   height:100%;
   width:50%;
   border-radius:999px;
-  background:linear-gradient(90deg,var(--blue2),var(--cyan));
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
   transition:.25s ease;
 }
 
-.dream-section{padding:0 0 80px;background:#06131d}
-
-.section-head{margin-bottom:24px}
-
-.section-head h2{
-  color:white;
-  text-transform:uppercase;
-  font-size:clamp(2.2rem,5vw,4rem);
-  line-height:.94;
-  letter-spacing:-1.5px;
-  margin:14px 0;
-}
-
-.section-head p{
+.notice{
   color:#c5e2ee;
-  line-height:1.7;
+  font-size:.9rem;
+  line-height:1.55;
   font-weight:650;
-  max-width:850px;
 }
+
+/* PROJETS */
 
 .dream-grid{
   display:grid;
@@ -331,39 +566,43 @@ body{color:white}
 
 .dream-card{
   overflow:hidden;
-  border-radius:26px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(142,234,255,.16);
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
+  border-radius:28px;
+  background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.055));
+  border:1px solid rgba(142,234,255,.18);
+  box-shadow:0 20px 70px rgba(0,0,0,.25);
 }
 
 .dream-card img{
   width:100%;
-  height:190px;
+  height:185px;
   object-fit:cover;
   display:block;
   background:#0b2a3a;
 }
 
-.dream-content{padding:18px}
+.dream-content{
+  padding:18px;
+}
 
 .dream-content h3{
+  margin:0 0 9px;
   color:white;
   text-transform:uppercase;
-  font-size:1.05rem;
-  margin-bottom:9px;
+  font-size:1.02rem;
 }
 
 .dream-content p{
+  margin:0;
   color:#c5e2ee;
   line-height:1.45;
-  font-weight:700;
+  font-weight:650;
+  font-size:.86rem;
 }
 
 .dream-content b{
   display:block;
   color:var(--cyan);
-  font-size:1.4rem;
+  font-size:1.28rem;
   margin-top:10px;
 }
 
@@ -383,8 +622,8 @@ body{color:white}
 
 .goal-btn{
   cursor:pointer;
-  min-height:68px;
-  border-radius:20px;
+  min-height:64px;
+  border-radius:18px;
   border:1px solid rgba(142,234,255,.17);
   background:rgba(255,255,255,.055);
   color:white;
@@ -393,7 +632,7 @@ body{color:white}
 }
 
 .goal-btn.active{
-  background:linear-gradient(135deg,var(--blue2),var(--cyan));
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
 }
 
@@ -403,6 +642,7 @@ body{color:white}
   overflow:hidden;
   border:1px solid rgba(142,234,255,.18);
   background:rgba(255,255,255,.06);
+  box-shadow:var(--shadow);
 }
 
 .goal-result img{
@@ -412,46 +652,52 @@ body{color:white}
   display:block;
 }
 
-.goal-result-content{padding:24px}
+.goal-result-content{
+  padding:24px;
+}
 
 .goal-result-content h3{
+  margin:0 0 12px;
   color:white;
   text-transform:uppercase;
   font-size:1.55rem;
-  margin-bottom:12px;
 }
 
 .goal-result-content p{
   color:#c5e2ee;
   line-height:1.65;
   font-weight:650;
+  margin:0;
 }
 
 .goal-result-content strong{color:var(--cyan)}
 
-.punchline{
-  margin-top:34px;
+.final-panel{
+  padding:0 0 70px;
+}
+
+.final-card{
   text-align:center;
   border-radius:34px;
   padding:34px 24px;
   background:
     radial-gradient(circle at 50% 20%,rgba(142,234,255,.20),transparent 38%),
-    linear-gradient(135deg,rgba(53,185,238,.15),rgba(255,255,255,.045));
+    linear-gradient(135deg,rgba(85,212,255,.15),rgba(255,255,255,.045));
   border:1px solid rgba(142,234,255,.22);
+  box-shadow:var(--shadow);
 }
 
-.punchline h2{
+.final-card h2{
+  margin:14px 0;
   color:white;
   text-transform:uppercase;
-  font-size:clamp(2rem,5vw,3.7rem);
-  line-height:.96;
-  letter-spacing:-1.5px;
-  margin-bottom:16px;
+  font-size:clamp(2rem,4vw,3.8rem);
+  line-height:.95;
 }
 
-.punchline h2 span{color:var(--cyan)}
+.final-card h2 span{color:var(--cyan)}
 
-.punchline p{
+.final-card p{
   color:#d8f5ff;
   font-weight:750;
   line-height:1.65;
@@ -459,47 +705,166 @@ body{color:white}
   margin:0 auto 22px;
 }
 
-.notice{
-  margin-top:18px;
-  padding:16px;
-  border-radius:20px;
-  background:rgba(255,255,255,.045);
-  border:1px solid rgba(142,234,255,.14);
+.mobile-actions{display:none}
+
+footer{
+  border-top:1px solid rgba(255,255,255,.09);
+  padding:22px 0;
   color:#c5e2ee;
-  font-size:.92rem;
-  line-height:1.6;
-  font-weight:600;
+  font-size:.78rem;
 }
 
-@media(max-width:1050px){
-  .eco-layout,.goal-zone{grid-template-columns:1fr}
-  .dream-grid{grid-template-columns:repeat(2,1fr)}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
-@media(max-width:760px){
-  .eco-hero{
-    height:170px!important;
-    min-height:170px!important;
-    background-size:cover!important;
-    background-position:center center!important;
-  }
+/* RESPONSIVE */
 
-  .eco-section{padding:28px 0 60px}
-  .eco-panel{padding:22px;border-radius:24px}
-
-  .select-row,.results-grid,.compare,.dream-grid,.goal-buttons{
+@media(max-width:1100px){
+  .hero .container,
+  .eco-layout,
+  .goal-zone{
     grid-template-columns:1fr;
   }
 
-  .dream-card img,.goal-result img{height:220px}
-  .control-line{align-items:flex-start;flex-direction:column}
-  .btn{width:100%;justify-content:center;text-align:center}
+  .dream-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:900px){
+  .menu,
+  .nav-cta{
+    display:none;
+  }
+
+  .mobile-actions{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:90;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    padding:8px;
+    border-radius:22px;
+    background:rgba(6,19,29,.91);
+    border:1px solid rgba(255,255,255,.13);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
+  }
+
+  .mobile-actions a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+    border-radius:16px;
+    color:#06131d;
+    font-weight:900;
+    font-size:.72rem;
+    text-transform:uppercase;
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+  }
+
+  footer{padding-bottom:88px}
+}
+
+@media(max-width:640px){
+  .container{width:min(100% - 22px,1220px)}
+  .top{font-size:.66rem}
+  .nav{min-height:68px}
+  .logo-mark{width:40px;height:40px}
+  .logo strong{font-size:1.5rem}
+  .logo span{font-size:.62rem}
+
+  .hero{
+    padding:42px 0 30px;
+  }
+
+  .hero h1{
+    font-size:2.35rem;
+    letter-spacing:-1px;
+  }
+
+  .hero p{font-size:.88rem}
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  .section{
+    padding:34px 0;
+  }
+
+  .section-title{
+    display:block;
+  }
+
+  .section-title p{
+    margin-top:12px;
+    font-size:.9rem;
+  }
+
+  .panel{
+    padding:20px;
+    border-radius:26px;
+  }
+
+  .select-row,
+  .results-grid,
+  .compare,
+  .goal-buttons{
+    grid-template-columns:1fr;
+  }
+
+  .dream-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .dream-card img{
+    height:130px;
+  }
+
+  .dream-content{
+    padding:13px;
+  }
+
+  .dream-content h3{
+    font-size:.86rem;
+  }
+
+  .dream-content p{
+    display:none;
+  }
+
+  .dream-content b{
+    font-size:1rem;
+  }
+
+  .control-line{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .goal-result img{
+    height:210px;
+  }
+
+  .btn{
+    width:100%;
+  }
 }
 
 @media(max-width:390px){
-  .eco-hero{
-    height:145px!important;
-    min-height:145px!important;
+  .dream-card img{
+    height:120px;
   }
 }
 </style>
@@ -508,7 +873,7 @@ body{color:white}
 <body data-page="eco">
 
 <div class="top">
-  STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne
+STOOM Clermont-Ferrand · Calculateur économies · Produits réservés aux majeurs · Achat uniquement en boutique
 </div>
 
 <header>
@@ -522,49 +887,99 @@ body{color:white}
     </a>
 
     <nav class="menu">
-     
-      <a href="economies.html" class="active">Économies</a>
+      <a href="index.html">Catalogue</a>
+      <a href="materiel.html">Matériel</a>
       <a href="diy.html">DIY</a>
       <a href="concours.html">Concours</a>
-      <a href="debuter.html">Débuter</a>
+      <a href="economies.html" class="active">Économies</a>
       <a href="contact.html">Contact</a>
-      <a class="cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
     </nav>
+
+    <a class="nav-cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">
+      Itinéraire
+    </a>
   </div>
 </header>
 
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
-  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
-  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="#calculateur">Calculer</a>
 </div>
 
 <main>
 
-<section class="eco-hero"></section>
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="badge">Calculateur économies</span>
 
-<section class="eco-section">
+      <h1>
+        Et si votre budget tabac devenait <span>un vrai projet ?</span>
+      </h1>
+
+      <p>
+        Calculez votre budget tabac, comparez avec une estimation vape,
+        puis voyez concrètement ce que cet argent pourrait représenter.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#calculateur">Faire le calcul</a>
+        <a class="btn btn-soft" href="#projets">Voir les projets</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <span class="badge">Impact budget</span>
+      <h2>Le chiffre qui parle vraiment</h2>
+      <p>
+        Les économies ne sont pas qu’un argument. Sur plusieurs mois ou années,
+        le budget tabac peut devenir un téléphone, un voyage, une voiture ou un projet maison.
+      </p>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <b id="heroMonthly">380 €</b>
+          <small>Par mois</small>
+        </div>
+        <div class="hero-stat">
+          <b id="heroYearly">4 563 €</b>
+          <small>Par an</small>
+        </div>
+        <div class="hero-stat">
+          <b id="heroFive">22 813 €</b>
+          <small>Sur 5 ans</small>
+        </div>
+        <div class="hero-stat">
+          <b id="heroSaving">3 663 €</b>
+          <small>Économie/an</small>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="calculateur">
   <div class="container">
 
-    <div class="intro-card">
-      <h1>Votre budget tabac peut devenir <span>un vrai projet.</span></h1>
+    <div class="section-title">
+      <h2>Faites <span>le test</span></h2>
       <p>
-        Calculez votre consommation, comparez avec une estimation vape, puis découvrez concrètement
-        ce que cet argent pourrait représenter : voyages, téléphone, console, moto, voiture, loisirs ou maison.
+        Ajustez les curseurs selon votre consommation. Le résultat donne un ordre d’idée clair,
+        puis le conseil en boutique permet d’adapter la solution.
       </p>
     </div>
 
     <div class="eco-layout">
 
-      <div class="eco-panel">
+      <div class="panel">
         <span class="badge">Votre consommation</span>
-        <h2>Faites le test</h2>
+        <h3>Paramètres</h3>
         <p>
-          Ajustez les curseurs. Le calcul donne un ordre d’idée simple et parlant.
-          En boutique, on affine selon votre profil, votre dosage et votre matériel.
+          Modifiez votre nombre de cigarettes, le prix du paquet et un budget vape estimé.
         </p>
 
-        <div class="control-box">
+        <div class="controls">
           <div class="control-line">
             <span>Cigarettes par jour</span>
             <b><span id="cigsValue">20</span> / jour</b>
@@ -600,11 +1015,11 @@ body{color:white}
         </div>
 
         <div class="notice">
-          Estimation indicative. La vape n’est pas magique : le bon matériel, le bon dosage et le bon accompagnement changent tout.
+          Estimation indicative. Le bon matériel, le bon dosage et le bon accompagnement changent tout.
         </div>
       </div>
 
-      <div class="eco-panel">
+      <div class="panel">
         <div class="big-result">
           <span>Budget tabac annuel</span>
           <b id="yearly">4 563 €</b>
@@ -656,12 +1071,11 @@ body{color:white}
   </div>
 </section>
 
-<section class="dream-section">
+<section class="section" id="projets">
   <div class="container">
 
-    <div class="section-head">
-      <span class="badge">Mur des envies</span>
-      <h2>Ce que votre budget tabac pourrait représenter</h2>
+    <div class="section-title">
+      <h2>Ce budget pourrait devenir <span>autre chose</span></h2>
       <p>
         Les chiffres seuls parlent peu. Les projets parlent beaucoup plus.
         Ces exemples se mettent à jour automatiquement selon votre consommation.
@@ -743,12 +1157,11 @@ body{color:white}
     </div>
 
     <div class="goal-zone">
-      <div class="eco-panel">
+      <div class="panel">
         <span class="badge">Objectif rêve</span>
-        <h2>Choisissez un projet</h2>
+        <h3>Choisissez un projet</h3>
         <p>
-          Le site transforme votre budget tabac en délai concret.
-          C’est simple, direct, et beaucoup plus parlant qu’un chiffre abstrait.
+          Transformez votre budget tabac en délai concret. C’est plus parlant qu’un simple montant.
         </p>
 
         <div class="goal-buttons">
@@ -772,7 +1185,13 @@ body{color:white}
       </div>
     </div>
 
-    <div class="punchline">
+  </div>
+</section>
+
+<section class="final-panel">
+  <div class="container">
+    <div class="final-card">
+      <span class="badge">Conseil STOOM</span>
       <h2>La vraie question : <span>où voulez-vous mettre cet argent ?</span></h2>
       <p id="finalSentence">
         À 20 cigarettes par jour, le tabac peut représenter plus de 22 000 € sur 5 ans.
@@ -780,7 +1199,6 @@ body{color:white}
       </p>
       <a class="btn btn-primary" href="contact.html">Je veux un conseil personnalisé</a>
     </div>
-
   </div>
 </section>
 
@@ -789,7 +1207,7 @@ body{color:white}
 <footer>
   <div class="container footer-inner">
     <span>© STOOM Clermont-Ferrand</span>
-    <span>Conseil en boutique · Pas de vente en ligne</span>
+    <span>Calculateur économies · Catalogue vitrine · Achat uniquement en boutique</span>
   </div>
 </footer>
 
@@ -809,6 +1227,11 @@ body{color:white}
   const tobaccoAnnual = document.getElementById("tobaccoAnnual");
   const vapeAnnual = document.getElementById("vapeAnnual");
   const savingAnnual = document.getElementById("savingAnnual");
+
+  const heroMonthly = document.getElementById("heroMonthly");
+  const heroYearly = document.getElementById("heroYearly");
+  const heroFive = document.getElementById("heroFive");
+  const heroSaving = document.getElementById("heroSaving");
 
   const impactFill = document.getElementById("impactFill");
   const impactLabel = document.getElementById("impactLabel");
@@ -911,6 +1334,11 @@ body{color:white}
     vapeAnnual.textContent = euro(vapeYear);
     savingAnnual.textContent = euro(saving);
 
+    heroMonthly.textContent = euro(month);
+    heroYearly.textContent = euro(annual);
+    heroFive.textContent = euro(annual * 5);
+    heroSaving.textContent = euro(saving);
+
     iphoneCount.textContent = Math.floor(annual / 1200) + " possible(s)";
     ps5Count.textContent = Math.floor(annual / 550) + " possible(s)";
     travelCount.textContent = Math.floor(annual / 2200) + " possible(s)";
@@ -925,7 +1353,7 @@ body{color:white}
 
     if(annual < 1200){
       impactLabel.textContent = "Modéré";
-      burnText.textContent = "c’est déjà un vrai budget chaque année.";
+      burnText.textContent = "c’est déjà un budget chaque année.";
     }else if(annual < 3000){
       impactLabel.textContent = "Important";
       burnText.textContent = "c’est un budget loisirs conséquent chaque année.";
@@ -963,5 +1391,6 @@ body{color:white}
 </script>
 
 <script src="assets/age-check.js"></script>
+
 </body>
 </html>
