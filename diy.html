@@ -66,6 +66,8 @@ button,input,select{font-family:inherit}
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
+/* HEADER IDENTIQUE INDEX */
+
 header{
   position:sticky;
   top:0;
@@ -81,7 +83,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
+  gap:22px;
 }
 
 .logo{
@@ -106,6 +108,7 @@ header{
 
 .logo strong{
   display:block;
+  color:white;
   font-size:1.7rem;
   line-height:.9;
   letter-spacing:2px;
@@ -114,29 +117,49 @@ header{
 .logo span{
   display:block;
   color:var(--cyan);
-  font-size:.72rem;
-  font-weight:900;
   text-transform:uppercase;
-  letter-spacing:2px;
+  font-weight:900;
+  font-size:.70rem;
+  letter-spacing:2.4px;
   margin-top:4px;
 }
 
 .menu{
   display:flex;
-  gap:22px;
   align-items:center;
+  gap:22px;
 }
 
 .menu a{
   color:#d8f5ff;
   text-decoration:none;
   text-transform:uppercase;
-  font-size:.75rem;
   font-weight:900;
+  font-size:.74rem;
 }
 
-.menu a.active,
-.menu a:hover{color:var(--cyan)}
+.menu a:hover,
+.menu a.active{
+  color:var(--cyan);
+}
+
+.nav-cta{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:.74rem;
+  white-space:nowrap;
+}
+
+/* PAGE DIY */
 
 .hero{
   position:relative;
@@ -696,7 +719,10 @@ footer{
 }
 
 @media(max-width:900px){
-  .menu{display:none}
+  .menu,
+  .nav-cta{
+    display:none;
+  }
 
   .mobile-actions{
     position:fixed;
@@ -857,12 +883,16 @@ STOOM Clermont-Ferrand · DIY e-liquide · Produits réservés aux majeurs · Ac
       <a href="economies.html">Économies</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    <a class="nav-cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">
+      Itinéraire
+    </a>
   </div>
 </header>
 
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
-  <a href="contact.html">Venir</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
   <a href="#calculateur">Calculer</a>
 </div>
 
