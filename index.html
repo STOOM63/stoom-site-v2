@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>STOOM Clermont-Ferrand | Catalogue boutique vape</title>
-<meta name="description" content="Catalogue vitrine STOOM Clermont-Ferrand : e-liquides, DIY, matériel, nouveautés, concours et conseil en boutique. Pas de vente en ligne.">
+<title>STOOM Clermont-Ferrand | Boutique vape, e-liquides, matériel et conseil</title>
+<meta name="description" content="STOOM Clermont-Ferrand : boutique spécialisée en cigarette électronique, e-liquides, matériel, DIY et accompagnement personnalisé. Catalogue vitrine, pas de vente en ligne.">
 <meta name="theme-color" content="#06131d">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,46 +14,81 @@
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
+:root{
+  --bg:#06131d;
+  --bg2:#081923;
+  --cyan:#8eeaff;
+  --blue:#55d4ff;
+  --green:#6dffb7;
+  --text:#f4fbff;
+  --muted:#b8cad6;
+  --line:rgba(142,234,255,.20);
+  --soft:rgba(255,255,255,.075);
+  --soft2:rgba(255,255,255,.105);
+  --shadow:0 24px 90px rgba(0,0,0,.34);
+}
+
 *{box-sizing:border-box}
-html,body{width:100%;max-width:100%;overflow-x:hidden;background:#06131d}
+
+html,body{
+  margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Montserrat,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 0%,rgba(85,212,255,.26),transparent 34%),
+    radial-gradient(circle at 92% 10%,rgba(109,255,183,.12),transparent 31%),
+    linear-gradient(180deg,#06131d,#081923 52%,#06131d);
+}
+
+a{text-decoration:none;color:inherit}
+
+.container{
+  width:min(1220px,calc(100% - 28px));
+  margin:auto;
+}
 
 .top{
-  width:100%;
-  background:#06131d;
+  background:rgba(0,0,0,.24);
   text-align:center;
   font-size:.72rem;
-  line-height:1.25;
-  padding:6px 14px;
+  line-height:1.35;
+  padding:8px 14px;
   color:#d8f5ff;
   font-weight:800;
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 header{
-  width:100%;
-  height:74px;
-  background:#06131d!important;
-  border-bottom:1px solid rgba(255,255,255,.12);
-  position:relative;
-  z-index:20;
+  position:sticky;
+  top:0;
+  z-index:60;
+  background:rgba(6,19,29,.90);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.10);
 }
 
-header .container.nav{
-  width:min(96%,1500px);
-  max-width:1500px;
-  margin:auto;
-  padding:0 18px;
-  height:74px;
-  display:grid;
-  grid-template-columns:260px 1fr 180px;
+.nav{
+  min-height:74px;
+  display:flex;
   align-items:center;
-  gap:20px;
+  justify-content:space-between;
+  gap:22px;
 }
 
 .logo{
   display:flex;
   align-items:center;
   gap:12px;
-  text-decoration:none;
 }
 
 .logo-mark{
@@ -62,16 +97,15 @@ header .container.nav{
   border-radius:16px;
   display:grid;
   place-items:center;
-  background:linear-gradient(135deg,var(--blue2),var(--cyan));
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
   font-weight:900;
-  font-size:1.1rem;
 }
 
 .logo strong{
   display:block;
   color:white;
-  font-size:1.75rem;
+  font-size:1.7rem;
   line-height:.9;
   letter-spacing:2px;
 }
@@ -81,26 +115,22 @@ header .container.nav{
   color:var(--cyan);
   text-transform:uppercase;
   font-weight:900;
-  font-size:.72rem;
-  letter-spacing:2.6px;
+  font-size:.70rem;
+  letter-spacing:2.4px;
   margin-top:4px;
 }
 
 .menu{
   display:flex;
-  justify-content:center;
   align-items:center;
-  gap:30px;
+  gap:22px;
 }
 
 .menu a{
   color:#d8f5ff;
-  text-decoration:none;
   text-transform:uppercase;
   font-weight:900;
-  font-size:.78rem;
-  letter-spacing:.2px;
-  opacity:.9;
+  font-size:.74rem;
 }
 
 .menu a:hover,
@@ -109,218 +139,339 @@ header .container.nav{
 }
 
 .nav-cta{
-  justify-self:end;
+  min-height:44px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:44px;
-  padding:0 22px;
+  padding:0 20px;
   border-radius:999px;
-  background:linear-gradient(135deg,var(--blue2),var(--cyan));
-  color:#06131d!important;
-  text-decoration:none;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
   text-transform:uppercase;
   font-weight:900;
-  font-size:.78rem;
+  font-size:.74rem;
 }
 
-.catalog-hero{
-  min-height:250px;
-  padding:40px 0;
-  display:flex;
-  align-items:center;
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:64px 0 48px;
+  border-bottom:1px solid var(--line);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
   background:
-    linear-gradient(90deg,rgba(6,19,29,.98) 0%,rgba(6,19,29,.92) 44%,rgba(6,19,29,.62) 100%),
-    url("uploads/premierepage.webp");
-  background-size:cover;
-  background-position:center 48%;
-  border-bottom:1px solid rgba(142,234,255,.18);
+    linear-gradient(90deg,rgba(6,19,29,.98),rgba(6,19,29,.72),rgba(6,19,29,.88)),
+    url("uploads/premierepage.webp") center/cover no-repeat;
+  z-index:0;
 }
 
-.hero-inner{
-  width:min(92%,1220px);
-  margin:auto;
-
+.hero .container{
+  position:relative;
+  z-index:1;
   display:grid;
-  grid-template-columns:1fr 340px;
-
+  grid-template-columns:1.15fr .85fr;
+  gap:34px;
   align-items:center;
-  gap:40px;
 }
 
-.hero-title{
+.badge{
+  display:inline-flex;
+  align-items:center;
+  padding:9px 14px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
+  font-weight:900;
+  font-size:.70rem;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  max-width:760px;
   color:white;
   text-transform:uppercase;
-  font-size:clamp(2rem,4vw,4rem);
-  line-height:.9;
-  letter-spacing:-1.8px;
-  font-weight:900;
-  margin:12px 0 10px;
-  max-width:620px;
+  font-size:clamp(2.45rem,6vw,5.25rem);
+  line-height:.88;
+  letter-spacing:-2px;
+  margin:18px 0 16px;
 }
 
-.hero-title span{color:var(--cyan)}
+.hero h1 span{color:var(--cyan)}
 
-.hero-lead{
-  max-width:560px;
+.hero p{
+  max-width:650px;
   color:#c5e2ee;
-  font-size:.92rem;
+  line-height:1.65;
+  font-weight:650;
+  font-size:.98rem;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px;
+}
+
+.btn{
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 18px;
+  border-radius:16px;
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:.72rem;
+  transition:.2s ease;
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
+}
+
+.btn-ghost{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.14);
+  color:white;
+}
+
+.hero-card{
+  border-radius:32px;
+  padding:26px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(142,234,255,.20);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+
+.hero-card strong{
+  display:block;
+  color:white;
+  text-transform:uppercase;
+  font-size:1.35rem;
+  line-height:1.1;
+  margin-bottom:10px;
+}
+
+.hero-card span{
+  display:block;
+  color:#c5e2ee;
   line-height:1.55;
   font-weight:650;
+  font-size:.88rem;
 }
 
-.hero-note{
-  margin-top:12px;
-  display:inline-flex;
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  border:1px solid var(--line);
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:18px;
+}
+
+.hero-stat{
+  padding:15px;
+  border-radius:20px;
+  background:rgba(0,0,0,.20);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+.hero-stat b{
+  display:block;
+  color:var(--cyan);
+  font-size:1.35rem;
+  margin-bottom:4px;
+}
+
+.hero-stat small{
   color:#d8f5ff;
-  font-weight:900;
+  font-weight:800;
   text-transform:uppercase;
   font-size:.62rem;
 }
 
-.hero-side{
-  width:100%;
-  max-width:340px;
-  justify-self:end;
-
-  padding:18px;
-  border-radius:24px;
-  background:rgba(255,255,255,.075);
-  border:1px solid rgba(142,234,255,.2);
-  box-shadow:0 18px 60px rgba(0,0,0,.22);
+.home-section{
+  padding:46px 0;
 }
-
-.hero-side strong{
-  display:block;
-  color:white;
-  text-transform:uppercase;
-  font-size:1.05rem;
-  line-height:1.1;
-  margin-bottom:8px;
-}
-
-.hero-side span{
-  display:block;
-  color:#c5e2ee;
-  font-weight:700;
-  font-size:.82rem;
-  line-height:1.45;
-}
-
-.home-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-.home-actions .btn{
-  min-width:150px;
-  min-height:42px;
-  padding:0 18px;
-  font-size:.72rem;
-}
-
-.home-section{padding:42px 0;background:#06131d}
 
 .section-title{
   display:flex;
   align-items:flex-end;
   justify-content:space-between;
-  gap:20px;
+  gap:24px;
   margin-bottom:24px;
 }
 
 .section-title h2{
+  margin:0;
   color:white;
   text-transform:uppercase;
-  font-size:clamp(2rem,4vw,3.8rem);
+  font-size:clamp(1.9rem,4vw,3.7rem);
   line-height:.95;
-  letter-spacing:-1.5px;
+  letter-spacing:-1.4px;
 }
 
 .section-title p{
-  color:#c5e2ee;
-  font-weight:600;
-  line-height:1.6;
   max-width:520px;
+  margin:0;
+  color:#c5e2ee;
+  line-height:1.6;
+  font-weight:650;
 }
-
 
 .card-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+  gap:20px;
 }
 
 .catalog-card{
   display:flex;
   flex-direction:column;
-  background:rgba(255,255,255,.065);
-  border:1px solid rgba(142,234,255,.18);
-  border-radius:26px;
   overflow:hidden;
-  color:inherit;
-  text-decoration:none;
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
+  min-height:100%;
+  border-radius:28px;
+  background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.055));
+  border:1px solid rgba(142,234,255,.18);
+  box-shadow:0 20px 70px rgba(0,0,0,.25);
   transition:.22s ease;
 }
 
-.catalog-card:hover{transform:translateY(-6px);border-color:rgba(142,234,255,.48)}
+.catalog-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(142,234,255,.45);
+}
 
 .catalog-img{
   width:100%;
-  height:170px;
+  height:190px;
   object-fit:cover;
   display:block;
   background:#081923;
 }
 
 .catalog-content{
-  padding:22px;
+  padding:20px;
   display:flex;
   flex-direction:column;
   flex:1;
 }
 
 .catalog-badge{
-  display:inline-flex;
   align-self:flex-start;
-  background:linear-gradient(135deg,var(--blue2),var(--cyan));
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   color:#06131d;
   border-radius:999px;
-  padding:8px 12px;
+  padding:8px 11px;
   font-weight:900;
   text-transform:uppercase;
-  font-size:.7rem;
+  font-size:.66rem;
   margin-bottom:14px;
 }
 
 .catalog-content h3{
+  margin:0 0 10px;
   color:white;
   text-transform:uppercase;
-  font-size:1.35rem;
+  font-size:1.25rem;
   line-height:1.08;
-  margin-bottom:10px;
 }
 
 .catalog-content p{
   color:#c5e2ee;
-  line-height:1.6;
+  line-height:1.55;
   font-weight:600;
-  margin-bottom:16px;
+  margin:0 0 16px;
 }
 
 .catalog-button{
   margin-top:auto;
-  min-height:46px;
+  min-height:43px;
   border-radius:14px;
-  border:1px solid var(--cyan);
   display:flex;
   align-items:center;
   justify-content:center;
+  border:1px solid var(--cyan);
   color:white;
   font-weight:900;
   text-transform:uppercase;
-  font-size:.78rem;
+  font-size:.70rem;
+}
+
+.material-banner{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  overflow:hidden;
+  border-radius:34px;
+  background:
+    radial-gradient(circle at top left,rgba(142,234,255,.20),transparent 40%),
+    linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.045));
+  border:1px solid rgba(142,234,255,.22);
+  box-shadow:var(--shadow);
+}
+
+.material-content{
+  padding:38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.material-content h2{
+  margin:16px 0;
+  color:white;
+  text-transform:uppercase;
+  font-size:clamp(2rem,4vw,4rem);
+  line-height:.92;
+}
+
+.material-content p{
+  color:#c5e2ee;
+  line-height:1.65;
+  font-weight:650;
+}
+
+.material-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:18px 0 22px;
+}
+
+.material-tags span{
+  padding:9px 12px;
+  border-radius:999px;
+  background:rgba(142,234,255,.10);
+  border:1px solid rgba(142,234,255,.22);
+  color:#d8f5ff;
+  font-weight:900;
+  font-size:.68rem;
+  text-transform:uppercase;
+}
+
+.material-visual{
+  min-height:340px;
+  background:
+    radial-gradient(circle at center,rgba(142,234,255,.22),transparent 58%),
+    #081923;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+.material-visual img{
+  max-width:100%;
+  max-height:300px;
+  object-fit:contain;
 }
 
 .product-strip{
@@ -330,119 +481,80 @@ header .container.nav{
 }
 
 .small-product{
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(142,234,255,.18);
-  border-radius:22px;
   overflow:hidden;
+  border-radius:24px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(142,234,255,.18);
 }
 
 .small-product img{
   width:100%;
   height:190px;
   object-fit:contain;
-  object-position:center;
   background:#0b1c27;
   padding:8px;
   display:block;
 }
 
-.small-product div{padding:16px}
-.small-product h3{color:white;text-transform:uppercase;font-size:1rem;margin-bottom:8px}
-.small-product p{color:#c5e2ee;font-weight:600;line-height:1.45;font-size:.9rem}
+.small-product div{padding:15px}
+.small-product h3{margin:0 0 8px;color:white;text-transform:uppercase;font-size:.95rem}
+.small-product p{margin:0;color:#c5e2ee;font-weight:650;line-height:1.45;font-size:.85rem}
 
-.contest-banner{
+.duo-grid{
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:0;
-  overflow:hidden;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.big-card{
   border-radius:32px;
-  background:rgba(255,255,255,.065);
+  padding:30px;
+  background:rgba(255,255,255,.07);
   border:1px solid rgba(142,234,255,.18);
-  box-shadow:0 18px 70px rgba(0,0,0,.22);
-  text-decoration:none;
-  color:inherit;
+  box-shadow:0 20px 70px rgba(0,0,0,.22);
 }
 
-.contest-content{
-  padding:34px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.contest-content h2{
+.big-card h3{
+  margin:16px 0 10px;
   color:white;
   text-transform:uppercase;
-  font-size:clamp(2rem,4vw,3.6rem);
+  font-size:clamp(1.7rem,3vw,3rem);
   line-height:.95;
-  margin:16px 0;
 }
 
-.contest-content p{
+.big-card p{
+  margin:0 0 20px;
   color:#c5e2ee;
-  line-height:1.7;
-  font-weight:600;
-  margin-bottom:20px;
+  line-height:1.65;
+  font-weight:650;
 }
-
-.contest-img{
-  min-height:320px;
-  background:
-    linear-gradient(90deg,rgba(6,19,29,.35),rgba(6,19,29,.05)),
-    url("uploads/sixvape.jpg");
-  background-size:cover;
-  background-position:center;
-}
-
-.tools-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:22px;
-}
-
-.tool-card{
-  display:grid;
-  grid-template-columns:80px 1fr auto;
-  gap:20px;
-  align-items:center;
-  background:rgba(255,255,255,.065);
-  border:1px solid rgba(142,234,255,.18);
-  border-radius:26px;
-  padding:24px;
-  text-decoration:none;
-  color:inherit;
-}
-
-.tool-icon{
-  width:80px;
-  height:80px;
-  border-radius:24px;
-  display:grid;
-  place-items:center;
-  background:rgba(142,234,255,.12);
-  border:1px solid rgba(142,234,255,.24);
-  color:var(--cyan);
-  font-size:2rem;
-}
-
-.tool-card h3{color:white;text-transform:uppercase;font-size:1.35rem;margin-bottom:8px}
-.tool-card p{color:#c5e2ee;line-height:1.55;font-weight:600}
 
 .reassurance-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:16px;
+  gap:14px;
 }
 
 .reassurance{
   background:rgba(255,255,255,.055);
   border:1px solid rgba(142,234,255,.18);
-  border-radius:22px;
-  padding:22px;
+  border-radius:24px;
+  padding:21px;
 }
 
-.reassurance b{display:block;color:white;font-size:1.1rem;margin-bottom:8px}
-.reassurance span{color:#c5e2ee;line-height:1.5;font-weight:600}
+.reassurance b{
+  display:block;
+  color:white;
+  font-size:1.05rem;
+  margin-bottom:8px;
+}
+
+.reassurance span{
+  color:#c5e2ee;
+  line-height:1.5;
+  font-weight:650;
+  font-size:.88rem;
+}
 
 .contact-panel{
   display:grid;
@@ -452,28 +564,32 @@ header .container.nav{
 }
 
 .home-panel{
-  background:rgba(255,255,255,.065);
+  background:rgba(255,255,255,.07);
   border:1px solid rgba(142,234,255,.18);
-  border-radius:30px;
-  padding:30px;
+  border-radius:32px;
+  padding:32px;
   box-shadow:var(--shadow);
 }
 
 .home-panel h2{
+  margin:16px 0;
   color:white;
   text-transform:uppercase;
   font-size:clamp(2rem,4vw,3.5rem);
   line-height:.95;
-  margin:16px 0;
 }
 
-.home-panel p{color:#c5e2ee;line-height:1.7;font-weight:600}
+.home-panel p{
+  color:#c5e2ee;
+  line-height:1.65;
+  font-weight:650;
+}
 
 .home-map{
   width:100%;
   min-height:390px;
   border:0;
-  border-radius:30px;
+  border-radius:32px;
   box-shadow:var(--shadow);
 }
 
@@ -486,85 +602,147 @@ header .container.nav{
   color:#c5e2ee;
   font-weight:700;
 }
-.material-banner{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:0;
-  overflow:hidden;
-  border-radius:34px;
-  background:
-    radial-gradient(circle at top left,rgba(142,234,255,.20),transparent 38%),
-    linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.045));
-  border:1px solid rgba(142,234,255,.22);
-  box-shadow:0 22px 80px rgba(0,0,0,.28);
-  text-decoration:none;
-  color:inherit;
+
+.mobile-actions{
+  display:none;
 }
 
-.material-content{
-  padding:38px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.material-content h2{
-  color:white;
-  text-transform:uppercase;
-  font-size:clamp(2rem,4vw,4rem);
-  line-height:.92;
-  margin:16px 0;
-}
-
-.material-content p{
+footer{
+  border-top:1px solid rgba(255,255,255,.09);
+  padding:22px 0;
   color:#c5e2ee;
-  line-height:1.7;
-  font-weight:650;
-  margin-bottom:18px;
+  font-size:.78rem;
 }
 
-.material-tags{
+.footer-inner{
   display:flex;
+  justify-content:space-between;
+  gap:14px;
   flex-wrap:wrap;
-  gap:10px;
-  margin-bottom:22px;
 }
 
-.material-tags span{
-  padding:9px 12px;
-  border-radius:999px;
-  background:rgba(142,234,255,.10);
-  border:1px solid rgba(142,234,255,.22);
-  color:#d8f5ff;
-  font-weight:900;
-  font-size:.72rem;
-  text-transform:uppercase;
-}
-
-.material-visual{
-  min-height:330px;
-  background:
-    radial-gradient(circle at center,rgba(142,234,255,.20),transparent 58%),
-    #081923;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:28px;
-}
-
-.material-visual img{
-  max-width:100%;
-  max-height:290px;
-  object-fit:contain;
-}
-
-@media(max-width:900px){
-  .material-banner{
+@media(max-width:980px){
+  .menu,.nav-cta{display:none}
+  .hero .container,
+  .material-banner,
+  .duo-grid,
+  .contact-panel{
     grid-template-columns:1fr;
   }
+
+  .hero-card{max-width:560px}
+  .reassurance-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:760px){
+  .mobile-actions{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:90;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    padding:8px;
+    border-radius:22px;
+    background:rgba(6,19,29,.91);
+    border:1px solid rgba(255,255,255,.13);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
+  }
+
+  .mobile-actions a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+    border-radius:16px;
+    color:#06131d;
+    font-weight:900;
+    font-size:.70rem;
+    text-transform:uppercase;
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+  }
+
+  footer{padding-bottom:88px}
 }
 
 @media(max-width:640px){
+  .container{width:min(100% - 22px,1220px)}
+  .top{font-size:.66rem;padding:8px 12px}
+
+  .nav{min-height:68px}
+  .logo-mark{width:40px;height:40px}
+  .logo strong{font-size:1.5rem}
+  .logo span{font-size:.60rem}
+
+  .hero{
+    padding:42px 0 30px;
+  }
+
+  .hero h1{
+    font-size:2.35rem;
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:.88rem;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  .hero-stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section-title{
+    display:block;
+  }
+
+  .section-title p{
+    margin-top:12px;
+    font-size:.9rem;
+  }
+
+  .home-section{
+    padding:34px 0;
+  }
+
+  .card-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .catalog-img{
+    height:118px;
+  }
+
+  .catalog-content{
+    padding:14px;
+  }
+
+  .catalog-badge{
+    font-size:.54rem;
+    padding:6px 8px;
+    margin-bottom:10px;
+  }
+
+  .catalog-content h3{
+    font-size:.88rem;
+  }
+
+  .catalog-content p{
+    display:none;
+  }
+
+  .catalog-button{
+    min-height:38px;
+    font-size:.60rem;
+  }
 
   .material-content{
     padding:26px;
@@ -578,87 +756,6 @@ header .container.nav{
     max-height:180px;
   }
 
-}
-@media(max-width:1100px){
-  header .container.nav{
-    grid-template-columns:230px 1fr 160px;
-    gap:12px;
-  }
-
-  .menu{gap:18px}
-  .menu a{font-size:.72rem}
-}
-
-@media(max-width:900px){
-  header{
-    height:86px;
-  }
-
-  header .container.nav{
-    height:86px;
-    display:flex;
-    justify-content:flex-start;
-  }
-
-  .menu,
-  .nav-cta{
-    display:none!important;
-  }
-
-  .logo{width:100%}
-  .catalog-hero{min-height:auto;padding:38px 0}.hero-inner{grid-template-columns:1fr}.hero-side{width:100%}
-  .tools-grid,.contact-panel,.contest-banner{grid-template-columns:1fr}
-  .tool-card{grid-template-columns:1fr}
-  .reassurance-grid{grid-template-columns:repeat(2,1fr)}
-}
-
-@media(max-width:640px){
-  .top{font-size:.68rem;line-height:1.35;padding:10px 18px}
-
-  header{
-    height:92px;
-  }
-
-  header .container.nav{
-    padding:0 26px;
-    height:92px;
-  }
-
-  .hero-title{font-size:2rem;letter-spacing:-.8px}
-  .hero-note{width:100%;justify-content:center;text-align:center;border-radius:18px}
-  .home-actions .btn{width:100%;min-width:0}
-
-  .section-title{display:block}
-  .section-title p{margin-top:12px}
-
-
-  .card-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-  }
-
-  .catalog-img{height:112px}
-  .catalog-content{padding:14px}
-
-  .catalog-badge{
-    font-size:.56rem;
-    padding:6px 8px;
-    margin-bottom:10px;
-  }
-
-  .catalog-content h3{
-    font-size:.95rem;
-    line-height:1.05;
-  }
-
-  .catalog-content p{display:none}
-
-  .catalog-button{
-    min-height:38px;
-    font-size:.66rem;
-    border-radius:12px;
-  }
-
   .product-strip{
     grid-template-columns:repeat(2,1fr);
     gap:12px;
@@ -666,22 +763,15 @@ header .container.nav{
 
   .small-product img{
     height:145px;
-    object-fit:contain;
-    background:#0b1c27;
-    padding:6px;
   }
 
-  .small-product div{padding:12px}
-  .small-product h3{font-size:.85rem}
-  .small-product p{font-size:.78rem}
+  .reassurance-grid{
+    grid-template-columns:1fr;
+  }
 
-  .contest-content{padding:26px}
-  .contest-img{min-height:220px}
-
-  .tools-grid{grid-template-columns:1fr}
-  .tool-card{grid-template-columns:1fr}
-  .reassurance-grid{grid-template-columns:1fr}
-  .home-map{min-height:340px}
+  .home-map{
+    min-height:330px;
+  }
 }
 </style>
 </head>
@@ -696,18 +786,22 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container nav">
     <a href="index.html" class="logo">
       <div class="logo-mark">S</div>
-      <div><strong>STOOM</strong><span>Clermont-Ferrand</span></div>
+      <div>
+        <strong>STOOM</strong>
+        <span>Clermont-Ferrand</span>
+      </div>
     </a>
 
     <nav class="menu">
       <a href="index.html" class="active">Catalogue</a>
+      <a href="materiel.html">Matériel</a>
       <a href="diy.html">DIY</a>
       <a href="concours.html">Concours</a>
-      <a href="economies.html" class="active">Économies</a>
+      <a href="economies.html">Économies</a>
       <a href="contact.html">Contact</a>
     </nav>
 
-    <a class="nav-cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">
+    <a class="nav-cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">
       Itinéraire
     </a>
   </div>
@@ -715,36 +809,59 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
-  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
-  <a href="https://www.instagram.com/stoomclermontferrand/" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <main>
 
-<section class="catalog-hero">
-  <div class="hero-inner">
+<section class="hero">
+  <div class="container">
     <div>
-      <span class="badge">Catalogue boutique</span>
+      <span class="badge">Catalogue vitrine STOOM</span>
 
-      <h1 class="hero-title">
-        Le catalogue <span>STOOM</span>
+      <h1>
+        La vape avec du vrai <span>conseil</span>
       </h1>
 
-      <p class="hero-lead">
-        Liquides, nouveautés, DIY, matériel et conseils en boutique.
-        Pas de vente en ligne : ici, on vous guide vraiment.
+      <p>
+        Découvrez nos e-liquides, notre matériel, nos nouveautés et nos outils pratiques.
+        Le site vous aide à repérer les produits, la boutique vous aide à choisir correctement.
       </p>
 
-      <div class="home-actions">
-        <a class="btn btn-white" href="contact.html">Venir en boutique</a>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#gammes">Explorer le catalogue</a>
+        <a class="btn btn-ghost" href="materiel.html">Voir le matériel</a>
+        <a class="btn btn-ghost" href="contact.html">Venir en boutique</a>
       </div>
     </div>
 
-    <div class="hero-side">
-      <strong>Conseil en magasin</strong>
-      <span>Un catalogue clair pour repérer les produits, puis un accompagnement personnalisé chez STOOM Clermont-Ferrand.</span>
-      <div class="hero-note">Catalogue vitrine · Achat en boutique</div>
-    </div>
+    <aside class="hero-card">
+      <strong>Pas de vente en ligne volontairement</strong>
+      <span>
+        Chez STOOM, on préfère éviter les mauvais choix de dosage, de matériel ou de résistance.
+        Vous regardez, vous comparez, puis on vous conseille en boutique.
+      </span>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <b>640+</b>
+          <small>Avis Google</small>
+        </div>
+        <div class="hero-stat">
+          <b>4,9★</b>
+          <small>Note moyenne</small>
+        </div>
+        <div class="hero-stat">
+          <b>0</b>
+          <small>Vente en ligne</small>
+        </div>
+        <div class="hero-stat">
+          <b>100%</b>
+          <small>Conseil boutique</small>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -752,7 +869,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Nouveautés du moment</h2>
-      <p>Découvrez les nouveautés et les arrivages STOOM.</p>
+      <p>Les arrivages et gammes à découvrir actuellement chez STOOM Clermont-Ferrand.</p>
     </div>
 
     <div class="card-grid" id="homeNewsGrid"></div>
@@ -762,59 +879,42 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 <section class="home-section" id="gammes">
   <div class="container">
     <div class="section-title">
-      <h2>Nos gammes</h2>
-      <p>Découvrez nos gammes de e-liquides, DIY et produits sélectionnés, disponibles en boutique.</p>
+      <h2>Nos univers</h2>
+      <p>Liquides, gammes auvergnates, DIY, matériel et sélections boutique.</p>
     </div>
 
     <div class="card-grid" id="homeRangesGrid"></div>
   </div>
 </section>
-  <section class="home-section" id="materiel">
+
+<section class="home-section" id="materiel">
   <div class="container">
-
-    <div class="section-title">
-      <h2>Matériel disponible en boutique</h2>
-      <p>
-        Découvrez les box, pods, batteries intégrées, accus 18650, accus 21700,
-        doubles accus et accessoires disponibles chez STOOM Clermont-Ferrand.
-      </p>
-    </div>
-
-    <a class="material-banner" href="maintenance.html">
-
+    <a class="material-banner" href="materiel.html">
       <div class="material-content">
+        <span class="badge">Matériel disponible</span>
 
-        <span class="badge">Matériel STOOM</span>
-
-        <h2>Voir le matériel disponible</h2>
+        <h2>Pods, box, clearomiseurs et accessoires</h2>
 
         <p>
-          Consultez notre sélection de matériel classée par catégorie
-          et trouvez facilement la box ou l'accessoire adapté à vos besoins.
+          Consultez le catalogue matériel avant de venir : pods, kits complets, box simple accu,
+          box double accus, clearomiseurs, résistances, accus, chargeurs et accessoires.
         </p>
 
         <div class="material-tags">
-          <span>Batteries intégrées</span>
-          <span>18650</span>
-          <span>21700</span>
-          <span>Double accus</span>
+          <span>Pods</span>
+          <span>Kits complets</span>
+          <span>Box</span>
+          <span>Résistances</span>
           <span>Accessoires</span>
         </div>
 
-        <div class="catalog-button">
-          Voir le matériel
-        </div>
-
+        <div class="catalog-button">Voir le matériel</div>
       </div>
 
       <div class="material-visual">
-        <img
-          src="uploads/materiel.webp"
-          alt="Matériel disponible en boutique STOOM">
+        <img src="uploads/materiel.webp" alt="Matériel vape disponible chez STOOM Clermont-Ferrand">
       </div>
-
     </a>
-
   </div>
 </section>
 
@@ -822,7 +922,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container">
     <div class="section-title">
       <h2>Produits du moment</h2>
-      <p>Notre sélection coup de coeur</p>
+      <p>Une sélection courte, claire et mise à jour selon les produits à pousser en boutique.</p>
     </div>
 
     <div class="product-strip" id="homeProductsGrid"></div>
@@ -830,57 +930,68 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 </section>
 
 <section class="home-section">
-  <div class="container">
-    <a class="contest-banner" href="concours.html">
-      <div class="contest-content">
-        <span class="badge">Concours & animations</span>
-        <h2>Jeux concours en boutique</h2>
-        <p>
-          Retrouvez les concours en cours, les lots à gagner et les animations à venir en boutique STOOM Clermont-Ferrand.
-        </p>
-        <div class="catalog-button">Voir les concours</div>
-      </div>
-      <div class="contest-img"></div>
+  <div class="container duo-grid">
+    <a class="big-card" href="diy.html">
+      <span class="badge">DIY STOOM</span>
+      <h3>Préparez vos mélanges plus facilement</h3>
+      <p>
+        Bases, boosters, arômes et calculateur pratique pour comprendre vos préparations.
+      </p>
+      <div class="catalog-button">Voir le DIY</div>
+    </a>
+
+    <a class="big-card" href="economies.html">
+      <span class="badge">Budget vape</span>
+      <h3>Comparez tabac et cigarette électronique</h3>
+      <p>
+        Un outil simple pour visualiser les économies possibles selon votre consommation.
+      </p>
+      <div class="catalog-button">Calculer mes économies</div>
     </a>
   </div>
 </section>
 
 <section class="home-section">
   <div class="container">
-    <div class="section-title">
-      <h2>Outils STOOM</h2>
-      <p>Des calculateurs pratiques pour mieux comprendre votre budget et vos préparations DIY.</p>
-    </div>
+    <a class="material-banner" href="concours.html">
+      <div class="material-content">
+        <span class="badge">Concours & animations</span>
+        <h2>Jeux concours en boutique</h2>
+        <p>
+          Retrouvez les concours en cours, les lots à gagner et les animations disponibles chez STOOM.
+        </p>
+        <div class="catalog-button">Voir les concours</div>
+      </div>
 
-    <div class="tools-grid">
-      <a class="tool-card" href="diy.html">
-        <div class="tool-icon">🧪</div>
-        <div>
-          <h3>Calculateur DIY</h3>
-          <p>Estimez base, arôme et boosters pour vos préparations.</p>
-        </div>
-        <div class="catalog-button">Calculer</div>
-      </a>
-
-      <a class="tool-card" href="economies.html">
-        <div class="tool-icon">€</div>
-        <div>
-          <h3>Calculateur économies</h3>
-          <p>Comparez votre budget tabac avec une solution vape.</p>
-        </div>
-        <div class="catalog-button">Comparer</div>
-      </a>
-    </div>
+      <div class="material-visual">
+        <img src="uploads/sixvape.jpg" alt="Jeux concours STOOM Clermont-Ferrand">
+      </div>
+    </a>
   </div>
 </section>
 
 <section class="home-section">
   <div class="container">
     <div class="reassurance-grid">
-      <div class="reassurance"><b>640+ avis Google</b><span>Une boutique reconnue sur toute l'Auvergne.</span></div>
-      <div class="reassurance"><b>Conseil personnalisé gratuit</b><span>Un accompagnement gratuit selon votre profil.</span></div>
-      <div class="reassurance"><b>Produits auvergnats</b><span>Flavour Power et bases STOOM fabriquées en Auvergne CERTIFICATION ISOFFC22000 pour votre sécurité.</span></div>
-      <div class="reassurance"><b>Pas de vente en ligne</b><span>Achat uniquement en boutique avec conseil.</span></div>
+      <div class="reassurance">
+        <b>Conseil personnalisé</b>
+        <span>Dosage, tirage, matériel et autonomie adaptés à votre profil.</span>
+      </div>
+
+      <div class="reassurance">
+        <b>Produits auvergnats</b>
+        <span>Flavour Power et bases STOOM fabriquées en Auvergne.</span>
+      </div>
+
+      <div class="reassurance">
+        <b>Catalogue vitrine</b>
+        <span>Vous repérez les produits en ligne, vous achetez en boutique.</span>
+      </div>
+
+      <div class="reassurance">
+        <b>Accompagnement</b>
+        <span>Objectif : éviter les mauvais choix et limiter le risque de rechute.</span>
+      </div>
     </div>
   </div>
 </section>
@@ -889,14 +1000,16 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   <div class="container contact-panel">
     <div class="home-panel">
       <span class="badge">Venir chez STOOM</span>
+
       <h2>109 avenue Édouard Michelin</h2>
+
       <p>
         Boutique spécialisée en cigarette électronique à Clermont-Ferrand.
-        Conseils, nouveautés, liquides, résistances, DIY et accompagnement en magasin.
+        Liquides, matériel, résistances, DIY, nouveautés et accompagnement en magasin.
       </p>
 
-      <div class="home-actions">
-        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand" target="_blank" rel="noopener">Lancer l’itinéraire</a>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Lancer l’itinéraire</a>
         <a class="btn btn-ghost" href="tel:0473273394">Appeler</a>
       </div>
     </div>
@@ -905,7 +1018,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
       class="home-map"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=109%20avenue%20Edouard%20Michelin%2063100%20Clermont-Ferrand&output=embed"
+      src="https://www.google.com/maps?q=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand&output=embed"
       title="Carte STOOM Clermont-Ferrand">
     </iframe>
   </div>
@@ -929,9 +1042,10 @@ function escapeHtml(str){
 
 async function loadJson(path,fallback){
   try{
-    const r = await fetch(path);
+    const r = await fetch(path,{cache:'no-store'});
     if(!r.ok) return fallback;
-    return await r.json();
+    const data = await r.json();
+    return Array.isArray(data) ? data : fallback;
   }catch(e){
     return fallback;
   }
@@ -949,7 +1063,7 @@ function renderCards(targetId, items){
   el.innerHTML = items.map(function(item){
     return `
       <a class="catalog-card" href="${escapeHtml(item.lien || '#')}">
-        <img class="catalog-img" src="${escapeHtml(item.image || '')}" alt="${escapeHtml(item.titre || '')}">
+        <img class="catalog-img" src="${escapeHtml(item.image || '')}" alt="${escapeHtml(item.titre || '')}" loading="lazy" decoding="async">
         <div class="catalog-content">
           <div class="catalog-badge">${escapeHtml(item.categorie || 'Catalogue')}</div>
           <h3>${escapeHtml(item.titre || '')}</h3>
@@ -981,7 +1095,7 @@ function renderProducts(targetId, items){
 
     return `
       <div class="small-product">
-        <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(titre)}">
+        <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(titre)}" loading="lazy" decoding="async">
         <div>
           <h3>${escapeHtml(titre)}</h3>
           <p>${escapeHtml(infos || description)}</p>
@@ -990,6 +1104,7 @@ function renderProducts(targetId, items){
     `;
   }).join('');
 }
+
 const fallbackNews = [
   {
     "titre":"Vape City",
@@ -1011,19 +1126,19 @@ const fallbackNews = [
 
 const fallbackRanges = [
   {
-    "titre":"Vape City",
-    "categorie":"E-liquides",
-    "description":"Fruités intenses et recettes fraîches.",
-    "image":"uploads/vapecityambiance.jpg",
-    "lien":"vapecity.html",
+    "titre":"Origin's",
+    "categorie":"Classiques tabac",
+    "description":"Des saveurs tabac réalistes, peu sucrées, idéales pour accompagner le sevrage.",
+    "image":"uploads/origins-ambiance.webp",
+    "lien":"origins.html",
     "bouton":"Voir la gamme"
   },
   {
-    "titre":"Le Perfect Match",
+    "titre":"Flavour Power",
     "categorie":"E-liquides auvergnats",
-    "description":"Gamme Flavour Power fabriquée en Auvergne.",
-    "image":"uploads/perfectmatchambiance.jpg",
-    "lien":"leperfectmatch.html",
+    "description":"Découvrez l’univers Flavour Power disponible chez STOOM.",
+    "image":"uploads/flavourpower.webp",
+    "lien":"flavourpower.html",
     "bouton":"Voir la gamme"
   },
   {
@@ -1033,6 +1148,14 @@ const fallbackRanges = [
     "image":"uploads/diyambiance2.jpg",
     "lien":"diy.html",
     "bouton":"Voir le DIY"
+  },
+  {
+    "titre":"Matériel",
+    "categorie":"Pods, box et accessoires",
+    "description":"Retrouvez le matériel disponible en boutique.",
+    "image":"uploads/materiel.webp",
+    "lien":"materiel.html",
+    "bouton":"Voir le matériel"
   }
 ];
 
@@ -1060,9 +1183,9 @@ const fallbackProducts = [
 ];
 
 async function initHome(){
-  const news = await loadJson('data/home/nouveautes.json?v=99', fallbackNews);
-  const ranges = await loadJson('data/home/gammes.json?v=99', fallbackRanges);
-  const products = await loadJson('data/home/produits.json?v=99', fallbackProducts);
+  const news = await loadJson('data/home/nouveautes.json?v=120', fallbackNews);
+  const ranges = await loadJson('data/home/gammes.json?v=120', fallbackRanges);
+  const products = await loadJson('data/home/produits.json?v=120', fallbackProducts);
 
   renderCards('homeNewsGrid', news);
   renderCards('homeRangesGrid', ranges);
@@ -1071,6 +1194,8 @@ async function initHome(){
 
 initHome();
 </script>
+
 <script src="assets/age-check.js"></script>
+
 </body>
 </html>
