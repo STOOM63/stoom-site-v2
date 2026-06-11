@@ -66,6 +66,8 @@ button,input,select{font-family:inherit}
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
+/* HEADER IDENTIQUE INDEX */
+
 header{
   position:sticky;
   top:0;
@@ -81,7 +83,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
+  gap:22px;
 }
 
 .logo{
@@ -106,6 +108,7 @@ header{
 
 .logo strong{
   display:block;
+  color:white;
   font-size:1.7rem;
   line-height:.9;
   letter-spacing:2px;
@@ -114,29 +117,49 @@ header{
 .logo span{
   display:block;
   color:var(--cyan);
-  font-size:.72rem;
-  font-weight:900;
   text-transform:uppercase;
-  letter-spacing:2px;
+  font-weight:900;
+  font-size:.70rem;
+  letter-spacing:2.4px;
   margin-top:4px;
 }
 
 .menu{
   display:flex;
-  gap:22px;
   align-items:center;
+  gap:22px;
 }
 
 .menu a{
   color:#d8f5ff;
   text-decoration:none;
   text-transform:uppercase;
-  font-size:.75rem;
   font-weight:900;
+  font-size:.74rem;
 }
 
-.menu a.active,
-.menu a:hover{color:var(--cyan)}
+.menu a:hover,
+.menu a.active{
+  color:var(--cyan);
+}
+
+.nav-cta{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  color:#06131d;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:.74rem;
+  white-space:nowrap;
+}
+
+/* HERO */
 
 .hero{
   position:relative;
@@ -227,6 +250,8 @@ header{
   background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.13);
 }
+
+/* FILTRES */
 
 .filters-zone{
   background:rgba(6,19,29,.93);
@@ -391,6 +416,8 @@ header{
   font-weight:900;
   text-transform:uppercase;
 }
+
+/* PRODUITS */
 
 .catalog{padding:28px 0 64px}
 
@@ -593,7 +620,10 @@ footer{
 }
 
 @media(max-width:900px){
-  .menu{display:none}
+  .menu,
+  .nav-cta{
+    display:none;
+  }
 
   .mobile-actions{
     position:fixed;
@@ -761,12 +791,16 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
       <a href="economies.html">Économies</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    <a class="nav-cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">
+      Itinéraire
+    </a>
   </div>
 </header>
 
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
-  <a href="contact.html">Venir</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
   <a href="#catalogue">Catalogue</a>
 </div>
 
@@ -926,7 +960,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 
   async function loadMaterials(){
     try{
-      const response = await fetch("data/materiel.json?v=15", {cache:"no-store"});
+      const response = await fetch("data/materiel.json?v=16", {cache:"no-store"});
       if(!response.ok) throw new Error("JSON introuvable");
       const data = await response.json();
       allMaterials = Array.isArray(data) ? data : fallbackMaterials;
