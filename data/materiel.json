@@ -20,10 +20,10 @@
     "profil": "Débutant",
     "usage": "Sevrage tabagique",
     "description": "Pods simple d'utilisation, tirage automatique, peut etre utilisé avec un filtre pour faciliter la transition cigarette industrielle vers l'électronique! Ce modéle posséde 2 X plus d'autonomie que Vilter 2 1800 mAH",
-    "image": "uploads/vilter.webp",
+    "image": "uploads/viltermax.webp",
     "badge": "Simple et efficace",
     "stock": "Disponible",
-    "ordre": 1
+    "ordre": 2
   },
   {
     "nom": "XROS 5 Mini",
@@ -36,7 +36,7 @@
     "image": "uploads/xros-5-mini.webp",
     "badge": "Meilleure vente",
     "stock": "Disponible",
-    "ordre": 2
+    "ordre": 3
   },
   {
     "nom": "Vibe SE",
@@ -49,7 +49,7 @@
     "image": "uploads/vibese.webp",
     "badge": "Premier prix",
     "stock": "Disponible",
-    "ordre": 3
+    "ordre": 4
   },
   {
     "nom": "Digi Q",
@@ -62,7 +62,7 @@
     "image": "uploads/digiq.webp",
     "badge": "Écran LED incurvé",
     "stock": "Disponible",
-    "ordre": 4
+    "ordre": 5
   },
   {
     "nom": "Soul 2",
@@ -75,7 +75,7 @@
     "image": "uploads/soulfinal.webp",
     "badge": "Polyvalent",
     "stock": "Disponible",
-    "ordre": 5
+    "ordre": 6
   },
   {
     "nom": "Aegis Force",
