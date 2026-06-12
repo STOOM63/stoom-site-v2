@@ -316,11 +316,14 @@ header{
 
 .category-strip{
   display:flex;
+  flex-wrap:wrap;
   gap:10px;
-  overflow-x:auto;
+  overflow:visible;
   padding:2px 0 12px;
-  scrollbar-width:none;
-  -webkit-overflow-scrolling:touch;
+}
+
+.category-pill{
+  flex:0 0 auto;
 }
 
 .category-strip::-webkit-scrollbar{display:none}
