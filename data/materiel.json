@@ -52,6 +52,19 @@
     "ordre": 4
   },
   {
+    "nom": "Peak 2",
+    "marque": "Geekvape",
+    "categorie": "Pods",
+    "type": "Pod rechargeable",
+    "profil": "Débutant",
+    "usage": "Compact",
+    "description": "Matériel simple et intuitif, la puissance de l'appareil s'ajuste en fonction de votre tirage ! Batterie 1600 mAH",
+    "image": "uploads/peak2.webp",
+    "badge": "Meilleure vente",
+    "stock": "Disponible",
+    "ordre": 5
+  },
+  {
     "nom": "Digi Q",
     "marque": "Geekvape",
     "categorie": "Pods",
@@ -62,7 +75,7 @@
     "image": "uploads/digiq.webp",
     "badge": "Polyvalent",
     "stock": "Disponible",
-    "ordre": 5
+    "ordre": 6
   },
   {
     "nom": "Soul 2",
@@ -75,7 +88,7 @@
     "image": "uploads/soulfinal.webp",
     "badge": "Polyvalent",
     "stock": "Disponible",
-    "ordre": 6
+    "ordre": 7
   },
   {
     "nom": "Aegis Force",
