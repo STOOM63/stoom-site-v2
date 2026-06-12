@@ -1203,7 +1203,7 @@
     "profil": "Débutant",
     "usage": "Sevrage, Confort",
     "description": "Filtre type cigarette • Transition plus naturelle",
-    "image": "uploads/filtre-pod.webp",
+    "image": "uploads/filtre-pod-vilter.webp",
     "badge": "Sevrage",
     "stock": "Disponible",
     "ordre": 559
@@ -1220,19 +1220,6 @@
     "badge": "DIY",
     "stock": "Disponible",
     "ordre": 561
-  },
-  {
-    "nom": "Lot Drip Tip Triad",
-    "marque": "STOOM",
-    "categorie": "Accessoires",
-    "type": "Drip tip",
-    "profil": "Tous profils",
-    "usage": "Confort, Personnalisation",
-    "description": "Lot d’embouts • Remplacement et personnalisation",
-    "image": "uploads/lot-drip-tip-triad.webp",
-    "badge": "Triad",
-    "stock": "Disponible",
-    "ordre": 563
   },
   {
     "nom": "Mini Tools Kit V2 Geekvape",
