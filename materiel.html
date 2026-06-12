@@ -1016,17 +1016,31 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
       btn.type = "button";
       btn.textContent = category + " · " + count;
 
-      btn.addEventListener("click", function(){
-        selectedCategory = category;
-        setSelectValue("brandFilter", "Tous");
-        setSelectValue("typeFilter", "Tous");
-        setSelectValue("profilFilter", "Tous");
-        setSelectValue("usageFilter", "Tous");
-        buildCategoryStrip();
-        buildSelectFilters();
-        renderMaterials();
-      });
+     btn.addEventListener("click", function(){
+  selectedCategory = category;
 
+  setSelectValue("brandFilter", "Tous");
+  setSelectValue("typeFilter", "Tous");
+  setSelectValue("profilFilter", "Tous");
+  setSelectValue("usageFilter", "Tous");
+
+  buildCategoryStrip();
+  buildSelectFilters();
+  renderMaterials();
+
+  if(window.innerWidth <= 900){
+    setTimeout(() => {
+      const firstCard = document.querySelector('.material-card');
+
+      if(firstCard){
+        firstCard.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 100);
+  }
+});
       els.strip.appendChild(btn);
     });
   }
