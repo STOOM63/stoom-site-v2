@@ -10,7 +10,7 @@
     "image": "uploads/xros-5-mini.webp",
     "badge": "Meilleure vente",
     "stock": "Disponible",
-    "ordre": 1
+    "ordre": 4
   },
   {
     "nom": "Digi Q",
@@ -23,7 +23,7 @@
     "image": "uploads/digiq.webp",
     "badge": "Écran LED incurvé",
     "stock": "Disponible",
-    "ordre": 2
+    "ordre": 5
   },
   {
     "nom": "Soul 2",
@@ -49,7 +49,7 @@
     "image": "uploads/vibese.webp",
     "badge": "Premier prix",
     "stock": "Disponible",
-    "ordre": 4
+    "ordre": 3
   },
   {
     "nom": "Luxe XR Max 2",
@@ -76,5 +76,18 @@
     "badge": "Robuste",
     "stock": "Disponible",
     "ordre": 51
+  },
+  {
+    "nom": "Vilter",
+    "marque": "Aspire",
+    "categorie": "Pods",
+    "type": "Batterie intégrée",
+    "profil": "Débutant",
+    "usage": "Sevrage tabagique",
+    "description": "Pods simple d'utilisation, tirage automatique, peut etre utilisé avec un filtre pour faciliter la transition cigarette industrielle vers l'électronique",
+    "image": "uploads/vilter.webp",
+    "badge": "Simple et efficace",
+    "stock": "Disponible",
+    "ordre": 1
   }
 ]
