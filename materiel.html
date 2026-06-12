@@ -614,9 +614,181 @@ footer{
 }
 
 @media(max-width:900px){
+  .top{display:none}
+
+  header{
+    position:relative;
+  }
+
   .menu,
   .nav-cta{
     display:none;
+  }
+
+  .nav{
+    min-height:64px;
+  }
+
+  .hero{
+    padding:30px 0 22px;
+  }
+
+  .hero h1{
+    font-size:2rem;
+    line-height:.95;
+    letter-spacing:-1px;
+  }
+
+  .hero p{
+    font-size:.86rem;
+    line-height:1.5;
+  }
+
+  .hero-actions{
+    display:none;
+  }
+
+  .filters-zone{
+    position:sticky;
+    top:0;
+    z-index:70;
+    background:rgba(6,19,29,.97);
+  }
+
+  .filters-inner{
+    padding:10px 0;
+  }
+
+  .search-line{
+    grid-template-columns:1fr;
+    gap:8px;
+    margin-bottom:8px;
+  }
+
+  .search-line input{
+    min-height:48px;
+    border-radius:16px;
+    font-size:.82rem;
+  }
+
+  .reset-btn{
+    min-height:40px;
+    border-radius:14px;
+    font-size:.68rem;
+  }
+
+  .category-strip{
+    display:flex;
+    flex-wrap:nowrap;
+    gap:8px;
+    overflow-x:auto;
+    padding:2px 0 10px;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .category-strip::-webkit-scrollbar{
+    display:none;
+  }
+
+  .category-pill{
+    flex:0 0 auto;
+    padding:10px 12px;
+    font-size:.62rem;
+  }
+
+  .secondary-filters{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+  }
+
+  .select-wrap label{
+    font-size:.52rem;
+  }
+
+  .select-wrap select{
+    min-height:40px;
+    border-radius:13px;
+    font-size:.72rem;
+  }
+
+  .results-row{
+    margin-top:8px;
+    display:block;
+    font-size:.72rem;
+  }
+
+  .active-filters{
+    justify-content:flex-start;
+    margin-top:6px;
+  }
+
+  .catalog{
+    padding:14px 0 92px;
+  }
+
+  .material-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+
+  .material-card{
+    border-radius:20px;
+  }
+
+  .material-img{
+    height:155px;
+    padding:7px;
+  }
+
+  .floating-badge{
+    left:7px;
+    top:7px;
+    padding:5px 7px;
+    font-size:.47rem;
+  }
+
+  .material-content{
+    padding:10px;
+  }
+
+  .material-top{
+    display:block;
+    margin-bottom:6px;
+  }
+
+  .material-brand{
+    font-size:.58rem;
+  }
+
+  .stock-dot{
+    margin-top:5px;
+    font-size:.48rem;
+  }
+
+  .material-content h2{
+    font-size:.78rem;
+    line-height:1.12;
+    margin-bottom:0;
+  }
+
+  .material-content p{
+    display:none;
+  }
+
+  .material-tags{
+    display:none;
+  }
+
+  .card-cta{
+    padding-top:10px;
+  }
+
+  .card-cta span{
+    min-height:34px;
+    border-radius:12px;
+    font-size:.50rem;
   }
 
   .mobile-actions{
@@ -630,133 +802,61 @@ footer{
     gap:8px;
     padding:8px;
     border-radius:22px;
-    background:rgba(6,19,29,.91);
+    background:rgba(6,19,29,.94);
     border:1px solid rgba(255,255,255,.13);
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
-    box-shadow:0 18px 50px rgba(0,0,0,.35);
   }
 
   .mobile-actions a{
     display:flex;
     align-items:center;
     justify-content:center;
-    min-height:44px;
-    border-radius:16px;
+    min-height:42px;
+    border-radius:15px;
     text-decoration:none;
     color:#06131d;
     font-weight:900;
-    font-size:.72rem;
+    font-size:.66rem;
     text-transform:uppercase;
     background:linear-gradient(135deg,var(--blue),var(--cyan));
   }
 
-  .filters-zone{
-    position:relative;
-    top:auto;
+  footer{
+    padding-bottom:90px;
+  }
+}
+
+@media(max-width:430px){
+  .container{
+    width:min(100% - 18px,1220px);
   }
 
-  .material-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
+  .logo-mark{
+    width:38px;
+    height:38px;
+    border-radius:14px;
   }
 
-  .material-img{
-    height:210px;
-    padding:9px;
+  .logo strong{
+    font-size:1.4rem;
   }
 
-  .material-content{padding:13px}
-  .material-content h2{font-size:.92rem}
-  .material-content p{display:none}
-  .material-brand{font-size:.66rem}
-
-  .material-tags{
-    gap:6px;
-    margin-top:12px;
-  }
-
-  .material-tags span{
-    font-size:.50rem;
-    padding:6px 7px;
-  }
-
-  .card-cta span{
-    min-height:38px;
+  .logo span{
     font-size:.58rem;
   }
 
-  footer{padding-bottom:88px}
-}
-
-@media(max-width:620px){
-  .container{width:min(100% - 22px,1220px)}
-  .top{font-size:.66rem}
-  .nav{min-height:68px}
-  .logo-mark{width:40px;height:40px}
-  .logo strong{font-size:1.5rem}
-  .logo span{font-size:.62rem}
-
-  .hero{padding:42px 0 26px}
-
   .hero h1{
-    font-size:2.35rem;
-    letter-spacing:-1px;
+    font-size:1.85rem;
   }
-
-  .hero p{font-size:.88rem}
-  .hero-actions a{width:100%}
-
-  .search-line{grid-template-columns:1fr}
-  .search-line input{min-height:52px;font-size:.88rem}
-  .reset-btn{min-height:46px}
-  .secondary-filters{grid-template-columns:1fr}
-
-  .results-row{display:block}
-
-  .active-filters{
-    justify-content:flex-start;
-    margin-top:8px;
-  }
-
-  .category-pill{
-    padding:11px 13px;
-    font-size:.66rem;
-  }
-
-  .catalog{padding-top:18px}
-
-  .material-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 
   .material-img{
-    height:175px;
-    padding:8px;
+    height:140px;
   }
 
-  .floating-badge{
-    left:8px;
-    top:8px;
-    padding:6px 8px;
-    font-size:.50rem;
+  .material-content h2{
+    font-size:.72rem;
   }
-
-  .material-top{display:block}
-
-  .stock-dot{
-    margin-top:7px;
-    font-size:.53rem;
-  }
-}
-
-@media(max-width:390px){
-  .material-img{
-    height:160px;
-    padding:7px;
-  }
-
-  .material-content{padding:11px}
-  .material-content h2{font-size:.84rem}
-  .material-tags span{font-size:.48rem}
 }
 </style>
 </head>
