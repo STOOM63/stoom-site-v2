@@ -902,11 +902,11 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
   }
 
   function splitValues(value){
-    return String(value || "")
-      .split(/[,/|]+/)
-      .map(v => v.trim())
-      .filter(Boolean);
-  }
+  return String(value || "")
+    .split(",")
+    .map(v => v.trim())
+    .filter(Boolean);
+}
 
   function normalize(str){
     return String(str ?? "")
