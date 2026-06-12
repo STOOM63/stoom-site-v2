@@ -607,6 +607,7 @@ footer{
 }
 
 .mobile-actions{display:none}
+.filter-toggle{display:none}
 
 @media(max-width:1180px){
   .material-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -615,6 +616,10 @@ footer{
 
 @media(max-width:900px){
   .top{display:none}
+
+  html,body{
+    scroll-padding-top:136px;
+  }
 
   header{
     position:relative;
@@ -625,23 +630,49 @@ footer{
     display:none;
   }
 
+  .container{
+    width:min(100% - 18px,1220px);
+  }
+
   .nav{
-    min-height:64px;
+    min-height:62px;
+  }
+
+  .logo-mark{
+    width:38px;
+    height:38px;
+    border-radius:14px;
+  }
+
+  .logo strong{
+    font-size:1.42rem;
+  }
+
+  .logo span{
+    font-size:.56rem;
+    letter-spacing:1.8px;
   }
 
   .hero{
-    padding:30px 0 22px;
+    padding:26px 0 18px;
+  }
+
+  .badge{
+    padding:8px 12px;
+    font-size:.62rem;
   }
 
   .hero h1{
-    font-size:2rem;
-    line-height:.95;
+    margin:14px 0 10px;
+    font-size:clamp(1.85rem,8vw,2.35rem);
+    line-height:.94;
     letter-spacing:-1px;
   }
 
   .hero p{
-    font-size:.86rem;
+    font-size:.84rem;
     line-height:1.5;
+    max-width:100%;
   }
 
   .hero-actions{
@@ -652,29 +683,36 @@ footer{
     position:sticky;
     top:0;
     z-index:70;
-    background:rgba(6,19,29,.97);
+    background:rgba(6,19,29,.98);
+    box-shadow:0 14px 34px rgba(0,0,0,.28);
   }
 
   .filters-inner{
-    padding:10px 0;
+    padding:9px 0 8px;
   }
 
   .search-line{
     grid-template-columns:1fr;
-    gap:8px;
+    gap:7px;
     margin-bottom:8px;
   }
 
+  .search-box::before{
+    left:14px;
+    font-size:1.05rem;
+  }
+
   .search-line input{
-    min-height:48px;
+    min-height:46px;
     border-radius:16px;
+    padding-left:40px;
     font-size:.82rem;
   }
 
   .reset-btn{
-    min-height:40px;
+    min-height:38px;
     border-radius:14px;
-    font-size:.68rem;
+    font-size:.66rem;
   }
 
   .category-strip{
@@ -682,7 +720,7 @@ footer{
     flex-wrap:nowrap;
     gap:8px;
     overflow-x:auto;
-    padding:2px 0 10px;
+    padding:1px 0 9px;
     scrollbar-width:none;
     -webkit-overflow-scrolling:touch;
   }
@@ -694,101 +732,133 @@ footer{
   .category-pill{
     flex:0 0 auto;
     padding:10px 12px;
-    font-size:.62rem;
+    font-size:.60rem;
+    border-radius:999px;
+  }
+
+  .filter-toggle{
+    width:100%;
+    min-height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(142,234,255,.26);
+    background:rgba(255,255,255,.075);
+    color:#d8f5ff;
+    border-radius:14px;
+    font-weight:900;
+    text-transform:uppercase;
+    font-size:.66rem;
+    cursor:pointer;
+    margin:0 0 8px;
+  }
+
+  .filter-toggle.open{
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+    color:#06131d;
+    border-color:transparent;
   }
 
   .secondary-filters{
-    display:grid;
+    display:none;
     grid-template-columns:1fr 1fr;
     gap:8px;
+    margin-top:0;
+  }
+
+  .secondary-filters.open{
+    display:grid;
   }
 
   .select-wrap label{
-    font-size:.52rem;
+    font-size:.51rem;
+    margin-bottom:5px;
   }
 
   .select-wrap select{
     min-height:40px;
     border-radius:13px;
     font-size:.72rem;
+    padding:0 9px;
   }
 
   .results-row{
-    margin-top:8px;
-    display:block;
-    font-size:.72rem;
+    margin-top:7px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:.70rem;
   }
 
   .active-filters{
-    justify-content:flex-start;
-    margin-top:6px;
+    display:none;
   }
 
   .catalog{
-    padding:14px 0 92px;
+    padding:14px 0 96px;
   }
 
   .material-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:10px;
+    grid-template-columns:1fr;
+    gap:14px;
   }
 
   .material-card{
-    border-radius:20px;
+    border-radius:24px;
   }
 
   .material-img{
-    height:155px;
-    padding:7px;
-  }
-
-  .floating-badge{
-    left:7px;
-    top:7px;
-    padding:5px 7px;
-    font-size:.47rem;
-  }
-
-  .material-content{
+    height:235px;
     padding:10px;
   }
 
+  .floating-badge{
+    left:10px;
+    top:10px;
+    padding:7px 9px;
+    font-size:.53rem;
+  }
+
+  .material-content{
+    padding:14px;
+  }
+
   .material-top{
-    display:block;
-    margin-bottom:6px;
+    margin-bottom:8px;
   }
 
   .material-brand{
-    font-size:.58rem;
+    font-size:.68rem;
   }
 
   .stock-dot{
-    margin-top:5px;
-    font-size:.48rem;
+    font-size:.54rem;
   }
 
   .material-content h2{
-    font-size:.78rem;
+    font-size:1rem;
     line-height:1.12;
-    margin-bottom:0;
+    margin-bottom:7px;
   }
 
   .material-content p{
-    display:none;
+    display:block;
+    font-size:.74rem;
+    line-height:1.4;
   }
 
   .material-tags{
-    display:none;
+    margin-top:11px;
+    gap:6px;
+  }
+
+  .material-tags span{
+    font-size:.47rem;
+    padding:6px 7px;
   }
 
   .card-cta{
-    padding-top:10px;
-  }
-
-  .card-cta span{
-    min-height:34px;
-    border-radius:12px;
-    font-size:.50rem;
+    display:none;
   }
 
   .mobile-actions{
@@ -806,6 +876,7 @@ footer{
     border:1px solid rgba(255,255,255,.13);
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
+    box-shadow:0 18px 50px rgba(0,0,0,.35);
   }
 
   .mobile-actions a{
@@ -823,39 +894,44 @@ footer{
   }
 
   footer{
-    padding-bottom:90px;
+    padding-bottom:92px;
   }
 }
 
 @media(max-width:430px){
-  .container{
-    width:min(100% - 18px,1220px);
-  }
-
-  .logo-mark{
-    width:38px;
-    height:38px;
-    border-radius:14px;
-  }
-
-  .logo strong{
-    font-size:1.4rem;
-  }
-
-  .logo span{
-    font-size:.58rem;
+  .hero{
+    padding:22px 0 16px;
   }
 
   .hero h1{
-    font-size:1.85rem;
+    font-size:1.82rem;
+  }
+
+  .hero p{
+    font-size:.80rem;
+  }
+
+  .secondary-filters{
+    grid-template-columns:1fr;
   }
 
   .material-img{
-    height:140px;
+    height:215px;
   }
 
   .material-content h2{
-    font-size:.72rem;
+    font-size:.94rem;
+  }
+}
+
+@media(max-width:360px){
+  .material-img{
+    height:195px;
+  }
+
+  .category-pill{
+    font-size:.56rem;
+    padding:9px 10px;
   }
 }
 </style>
@@ -895,7 +971,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
   <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
-  <a href="#catalogue">Catalogue</a>
+  <a href="https://www.google.com/search?q=STOOM+Clermont-Ferrand+avis+Google" target="_blank" rel="noopener">Avis</a>
 </div>
 
 <main>
@@ -933,7 +1009,11 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 
     <div class="category-strip" id="categoryStrip" aria-label="Catégories matériel"></div>
 
-    <div class="secondary-filters">
+    <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false">
+      ⚙️ Filtres avancés
+    </button>
+
+    <div class="secondary-filters" id="advancedFilters">
       <div class="select-wrap">
         <label for="brandFilter">Marque</label>
         <select id="brandFilter"></select>
@@ -1064,7 +1144,9 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     usage:document.getElementById("usageFilter"),
     sort:document.getElementById("sortFilter"),
     results:document.getElementById("resultsInfo"),
-    active:document.getElementById("activeFilters")
+    active:document.getElementById("activeFilters"),
+    filterToggle:document.getElementById("filterToggle"),
+    advancedFilters:document.getElementById("advancedFilters")
   };
 
   async function loadMaterials(){
@@ -1129,16 +1211,21 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
   renderMaterials();
 
   if(window.innerWidth <= 900){
+    closeAdvancedFilters();
+
     setTimeout(() => {
       const firstCard = document.querySelector('.material-card');
 
       if(firstCard){
-        firstCard.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        const offset = 132;
+        const top = firstCard.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top:Math.max(top, 0),
+          behavior:'smooth'
         });
       }
-    }, 100);
+    }, 120);
   }
 });
       els.strip.appendChild(btn);
@@ -1344,6 +1431,24 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     }).join("");
   }
 
+  function closeAdvancedFilters(){
+    if(!els.advancedFilters || !els.filterToggle) return;
+
+    els.advancedFilters.classList.remove("open");
+    els.filterToggle.classList.remove("open");
+    els.filterToggle.setAttribute("aria-expanded","false");
+    els.filterToggle.textContent = "⚙️ Filtres avancés";
+  }
+
+  function toggleAdvancedFilters(){
+    if(!els.advancedFilters || !els.filterToggle) return;
+
+    const isOpen = els.advancedFilters.classList.toggle("open");
+    els.filterToggle.classList.toggle("open", isOpen);
+    els.filterToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    els.filterToggle.textContent = isOpen ? "Masquer les filtres" : "⚙️ Filtres avancés";
+  }
+
   function resetFilters(){
     selectedCategory = "Tous";
     els.search.value = "";
@@ -1354,6 +1459,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     setSelectValue("typeFilter", "Tous");
     setSelectValue("profilFilter", "Tous");
     setSelectValue("usageFilter", "Tous");
+    closeAdvancedFilters();
     renderMaterials();
   }
 
@@ -1369,6 +1475,10 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
   });
 
   els.reset.addEventListener("click", resetFilters);
+
+  if(els.filterToggle){
+    els.filterToggle.addEventListener("click", toggleAdvancedFilters);
+  }
 
   loadMaterials();
 })();
