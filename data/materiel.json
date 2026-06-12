@@ -1,5 +1,18 @@
 [
   {
+    "nom": "Vilter",
+    "marque": "Aspire",
+    "categorie": "Pods",
+    "type": "Batterie intégrée",
+    "profil": "Débutant",
+    "usage": "Sevrage tabagique",
+    "description": "Pods simple d'utilisation, tirage automatique, peut etre utilisé avec un filtre pour faciliter la transition cigarette industrielle vers l'électronique",
+    "image": "uploads/vilter.webp",
+    "badge": "Simple et efficace",
+    "stock": "Disponible",
+    "ordre": 1
+  },
+  {
     "nom": "XROS 5 Mini",
     "marque": "Vaporesso",
     "categorie": "Pods",
@@ -10,33 +23,7 @@
     "image": "uploads/xros-5-mini.webp",
     "badge": "Meilleure vente",
     "stock": "Disponible",
-    "ordre": 4
-  },
-  {
-    "nom": "Digi Q",
-    "marque": "Geekvape",
-    "categorie": "Pods",
-    "type": "Pod rechargeable",
-    "profil": "Débutant",
-    "usage": "Compact",
-    "description": "Pod moderne et léger avec écran LED incurvé, idéal pour les utilisateurs recherchant un matériel discret, lisible et facile à transporter, batterie 1600mah.",
-    "image": "uploads/digiq.webp",
-    "badge": "Écran LED incurvé",
-    "stock": "Disponible",
-    "ordre": 5
-  },
-  {
-    "nom": "Soul 2",
-    "marque": "Geekvape",
-    "categorie": "Pods",
-    "type": "Pod rechargeable",
-    "profil": "Intermédiaire",
-    "usage": "Polyvalent",
-    "description": "Pod polyvalent offrant un bon compromis entre simplicitéet autonomie, systeme anti fuites, batterie 2100mAH.",
-    "image": "uploads/soulfinal.webp",
-    "badge": "Polyvalent",
-    "stock": "Disponible",
-    "ordre": 3
+    "ordre": 2
   },
   {
     "nom": "Vibe SE",
@@ -51,6 +38,33 @@
     "stock": "Disponible",
     "ordre": 3
   },
+  {
+    "nom": "Digi Q",
+    "marque": "Geekvape",
+    "categorie": "Pods",
+    "type": "Pod rechargeable",
+    "profil": "Débutant",
+    "usage": "Compact",
+    "description": "Pod moderne et léger avec écran LED incurvé, idéal pour les utilisateurs recherchant un matériel discret, lisible et facile à transporter, batterie 1600mah.",
+    "image": "uploads/digiq.webp",
+    "badge": "Écran LED incurvé",
+    "stock": "Disponible",
+    "ordre": 4
+  },
+  {
+    "nom": "Soul 2",
+    "marque": "Geekvape",
+    "categorie": "Pods",
+    "type": "Pod rechargeable",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent",
+    "description": "Pod polyvalent offrant un bon compromis entre simplicitéet autonomie, systeme anti fuites, batterie 2100mAH.",
+    "image": "uploads/soulfinal.webp",
+    "badge": "Polyvalent",
+    "stock": "Disponible",
+    "ordre": 5
+  },
+  
   {
     "nom": "Luxe XR Max 2",
     "marque": "Vaporesso",
@@ -76,18 +90,6 @@
     "badge": "Robuste",
     "stock": "Disponible",
     "ordre": 51
-  },
-  {
-    "nom": "Vilter",
-    "marque": "Aspire",
-    "categorie": "Pods",
-    "type": "Batterie intégrée",
-    "profil": "Débutant",
-    "usage": "Sevrage tabagique",
-    "description": "Pods simple d'utilisation, tirage automatique, peut etre utilisé avec un filtre pour faciliter la transition cigarette industrielle vers l'électronique",
-    "image": "uploads/vilter.webp",
-    "badge": "Simple et efficace",
-    "stock": "Disponible",
-    "ordre": 1
   }
+  
 ]
