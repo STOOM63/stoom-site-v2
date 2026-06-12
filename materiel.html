@@ -22,7 +22,6 @@
   --orange:#ffcf7a;
   --red:#ff8b8b;
   --text:#f4fbff;
-  --muted:#b8cad6;
   --line:rgba(142,234,255,.20);
   --shadow:0 22px 80px rgba(0,0,0,.34);
 }
@@ -65,8 +64,6 @@ button,input,select{font-family:inherit}
   background:rgba(0,0,0,.22);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
-
-/* HEADER IDENTIQUE INDEX */
 
 header{
   position:sticky;
@@ -159,8 +156,6 @@ header{
   white-space:nowrap;
 }
 
-/* HERO */
-
 .hero{
   position:relative;
   padding:54px 0 32px;
@@ -250,8 +245,6 @@ header{
   background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.13);
 }
-
-/* FILTRES */
 
 .filters-zone{
   background:rgba(6,19,29,.93);
@@ -417,8 +410,6 @@ header{
   text-transform:uppercase;
 }
 
-/* PRODUITS */
-
 .catalog{padding:28px 0 64px}
 
 .material-grid{
@@ -551,9 +542,9 @@ header{
 
 .material-content p{
   color:#c5e2ee;
-  line-height:1.5;
-  font-weight:600;
-  font-size:.84rem;
+  line-height:1.45;
+  font-weight:700;
+  font-size:.80rem;
   margin:0;
 }
 
@@ -570,7 +561,7 @@ header{
   background:rgba(255,255,255,.07);
   border:1px solid rgba(255,255,255,.10);
   color:#d8f5ff;
-  font-size:.56rem;
+  font-size:.54rem;
   font-weight:900;
   text-transform:uppercase;
 }
@@ -683,7 +674,7 @@ footer{
   }
 
   .material-tags span{
-    font-size:.51rem;
+    font-size:.50rem;
     padding:6px 7px;
   }
 
@@ -792,7 +783,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
       <a href="contact.html">Contact</a>
     </nav>
 
-    <a class="nav-cta" href="https://www.google.com/maps/place/STOOM+Cigarettes+%C3%A9lectronique+-+Clermont-Ferrand/@45.7803875,3.1121377,17z/data=!3m2!4b1!5s0x47f71c04b1104fbf:0xd83fa10f431a94a6!4m6!3m5!1s0x47f71c04a4b0e361:0xf13c887c2b2525ad!8m2!3d45.7803875!4d3.1147126!16s%2Fg%2F1pxwrpjl_?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+    <a class="nav-cta" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">
       Itinéraire
     </a>
   </div>
@@ -800,7 +791,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
-  <a href="https://www.google.com/maps/place/STOOM+Cigarettes+%C3%A9lectronique+-+Clermont-Ferrand/@45.7803875,3.1121377,17z/data=!3m2!4b1!5s0x47f71c04b1104fbf:0xd83fa10f431a94a6!4m6!3m5!1s0x47f71c04a4b0e361:0xf13c887c2b2525ad!8m2!3d45.7803875!4d3.1147126!16s%2Fg%2F1pxwrpjl_?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Itinéraire</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Itinéraire</a>
   <a href="#catalogue">Catalogue</a>
 </div>
 
@@ -910,6 +901,21 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     });
   }
 
+  function splitValues(value){
+    return String(value || "")
+      .split(/[,/|]+/)
+      .map(v => v.trim())
+      .filter(Boolean);
+  }
+
+  function normalize(str){
+    return String(str ?? "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g,"")
+      .trim();
+  }
+
   const categoryOrder = [
     "Tous",
     "Pods",
@@ -936,7 +942,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
       "type":"Catalogue",
       "profil":"Boutique",
       "usage":"Conseil",
-      "description":"Le fichier data/materiel.json n'a pas pu être chargé. Vérifiez le chemin du fichier.",
+      "description":"Le fichier data/materiel.json n'a pas pu être chargé.",
       "image":"uploads/materiel.webp",
       "badge":"Catalogue",
       "stock":"Boutique",
@@ -960,7 +966,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 
   async function loadMaterials(){
     try{
-      const response = await fetch("data/materiel.json?v=16", {cache:"no-store"});
+      const response = await fetch("data/materiel.json?v=20", {cache:"no-store"});
       if(!response.ok) throw new Error("JSON introuvable");
       const data = await response.json();
       allMaterials = Array.isArray(data) ? data : fallbackMaterials;
@@ -973,16 +979,14 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     renderMaterials();
   }
 
-  function normalize(str){
-    return String(str ?? "")
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g,"")
-      .trim();
-  }
+  function uniqueSingleValues(key, baseItems){
+    const values = [];
 
-  function uniqueValues(key, baseItems){
-    return [...new Set(baseItems.map(item => item[key]).filter(Boolean))]
+    baseItems.forEach(item => {
+      splitValues(item[key]).forEach(value => values.push(value));
+    });
+
+    return [...new Set(values)]
       .sort((a,b) => String(a).localeCompare(String(b),"fr"));
   }
 
@@ -1046,10 +1050,10 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
   function buildSelectFilters(){
     const base = getBaseFilteredByCategory();
 
-    fillSelect("brandFilter", uniqueValues("marque", base), els.brand.value || "Tous");
-    fillSelect("typeFilter", uniqueValues("type", base), els.type.value || "Tous");
-    fillSelect("profilFilter", uniqueValues("profil", base), els.profil.value || "Tous");
-    fillSelect("usageFilter", uniqueValues("usage", base), els.usage.value || "Tous");
+    fillSelect("brandFilter", uniqueSingleValues("marque", base), els.brand.value || "Tous");
+    fillSelect("typeFilter", uniqueSingleValues("type", base), els.type.value || "Tous");
+    fillSelect("profilFilter", uniqueSingleValues("profil", base), els.profil.value || "Tous");
+    fillSelect("usageFilter", uniqueSingleValues("usage", base), els.usage.value || "Tous");
   }
 
   function getStockClass(stock){
@@ -1064,6 +1068,13 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     }
 
     return "";
+  }
+
+  function hasSelectedValue(itemValue, selectedValue){
+    if(selectedValue === "Tous") return true;
+
+    const selected = normalize(selectedValue);
+    return splitValues(itemValue).some(value => normalize(value) === selected);
   }
 
   function getFilteredMaterials(){
@@ -1090,10 +1101,10 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
 
       const matchSearch = words.length === 0 || words.every(word => text.includes(word));
       const matchCategory = selectedCategory === "Tous" || item.categorie === selectedCategory;
-      const matchBrand = selectedBrand === "Tous" || item.marque === selectedBrand;
-      const matchType = selectedType === "Tous" || item.type === selectedType;
-      const matchProfil = selectedProfil === "Tous" || item.profil === selectedProfil;
-      const matchUsage = selectedUsage === "Tous" || item.usage === selectedUsage;
+      const matchBrand = hasSelectedValue(item.marque, selectedBrand);
+      const matchType = hasSelectedValue(item.type, selectedType);
+      const matchProfil = hasSelectedValue(item.profil, selectedProfil);
+      const matchUsage = hasSelectedValue(item.usage, selectedUsage);
 
       return matchSearch && matchCategory && matchBrand && matchType && matchProfil && matchUsage;
     });
@@ -1155,6 +1166,17 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
     els.active.innerHTML = tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("");
   }
 
+  function buildTagList(item){
+    const tags = [
+      item.categorie,
+      ...splitValues(item.type),
+      ...splitValues(item.profil),
+      ...splitValues(item.usage)
+    ];
+
+    return [...new Set(tags.filter(Boolean))];
+  }
+
   function renderMaterials(){
     const filtered = getFilteredMaterials();
     updateActiveFilters(filtered.length);
@@ -1173,6 +1195,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
       const badge = item.badge || item.categorie || "Matériel";
       const stock = item.stock || "Boutique";
       const stockClass = getStockClass(stock);
+      const tags = buildTagList(item);
 
       return `
         <article class="material-card">
@@ -1192,10 +1215,7 @@ STOOM Clermont-Ferrand · Catalogue vitrine · Produits réservés aux majeurs �
             <p>${escapeHtml(item.description || "")}</p>
 
             <div class="material-tags">
-              ${item.categorie ? `<span>${escapeHtml(item.categorie)}</span>` : ""}
-              ${item.type ? `<span>${escapeHtml(item.type)}</span>` : ""}
-              ${item.profil ? `<span>${escapeHtml(item.profil)}</span>` : ""}
-              ${item.usage ? `<span>${escapeHtml(item.usage)}</span>` : ""}
+              ${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join("")}
             </div>
 
             <div class="card-cta">
