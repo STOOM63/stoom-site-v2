@@ -1196,8 +1196,8 @@
     "ordre": 558
   },
   {
-    "nom": "Filtre pod",
-    "marque": "STOOM",
+    "nom": "Filtre pod Vilter / Vilter v2 / Vilter MAX",
+    "marque": "Aspire",
     "categorie": "Accessoires",
     "type": "Filtre",
     "profil": "Débutant",
@@ -1209,21 +1209,8 @@
     "ordre": 559
   },
   {
-    "nom": "Filtre pod Vilter",
-    "marque": "Aspire",
-    "categorie": "Accessoires",
-    "type": "Filtre",
-    "profil": "Débutant",
-    "usage": "Sevrage, Confort",
-    "description": "Filtres compatibles Vilter",
-    "image": "uploads/filtre-pod-vilter.webp",
-    "badge": "Vilter",
-    "stock": "Disponible",
-    "ordre": 560
-  },
-  {
     "nom": "Fiole / bouteille vide toute contenance",
-    "marque": "STOOM",
+    "marque": "Sans Marque",
     "categorie": "Accessoires",
     "type": "Flacon",
     "profil": "Tous profils",
@@ -1233,19 +1220,6 @@
     "badge": "DIY",
     "stock": "Disponible",
     "ordre": 561
-  },
-  {
-    "nom": "Fiole vide 10 ml",
-    "marque": "STOOM",
-    "categorie": "Accessoires",
-    "type": "Flacon",
-    "profil": "Tous profils",
-    "usage": "DIY, Préparation",
-    "description": "10 ml • Pratique pour mélanges et transport",
-    "image": "uploads/fiole-vide-10ml.webp",
-    "badge": "10 ml",
-    "stock": "Disponible",
-    "ordre": 562
   },
   {
     "nom": "Lot Drip Tip Triad",
@@ -1389,19 +1363,6 @@
     "badge": "Hygiène",
     "stock": "Disponible",
     "ordre": 572
-  },
-  {
-    "nom": "Support ato magasin",
-    "marque": "We Are Vape",
-    "categorie": "Accessoires",
-    "type": "Support",
-    "profil": "Tous profils",
-    "usage": "Rangement, Pratique",
-    "description": "Support atomiseur • Comptoir ou atelier",
-    "image": "uploads/support-ato-magasin.webp",
-    "badge": "Support",
-    "stock": "Disponible",
-    "ordre": 573
   },
   {
     "nom": "Support e-cig voiture",
