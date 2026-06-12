@@ -64,20 +64,6 @@
     "stock": "Disponible",
     "ordre": 5
   },
-  
-  {
-    "nom": "Luxe XR Max 2",
-    "marque": "Vaporesso",
-    "categorie": "Kits complets",
-    "type": "Batterie intégrée",
-    "profil": "Confirmé",
-    "usage": "Grande autonomie",
-    "description": "Kit ultra polyvalent destiné aux utilisateurs recherchant davantage d'autonomie,batterie 3000mAH !.",
-    "image": "uploads/luxefinal.webp",
-    "badge": "Grande autonomie et polyvalence",
-    "stock": "Disponible",
-    "ordre": 50
-  },
   {
     "nom": "Aegis Force",
     "marque": "Geekvape",
@@ -88,6 +74,19 @@
     "description": "Kit robuste conçu pour les vapoteurs souhaitant un matériel endurant avec une excellente autonomie et trés polyvalent, batterie 3000mAH.",
     "image": "uploads/forcefinal.webp",
     "badge": "Robuste",
+    "stock": "Disponible",
+    "ordre": 50
+  },
+   {
+    "nom": "Luxe XR Max 2",
+    "marque": "Vaporesso",
+    "categorie": "Kits complets",
+    "type": "Batterie intégrée",
+    "profil": "Confirmé",
+    "usage": "Grande autonomie",
+    "description": "Kit ultra polyvalent destiné aux utilisateurs recherchant davantage d'autonomie,batterie 3000mAH !.",
+    "image": "uploads/luxefinal.webp",
+    "badge": "Grande autonomie et polyvalence",
     "stock": "Disponible",
     "ordre": 51
   }
