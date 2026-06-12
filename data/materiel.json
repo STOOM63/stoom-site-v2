@@ -102,6 +102,19 @@
     "badge": "Grande autonomie et polyvalence",
     "stock": "Disponible",
     "ordre": 51
-  }
+  },
+  {
+    "nom": "Melo 6",
+    "marque": "Eleaf",
+    "categorie": "Clearomiseurs",
+    "type": "DTL",
+    "profil": "Confirmé",
+    "usage": "Puissance",
+    "description": "Dernier né de la gamme Melo, un incontournable de la vape directe, le Melo 6 d'une contenance de 5ml, dispose d'un top airflow pour éviter tout risque de fuite et d'un top cap coulissant pour faciliter son remplissage / Résistances compatibles : EC / EC2 / EC-A",
+    "image": "uploads/forcefinal.webp",
+    "badge": "Robuste",
+    "stock": "Disponible",
+    "ordre": 50
+  },
   
 ]
