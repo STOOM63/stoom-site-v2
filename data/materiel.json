@@ -117,6 +117,214 @@
     "ordre": 51
   },
   {
+    "nom": "Box batterie intégrée Solo 3",
+    "marque": "Geekvape",
+    "categorie": "Kits complets",
+    "type": "Batterie intégrée",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Batterie intégrée • Format robuste • Usage quotidien",
+    "image": "uploads/solo-3-batterie.webp",
+    "badge": "Batterie intégrée",
+    "stock": "Disponible",
+    "ordre": 65
+  },
+  {
+    "nom": "Aegis Solo 3",
+    "marque": "Geekvape",
+    "categorie": "Box simple accu 18650",
+    "type": "Simple accu 18650",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Robuste",
+    "description": "Simple accu 18650 • Robuste • Jusqu'à 100W",
+    "image": "uploads/aegis-solo-3.webp",
+    "badge": "Robuste",
+    "stock": "Disponible",
+    "ordre": 100
+  },
+  {
+    "nom": "Vinci Spark 100",
+    "marque": "Voopoo",
+    "categorie": "Box simple accu 18650",
+    "type": "Simple accu 18650",
+    "profil": "Intermédiaire",
+    "usage": "Compact, Polyvalent",
+    "description": "Simple accu 18650 • Éclairage intégré • Jusqu'à 100W",
+    "image": "uploads/vinci-spark-100.webp",
+    "badge": "Compact",
+    "stock": "Disponible",
+    "ordre": 101
+  },
+  {
+    "nom": "Thelema Solo 100W",
+    "marque": "Lost Vape",
+    "categorie": "Box simple accu 21700",
+    "type": "Simple accu 21700",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Simple accu 21700 / 18650 • Légère • Jusqu'à 100W",
+    "image": "uploads/thelema-solo-100.webp",
+    "badge": "21700",
+    "stock": "Disponible",
+    "ordre": 150
+  },
+  {
+    "nom": "Huracan LX",
+    "marque": "Aspire",
+    "categorie": "Box simple accu 21700",
+    "type": "Simple accu 21700",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Simple accu 21700 • Écran tactile • Bonne autonomie",
+    "image": "uploads/huracan-lx.webp",
+    "badge": "Écran tactile",
+    "stock": "Disponible",
+    "ordre": 151
+  },
+  {
+    "nom": "Centaurus M100 V2",
+    "marque": "Lost Vape",
+    "categorie": "Box simple accu 21700",
+    "type": "Simple accu 21700",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Simple accu 21700 • Finition premium • Jusqu'à 100W",
+    "image": "uploads/centaurus-m100-v2.webp",
+    "badge": "Premium",
+    "stock": "Disponible",
+    "ordre": 152
+  },
+  {
+    "nom": "Centaurus N100",
+    "marque": "Lost Vape",
+    "categorie": "Box simple accu 21700",
+    "type": "Simple accu 21700",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Simple accu 21700 • Légère • Jusqu'à 100W",
+    "image": "uploads/centaurus-n100.webp",
+    "badge": "21700",
+    "stock": "Disponible",
+    "ordre": 153
+  },
+  {
+    "nom": "Aegis Legend 2 L200",
+    "marque": "Geekvape",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Robuste",
+    "description": "Double accu 18650 • Étanche et antichoc • 200W",
+    "image": "uploads/aegis-legend-2.webp",
+    "badge": "Robuste",
+    "stock": "Disponible",
+    "ordre": 200
+  },
+  {
+    "nom": "Aegis Legend 3",
+    "marque": "Geekvape",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Robuste",
+    "description": "Double accu 18650 • Verrouillage intelligent • 200W",
+    "image": "uploads/aegis-legend-3.webp",
+    "badge": "Nouvelle génération",
+    "stock": "Disponible",
+    "ordre": 201
+  },
+  {
+    "nom": "Aegis Legend 5",
+    "marque": "Geekvape",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Grande autonomie",
+    "description": "Double accu 18650 • Dernière génération Aegis • 200W",
+    "image": "uploads/aegis-legend-5.webp",
+    "badge": "Nouveauté",
+    "stock": "Disponible",
+    "ordre": 202
+  },
+  {
+    "nom": "Centaurus M200",
+    "marque": "Lost Vape",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Polyvalent",
+    "description": "Double accu 18650 • Finition premium • 200W",
+    "image": "uploads/centaurus-m200.webp",
+    "badge": "Best Seller",
+    "stock": "Disponible",
+    "ordre": 203
+  },
+  {
+    "nom": "Centaurus M200 Sakura Edition",
+    "marque": "Lost Vape",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Polyvalent",
+    "description": "Double accu 18650 • Édition Sakura • 200W",
+    "image": "uploads/centaurus-m200-sakura.webp",
+    "badge": "Édition limitée",
+    "stock": "Disponible",
+    "ordre": 204
+  },
+  {
+    "nom": "Centaurus M200 Monolith Spire",
+    "marque": "Lost Vape",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Polyvalent",
+    "description": "Double accu 18650 • Édition Monolith Spire • 200W",
+    "image": "uploads/centaurus-m200-monolith.webp",
+    "badge": "Édition limitée",
+    "stock": "Disponible",
+    "ordre": 205
+  },
+  {
+    "nom": "Centaurus N200",
+    "marque": "Lost Vape",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Polyvalent",
+    "description": "Double accu 18650 • Légère et performante • 200W",
+    "image": "uploads/centaurus-n200.webp",
+    "badge": "Polyvalent",
+    "stock": "Disponible",
+    "ordre": 206
+  },
+  {
+    "nom": "Gen 200",
+    "marque": "Vaporesso",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance, Légèreté",
+    "description": "Double accu 18650 • Très légère • Jusqu'à 220W",
+    "image": "uploads/gen-200.webp",
+    "badge": "Légère",
+    "stock": "Disponible",
+    "ordre": 207
+  },
+  {
+    "nom": "Rigel 230W",
+    "marque": "Smok",
+    "categorie": "Box double accus",
+    "type": "Double accu 18650",
+    "profil": "Confirmé",
+    "usage": "Puissance",
+    "description": "Double accu 18650 • Vape puissante • Jusqu'à 230W",
+    "image": "uploads/rigel-230.webp",
+    "badge": "230W",
+    "stock": "Disponible",
+    "ordre": 208
+  },
+  {
     "nom": "Melo 6",
     "marque": "Eleaf",
     "categorie": "Clearomiseurs",
@@ -857,7 +1065,7 @@
     "stock": "Disponible",
     "ordre": 378
   },
-   {
+  {
     "nom": "Accu 18650 MPV 20A 4000 mAh",
     "marque": "MPV",
     "categorie": "Accus",
@@ -1001,19 +1209,6 @@
     "ordre": 502
   },
   {
-    "nom": "Bouteille vide Dual Fill 75 ml",
-    "marque": "STOOM",
-    "categorie": "Accessoires",
-    "type": "Flacon",
-    "profil": "Tous profils",
-    "usage": "DIY, Préparation",
-    "description": "75 ml • Double ouverture • Pratique DIY",
-    "image": "uploads/bouteille-dual-fill.webp",
-    "badge": "75 ml",
-    "stock": "Disponible",
-    "ordre": 550
-  },
-  {
     "nom": "Câble USB-C",
     "marque": "STOOM",
     "categorie": "Chargeurs",
@@ -1090,6 +1285,32 @@
     "badge": "FC2",
     "stock": "Disponible",
     "ordre": 508
+  },
+  {
+    "nom": "Slim K2 Chargeur",
+    "marque": "Efest",
+    "categorie": "Chargeurs",
+    "type": "Chargeur accu",
+    "profil": "Confirmé",
+    "usage": "Recharge, Batterie",
+    "description": "Double accus • Chargeur compact",
+    "image": "uploads/slim-k2-chargeur.webp",
+    "badge": "Slim K2",
+    "stock": "Disponible",
+    "ordre": 509
+  },
+  {
+    "nom": "Bouteille vide Dual Fill 75 ml",
+    "marque": "STOOM",
+    "categorie": "Accessoires",
+    "type": "Flacon",
+    "profil": "Tous profils",
+    "usage": "DIY, Préparation",
+    "description": "75 ml • Double ouverture • Pratique DIY",
+    "image": "uploads/bouteille-dual-fill.webp",
+    "badge": "75 ml",
+    "stock": "Disponible",
+    "ordre": 550
   },
   {
     "nom": "Coton Cotton Pro BP Mods",
@@ -1326,19 +1547,6 @@
     "ordre": 571
   },
   {
-    "nom": "Slim K2 Chargeur",
-    "marque": "Efest",
-    "categorie": "Chargeurs",
-    "type": "Chargeur accu",
-    "profil": "Confirmé",
-    "usage": "Recharge, Batterie",
-    "description": "Double accus • Chargeur compact",
-    "image": "uploads/slim-k2-chargeur.webp",
-    "badge": "Slim K2",
-    "stock": "Disponible",
-    "ordre": 509
-  },
-  {
     "nom": "Spray hydroalcoolique vanille 100 ml",
     "marque": "Akiva",
     "categorie": "Accessoires",
@@ -1404,4 +1612,3 @@
     "ordre": 577
   }
 ]
-
