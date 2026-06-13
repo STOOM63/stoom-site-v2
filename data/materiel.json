@@ -197,13 +197,13 @@
   {
     "nom": "Huracan LX",
     "marque": "Aspire",
-    "categorie": "Box simple accu 21700",
-    "type": "Simple accu 21700",
+    "categorie": "Box Batterie intégrée",
+    "type": "Batterie intégrée",
     "profil": "Intermédiaire",
     "usage": "Polyvalent, Grande autonomie",
-    "description": "Simple accu 21700 • Écran tactile • Bonne autonomie",
+    "description": "Batterie intégrée • Bonne autonomie",
     "image": "uploads/huracan-lx.webp",
-    "badge": "Écran tactile",
+    "badge": "Meilleure vente",
     "stock": "Disponible",
     "ordre": 151
   },
