@@ -103,7 +103,7 @@
     "stock": "Disponible",
     "ordre": 50
   },
-   {
+  {
     "nom": "Magnum",
     "marque": "Aspire",
     "categorie": "Pods rechargeable",
@@ -153,7 +153,20 @@
     "image": "uploads/solo-3-batterie.webp",
     "badge": "Batterie intégrée",
     "stock": "Disponible",
-    "ordre": 65
+    "ordre": 100
+  },
+  {
+    "nom": "Huracan LX",
+    "marque": "Aspire",
+    "categorie": "Box batterie intégrée",
+    "type": "Box batterie intégrée",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Batterie intégrée • Bonne autonomie",
+    "image": "uploads/huracan-lx.webp",
+    "badge": "Meilleure vente",
+    "stock": "Disponible",
+    "ordre": 101
   },
   {
     "nom": "Aegis Solo 3",
@@ -166,7 +179,7 @@
     "image": "uploads/aegis-solo-3.webp",
     "badge": "Robuste",
     "stock": "Disponible",
-    "ordre": 100
+    "ordre": 150
   },
   {
     "nom": "Vinci Spark 100",
@@ -178,32 +191,6 @@
     "description": "Simple accu 18650 • Éclairage intégré • Jusqu'à 100W",
     "image": "uploads/vinci-spark-100.webp",
     "badge": "Compact",
-    "stock": "Disponible",
-    "ordre": 101
-  },
-  {
-    "nom": "Thelema Solo 100W",
-    "marque": "Lost Vape",
-    "categorie": "Box simple accu 21700",
-    "type": "Simple accu 21700",
-    "profil": "Intermédiaire",
-    "usage": "Polyvalent, Grande autonomie",
-    "description": "Simple accu 21700 / 18650 • Légère • Jusqu'à 100W",
-    "image": "uploads/thelema-solo-100.webp",
-    "badge": "21700",
-    "stock": "Disponible",
-    "ordre": 150
-  },
-  {
-    "nom": "Huracan LX",
-    "marque": "Aspire",
-    "categorie": "Box batterie intégrée",
-    "type": "Box batterie intégrée",
-    "profil": "Intermédiaire",
-    "usage": "Polyvalent, Grande autonomie",
-    "description": "Batterie intégrée • Bonne autonomie",
-    "image": "uploads/huracan-lx.webp",
-    "badge": "Meilleure vente",
     "stock": "Disponible",
     "ordre": 151
   },
@@ -221,6 +208,19 @@
     "ordre": 152
   },
   {
+    "nom": "Thelema Solo 100W",
+    "marque": "Lost Vape",
+    "categorie": "Box simple accu 21700",
+    "type": "Simple accu 21700",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Simple accu 21700 / 18650 • Légère • Jusqu'à 100W",
+    "image": "uploads/thelema-solo-100.webp",
+    "badge": "21700",
+    "stock": "Disponible",
+    "ordre": 200
+  },
+  {
     "nom": "Centaurus N100",
     "marque": "Lost Vape",
     "categorie": "Box simple accu 21700",
@@ -231,7 +231,7 @@
     "image": "uploads/centaurus-n100.webp",
     "badge": "21700",
     "stock": "Disponible",
-    "ordre": 153
+    "ordre": 201
   },
   {
     "nom": "Aegis Legend 2 L200",
@@ -244,7 +244,7 @@
     "image": "uploads/aegis-legend-2.webp",
     "badge": "Robuste",
     "stock": "Disponible",
-    "ordre": 200
+    "ordre": 250
   },
   {
     "nom": "Aegis Legend 3",
@@ -257,7 +257,7 @@
     "image": "uploads/aegis-legend-3.webp",
     "badge": "Nouvelle génération",
     "stock": "Disponible",
-    "ordre": 201
+    "ordre": 251
   },
   {
     "nom": "Aegis Legend 5",
@@ -270,7 +270,7 @@
     "image": "uploads/aegis-legend-5.webp",
     "badge": "Nouveauté",
     "stock": "Disponible",
-    "ordre": 202
+    "ordre": 252
   },
   {
     "nom": "Centaurus M200 ASAKUZA BLOOM",
@@ -283,7 +283,7 @@
     "image": "uploads/centaurus-m200-asakuza.webp",
     "badge": "Best Seller",
     "stock": "Disponible",
-    "ordre": 203
+    "ordre": 253
   },
   {
     "nom": "Centaurus M200 Sakura Edition",
@@ -296,7 +296,7 @@
     "image": "uploads/centaurus-m200-sakura.webp",
     "badge": "Édition limitée",
     "stock": "Disponible",
-    "ordre": 204
+    "ordre": 254
   },
   {
     "nom": "Centaurus M200 Moonlight Spire",
@@ -309,7 +309,7 @@
     "image": "uploads/centaurus-m200-monolith.webp",
     "badge": "Édition limitée",
     "stock": "Disponible",
-    "ordre": 205
+    "ordre": 255
   },
   {
     "nom": "Centaurus N200",
@@ -322,7 +322,7 @@
     "image": "uploads/centaurus-n200.webp",
     "badge": "Polyvalent",
     "stock": "Disponible",
-    "ordre": 206
+    "ordre": 256
   },
   {
     "nom": "Gen 200",
@@ -335,7 +335,7 @@
     "image": "uploads/gen-200.webp",
     "badge": "Légère",
     "stock": "Disponible",
-    "ordre": 207
+    "ordre": 257
   },
   {
     "nom": "Melo 6",
@@ -348,7 +348,7 @@
     "image": "uploads/melo.webp",
     "badge": "DTL",
     "stock": "Disponible",
-    "ordre": 250
+    "ordre": 300
   },
   {
     "nom": "iTank T Dual",
@@ -361,7 +361,7 @@
     "image": "uploads/itanktdual.webp",
     "badge": "DTL",
     "stock": "Disponible",
-    "ordre": 251
+    "ordre": 301
   },
   {
     "nom": "Z Subohm 5",
@@ -374,7 +374,7 @@
     "image": "uploads/subohm5.webp",
     "badge": "Anti-fuite",
     "stock": "Disponible",
-    "ordre": 252
+    "ordre": 302
   },
   {
     "nom": "Z Subohm SE",
@@ -387,7 +387,7 @@
     "image": "uploads/subohmse.webp",
     "badge": "Anti-fuite",
     "stock": "Disponible",
-    "ordre": 253
+    "ordre": 303
   },
   {
     "nom": "Centaurus",
@@ -400,7 +400,7 @@
     "image": "uploads/centaurus.webp",
     "badge": "Haut de gamme",
     "stock": "Disponible",
-    "ordre": 254
+    "ordre": 304
   },
   {
     "nom": "Centaurus SUB-COO",
@@ -413,7 +413,7 @@
     "image": "uploads/centaurussubcoo.webp",
     "badge": "Compact DTL",
     "stock": "Disponible",
-    "ordre": 255
+    "ordre": 305
   },
   {
     "nom": "Z Nano V3",
@@ -426,7 +426,7 @@
     "image": "uploads/znano3.webp",
     "badge": "Ultra polyvalent",
     "stock": "Disponible",
-    "ordre": 256
+    "ordre": 306
   },
   {
     "nom": "Zenith NEX",
@@ -439,7 +439,7 @@
     "image": "uploads/zenithnex.webp",
     "badge": "Saveurs",
     "stock": "Disponible",
-    "ordre": 257
+    "ordre": 307
   },
   {
     "nom": "Zlide D24",
@@ -452,7 +452,7 @@
     "image": "uploads/zlide.webp",
     "badge": "Débutant",
     "stock": "Disponible",
-    "ordre": 258
+    "ordre": 308
   },
   {
     "nom": "Zenith 2",
@@ -465,241 +465,7 @@
     "image": "uploads/zenith2.webp",
     "badge": "Référence saveurs",
     "stock": "Disponible",
-    "ordre": 259
-  },
-  {
-    "nom": "Cartouches XROS",
-    "marque": "Vaporesso",
-    "categorie": "Cartouches",
-    "type": "XROS",
-    "profil": "Débutant,Compact",
-    "usage": "Sevrage,Compact,Saveurs",
-    "description": "0.4 Ω • 0.6 Ω • 1.0 Ω • 1.2 Ω • Compatibles XROS, XROS Pro et XROS 5.",
-    "image": "uploads/cartouche-xros.webp",
-    "badge": "XROS",
-    "stock": "Disponible",
-    "ordre": 300
-  },
-  {
-    "nom": "Cartouches Vibe SE",
-    "marque": "Vaporesso",
-    "categorie": "Cartouches",
-    "type": "Vibe",
-    "profil": "Débutant,Compact",
-    "usage": "Sevrage,Compact",
-    "description": "0.6 Ω / 0.8 Ω • Compatibles Vibe et Vibe SE.",
-    "image": "uploads/cartouche-vibe.webp",
-    "badge": "Vibe",
-    "stock": "Disponible",
-    "ordre": 301
-  },
-  {
-    "nom": "Cartouches Armour G",
-    "marque": "Vaporesso",
-    "categorie": "Cartouches",
-    "type": "Armour G",
-    "profil": "Polyvalent",
-    "usage": "Polyvalent,Saveurs",
-    "description": "Cartouches vides compatibles Armour G et GTX.",
-    "image": "uploads/cartouche-armour-g.webp",
-    "badge": "Armour G",
-    "stock": "Disponible",
-    "ordre": 302
-  },
-  {
-    "nom": "Cartouches Luxe XR",
-    "marque": "Vaporesso",
-    "categorie": "Cartouches",
-    "type": "Luxe XR",
-    "profil": "Polyvalent",
-    "usage": "Polyvalent,Puissance",
-    "description": "Version MTL ou DTL compatible Luxe XR et GTX.",
-    "image": "uploads/cartouche-luxe-xr.webp",
-    "badge": "Luxe XR",
-    "stock": "Disponible",
-    "ordre": 303
-  },
-  {
-    "nom": "Cartouches Luxe X",
-    "marque": "Vaporesso",
-    "categorie": "Cartouches",
-    "type": "Luxe X",
-    "profil": "Polyvalent",
-    "usage": "Polyvalent,Saveurs",
-    "description": "0.4 Ω • Compatibles Luxe X.",
-    "image": "uploads/cartouche-luxe-x.webp",
-    "badge": "Luxe X",
-    "stock": "Disponible",
-    "ordre": 304
-  },
-  {
-    "nom": "Cartouches Eco Nano",
-    "marque": "Vaporesso",
-    "categorie": "Cartouches",
-    "type": "Eco Nano",
-    "profil": "Débutant",
-    "usage": "Sevrage,Autonomie",
-    "description": "0.8 Ω • Grande autonomie 6 ml.",
-    "image": "uploads/cartouche-eco-nano.webp",
-    "badge": "Eco Nano",
-    "stock": "Disponible",
-    "ordre": 305
-  },
-  {
-    "nom": "Cartouches Veco Go",
-    "marque": "Vaporesso",
-    "categorie": "Cartouches",
-    "type": "Veco Go",
-    "profil": "Débutant",
-    "usage": "Sevrage,Autonomie",
-    "description": "0.6 Ω • Réservoir 5 ml.",
-    "image": "uploads/cartouche-veco-go.webp",
-    "badge": "Veco Go",
-    "stock": "Disponible",
-    "ordre": 306
-  },
-  {
-    "nom": "Cartouches Soul",
-    "marque": "Geekvape",
-    "categorie": "Cartouches",
-    "type": "Soul",
-    "profil": "Débutant,Compact",
-    "usage": "Sevrage,Compact,Saveurs",
-    "description": "0.6 Ω • 1.0 Ω • Compatibles Soul et Soul 2.",
-    "image": "uploads/cartouche-soul.webp",
-    "badge": "Soul",
-    "stock": "Disponible",
-    "ordre": 307
-  },
-  {
-    "nom": "Cartouches Peak",
-    "marque": "Geekvape",
-    "categorie": "Cartouches",
-    "type": "Peak",
-    "profil": "Débutant",
-    "usage": "Sevrage",
-    "description": "0.8 Ω • Compatibles Peak.",
-    "image": "uploads/cartouche-peak.webp",
-    "badge": "Peak",
-    "stock": "Disponible",
-    "ordre": 308
-  },
-  {
-    "nom": "Cartouches Digi Q",
-    "marque": "Geekvape",
-    "categorie": "Cartouches",
-    "type": "Digi Q",
-    "profil": "Débutant",
-    "usage": "Sevrage,Compact",
-    "description": "0.6 Ω • Compatibles Digi Q et Vista.",
-    "image": "uploads/cartouche-digi-q.webp",
-    "badge": "Digi Q",
-    "stock": "Disponible",
     "ordre": 309
-  },
-  {
-    "nom": "Cartouches Force",
-    "marque": "Geekvape",
-    "categorie": "Cartouches",
-    "type": "Force",
-    "profil": "Polyvalent",
-    "usage": "Polyvalent",
-    "description": "Cartouches vides compatibles Force.",
-    "image": "uploads/cartouche-force.webp",
-    "badge": "Force",
-    "stock": "Disponible",
-    "ordre": 310
-  },
-  {
-    "nom": "Cartouches Vilter",
-    "marque": "Aspire",
-    "categorie": "Cartouches",
-    "type": "Vilter",
-    "profil": "Débutant",
-    "usage": "Sevrage",
-    "description": "0.8 Ω • 1.0 Ω • Compatibles Vilter et Vilter 2.",
-    "image": "uploads/cartouche-vilter.webp",
-    "badge": "Vilter",
-    "stock": "Disponible",
-    "ordre": 311
-  },
-  {
-    "nom": "Cartouches Fluffi",
-    "marque": "Aspire",
-    "categorie": "Cartouches",
-    "type": "Fluffi",
-    "profil": "Débutant",
-    "usage": "Sevrage,Compact",
-    "description": "0.6 Ω • 1.0 Ω • Compatibles Fluffi.",
-    "image": "uploads/cartouche-fluffi.webp",
-    "badge": "Fluffi",
-    "stock": "Disponible",
-    "ordre": 312
-  },
-  {
-    "nom": "Cartouches Magnum",
-    "marque": "Aspire",
-    "categorie": "Cartouches",
-    "type": "Magnum",
-    "profil": "Confirmé",
-    "usage": "Puissance",
-    "description": "0.25 Ω • Compatibles Magnum.",
-    "image": "uploads/cartouche-magnum.webp",
-    "badge": "Magnum",
-    "stock": "Disponible",
-    "ordre": 313
-  },
-  {
-    "nom": "Cartouches TG Pod",
-    "marque": "Aspire",
-    "categorie": "Cartouches",
-    "type": "TG Pod",
-    "profil": "Débutant",
-    "usage": "Sevrage,Saveurs",
-    "description": "0.8 Ω • 1.0 Ω • Compatibles Cyber G et TG Pod.",
-    "image": "uploads/cartouche-tg-pod.webp",
-    "badge": "TG Pod",
-    "stock": "Disponible",
-    "ordre": 314
-  },
-  {
-    "nom": "Cartouches Vmate",
-    "marque": "Voopoo",
-    "categorie": "Cartouches",
-    "type": "Vmate",
-    "profil": "Débutant",
-    "usage": "Sevrage,Compact",
-    "description": "0.7 Ω • 1.0 Ω • 1.2 Ω • Compatibles Vmate.",
-    "image": "uploads/cartouche-vmate.webp",
-    "badge": "Vmate",
-    "stock": "Disponible",
-    "ordre": 315
-  },
-  {
-    "nom": "Cartouches ITO",
-    "marque": "Voopoo",
-    "categorie": "Cartouches",
-    "type": "ITO",
-    "profil": "Débutant",
-    "usage": "Sevrage",
-    "description": "0.7 Ω • Compatibles Doric et ITO.",
-    "image": "uploads/cartouche-ito.webp",
-    "badge": "ITO",
-    "stock": "Disponible",
-    "ordre": 316
-  },
-  {
-    "nom": "Cartouches VPrime",
-    "marque": "OXVA",
-    "categorie": "Cartouches",
-    "type": "VPrime",
-    "profil": "Polyvalent",
-    "usage": "Polyvalent,Saveurs",
-    "description": "Compatibles OXVA VPrime.",
-    "image": "uploads/cartouche-vprime.webp",
-    "badge": "VPrime",
-    "stock": "Disponible",
-    "ordre": 317
   },
   {
     "nom": "Résistances Geekvape B Series",
@@ -1079,6 +845,240 @@
     "ordre": 378
   },
   {
+    "nom": "Cartouches XROS",
+    "marque": "Vaporesso",
+    "categorie": "Cartouches",
+    "type": "XROS",
+    "profil": "Débutant,Compact",
+    "usage": "Sevrage,Compact,Saveurs",
+    "description": "0.4 Ω • 0.6 Ω • 1.0 Ω • 1.2 Ω • Compatibles XROS, XROS Pro et XROS 5.",
+    "image": "uploads/cartouche-xros.webp",
+    "badge": "XROS",
+    "stock": "Disponible",
+    "ordre": 450
+  },
+  {
+    "nom": "Cartouches Vibe SE",
+    "marque": "Vaporesso",
+    "categorie": "Cartouches",
+    "type": "Vibe",
+    "profil": "Débutant,Compact",
+    "usage": "Sevrage,Compact",
+    "description": "0.6 Ω / 0.8 Ω • Compatibles Vibe et Vibe SE.",
+    "image": "uploads/cartouche-vibe.webp",
+    "badge": "Vibe",
+    "stock": "Disponible",
+    "ordre": 451
+  },
+  {
+    "nom": "Cartouches Armour G",
+    "marque": "Vaporesso",
+    "categorie": "Cartouches",
+    "type": "Armour G",
+    "profil": "Polyvalent",
+    "usage": "Polyvalent,Saveurs",
+    "description": "Cartouches vides compatibles Armour G et GTX.",
+    "image": "uploads/cartouche-armour-g.webp",
+    "badge": "Armour G",
+    "stock": "Disponible",
+    "ordre": 452
+  },
+  {
+    "nom": "Cartouches Luxe XR",
+    "marque": "Vaporesso",
+    "categorie": "Cartouches",
+    "type": "Luxe XR",
+    "profil": "Polyvalent",
+    "usage": "Polyvalent,Puissance",
+    "description": "Version MTL ou DTL compatible Luxe XR et GTX.",
+    "image": "uploads/cartouche-luxe-xr.webp",
+    "badge": "Luxe XR",
+    "stock": "Disponible",
+    "ordre": 453
+  },
+  {
+    "nom": "Cartouches Luxe X",
+    "marque": "Vaporesso",
+    "categorie": "Cartouches",
+    "type": "Luxe X",
+    "profil": "Polyvalent",
+    "usage": "Polyvalent,Saveurs",
+    "description": "0.4 Ω • Compatibles Luxe X.",
+    "image": "uploads/cartouche-luxe-x.webp",
+    "badge": "Luxe X",
+    "stock": "Disponible",
+    "ordre": 454
+  },
+  {
+    "nom": "Cartouches Eco Nano",
+    "marque": "Vaporesso",
+    "categorie": "Cartouches",
+    "type": "Eco Nano",
+    "profil": "Débutant",
+    "usage": "Sevrage,Autonomie",
+    "description": "0.8 Ω • Grande autonomie 6 ml.",
+    "image": "uploads/cartouche-eco-nano.webp",
+    "badge": "Eco Nano",
+    "stock": "Disponible",
+    "ordre": 455
+  },
+  {
+    "nom": "Cartouches Veco Go",
+    "marque": "Vaporesso",
+    "categorie": "Cartouches",
+    "type": "Veco Go",
+    "profil": "Débutant",
+    "usage": "Sevrage,Autonomie",
+    "description": "0.6 Ω • Réservoir 5 ml.",
+    "image": "uploads/cartouche-veco-go.webp",
+    "badge": "Veco Go",
+    "stock": "Disponible",
+    "ordre": 456
+  },
+  {
+    "nom": "Cartouches Soul",
+    "marque": "Geekvape",
+    "categorie": "Cartouches",
+    "type": "Soul",
+    "profil": "Débutant,Compact",
+    "usage": "Sevrage,Compact,Saveurs",
+    "description": "0.6 Ω • 1.0 Ω • Compatibles Soul et Soul 2.",
+    "image": "uploads/cartouche-soul.webp",
+    "badge": "Soul",
+    "stock": "Disponible",
+    "ordre": 457
+  },
+  {
+    "nom": "Cartouches Peak",
+    "marque": "Geekvape",
+    "categorie": "Cartouches",
+    "type": "Peak",
+    "profil": "Débutant",
+    "usage": "Sevrage",
+    "description": "0.8 Ω • Compatibles Peak.",
+    "image": "uploads/cartouche-peak.webp",
+    "badge": "Peak",
+    "stock": "Disponible",
+    "ordre": 458
+  },
+  {
+    "nom": "Cartouches Digi Q",
+    "marque": "Geekvape",
+    "categorie": "Cartouches",
+    "type": "Digi Q",
+    "profil": "Débutant",
+    "usage": "Sevrage,Compact",
+    "description": "0.6 Ω • Compatibles Digi Q et Vista.",
+    "image": "uploads/cartouche-digi-q.webp",
+    "badge": "Digi Q",
+    "stock": "Disponible",
+    "ordre": 459
+  },
+  {
+    "nom": "Cartouches Force",
+    "marque": "Geekvape",
+    "categorie": "Cartouches",
+    "type": "Force",
+    "profil": "Polyvalent",
+    "usage": "Polyvalent",
+    "description": "Cartouches vides compatibles Force.",
+    "image": "uploads/cartouche-force.webp",
+    "badge": "Force",
+    "stock": "Disponible",
+    "ordre": 460
+  },
+  {
+    "nom": "Cartouches Vilter",
+    "marque": "Aspire",
+    "categorie": "Cartouches",
+    "type": "Vilter",
+    "profil": "Débutant",
+    "usage": "Sevrage",
+    "description": "0.8 Ω • 1.0 Ω • Compatibles Vilter et Vilter 2.",
+    "image": "uploads/cartouche-vilter.webp",
+    "badge": "Vilter",
+    "stock": "Disponible",
+    "ordre": 461
+  },
+  {
+    "nom": "Cartouches Fluffi",
+    "marque": "Aspire",
+    "categorie": "Cartouches",
+    "type": "Fluffi",
+    "profil": "Débutant",
+    "usage": "Sevrage,Compact",
+    "description": "0.6 Ω • 1.0 Ω • Compatibles Fluffi.",
+    "image": "uploads/cartouche-fluffi.webp",
+    "badge": "Fluffi",
+    "stock": "Disponible",
+    "ordre": 462
+  },
+  {
+    "nom": "Cartouches Magnum",
+    "marque": "Aspire",
+    "categorie": "Cartouches",
+    "type": "Magnum",
+    "profil": "Confirmé",
+    "usage": "Puissance",
+    "description": "0.25 Ω • Compatibles Magnum.",
+    "image": "uploads/cartouche-magnum.webp",
+    "badge": "Magnum",
+    "stock": "Disponible",
+    "ordre": 463
+  },
+  {
+    "nom": "Cartouches TG Pod",
+    "marque": "Aspire",
+    "categorie": "Cartouches",
+    "type": "TG Pod",
+    "profil": "Débutant",
+    "usage": "Sevrage,Saveurs",
+    "description": "0.8 Ω • 1.0 Ω • Compatibles Cyber G et TG Pod.",
+    "image": "uploads/cartouche-tg-pod.webp",
+    "badge": "TG Pod",
+    "stock": "Disponible",
+    "ordre": 464
+  },
+  {
+    "nom": "Cartouches Vmate",
+    "marque": "Voopoo",
+    "categorie": "Cartouches",
+    "type": "Vmate",
+    "profil": "Débutant",
+    "usage": "Sevrage,Compact",
+    "description": "0.7 Ω • 1.0 Ω • 1.2 Ω • Compatibles Vmate.",
+    "image": "uploads/cartouche-vmate.webp",
+    "badge": "Vmate",
+    "stock": "Disponible",
+    "ordre": 465
+  },
+  {
+    "nom": "Cartouches ITO",
+    "marque": "Voopoo",
+    "categorie": "Cartouches",
+    "type": "ITO",
+    "profil": "Débutant",
+    "usage": "Sevrage",
+    "description": "0.7 Ω • Compatibles Doric et ITO.",
+    "image": "uploads/cartouche-ito.webp",
+    "badge": "ITO",
+    "stock": "Disponible",
+    "ordre": 466
+  },
+  {
+    "nom": "Cartouches VPrime",
+    "marque": "OXVA",
+    "categorie": "Cartouches",
+    "type": "VPrime",
+    "profil": "Polyvalent",
+    "usage": "Polyvalent,Saveurs",
+    "description": "Compatibles OXVA VPrime.",
+    "image": "uploads/cartouche-vprime.webp",
+    "badge": "VPrime",
+    "stock": "Disponible",
+    "ordre": 467
+  },
+  {
     "nom": "Accu 18650 MPV 20A 4000 mAh",
     "marque": "MPV",
     "categorie": "Accus",
@@ -1089,7 +1089,7 @@
     "image": "uploads/accu-18650-mpv.webp",
     "badge": "18650",
     "stock": "Disponible",
-    "ordre": 450
+    "ordre": 550
   },
   {
     "nom": "Accu 18650 Kuurve 4000 mAh",
@@ -1102,7 +1102,7 @@
     "image": "uploads/accu-18650-kuurve2.webp",
     "badge": "18650",
     "stock": "Disponible",
-    "ordre": 451
+    "ordre": 551
   },
   {
     "nom": "Accu 20A 3800 mAh MPV",
@@ -1115,7 +1115,7 @@
     "image": "uploads/accu-3800-mpv.webp",
     "badge": "18650",
     "stock": "Disponible",
-    "ordre": 452
+    "ordre": 552
   },
   {
     "nom": "Accu Samsung 25R",
@@ -1128,7 +1128,7 @@
     "image": "uploads/accu-25r.webp",
     "badge": "25R",
     "stock": "Disponible",
-    "ordre": 453
+    "ordre": 553
   },
   {
     "nom": "Accu 30A 21700 MPV 5000 mAh",
@@ -1141,7 +1141,7 @@
     "image": "uploads/accu-21700-mpv.webp",
     "badge": "21700",
     "stock": "Disponible",
-    "ordre": 454
+    "ordre": 554
   },
   {
     "nom": "Accu Kuurve 21700 5000 mAh",
@@ -1154,7 +1154,7 @@
     "image": "uploads/accu-21700-kuurve.webp",
     "badge": "21700",
     "stock": "Disponible",
-    "ordre": 455
+    "ordre": 555
   },
   {
     "nom": "Accu Sony VTC6 3000 mAh",
@@ -1167,7 +1167,7 @@
     "image": "uploads/accu-vtc6.webp",
     "badge": "VTC6",
     "stock": "Disponible",
-    "ordre": 456
+    "ordre": 556
   },
   {
     "nom": "Accu VTC5A 2600 mAh",
@@ -1180,7 +1180,7 @@
     "image": "uploads/accu-vtc5a.webp",
     "badge": "VTC5A",
     "stock": "Disponible",
-    "ordre": 457
+    "ordre": 557
   },
   {
     "nom": "Adaptateur secteur USB + USB-C Kuurve",
@@ -1193,7 +1193,7 @@
     "image": "uploads/adaptateur-kuurve.webp",
     "badge": "USB-C",
     "stock": "Disponible",
-    "ordre": 500
+    "ordre": 600
   },
   {
     "nom": "Adaptateur secteur Fumytech",
@@ -1206,7 +1206,7 @@
     "image": "uploads/adaptateur-fumytech2.webp",
     "badge": "Secteur",
     "stock": "Disponible",
-    "ordre": 501
+    "ordre": 601
   },
   {
     "nom": "Adaptateur secteur USB 2A",
@@ -1219,7 +1219,7 @@
     "image": "uploads/adaptateur-usb-2a.webp",
     "badge": "2A",
     "stock": "Disponible",
-    "ordre": 502
+    "ordre": 602
   },
   {
     "nom": "Câble USB-C",
@@ -1232,7 +1232,7 @@
     "image": "uploads/cable-usb-c.webp",
     "badge": "USB-C",
     "stock": "Disponible",
-    "ordre": 503
+    "ordre": 603
   },
   {
     "nom": "Chargeur A1 Kuurve",
@@ -1245,7 +1245,7 @@
     "image": "uploads/chargeur-a1-kuurve.webp",
     "badge": "1 accu",
     "stock": "Disponible",
-    "ordre": 504
+    "ordre": 604
   },
   {
     "nom": "Chargeur A2 Kuurve",
@@ -1258,7 +1258,7 @@
     "image": "uploads/chargeur-a2-kuurve.webp",
     "badge": "2 accus",
     "stock": "Disponible",
-    "ordre": 505
+    "ordre": 605
   },
   {
     "nom": "Chargeur C4 MPV",
@@ -1271,7 +1271,7 @@
     "image": "uploads/chargeur-c4-mpv.webp",
     "badge": "4 accus",
     "stock": "Disponible",
-    "ordre": 506
+    "ordre": 606
   },
   {
     "nom": "Chargeur FC1 MPV",
@@ -1284,7 +1284,7 @@
     "image": "uploads/chargeur-fc1-mpv.webp",
     "badge": "FC1",
     "stock": "Disponible",
-    "ordre": 507
+    "ordre": 607
   },
   {
     "nom": "Chargeur FC2 MPV",
@@ -1297,7 +1297,7 @@
     "image": "uploads/chargeur-fc2-mpv.webp",
     "badge": "FC2",
     "stock": "Disponible",
-    "ordre": 508
+    "ordre": 608
   },
   {
     "nom": "Slim K2 Chargeur",
@@ -1310,7 +1310,7 @@
     "image": "uploads/slim-k2-chargeur.webp",
     "badge": "Slim K2",
     "stock": "Disponible",
-    "ordre": 509
+    "ordre": 609
   },
   {
     "nom": "Bouteille vide Dual Fill 75 ml",
@@ -1323,7 +1323,7 @@
     "image": "uploads/bouteille-dual-fill.webp",
     "badge": "75 ml",
     "stock": "Disponible",
-    "ordre": 550
+    "ordre": 650
   },
   {
     "nom": "Coton Cotton Pro BP Mods",
@@ -1336,7 +1336,7 @@
     "image": "uploads/coton-bp-mods.webp",
     "badge": "Expert",
     "stock": "Disponible",
-    "ordre": 551
+    "ordre": 651
   },
   {
     "nom": "Décapsuleur We Are Vape",
@@ -1349,7 +1349,7 @@
     "image": "uploads/decapsuleur-we-are-vape.webp",
     "badge": "Pratique",
     "stock": "Disponible",
-    "ordre": 552
+    "ordre": 652
   },
   {
     "nom": "Drip Tip T2",
@@ -1362,7 +1362,7 @@
     "image": "uploads/drip-tip-t2.webp",
     "badge": "Embout",
     "stock": "Disponible",
-    "ordre": 553
+    "ordre": 653
   },
   {
     "nom": "Drip Tip Téflon",
@@ -1375,7 +1375,7 @@
     "image": "uploads/drip-tip-teflon.webp",
     "badge": "Téflon",
     "stock": "Disponible",
-    "ordre": 554
+    "ordre": 654
   },
   {
     "nom": "Drip Tip tout modèle",
@@ -1388,7 +1388,7 @@
     "image": "uploads/drip-tip-tout-modele.webp",
     "badge": "Embouts",
     "stock": "Disponible",
-    "ordre": 555
+    "ordre": 655
   },
   {
     "nom": "Drip Tip Zlide",
@@ -1401,7 +1401,7 @@
     "image": "uploads/drip-tip-zlide.webp",
     "badge": "Zlide",
     "stock": "Disponible",
-    "ordre": 556
+    "ordre": 656
   },
   {
     "nom": "Étui",
@@ -1414,7 +1414,7 @@
     "image": "uploads/etui.webp",
     "badge": "Transport",
     "stock": "Disponible",
-    "ordre": 557
+    "ordre": 657
   },
   {
     "nom": "Étui silicone accu 18650",
@@ -1427,7 +1427,7 @@
     "image": "uploads/etui-silicone-accu-18650.webp",
     "badge": "Sécurité",
     "stock": "Disponible",
-    "ordre": 558
+    "ordre": 658
   },
   {
     "nom": "Filtre pod Vilter / Vilter v2 / Vilter MAX",
@@ -1440,7 +1440,7 @@
     "image": "uploads/filtre-pod-vilter.webp",
     "badge": "Sevrage",
     "stock": "Disponible",
-    "ordre": 559
+    "ordre": 659
   },
   {
     "nom": "Fiole / bouteille vide toute contenance",
@@ -1453,7 +1453,7 @@
     "image": "uploads/fiole-toute-contenance.webp",
     "badge": "DIY",
     "stock": "Disponible",
-    "ordre": 561
+    "ordre": 660
   },
   {
     "nom": "Mini Tools Kit V2 Geekvape",
@@ -1466,7 +1466,7 @@
     "image": "uploads/mini-tools-kit-v2.webp",
     "badge": "Outils",
     "stock": "Disponible",
-    "ordre": 564
+    "ordre": 661
   },
   {
     "nom": "Pochette néoprène S ou L",
@@ -1479,7 +1479,7 @@
     "image": "uploads/pochette-neoprene.webp",
     "badge": "Pochette",
     "stock": "Disponible",
-    "ordre": 565
+    "ordre": 662
   },
   {
     "nom": "Porte interchangeable BT200 Limited",
@@ -1492,7 +1492,7 @@
     "image": "uploads/porte-bt200-limited.webp",
     "badge": "BT200",
     "stock": "Disponible",
-    "ordre": 566
+    "ordre": 663
   },
   {
     "nom": "Portes M200 Rose",
@@ -1505,7 +1505,7 @@
     "image": "uploads/portes-m200-rose.webp",
     "badge": "M200",
     "stock": "Disponible",
-    "ordre": 567
+    "ordre": 664
   },
   {
     "nom": "Protection TPU Armour iTank 5 ml",
@@ -1518,7 +1518,7 @@
     "image": "uploads/protection-tpu-armour-5ml.webp",
     "badge": "Protection",
     "stock": "Disponible",
-    "ordre": 568
+    "ordre": 665
   },
   {
     "nom": "Protection TPU Armour iTank 8 ml",
@@ -1531,7 +1531,7 @@
     "image": "uploads/protection-tpu-armour-8ml.webp",
     "badge": "Protection",
     "stock": "Disponible",
-    "ordre": 569
+    "ordre": 666
   },
   {
     "nom": "Pyrex",
@@ -1544,7 +1544,7 @@
     "image": "uploads/pyrex.webp",
     "badge": "Pyrex",
     "stock": "Disponible",
-    "ordre": 570
+    "ordre": 667
   },
   {
     "nom": "Sacoche de transport Army Camouflage",
@@ -1557,7 +1557,7 @@
     "image": "uploads/sacoche-army-camouflage.webp",
     "badge": "Transport",
     "stock": "Disponible",
-    "ordre": 571
+    "ordre": 668
   },
   {
     "nom": "Spray hydroalcoolique vanille 100 ml",
@@ -1570,7 +1570,7 @@
     "image": "uploads/spray-hydroalcoolique-vanille.webp",
     "badge": "Hygiène",
     "stock": "Disponible",
-    "ordre": 572
+    "ordre": 669
   },
   {
     "nom": "Support e-cig voiture",
@@ -1583,7 +1583,7 @@
     "image": "uploads/support-ecig-voiture.webp",
     "badge": "Voiture",
     "stock": "Disponible",
-    "ordre": 574
+    "ordre": 670
   },
   {
     "nom": "Vape Band Heroes",
@@ -1596,7 +1596,7 @@
     "image": "uploads/vape-band-heroes.webp",
     "badge": "Protection",
     "stock": "Disponible",
-    "ordre": 575
+    "ordre": 671
   },
   {
     "nom": "Wrap divers + installation 21700",
@@ -1609,7 +1609,7 @@
     "image": "uploads/wrap-divers-21700.webp",
     "badge": "Sécurité",
     "stock": "Disponible",
-    "ordre": 576
+    "ordre": 672
   },
   {
     "nom": "Wrap Dotmod + installation 18650",
@@ -1622,6 +1622,6 @@
     "image": "uploads/wrap-dotmod-18650.webp",
     "badge": "Sécurité",
     "stock": "Disponible",
-    "ordre": 577
+    "ordre": 673
   }
 ]
