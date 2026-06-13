@@ -3,7 +3,7 @@
     "titre": "Vape City",
     "categorie": "Nouveauté liquide",
     "description": "Une gamme fruitée et fraîche à découvrir en boutique.",
-    "image": "uploads/vapecity_resultat.webp",
+    "image": "uploads/vapecityfinal.webp",
     "lien": "vapecity.html",
     "bouton": "Découvrir"
   },
@@ -11,7 +11,7 @@
     "titre": "Six Vape",
     "categorie": "Nouveauté liquide",
     "description": "Bienvenue dans l'univers SIX VAPE, une gamme inspirée des plus belles destinations de la côte de Miami.",
-    "image": "uploads/header-brand-six-vape.webp",
+    "image": "uploads/sixvapefinal.webp",
     "lien": "sixvape.html",
     "bouton": "Découvrir"
   },
@@ -19,7 +19,7 @@
     "titre": "Le Perfect Match",
     "categorie": "Nouveauté auvergnate",
     "description": "Nouvelle gamme Flavour Power fabriquée en Auvergne.",
-    "image": "uploads/leperfectmatch_resultat.webp",
+    "image": "uploads/perfectmatchfinal.webp",
     "lien": "leperfectmatch.html",
     "bouton": "Découvrir"
   },
@@ -27,7 +27,7 @@
     "titre": "JNR",
     "categorie": "La Star du moment !",
     "description": "La marque JNR propose une gamme de puffs rechargeables, conçues pour une utilisation facile",
-    "image": "uploads/jnrambiance.webp",
+    "image": "uploads/jnrfinal.webp",
     "lien": "jnr.html",
     "bouton": "Découvrir"
   }
