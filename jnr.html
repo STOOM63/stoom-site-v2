@@ -573,11 +573,20 @@ body{
 </script>
 
 <script src="assets/age-check.js"></script>
-  <script>
-window.addEventListener("pageshow", function(){
+  <script src="assets/age-check.js"></script>
+
+<script>
+function fixSafariZoom(){
   document.documentElement.style.zoom = "1";
   document.body.style.zoom = "1";
   window.scrollTo(0, 0);
+}
+
+window.addEventListener("pageshow", function(){
+  fixSafariZoom();
+  setTimeout(fixSafariZoom, 100);
+  setTimeout(fixSafariZoom, 400);
+  setTimeout(fixSafariZoom, 1000);
 });
 </script>
 </body>
