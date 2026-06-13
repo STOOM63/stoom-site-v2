@@ -576,17 +576,17 @@ body{
   
 
 <script>
-function fixSafariZoom(){
-  document.documentElement.style.zoom = "1";
-  document.body.style.zoom = "1";
-  window.scrollTo(0, 0);
+function fixSafariReturn(){
+  document.documentElement.scrollLeft = 0;
+  document.body.scrollLeft = 0;
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 }
 
 window.addEventListener("pageshow", function(){
-  fixSafariZoom();
-  setTimeout(fixSafariZoom, 100);
-  setTimeout(fixSafariZoom, 400);
-  setTimeout(fixSafariZoom, 1000);
+  fixSafariReturn();
+  setTimeout(fixSafariReturn, 100);
+  setTimeout(fixSafariReturn, 400);
+  setTimeout(fixSafariReturn, 1000);
 });
 </script>
 </body>
