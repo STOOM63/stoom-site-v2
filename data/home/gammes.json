@@ -16,6 +16,14 @@
   "bouton": "Voir les gammes"
 },
   {
+  "titre": "JNR",
+  "categorie": "Puffs rechargeables",
+  "description": "Vapez stylé ! La star du moment !",
+  "image": "uploads/jnr1.webp",
+  "lien": "jnr.html",
+  "bouton": "Voir les gammes"
+},
+  {
     "titre": "Vape City",
     "categorie": "E-liquides Fruités Frais",
     "description": "Fruités intenses et recettes fraîches.",
