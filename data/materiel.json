@@ -145,7 +145,7 @@
   {
     "nom": "Box batterie intégrée Solo 3",
     "marque": "Geekvape",
-    "categorie": "Kits complets",
+    "categorie": "Batterie intégrée",
     "type": "Batterie intégrée",
     "profil": "Intermédiaire",
     "usage": "Polyvalent, Grande autonomie",
@@ -210,11 +210,11 @@
   {
     "nom": "Centaurus M100 V2",
     "marque": "Lost Vape",
-    "categorie": "Box simple accu 21700",
-    "type": "Simple accu 21700",
+    "categorie": "Box simple accu 18650",
+    "type": "Simple accu 18650",
     "profil": "Intermédiaire",
     "usage": "Polyvalent, Grande autonomie",
-    "description": "Simple accu 21700 • Finition premium • Jusqu'à 100W",
+    "description": "Simple accu 18650 • Finition premium • Jusqu'à 100W",
     "image": "uploads/centaurus-m100-v2.webp",
     "badge": "Premium",
     "stock": "Disponible",
