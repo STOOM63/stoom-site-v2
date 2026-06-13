@@ -22,5 +22,13 @@
     "image": "uploads/leperfectmatch_resultat.webp",
     "lien": "leperfectmatch.html",
     "bouton": "Découvrir"
+  },
+  {
+    "titre": "JNR",
+    "categorie": "La Star du moment !",
+    "description": "La marque JNR propose une gamme de puffs rechargeables, conçues pour une utilisation facile",
+    "image": "uploads/jnrambiance.webp",
+    "lien": "jnr.html",
+    "bouton": "Découvrir"
   }
 ]
