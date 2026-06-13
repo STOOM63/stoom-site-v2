@@ -1,1 +1,122 @@
-
+[
+  {
+    "nom": "Myrtille Framboise Acidulée",
+    "saveurs": "Myrtille, Framboise acidulée",
+    "description": "Une recette fruitée associant la douceur de la myrtille à une framboise délicatement acidulée.",
+    "image": "uploads/jnr_blueberrysourraspberry_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Mûre Framboise",
+    "saveurs": "Mûre, Framboise",
+    "description": "Une combinaison intense de mûre sauvage et de framboise gourmande.",
+    "image": "uploads/jnrblackberryraspberry_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Fruits Rouges Pêche",
+    "saveurs": "Fruits rouges, Pêche",
+    "description": "Une alliance fruitée mêlant des fruits rouges généreux à une pêche juteuse.",
+    "image": "uploads/jnrberrypeach_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Fruit du Dragon Noir Glacé",
+    "saveurs": "Fruit du Dragon, Fraîcheur",
+    "description": "Une saveur exotique de fruit du dragon relevée par une fraîcheur intense.",
+    "image": "uploads/jnrblackdragonice_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Myrtille Grenade Glacée",
+    "saveurs": "Myrtille, Grenade, Fraîcheur",
+    "description": "Une recette équilibrée associant myrtille, grenade et sensation glacée.",
+    "image": "uploads/jnrblueberrypomegranateice_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Myrtille Framboise Cerise",
+    "saveurs": "Myrtille, Framboise, Cerise",
+    "description": "Un mélange fruité réunissant myrtille, framboise et cerise gourmande.",
+    "image": "uploads/jnrblueberryraspberrycherry_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Cerise Glacée",
+    "saveurs": "Cerise, Fraîcheur",
+    "description": "Une saveur de cerise intense accompagnée d'une fraîcheur rafraîchissante.",
+    "image": "uploads/jnrcherryice_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Cerise Pastèque Glacée",
+    "saveurs": "Cerise, Pastèque, Fraîcheur",
+    "description": "Une association originale entre cerise gourmande et pastèque fraîche.",
+    "image": "uploads/jnrcherrywatermelonfreeze_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Mangue Fruit de la Passion",
+    "saveurs": "Mangue, Fruit de la Passion",
+    "description": "Une recette exotique mêlant mangue sucrée et fruit de la passion.",
+    "image": "uploads/jnrmangopassionfruit_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Mélange de Fruits Rouges",
+    "saveurs": "Fruits rouges",
+    "description": "Une explosion de fruits rouges dans une recette riche et équilibrée.",
+    "image": "uploads/jnrmixedberry_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Fraise Kiwi",
+    "saveurs": "Fraise, Kiwi",
+    "description": "Une combinaison incontournable entre la douceur de la fraise et le kiwi.",
+    "image": "uploads/jnrstrawberrykiwi_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Fraise Pastèque Glacée",
+    "saveurs": "Fraise, Pastèque, Fraîcheur",
+    "description": "Une recette estivale associant fraise, pastèque et fraîcheur.",
+    "image": "uploads/jnrstrawberrywatermelonice_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Pastèque Bubble Gum",
+    "saveurs": "Pastèque, Bubble Gum",
+    "description": "Une saveur originale mêlant la fraîcheur de la pastèque aux notes de bubble gum.",
+    "image": "uploads/jnrwatermelonbubblegum_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Pastèque Glacée",
+    "saveurs": "Pastèque, Fraîcheur",
+    "description": "Une saveur de pastèque fraîche accompagnée d'une sensation glacée.",
+    "image": "uploads/jnrwatermelonice_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  },
+  {
+    "nom": "Pastèque Pêche Mangue",
+    "saveurs": "Pastèque, Pêche, Mangue",
+    "description": "Une combinaison tropicale associant pastèque, pêche juteuse et mangue exotique.",
+    "image": "uploads/jnrwatermelonpeachmango_1.webp",
+    "format": "JNR Falcon Gem 28000",
+    "nicotine": "20mg"
+  }
+]
