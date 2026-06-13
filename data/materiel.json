@@ -103,6 +103,32 @@
     "stock": "Disponible",
     "ordre": 50
   },
+   {
+    "nom": "Magnum",
+    "marque": "Aspire",
+    "categorie": "Pods rechargeable",
+    "type": "Batterie intégrée",
+    "profil": "Intermédiaire",
+    "usage": "Puissance, Grande autonomie, Polyvalent",
+    "description": "3800 mAh • Grande contenance 6Ml • Très bonne autonomie",
+    "image": "uploads/magnum.webp",
+    "badge": "Grande contenance • Tirage Chicha ",
+    "stock": "Disponible",
+    "ordre": 51
+  },
+  {
+    "nom": "Magnum NANO",
+    "marque": "Aspire",
+    "categorie": "Pods rechargeable",
+    "type": "Batterie intégrée",
+    "profil": "Intermédiaire",
+    "usage": "Puissance, Grande autonomie, Polyvalent",
+    "description": "1800 mAh • Grande contenance 6Ml",
+    "image": "uploads/magnumnano.webp",
+    "badge": "Grande contenance 6Ml • Tirage Chicha ",
+    "stock": "Disponible",
+    "ordre": 52
+  },
   {
     "nom": "Luxe XR Max 2",
     "marque": "Vaporesso",
@@ -114,7 +140,7 @@
     "image": "uploads/luxefinal.webp",
     "badge": "Grande autonomie",
     "stock": "Disponible",
-    "ordre": 51
+    "ordre": 53
   },
   {
     "nom": "Box batterie intégrée Solo 3",
