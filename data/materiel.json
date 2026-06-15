@@ -165,7 +165,7 @@
     "description": "Batterie intégrée • Bonne autonomie",
     "image": "uploads/huracan-lx.webp",
     "badge": "Meilleure vente",
-    "stock": "Disponible",
+    "stock": "Derniere pieces disponible",
     "ordre": 101
   },
   {
@@ -204,7 +204,7 @@
     "description": "Simple accu 18650 • Finition premium • Jusqu'à 100W",
     "image": "uploads/centaurus-m100-v2.webp",
     "badge": "Premium",
-    "stock": "Disponible",
+    "stock": "Derniere pieces disponible",
     "ordre": 152
   },
   {
@@ -230,7 +230,7 @@
     "description": "Simple accu 21700 • Légère • Jusqu'à 100W",
     "image": "uploads/centaurus-n100.webp",
     "badge": "21700",
-    "stock": "Disponible",
+    "stock": "Derniere pieces disponible",
     "ordre": 201
   },
   {
@@ -282,7 +282,7 @@
     "description": "Double accu 18650 • Finition premium • 200W",
     "image": "uploads/centaurus-m200-asakuza.webp",
     "badge": "Best Seller",
-    "stock": "Disponible",
+    "stock": "Derniere pieces disponible",
     "ordre": 253
   },
   {
@@ -295,7 +295,7 @@
     "description": "Double accu 18650 • Édition Sakura • 200W",
     "image": "uploads/centaurus-m200-sakura.webp",
     "badge": "Édition limitée",
-    "stock": "Disponible",
+    "stock": "Derniere pieces disponible",
     "ordre": 254
   },
   {
