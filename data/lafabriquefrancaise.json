@@ -5,7 +5,7 @@
     "description": "Une délicieuse crème vanillée inspirée du célèbre dessert français, sublimée par une touche de caramel fondant.",
     "format": "50ml",
     "nicotine": "0mg",
-    "image": "uploads/ile-flottante-50ml-la-fabrique-francaise.jpg"
+    "image": "uploads/ile-flottante-50ml-la-fabrique-francaise.webp"
   },
   {
     "nom": "Mille-Feuille",
@@ -13,7 +13,7 @@
     "description": "Une recette gourmande reprenant les saveurs du célèbre mille-feuille avec sa crème pâtissière vanillée et ses notes feuilletées.",
     "format": "50ml",
     "nicotine": "0mg",
-    "image": "uploads/le-mille-feuille-50ml-la-fabrique-francaise.jpg"
+    "image": "uploads/le-mille-feuille-50ml-la-fabrique-francaise.webp"
   },
   {
     "nom": "Saint-Honoré",
@@ -21,7 +21,7 @@
     "description": "Une interprétation fidèle du célèbre Saint-Honoré mêlant crème pâtissière onctueuse, pâte à choux et caramel.",
     "format": "50ml",
     "nicotine": "0mg",
-    "image": "uploads/le-saint-honore-eliquide-la-fabrique-francaise-50ml.jpg"
+    "image": "uploads/le-saint-honore-eliquide-la-fabrique-francaise-50ml.webp"
   },
   {
     "nom": "Opéra",
@@ -29,7 +29,7 @@
     "description": "Une recette raffinée inspirée du gâteau Opéra, associant café intense, chocolat et crème gourmande.",
     "format": "50ml",
     "nicotine": "0mg",
-    "image": "uploads/l-opera-50ml-la-fabrique-francaise.jpg"
+    "image": "uploads/l-opera-50ml-la-fabrique-francaise.webp"
   },
   {
     "nom": "Tiramisu",
@@ -37,6 +37,6 @@
     "description": "Retrouvez toute la gourmandise du célèbre dessert italien avec ses notes de café, mascarpone et cacao.",
     "format": "50ml",
     "nicotine": "0mg",
-    "image": "uploads/tiramisu-50ml-la-fabrique-francaise.jpg"
+    "image": "uploads/tiramisu-50ml-la-fabrique-francaise.webp"
   }
 ]
