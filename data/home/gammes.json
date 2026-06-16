@@ -88,6 +88,14 @@
     "bouton": "Voir la gamme"
   },
   {
+  "titre": "Prestige",
+  "categorie": "Évasion fruitée",
+  "description": "Une invitation au voyage à travers des créations colorées, fraîches et généreuses, inspirées des plus belles associations fruitées.",
+  "image": "uploads/prestigefinal.webp",
+  "lien": "prestige.html",
+  "bouton": "Découvrir"
+},
+  {
   "titre": "Mexican Cartel",
   "categorie": "E-liquides Fruités",
   "description": "Des recettes fruitées explosives mêlant fruits exotiques, limonade, cactus et fruits rouges dans un univers coloré inspiré du Mexique.",
