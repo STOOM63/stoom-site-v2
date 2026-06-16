@@ -30,5 +30,13 @@
     "image": "uploads/jnrfinal.webp",
     "lien": "jnr.html",
     "bouton": "Découvrir"
+  },
+  {
+    "titre": "La fabrique francaise",
+    "categorie": "Nouveauté délicieusement gourmande",
+    "description": "Retrouvez tous les grands classiques de la patisserie Francaise, à consommer sans modération.",
+    "image": "uploads/lafabriquefrancaise.webp",
+    "lien": "lafabriquefrancaise.html",
+    "bouton": "Découvrir"
   }
 ]
