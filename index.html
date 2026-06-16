@@ -19,6 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="preload" as="image" href="uploads/premierepage.webp" fetchpriority="high">
 
 <style>
 :root{
@@ -780,6 +781,23 @@ footer{
     min-height:330px;
   }
 }
+
+/* Optimisation chargement images */
+img{
+  content-visibility:auto;
+}
+
+.catalog-img,
+.small-product img,
+.material-visual img{
+  transform:translateZ(0);
+}
+
+.home-section{
+  content-visibility:auto;
+  contain-intrinsic-size:1px 720px;
+}
+
 </style>
 </head>
 
@@ -922,7 +940,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
       </div>
 
       <div class="material-visual">
-        <img src="uploads/materiel.webp" alt="Matériel vape disponible chez STOOM Clermont-Ferrand">
+        <img src="uploads/materiel.webp" alt="Matériel vape disponible chez STOOM Clermont-Ferrand" loading="lazy" decoding="async">
       </div>
     </a>
   </div>
@@ -974,7 +992,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
       </div>
 
       <div class="material-visual">
-        <img src="uploads/sixvape.jpg" alt="Jeux concours STOOM Clermont-Ferrand">
+        <img src="uploads/sixvape.jpg" alt="Jeux concours STOOM Clermont-Ferrand" loading="lazy" decoding="async">
       </div>
     </a>
   </div>
@@ -1052,7 +1070,7 @@ function escapeHtml(str){
 
 async function loadJson(path,fallback){
   try{
-    const r = await fetch(path,{cache:'no-store'});
+    const r = await fetch(path);
     if(!r.ok) return fallback;
     const data = await r.json();
     return Array.isArray(data) ? data : fallback;
