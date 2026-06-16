@@ -1,0 +1,42 @@
+[
+  {
+    "nom": "Île Flottante",
+    "saveurs": "Vanille, Caramel",
+    "description": "Une délicieuse crème vanillée inspirée du célèbre dessert français, sublimée par une touche de caramel fondant.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/ile-flottante-50ml-la-fabrique-francaise.jpg"
+  },
+  {
+    "nom": "Mille-Feuille",
+    "saveurs": "Pâte feuilletée, Crème pâtissière, Vanille",
+    "description": "Une recette gourmande reprenant les saveurs du célèbre mille-feuille avec sa crème pâtissière vanillée et ses notes feuilletées.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/le-mille-feuille-50ml-la-fabrique-francaise.jpg"
+  },
+  {
+    "nom": "Saint-Honoré",
+    "saveurs": "Choux, Crème pâtissière, Caramel",
+    "description": "Une interprétation fidèle du célèbre Saint-Honoré mêlant crème pâtissière onctueuse, pâte à choux et caramel.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/le-saint-honore-eliquide-la-fabrique-francaise-50ml.jpg"
+  },
+  {
+    "nom": "Opéra",
+    "saveurs": "Café, Chocolat, Crème",
+    "description": "Une recette raffinée inspirée du gâteau Opéra, associant café intense, chocolat et crème gourmande.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/l-opera-50ml-la-fabrique-francaise.jpg"
+  },
+  {
+    "nom": "Tiramisu",
+    "saveurs": "Café, Mascarpone, Cacao",
+    "description": "Retrouvez toute la gourmandise du célèbre dessert italien avec ses notes de café, mascarpone et cacao.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/tiramisu-50ml-la-fabrique-francaise.jpg"
+  }
+]
