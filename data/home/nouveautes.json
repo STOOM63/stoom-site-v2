@@ -32,6 +32,14 @@
     "bouton": "Découvrir"
   },
   {
+  "titre": "Prestige",
+  "categorie": "Évasion fruitée",
+  "description": "Une invitation au voyage à travers des créations colorées, fraîches et généreuses, inspirées des plus belles associations fruitées.",
+  "image": "uploads/prestigefinal.webp",
+  "lien": "prestige.html",
+  "bouton": "Découvrir"
+},
+ {
     "titre": "La fabrique francaise",
     "categorie": "Nouveauté délicieusement gourmande",
     "description": "Retrouvez tous les grands classiques de la patisserie Francaise, à consommer sans modération.",
