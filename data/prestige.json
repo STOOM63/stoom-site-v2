@@ -1,0 +1,50 @@
+[
+  {
+    "nom": "Cactus Kiwi",
+    "saveurs": "Cactus, Kiwi",
+    "description": "Une association originale entre la fraîcheur végétale du cactus et les notes fruitées du kiwi.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/cactus-kiwi-prestige-fruits-50-ml.webp"
+  },
+  {
+    "nom": "Groseille Cassis Framboise",
+    "saveurs": "Groseille, Cassis, Framboise",
+    "description": "Un mélange généreux de fruits rouges où la groseille, le cassis et la framboise s'équilibrent parfaitement.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/eliquide-groseille-cassis-framboise-50-ml-prestige.webp"
+  },
+  {
+    "nom": "Fraise Blanche Pêche Violette",
+    "saveurs": "Fraise blanche, Pêche, Violette",
+    "description": "Une recette délicate mêlant la douceur de la fraise blanche, la pêche juteuse et une touche florale de violette.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/fraise-blanche-peche-violette-50-ml.webp"
+  },
+  {
+    "nom": "Fraise Mûre",
+    "saveurs": "Fraise, Mûre",
+    "description": "Une alliance fruitée entre la gourmandise de la fraise et l'intensité de la mûre.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/fraise-mure-0mg-50ml-prestige-fruits.webp"
+  },
+  {
+    "nom": "Fruit du Dragon Pastèque Citron Vert",
+    "saveurs": "Fruit du dragon, Pastèque, Citron vert",
+    "description": "Une recette exotique associant fruit du dragon, pastèque rafraîchissante et citron vert acidulé.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/fruit-du-dragon-pasteque-citron-vert-0mg-50ml-prestige-fruits.webp"
+  },
+  {
+    "nom": "Mangoustan Litchi Kiwi",
+    "saveurs": "Mangoustan, Litchi, Kiwi",
+    "description": "Un mélange exotique et dépaysant où le mangoustan, le litchi et le kiwi se complètent à merveille.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/mangoustan-litchi-kiwi-50ml.webp"
+  }
+]
