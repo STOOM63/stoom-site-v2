@@ -1,35 +1,35 @@
 [
   {
-  "titre": "Origin's",
-  "categorie": "E-Liquides Classiques Auvergnats",
-  "description": "Des saveurs tabac réalistes, peu sucrées, idéales pour accompagner le sevrage.",
-  "image": "uploads/origins-ambiance.webp",
-  "lien": "origins.html",
-  "bouton": "Voir la gamme"
-},
+    "titre": "Origin's",
+    "categorie": "E-Liquides Classiques Auvergnats",
+    "description": "Des saveurs tabac réalistes, peu sucrées, idéales pour accompagner le sevrage.",
+    "image": "uploads/origins-ambiance.webp",
+    "lien": "origins.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
-  "titre": "Flavour Power",
-  "categorie": "E-liquides auvergnats",
-  "description": "Découvrez l'univers Flavour Power : fruités, frais, gourmands, classiques, cocktails et bien plus encore.",
-  "image": "uploads/flavourpowerheader.webp",
-  "lien": "flavourpower.html",
-  "bouton": "Voir les gammes"
-},
+    "titre": "Flavour Power",
+    "categorie": "E-liquides auvergnats",
+    "description": "Découvrez l'univers Flavour Power : fruités, frais, gourmands, classiques, cocktails et bien plus encore.",
+    "image": "uploads/flavourpowerheader.webp",
+    "lien": "flavourpower.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
-  "titre": "JNR",
-  "categorie": "Puffs rechargeables",
-  "description": "Vapez stylé ! La star du moment !",
-  "image": "uploads/jnrvignette.webp",
-  "lien": "jnr.html",
-  "bouton": "Voir les gammes"
-},
+    "titre": "JNR",
+    "categorie": "Puffs rechargeables",
+    "description": "Vapez stylé ! La star du moment !",
+    "image": "uploads/jnrvignette.webp",
+    "lien": "jnr.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
     "titre": "Vape City",
     "categorie": "E-liquides Fruités Frais",
     "description": "Fruités intenses et recettes fraîches.",
     "image": "uploads/vapecityambiance.webp",
     "lien": "vapecity.html",
-    "bouton": "Voir la gamme"
+    "bouton": "Je fonce découvrir"
   },
   {
     "titre": "Le Perfect Match",
@@ -37,7 +37,7 @@
     "description": "Gamme Flavour Power fabriquée en Auvergne.",
     "image": "uploads/perfectmatchambiance.webp",
     "lien": "leperfectmatch.html",
-    "bouton": "Voir la gamme"
+    "bouton": "Je fonce découvrir"
   },
   {
     "titre": "Petit Nuage",
@@ -45,102 +45,103 @@
     "description": "Les eliquides Petit Nuage se distinguent par leur simplicité et leur légèreté.",
     "image": "uploads/petitnuagebandeau2.webp",
     "lien": "petitnuage.html",
-    "bouton": "Voir la gamme"
+    "bouton": "Je fonce découvrir"
   },
- {
+  {
     "titre": "Power Juice",
     "categorie": "E-liquides auvergnats frais et non frais",
     "description": "La puissance des arômes sur une base boisson MONSTER, une recette qui boostera tes journées !",
     "image": "uploads/powerjuiceambiance.webp",
     "lien": "powerjuice.html",
-    "bouton": "Voir la gamme"
+    "bouton": "Je fonce découvrir"
   },
-    {
+  {
     "titre": "Six Vape",
     "categorie": "Nouveauté liquide",
     "description": "Bienvenue dans l'univers SIX VAPE, une gamme inspirée des plus belles destinations de la côte de Miami.",
     "image": "uploads/sixvapeambiance.webp",
     "lien": "sixvape.html",
-    "bouton": "Découvrir"
+    "bouton": "Je fonce découvrir"
   },
   {
-  "titre": "Fighter Fuel",
-  "categorie": "Fruités frais",
-  "description": "Fruit du dragon, grenade, fruits rouges, pêche, ananas, kiwi et recettes X Enfer ultra fraîches. Une des gammes les plus emblématiques de la vape fruitée.",
-  "image": "uploads/fighterfuelambiance.webp",
-  "lien": "fighterfuel.html",
-  "bouton": "Découvrir"
-},
+    "titre": "Fighter Fuel",
+    "categorie": "Fruités frais",
+    "description": "Fruit du dragon, grenade, fruits rouges, pêche, ananas, kiwi et recettes X Enfer ultra fraîches.",
+    "image": "uploads/fighterfuelambiance.webp",
+    "lien": "fighterfuel.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
-  "titre": "Pep's",
-  "categorie": "E-liquides Boissons",
-  "description": "Des recettes cola originales déclinées en plusieurs versions fraîches et gourmandes.",
-  "image": "uploads/pepsambiance.webp",
-  "lien": "peps.html",
-  "bouton": "Voir la gamme"
-},
+    "titre": "Pep's",
+    "categorie": "E-liquides Boissons",
+    "description": "Des recettes cola originales déclinées en plusieurs versions fraîches et gourmandes.",
+    "image": "uploads/pepsambiance.webp",
+    "lien": "peps.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
     "titre": "Vape of Legend",
     "categorie": "E-liquides Fruités Frais",
     "description": "Une explosion de saveurs et fraîcheur.",
     "image": "uploads/vapeoflegendambiance.webp",
     "lien": "vapeoflegend.html",
-    "bouton": "Voir la gamme"
+    "bouton": "Je fonce découvrir"
   },
   {
-  "titre": "Prestige",
-  "categorie": "Évasion fruitée",
-  "description": "Une invitation au voyage à travers des créations colorées, fraîches et généreuses, inspirées des plus belles associations fruitées.",
-  "image": "uploads/prestigefinal2.webp",
-  "lien": "prestige.html",
-  "bouton": "Découvrir"
-},
+    "titre": "Prestige",
+    "categorie": "Évasion fruitée",
+    "description": "Une invitation au voyage à travers des créations colorées, fraîches et généreuses.",
+    "image": "uploads/prestigefinal2.webp",
+    "lien": "prestige.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
-  "titre": "Mexican Cartel",
-  "categorie": "E-liquides Fruités",
-  "description": "Des recettes fruitées explosives mêlant fruits exotiques, limonade, cactus et fruits rouges dans un univers coloré inspiré du Mexique.",
-  "image": "uploads/mexicancartelambiance.webp",
-  "lien": "mexicancartel.html",
-  "bouton": "Voir la gamme"
-},
+    "titre": "Liquideo",
+    "categorie": "E-liquides français",
+    "description": "Découvrez l’univers Liquideo : des créations accessibles, variées et généreuses.",
+    "image": "uploads/liquideofinal.webp",
+    "lien": "liquideo.html",
+    "bouton": "Je fonce découvrir"
+  },
+  {
+    "titre": "Mexican Cartel",
+    "categorie": "E-liquides Fruités",
+    "description": "Des recettes fruitées explosives dans un univers coloré inspiré du Mexique.",
+    "image": "uploads/mexicancartelambiance.webp",
+    "lien": "mexicancartel.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
     "titre": "Shojo",
     "categorie": "E-liquides Fruités Frais",
-    "description": "La marque Shojo propose des e-liquides fruités frais inspirés de l'univers du manga et du gaming.",
+    "description": "Des e-liquides inspirés de l'univers manga et gaming.",
     "image": "uploads/shojoambiance.webp",
     "lien": "shojo.html",
-    "bouton": "Voir la gamme"
+    "bouton": "Je fonce découvrir"
   },
   {
-  "titre": "Cebueno",
-  "categorie": "E-Liquides Gourmands",
-  "description": "Desserts, biscuits, crèmes et recettes gourmandes : une collection riche en saveurs pour les vapoteurs à la recherche de plaisir et de douceur au quotidien.",
-  "image": "uploads/cebuenoambiance.webp",
-  "lien": "cebueno.html",
-  "bouton": "Découvrir"
-},
-    {
-  "titre": "Fruity Fuel",
-  "categorie": "E-liquides fruités non frais",
-  "description": "Des recettes fruitées pour une vape pleine de peps.",
-  "image": "uploads/fruityfuelambiance.webp",
-  "lien": "fruityfuel.html",
-  "bouton": "Voir la gamme"
-{
-  "titre": "Liquideo",
-  "categorie": "E-liquides français",
-  "description": "Découvrez l’univers Liquideo : des créations accessibles, variées et généreuses, pensées pour accompagner tous les profils de vapoteurs.",
-  "image": "uploads/liquideofinal.webp",
-  "lien": "liquideo.html",
-  "bouton": "Découvrir"
-},
+    "titre": "Cebueno",
+    "categorie": "E-Liquides Gourmands",
+    "description": "Desserts, biscuits, crèmes et recettes gourmandes.",
+    "image": "uploads/cebuenoambiance.webp",
+    "lien": "cebueno.html",
+    "bouton": "Je fonce découvrir"
+  },
+  {
+    "titre": "Fruity Fuel",
+    "categorie": "E-liquides fruités non frais",
+    "description": "Des recettes fruitées pour une vape pleine de peps.",
+    "image": "uploads/fruityfuelambiance.webp",
+    "lien": "fruityfuel.html",
+    "bouton": "Je fonce découvrir"
+  },
   {
     "titre": "La fabrique francaise",
     "categorie": "Nouveauté délicieusement gourmande",
-    "description": "Retrouvez tous les grands classiques de la patisserie Francaise, à consommer sans modération.",
+    "description": "Retrouvez tous les grands classiques de la pâtisserie française.",
     "image": "uploads/lafabriquefrancaise.webp",
     "lien": "lafabriquefrancaise.html",
-    "bouton": "Découvrir"
+    "bouton": "Je fonce découvrir"
   },
   {
     "titre": "DIY STOOM",
@@ -148,6 +149,6 @@
     "description": "Bases STOOM, boosters et calculateur de mélange.",
     "image": "uploads/diyambiance2.webp",
     "lien": "diy.html",
-    "bouton": "Voir le DIY"
+    "bouton": "Je fonce découvrir"
   }
 ]
