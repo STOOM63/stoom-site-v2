@@ -1,0 +1,66 @@
+[
+  {
+    "nom": "Freeze Grenade",
+    "saveurs": "Explosion fruitée et fraîche.",
+    "description": "Une recette intense mêlant fruits et fraîcheur extrême.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/e-liquide-freeze-grenade-50ml-freeze-liquideo.webp"
+  },
+  {
+    "nom": "Holy Queen",
+    "saveurs": "Bonbon arlequin.",
+    "description": "Une gourmandise colorée inspirée des célèbres bonbons fruités.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/eliquide-holyqueen-bonbon-arlequin50ml.webp"
+  },
+  {
+    "nom": "Freeze Sunrise",
+    "saveurs": "Orange, fraise.",
+    "description": "Une association fruitée et lumineuse aux notes estivales.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/e-liquide-sunrise-orange-fraise-50ml-freeze-liquideo.webp"
+  },
+  {
+    "nom": "Freeze Fruit Dragon",
+    "saveurs": "Fruit du dragon frais.",
+    "description": "Une saveur exotique relevée par une fraîcheur intense.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/freeze-fruit-dragon-50-ml.webp"
+  },
+  {
+    "nom": "Freeze Fruit Dragon Serpent",
+    "saveurs": "Fruit du dragon, fruit du serpent.",
+    "description": "Un mélange exotique original et rafraîchissant.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/freeze-fruit-dragon-serpent-50ml-liquideo.webp"
+  },
+  {
+    "nom": "Freeze Fruit du Serpent",
+    "saveurs": "Fruit du serpent frais.",
+    "description": "Une recette atypique aux accents exotiques et glacés.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/freeze-fruit-du-serpent-50ml-liquideo.webp"
+  },
+  {
+    "nom": "Fruittles",
+    "saveurs": "Bonbons fruités.",
+    "description": "Un cocktail gourmand inspiré des célèbres confiseries multicolores.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/fruittles-bonbon-skittles50ml-liquideo-tentation.webp"
+  },
+  {
+    "nom": "Mistyk",
+    "saveurs": "Fruit du dragon, granité.",
+    "description": "Une recette exotique et fraîche parfaite pour l'été.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/mistyk-fuit-dragon-granite-50ml.webp"
+  }
+]
