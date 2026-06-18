@@ -126,6 +126,13 @@
   "image": "uploads/fruityfuelambiance.webp",
   "lien": "fruityfuel.html",
   "bouton": "Voir la gamme"
+{
+  "titre": "Liquideo",
+  "categorie": "E-liquides français",
+  "description": "Découvrez l’univers Liquideo : des créations accessibles, variées et généreuses, pensées pour accompagner tous les profils de vapoteurs.",
+  "image": "uploads/liquideofinal.webp",
+  "lien": "liquideo.html",
+  "bouton": "Découvrir"
 },
   {
     "titre": "La fabrique francaise",
