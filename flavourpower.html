@@ -565,22 +565,21 @@
     }
 
     .section-heading{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-end;
-      gap:34px;
-      margin-bottom:30px;
-      padding-bottom:16px;
+      display:block;
+      max-width:980px;
+      margin-bottom:28px;
+      padding-bottom:17px;
       border-bottom:1px solid rgba(142,234,255,.18);
     }
 
     .section-heading h2{
+      max-width:none;
       margin:0;
       color:#fff;
       font-family:var(--serif);
-      font-size:clamp(2.45rem,4vw,4.15rem);
+      font-size:clamp(2.45rem,3.65vw,4rem);
       font-weight:400;
-      line-height:.94;
+      line-height:.96;
       letter-spacing:-.048em;
     }
 
@@ -600,8 +599,8 @@
     }
 
     .section-heading p{
-      max-width:535px;
-      margin:0;
+      max-width:720px;
+      margin:15px 0 0;
       color:var(--muted);
       font-size:.90rem;
       font-weight:600;
@@ -636,12 +635,17 @@
 
     .collection-card.large{
       grid-column:span 7;
-      min-height:344px;
+      min-height:332px;
+    }
+
+    .collection-card.feature{
+      grid-column:span 5;
+      min-height:332px;
     }
 
     .collection-card.wide{
       grid-column:span 6;
-      min-height:292px;
+      min-height:286px;
     }
 
     .collection-card.standard{grid-column:span 4}
@@ -672,14 +676,14 @@
       position:relative;
       z-index:1;
       width:100%;
-      padding:24px 24px 22px;
+      padding:21px 22px 20px;
     }
 
     .collection-card-content span{
       display:block;
-      margin-bottom:8px;
+      margin-bottom:7px;
       color:var(--cyan);
-      font-size:.58rem;
+      font-size:.55rem;
       font-weight:900;
       letter-spacing:.075em;
       text-transform:uppercase;
@@ -690,23 +694,23 @@
       margin:0;
       color:#fff;
       font-family:var(--serif);
-      font-size:clamp(1.9rem,3vw,3.15rem);
+      font-size:clamp(1.75rem,2.55vw,2.7rem);
       font-weight:400;
-      line-height:.92;
+      line-height:.95;
       letter-spacing:-.04em;
     }
 
     .collection-card-content p{
       max-width:510px;
-      margin:10px 0 0;
+      margin:9px 0 0;
       color:#d4e6ed;
-      font-size:.80rem;
+      font-size:.75rem;
       font-weight:600;
-      line-height:1.58;
+      line-height:1.52;
     }
 
     .collection-card.standard .collection-card-content h3{
-      font-size:2.1rem;
+      font-size:1.95rem;
     }
 
     /* Bloc local de marque, volontairement plus sobre. */
@@ -1226,6 +1230,7 @@
 
       .collection-card,
       .collection-card.large,
+      .collection-card.feature,
       .collection-card.wide,
       .collection-card.standard{
         grid-column:1;
@@ -1405,7 +1410,7 @@
         <div class="section-heading">
           <h2>Les univers <span>Flavour Power</span></h2>
           <p>
-            Choisissez une famille de saveurs pour consulter la sélection. Les références et disponibilités évoluent : la boutique reste le meilleur moyen d’affiner votre choix.
+            Choisissez une famille de saveurs, puis consultez les références associées. Les stocks évoluent : pour une demande précise, la boutique reste le meilleur repère.
           </p>
         </div>
 
@@ -1414,17 +1419,17 @@
             <img src="uploads/fp-fruites.webp" alt="E-liquides Flavour Power fruités" loading="lazy" decoding="async">
             <div class="collection-card-content">
               <span>Fruités</span>
-              <h3>Fruits du quotidien, recettes colorées.</h3>
-              <p>Fraise, pomme, pêche, abricot, fruits rouges et d’autres profils fruités à découvrir.</p>
+              <h3>Fruités</h3>
+              <p>Fraise, pomme, pêche, abricot, fruits rouges et autres recettes fruitées.</p>
             </div>
           </a>
 
-          <a class="collection-card wide" href="flavourpower-frais.html">
+          <a class="collection-card feature" href="flavourpower-frais.html">
             <img src="uploads/fp-frais.webp" alt="E-liquides Flavour Power frais et menthes" loading="lazy" decoding="async">
             <div class="collection-card-content">
               <span>Frais & menthes</span>
-              <h3>Un registre plus rafraîchissant.</h3>
-              <p>Menthes, recettes fruitées fraîches et sensations plus nettes.</p>
+              <h3>Frais & menthes</h3>
+              <p>Menthes, recettes fruitées fraîches et profils plus rafraîchissants.</p>
             </div>
           </a>
 
@@ -1459,8 +1464,8 @@
             <img src="uploads/fp-ivresse.webp" alt="Gamme Flavour Power Ivresse" loading="lazy" decoding="async">
             <div class="collection-card-content">
               <span>Ivresse</span>
-              <h3>Inspirations cocktail.</h3>
-              <p>Mojito, pina colada, rhum vanille, anis et recettes qui sortent du registre classique.</p>
+              <h3>Ivresse</h3>
+              <p>Mojito, pina colada, rhum vanille, anis et inspirations cocktail.</p>
             </div>
           </a>
 
@@ -1468,8 +1473,8 @@
             <img src="uploads/fp-energy.webp" alt="Gamme Flavour Power E-Nergy" loading="lazy" decoding="async">
             <div class="collection-card-content">
               <span>E-Nergy</span>
-              <h3>Boisson et cola.</h3>
-              <p>Des saveurs inspirées de boissons énergisantes et de soda cola.</p>
+              <h3>E-Nergy</h3>
+              <p>Des saveurs inspirées de boissons énergisantes et de cola.</p>
             </div>
           </a>
         </div>
