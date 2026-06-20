@@ -1607,6 +1607,456 @@ footer{
   }
 }
 
+
+/* Compagnon STOOM : assistant vendeur-technicien flottant. */
+.stoom-assistant{
+  position:fixed;
+  z-index:96;
+  right:22px;
+  bottom:22px;
+}
+
+.stoom-chat-launcher{
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:9px 17px 9px 10px;
+  border:1px solid rgba(142,234,255,.45);
+  border-radius:999px;
+  color:#f5fcff;
+  background:linear-gradient(145deg,rgba(9,33,46,.98),rgba(5,18,27,.98));
+  box-shadow:0 18px 46px rgba(0,0,0,.38),0 0 0 5px rgba(142,234,255,.05);
+  cursor:pointer;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,opacity .2s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.stoom-chat-launcher:hover,
+.stoom-chat-launcher:focus-visible{
+  transform:translateY(-3px);
+  border-color:var(--cyan);
+  box-shadow:0 22px 54px rgba(0,0,0,.42),0 0 0 6px rgba(142,234,255,.10);
+  outline:none;
+}
+
+.stoom-companion-mark{
+  position:relative;
+  width:44px;
+  height:44px;
+  flex:0 0 44px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.38);
+  border-radius:15px;
+  background:
+    radial-gradient(circle at 30% 20%,rgba(255,255,255,.62),transparent 18%),
+    linear-gradient(135deg,var(--blue),var(--cyan));
+  box-shadow:inset 0 -9px 16px rgba(2,40,55,.17);
+}
+
+.stoom-companion-mark::before{
+  content:"";
+  position:absolute;
+  top:17px;
+  left:11px;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#06131d;
+  box-shadow:16px 0 0 #06131d;
+}
+
+.stoom-companion-mark::after{
+  content:"";
+  position:absolute;
+  left:14px;
+  bottom:10px;
+  width:15px;
+  height:7px;
+  border:2px solid #06131d;
+  border-top:0;
+  border-radius:0 0 14px 14px;
+}
+
+.stoom-chat-launcher-copy{
+  display:grid;
+  gap:2px;
+  text-align:left;
+}
+
+.stoom-chat-launcher-copy small{
+  color:var(--cyan);
+  font-size:.52rem;
+  font-weight:900;
+  letter-spacing:.075em;
+  text-transform:uppercase;
+}
+
+.stoom-chat-launcher-copy strong{
+  color:#fff;
+  font-size:.76rem;
+  font-weight:900;
+}
+
+.stoom-chat-panel{
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:min(398px,calc(100vw - 32px));
+  height:min(620px,calc(100dvh - 110px));
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto;
+  overflow:hidden;
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(14px) scale(.98);
+  border:1px solid rgba(142,234,255,.34);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 98% 0%,rgba(142,234,255,.16),transparent 26%),
+    linear-gradient(170deg,#0a2533,#061721 72%);
+  box-shadow:0 32px 84px rgba(0,0,0,.48);
+  transition:opacity .22s ease,transform .22s ease,visibility .22s ease;
+}
+
+.stoom-chat-panel.is-open{
+  visibility:visible;
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+
+.stoom-chat-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:17px 17px 14px;
+  border-bottom:1px solid rgba(142,234,255,.16);
+  background:rgba(4,17,26,.34);
+}
+
+.stoom-chat-heading{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+
+.stoom-chat-heading .stoom-companion-mark{
+  width:38px;
+  height:38px;
+  flex-basis:38px;
+  border-radius:13px;
+}
+
+.stoom-chat-heading .stoom-companion-mark::before{
+  top:14px;
+  left:9px;
+  width:4px;
+  height:4px;
+  box-shadow:14px 0 0 #06131d;
+}
+
+.stoom-chat-heading .stoom-companion-mark::after{
+  left:12px;
+  bottom:8px;
+  width:13px;
+  height:6px;
+}
+
+.stoom-chat-heading small{
+  display:block;
+  margin-bottom:2px;
+  color:var(--cyan);
+  font-size:.53rem;
+  font-weight:900;
+  letter-spacing:.075em;
+  text-transform:uppercase;
+}
+
+.stoom-chat-heading strong{
+  display:block;
+  overflow:hidden;
+  color:#fff;
+  font-size:.92rem;
+  font-weight:900;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.stoom-chat-close{
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  display:grid;
+  place-items:center;
+  padding:0;
+  border:1px solid rgba(142,234,255,.23);
+  border-radius:12px;
+  color:#d8f6ff;
+  background:rgba(255,255,255,.04);
+  font-size:1.25rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+.stoom-chat-close:hover,
+.stoom-chat-close:focus-visible{
+  border-color:var(--cyan);
+  color:#06131d;
+  background:var(--cyan);
+  outline:none;
+}
+
+.stoom-chat-body{
+  min-height:0;
+  overflow-y:auto;
+  padding:15px;
+  scrollbar-color:rgba(142,234,255,.42) transparent;
+  scrollbar-width:thin;
+}
+
+.stoom-chat-messages{
+  display:grid;
+  gap:10px;
+}
+
+.stoom-chat-message{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:5px;
+  max-width:91%;
+}
+
+.stoom-chat-message.user{
+  justify-self:end;
+  align-items:flex-end;
+}
+
+.stoom-chat-message-label{
+  color:#9cc4d2;
+  font-size:.51rem;
+  font-weight:900;
+  letter-spacing:.065em;
+  text-transform:uppercase;
+}
+
+.stoom-chat-message-text{
+  margin:0;
+  padding:11px 13px;
+  border:1px solid rgba(142,234,255,.16);
+  border-radius:15px 15px 15px 4px;
+  color:#e7f8ff;
+  background:rgba(255,255,255,.06);
+  font-size:.78rem;
+  font-weight:600;
+  line-height:1.56;
+  white-space:pre-wrap;
+}
+
+.stoom-chat-message.user .stoom-chat-message-text{
+  border-color:transparent;
+  border-radius:15px 15px 4px 15px;
+  color:#06131d;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  font-weight:800;
+}
+
+.stoom-chat-quick{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  margin-top:13px;
+}
+
+.stoom-chat-quick button{
+  min-height:44px;
+  padding:8px 9px;
+  border:1px solid rgba(142,234,255,.22);
+  border-radius:12px;
+  color:#dff5fc;
+  background:rgba(255,255,255,.04);
+  font-size:.66rem;
+  font-weight:850;
+  line-height:1.25;
+  text-align:left;
+  cursor:pointer;
+}
+
+.stoom-chat-quick button:hover,
+.stoom-chat-quick button:focus-visible{
+  border-color:var(--cyan);
+  color:#06131d;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  outline:none;
+}
+
+.stoom-chat-typing{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  width:max-content;
+  padding:11px 13px;
+  border:1px solid rgba(142,234,255,.16);
+  border-radius:15px 15px 15px 4px;
+  background:rgba(255,255,255,.06);
+}
+
+.stoom-chat-typing span{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--cyan);
+  animation:stoomTyping 1.05s infinite ease-in-out;
+}
+
+.stoom-chat-typing span:nth-child(2){animation-delay:.14s}
+.stoom-chat-typing span:nth-child(3){animation-delay:.28s}
+
+@keyframes stoomTyping{
+  0%,100%{transform:translateY(0);opacity:.42}
+  50%{transform:translateY(-4px);opacity:1}
+}
+
+.stoom-chat-footer{
+  padding:12px;
+  border-top:1px solid rgba(142,234,255,.16);
+  background:rgba(4,17,26,.45);
+}
+
+.stoom-chat-form{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:8px;
+}
+
+.stoom-chat-input{
+  width:100%;
+  min-height:48px;
+  max-height:106px;
+  resize:vertical;
+  padding:13px;
+  border:1px solid rgba(142,234,255,.23);
+  border-radius:14px;
+  color:#effbff;
+  background:#081a24;
+  font-family:inherit;
+  font-size:.76rem;
+  font-weight:600;
+  line-height:1.42;
+  outline:none;
+}
+
+.stoom-chat-input::placeholder{color:#91afba}
+
+.stoom-chat-input:focus{
+  border-color:var(--cyan);
+  box-shadow:0 0 0 4px rgba(142,234,255,.09);
+}
+
+.stoom-chat-send{
+  min-width:91px;
+  padding:0 14px;
+  border:0;
+  border-radius:14px;
+  color:#06131d;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.stoom-chat-send:hover,
+.stoom-chat-send:focus-visible{
+  filter:brightness(1.05);
+  outline:2px solid #fff;
+  outline-offset:2px;
+}
+
+.stoom-chat-send:disabled,
+.stoom-chat-input:disabled{
+  cursor:not-allowed;
+  opacity:.62;
+}
+
+.stoom-chat-privacy{
+  margin:8px 3px 0;
+  color:#91afba;
+  font-size:.52rem;
+  font-weight:650;
+  line-height:1.4;
+}
+
+body.stoom-chat-open .stoom-chat-launcher{
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+}
+
+@media(max-width:980px){
+  .stoom-assistant{
+    right:10px;
+    bottom:82px;
+  }
+
+  .stoom-chat-panel{
+    right:0;
+    bottom:0;
+    width:min(430px,calc(100vw - 20px));
+    height:min(620px,calc(100dvh - 152px));
+  }
+}
+
+@media(max-width:640px){
+  .stoom-chat-launcher{
+    min-height:54px;
+    padding:7px 13px 7px 8px;
+  }
+
+  .stoom-companion-mark{
+    width:38px;
+    height:38px;
+    flex-basis:38px;
+    border-radius:13px;
+  }
+
+  .stoom-companion-mark::before{
+    top:14px;
+    left:9px;
+    width:4px;
+    height:4px;
+    box-shadow:14px 0 0 #06131d;
+  }
+
+  .stoom-companion-mark::after{
+    left:12px;
+    bottom:8px;
+    width:13px;
+    height:6px;
+  }
+
+  .stoom-chat-launcher-copy small{font-size:.48rem}
+  .stoom-chat-launcher-copy strong{font-size:.69rem}
+
+  .stoom-chat-panel{
+    border-radius:20px;
+  }
+
+  .stoom-chat-header{padding:14px}
+  .stoom-chat-body{padding:12px}
+  .stoom-chat-footer{padding:10px}
+  .stoom-chat-quick{gap:7px}
+  .stoom-chat-quick button{font-size:.61rem}
+  .stoom-chat-send{min-width:76px;padding:0 10px;font-size:.61rem}
+  .stoom-chat-message-text{font-size:.74rem}
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
@@ -2174,6 +2624,307 @@ initHome();
   window.addEventListener('resize', function(){
     if(window.innerWidth > 980 && toggle.getAttribute('aria-expanded') === 'true'){
       closeMenu(false);
+    }
+  });
+})();
+</script>
+
+
+<!-- Compagnon vendeur-technicien STOOM -->
+<aside class="stoom-assistant" id="stoomAssistant" aria-label="Assistant STOOM">
+  <button class="stoom-chat-launcher" id="stoomChatLauncher" type="button" aria-controls="stoomChatPanel" aria-expanded="false">
+    <span class="stoom-companion-mark" aria-hidden="true"></span>
+    <span class="stoom-chat-launcher-copy">
+      <small>Le compagnon STOOM</small>
+      <strong>Besoin d’un conseil&nbsp;?</strong>
+    </span>
+  </button>
+
+  <section class="stoom-chat-panel" id="stoomChatPanel" aria-label="Conversation avec l’assistant STOOM" aria-hidden="true">
+    <header class="stoom-chat-header">
+      <div class="stoom-chat-heading">
+        <span class="stoom-companion-mark" aria-hidden="true"></span>
+        <div>
+          <small>Conseil matériel, DIY et SAV</small>
+          <strong>Assistant STOOM</strong>
+        </div>
+      </div>
+      <button class="stoom-chat-close" id="stoomChatClose" type="button" aria-label="Fermer l’assistant">×</button>
+    </header>
+
+    <div class="stoom-chat-body" id="stoomChatBody">
+      <div class="stoom-chat-messages" id="stoomChatMessages" aria-live="polite" aria-relevant="additions text"></div>
+
+      <div class="stoom-chat-quick" id="stoomChatQuick">
+        <button type="button" data-prompt="Je dois changer ma résistance. Comment savoir laquelle prendre ?">Changer ma résistance</button>
+        <button type="button" data-prompt="Je cherche un matériel simple pour arrêter la cigarette.">Trouver mon matériel</button>
+        <button type="button" data-prompt="Peux-tu m’aider pour un calcul DIY ?">Conseil DIY</button>
+        <button type="button" data-prompt="Mon matériel fuit. Que puis-je vérifier ?">Mon matériel fuit</button>
+      </div>
+    </div>
+
+    <footer class="stoom-chat-footer">
+      <form class="stoom-chat-form" id="stoomChatForm">
+        <label class="sr-only" for="stoomChatInput">Votre question</label>
+        <textarea class="stoom-chat-input" id="stoomChatInput" rows="1" maxlength="1200" placeholder="Décris ton matériel ou ta question…"></textarea>
+        <button class="stoom-chat-send" id="stoomChatSend" type="submit">Envoyer</button>
+      </form>
+      <p class="stoom-chat-privacy">Évite d’envoyer des coordonnées, des données de santé ou des informations bancaires.</p>
+    </footer>
+  </section>
+</aside>
+
+<script>
+(function(){
+  const endpoint = "https://stoom-assistant-api.a-blanc63100.workers.dev/chat";
+  const maxQuestionsPerWindow = 5;
+  const usageWindowMs = 15 * 60 * 1000;
+  const usageStorageKey = "stoomAssistantUsageV1";
+  const maxHistoryMessages = 8;
+
+  const launcher = document.getElementById("stoomChatLauncher");
+  const panel = document.getElementById("stoomChatPanel");
+  const closeButton = document.getElementById("stoomChatClose");
+  const form = document.getElementById("stoomChatForm");
+  const input = document.getElementById("stoomChatInput");
+  const sendButton = document.getElementById("stoomChatSend");
+  const messages = document.getElementById("stoomChatMessages");
+  const quickPrompts = document.getElementById("stoomChatQuick");
+  const chatBody = document.getElementById("stoomChatBody");
+
+  if(!launcher || !panel || !closeButton || !form || !input || !sendButton || !messages || !quickPrompts || !chatBody){
+    return;
+  }
+
+  let history = [];
+  let greeted = false;
+  let pending = false;
+
+  function track(eventName, parameters){
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: eventName,
+      assistant_surface: "index",
+      ...(parameters || {})
+    });
+  }
+
+  function getUsage(){
+    try{
+      const saved = JSON.parse(sessionStorage.getItem(usageStorageKey) || "{}");
+      const now = Date.now();
+
+      if(!saved.startedAt || now - saved.startedAt > usageWindowMs){
+        return { startedAt: now, count: 0 };
+      }
+
+      return {
+        startedAt: saved.startedAt,
+        count: Number(saved.count || 0)
+      };
+    }catch(error){
+      return { startedAt: Date.now(), count: 0 };
+    }
+  }
+
+  function saveUsage(usage){
+    try{
+      sessionStorage.setItem(usageStorageKey, JSON.stringify(usage));
+    }catch(error){
+      // Le service reste utilisable même si le stockage navigateur est indisponible.
+    }
+  }
+
+  function canAskQuestion(){
+    const usage = getUsage();
+    return usage.count < maxQuestionsPerWindow;
+  }
+
+  function incrementUsage(){
+    const usage = getUsage();
+    usage.count += 1;
+    saveUsage(usage);
+  }
+
+  function scrollToLatest(){
+    requestAnimationFrame(function(){
+      chatBody.scrollTop = chatBody.scrollHeight;
+    });
+  }
+
+  function addMessage(role, text){
+    const item = document.createElement("article");
+    item.className = "stoom-chat-message " + role;
+
+    const label = document.createElement("span");
+    label.className = "stoom-chat-message-label";
+    label.textContent = role === "user" ? "Vous" : "Assistant STOOM";
+
+    const content = document.createElement("p");
+    content.className = "stoom-chat-message-text";
+    content.textContent = text;
+
+    item.append(label, content);
+    messages.appendChild(item);
+    scrollToLatest();
+
+    return item;
+  }
+
+  function addTyping(){
+    const item = document.createElement("article");
+    item.className = "stoom-chat-message assistant";
+    item.setAttribute("aria-label", "L’assistant rédige sa réponse");
+
+    const typing = document.createElement("div");
+    typing.className = "stoom-chat-typing";
+
+    for(let index = 0; index < 3; index += 1){
+      const dot = document.createElement("span");
+      dot.setAttribute("aria-hidden", "true");
+      typing.appendChild(dot);
+    }
+
+    item.appendChild(typing);
+    messages.appendChild(item);
+    scrollToLatest();
+
+    return item;
+  }
+
+  function greet(){
+    if(greeted) return;
+
+    greeted = true;
+    addMessage(
+      "assistant",
+      "Bonjour, je suis le compagnon STOOM. Je peux t’aider à trouver une cartouche ou une résistance compatible, préparer un DIY, vérifier un problème simple ou orienter ton choix de matériel."
+    );
+  }
+
+  function openChat(){
+    panel.classList.add("is-open");
+    panel.setAttribute("aria-hidden", "false");
+    launcher.setAttribute("aria-expanded", "true");
+    document.body.classList.add("stoom-chat-open");
+    greet();
+    track("stoom_assistant_open");
+    window.setTimeout(function(){
+      input.focus();
+    }, 120);
+  }
+
+  function closeChat(){
+    panel.classList.remove("is-open");
+    panel.setAttribute("aria-hidden", "true");
+    launcher.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("stoom-chat-open");
+    launcher.focus();
+  }
+
+  function setPending(value){
+    pending = value;
+    input.disabled = value;
+    sendButton.disabled = value;
+    sendButton.textContent = value ? "Réponse…" : "Envoyer";
+  }
+
+  function remember(role, text){
+    history.push({ role: role, content: text });
+
+    if(history.length > maxHistoryMessages){
+      history = history.slice(-maxHistoryMessages);
+    }
+  }
+
+  async function askAssistant(rawMessage, source){
+    const message = String(rawMessage || "").trim();
+
+    if(!message || pending) return;
+
+    if(!canAskQuestion()){
+      addMessage(
+        "assistant",
+        "Pour préserver le service, cette conversation est limitée à cinq questions sur quinze minutes. Pour une urgence matériel ou une compatibilité précise, appelle STOOM au 04 73 27 33 94 ou passe en boutique avec ton matériel."
+      );
+      return;
+    }
+
+    quickPrompts.hidden = true;
+    addMessage("user", message);
+    remember("user", message);
+    incrementUsage();
+    setPending(true);
+
+    const typing = addTyping();
+
+    try{
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          message: message,
+          history: history.slice(0, -1)
+        })
+      });
+
+      const data = await response.json().catch(function(){
+        return {};
+      });
+
+      typing.remove();
+
+      if(!response.ok || !data.reply){
+        throw new Error(data.error || "Réponse indisponible");
+      }
+
+      const reply = String(data.reply).trim();
+      addMessage("assistant", reply);
+      remember("assistant", reply);
+      track("stoom_assistant_question", {
+        assistant_source: source || "message"
+      });
+    }catch(error){
+      typing.remove();
+      addMessage(
+        "assistant",
+        "Je n’arrive pas à répondre pour le moment. Tu peux appeler STOOM au 04 73 27 33 94 ou venir avec ton matériel au 109 avenue Édouard Michelin à Clermont-Ferrand."
+      );
+      track("stoom_assistant_error");
+    }finally{
+      setPending(false);
+      input.focus();
+    }
+  }
+
+  launcher.addEventListener("click", openChat);
+  closeButton.addEventListener("click", closeChat);
+
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+    const message = input.value;
+    input.value = "";
+    askAssistant(message, "message");
+  });
+
+  quickPrompts.querySelectorAll("button[data-prompt]").forEach(function(button){
+    button.addEventListener("click", function(){
+      askAssistant(button.getAttribute("data-prompt"), "quick_prompt");
+    });
+  });
+
+  input.addEventListener("keydown", function(event){
+    if(event.key === "Enter" && !event.shiftKey){
+      event.preventDefault();
+      form.requestSubmit();
+    }
+  });
+
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape" && panel.classList.contains("is-open")){
+      closeChat();
     }
   });
 })();
