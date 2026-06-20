@@ -13,9 +13,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>STOOM Clermont-Ferrand | Boutique vape, e-liquides, matériel et conseil</title>
-<meta name="description" content="STOOM Clermont-Ferrand : boutique spécialisée en cigarette électronique, e-liquides, matériel, DIY et accompagnement personnalisé. Catalogue vitrine, pas de vente en ligne.">
+<title>Cigarette électronique Clermont-Ferrand | E-liquides & matériel – STOOM</title>
+<meta name="description" content="STOOM, boutique de cigarette électronique à Clermont-Ferrand : e-liquides, matériel vape, résistances, DIY et conseil personnalisé en magasin.">
 <meta name="theme-color" content="#06131d">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://stoom.fr/">
+<link rel="alternate" hreflang="fr-FR" href="https://stoom.fr/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="STOOM Clermont-Ferrand">
+<meta property="og:title" content="STOOM Clermont-Ferrand | Cigarette électronique, e-liquides et conseil">
+<meta property="og:description" content="E-liquides, matériel vape, DIY et conseil personnalisé dans votre boutique STOOM à Clermont-Ferrand.">
+<meta property="og:url" content="https://stoom.fr/">
+<meta property="og:image" content="https://stoom.fr/uploads/premierepage.webp">
+<meta property="og:image:alt" content="STOOM Clermont-Ferrand, boutique de cigarette électronique">
+
+<!-- X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="STOOM Clermont-Ferrand | Cigarette électronique et conseil">
+<meta name="twitter:description" content="E-liquides, matériel vape, DIY et accompagnement personnalisé en boutique.">
+<meta name="twitter:image" content="https://stoom.fr/uploads/premierepage.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1275,10 +1294,6 @@ footer{
   }
 }
 
-/* Optimisation chargement images */
-img{
-  content-visibility:auto;
-}
 
 .catalog-img,
 .small-product img,
@@ -1286,12 +1301,92 @@ img{
   transform:translateZ(0);
 }
 
-.home-section{
-  content-visibility:auto;
-  contain-intrinsic-size:1px 720px;
+
+
+/* SEO local : le lieu reste lisible dans le H1, sans casser le rendu premium. */
+.hero h1 .hero-location{
+  color:#fff;
+  font-style:normal;
+}
+
+.store-details{
+  position:relative;
+  z-index:1;
+  display:grid;
+  gap:10px;
+  margin:25px 0 2px;
+  padding-top:19px;
+  border-top:1px solid rgba(142,234,255,.18);
+}
+
+.store-detail{
+  display:grid;
+  grid-template-columns:82px minmax(0,1fr);
+  gap:10px;
+  align-items:baseline;
+  color:#c4d9e1;
+  font-size:.78rem;
+  line-height:1.45;
+}
+
+.store-detail strong{
+  color:var(--cyan);
+  font-size:.60rem;
+  font-weight:900;
+  letter-spacing:.065em;
+  text-transform:uppercase;
+}
+
+@media(max-width:640px){
+  .store-details{margin-top:20px;padding-top:16px}
+  .store-detail{grid-template-columns:70px minmax(0,1fr);font-size:.72rem}
+  .store-detail strong{font-size:.54rem}
 }
 
 </style>
+
+<!-- Données structurées : boutique locale STOOM -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Store", "LocalBusiness"],
+  "@id": "https://stoom.fr/#store",
+  "name": "STOOM Clermont-Ferrand",
+  "url": "https://stoom.fr/",
+  "image": "https://stoom.fr/uploads/premierepage.webp",
+  "description": "STOOM est une boutique de cigarette électronique à Clermont-Ferrand proposant e-liquides, matériel vape, résistances, DIY et conseil personnalisé en magasin.",
+  "telephone": "+33473273394",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "109 avenue Édouard Michelin",
+    "postalCode": "63100",
+    "addressLocality": "Clermont-Ferrand",
+    "addressRegion": "Auvergne-Rhône-Alpes",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.7803875,
+    "longitude": 3.1147126
+  },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:30",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body data-page="home">
@@ -1339,15 +1434,16 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 <section class="hero">
   <div class="container">
     <div>
-      <span class="badge">Catalogue vitrine STOOM</span>
+      <span class="badge">Boutique de cigarette électronique à Clermont-Ferrand</span>
 
       <h1>
-        La vape avec du vrai <span>conseil</span>
+        La cigarette électronique <span class="hero-location">à Clermont-Ferrand</span>,<br>
+        avec du vrai <span>conseil</span>
       </h1>
 
       <p>
-        Découvrez nos e-liquides, notre matériel, nos nouveautés et nos outils pratiques.
-        Le site vous aide à repérer les produits, la boutique vous aide à choisir correctement.
+        STOOM est votre boutique de cigarette électronique à Clermont-Ferrand :
+        e-liquides, matériel vape, DIY, nouveautés et conseil personnalisé pour choisir une vape adaptée à votre consommation.
       </p>
 
       <div class="hero-actions">
@@ -1389,7 +1485,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 <section class="home-section">
   <div class="container">
     <div class="section-title">
-      <h2>Nouveautés du moment</h2>
+      <h2>Nouveautés e-liquides du moment</h2>
       <p>Les arrivages et gammes à découvrir actuellement chez STOOM Clermont-Ferrand.</p>
     </div>
 
@@ -1400,7 +1496,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 <section class="home-section" id="gammes">
   <div class="container">
     <div class="section-title">
-      <h2>Nos univers</h2>
+      <h2>E-liquides, matériel vape et DIY</h2>
       <p>Liquides, gammes auvergnates, DIY, matériel et sélections boutique.</p>
     </div>
 
@@ -1442,7 +1538,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 <section class="home-section" id="produits">
   <div class="container">
     <div class="section-title">
-      <h2>Produits du moment</h2>
+      <h2>Produits disponibles en boutique</h2>
       <p>Une sélection courte, claire et mise à jour selon les produits à pousser en boutique.</p>
     </div>
 
@@ -1522,12 +1618,27 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
     <div class="home-panel">
       <span class="badge">Venir chez STOOM</span>
 
-      <h2>109 avenue Édouard Michelin</h2>
+      <h2>Votre boutique vape à Clermont-Ferrand</h2>
 
       <p>
         Boutique spécialisée en cigarette électronique à Clermont-Ferrand.
         Liquides, matériel, résistances, DIY, nouveautés et accompagnement en magasin.
       </p>
+
+      <div class="store-details" aria-label="Informations pratiques STOOM Clermont-Ferrand">
+        <div class="store-detail">
+          <strong>Adresse</strong>
+          <span>109 avenue Édouard Michelin · 63100 Clermont-Ferrand</span>
+        </div>
+        <div class="store-detail">
+          <strong>Téléphone</strong>
+          <span>04 73 27 33 94</span>
+        </div>
+        <div class="store-detail">
+          <strong>Horaires</strong>
+          <span>Lun–ven 8h30–19h · Sam 9h–19h</span>
+        </div>
+      </div>
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=109%20avenue%20Edouard%20Michelin%20631000%20Clermont-Ferrand" target="_blank" rel="noopener">Lancer l’itinéraire</a>
