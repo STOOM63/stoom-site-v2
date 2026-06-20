@@ -305,6 +305,10 @@ header{
 .hero .container{
   position:relative;
   z-index:1;
+  display:grid;
+  grid-template-columns:minmax(0,1.04fr) minmax(340px,.96fr);
+  align-items:end;
+  gap:46px;
 }
 
 .hero-copy{
@@ -348,6 +352,105 @@ header{
   font-weight:600;
   line-height:1.7;
 }
+
+.hero-aside{
+  position:relative;
+  min-height:358px;
+  overflow:hidden;
+  border:1px solid rgba(142,234,255,.24);
+  border-radius:24px;
+  background:#071720;
+  box-shadow:0 30px 70px rgba(0,0,0,.33);
+}
+
+.hero-aside::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(4,14,21,.04) 16%,rgba(4,14,21,.92) 100%),
+    linear-gradient(90deg,rgba(4,14,21,.12),transparent 65%);
+  pointer-events:none;
+}
+
+.hero-aside img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.93) contrast(1.04);
+}
+
+.hero-aside-content{
+  position:absolute;
+  z-index:1;
+  right:0;
+  bottom:0;
+  left:0;
+  padding:30px 28px 23px;
+}
+
+.hero-aside-content .kicker{
+  padding:6px 9px;
+  color:#c9f6ff;
+  font-size:.56rem;
+}
+
+.hero-aside h2{
+  max-width:420px;
+  margin:14px 0 10px;
+  color:#fff;
+  font-family:var(--serif);
+  font-size:clamp(2.1rem,3vw,3.35rem);
+  font-weight:400;
+  line-height:.92;
+  letter-spacing:-.045em;
+}
+
+.hero-aside p{
+  max-width:430px;
+  margin:0;
+  color:#d1e4eb;
+  font-size:.84rem;
+  font-weight:600;
+  line-height:1.6;
+}
+
+.hero-aside-meta{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin-top:19px;
+  border-top:1px solid rgba(255,255,255,.18);
+}
+
+.hero-aside-meta div{
+  padding-top:13px;
+}
+
+.hero-aside-meta div + div{
+  padding-left:18px;
+  border-left:1px solid rgba(255,255,255,.18);
+}
+
+.hero-aside-meta span{
+  display:block;
+  margin-bottom:5px;
+  color:var(--cyan);
+  font-size:.56rem;
+  font-weight:900;
+  letter-spacing:.065em;
+  text-transform:uppercase;
+}
+
+.hero-aside-meta strong{
+  display:block;
+  color:#fff;
+  font-size:.84rem;
+  font-weight:800;
+  line-height:1.35;
+}
+
 
 .hero-actions{
   display:flex;
@@ -1122,8 +1225,43 @@ footer{
   }
 
   .hero{
-    min-height:470px;
+    min-height:0;
     padding:62px 0 39px;
+  }
+
+  .hero .container{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .hero-aside{
+    min-height:255px;
+    border-radius:18px;
+  }
+
+  .hero-aside-content{
+    padding:22px 20px 19px;
+  }
+
+  .hero-aside h2{
+    margin:11px 0 8px;
+    font-size:2.35rem;
+  }
+
+  .hero-aside p{
+    font-size:.78rem;
+  }
+
+  .hero-aside-meta{
+    margin-top:14px;
+  }
+
+  .hero-aside-meta div{
+    padding-top:11px;
+  }
+
+  .hero-aside-meta strong{
+    font-size:.76rem;
   }
 
   .hero::before{
@@ -1330,6 +1468,25 @@ footer{
             <a class="btn btn-soft" href="tel:0473273394">Appeler la boutique</a>
           </div>
         </div>
+
+        <aside class="hero-aside" aria-label="Informations boutique STOOM">
+          <img src="uploads/boutique-interieur.webp" alt="Intérieur de la boutique STOOM Clermont-Ferrand">
+          <div class="hero-aside-content">
+            <span class="kicker">La boutique</span>
+            <h2>Le conseil avant le choix.</h2>
+            <p>Un passage simple, avec un échange adapté à votre besoin et à votre usage.</p>
+            <div class="hero-aside-meta">
+              <div>
+                <span>Semaine</span>
+                <strong>8h30 à 19h<br>sans coupure</strong>
+              </div>
+              <div>
+                <span>Samedi</span>
+                <strong>9h à 19h<br>sans coupure</strong>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
