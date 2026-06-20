@@ -89,14 +89,15 @@ a{text-decoration:none;color:inherit}
 
 /* Barre du haut et navigation : volontairement conservées à l’identique. */
 .top{
-  background:rgba(0,0,0,.24);
+  background:rgba(0,0,0,.20);
   text-align:center;
-  font-size:.72rem;
-  line-height:1.35;
-  padding:8px 14px;
-  color:#d8f5ff;
+  font-size:.58rem;
+  line-height:1.2;
+  padding:5px 14px;
+  color:#cfeaf4;
   font-weight:800;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  letter-spacing:.015em;
+  border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 header{
@@ -207,10 +208,10 @@ main::before{
 .hero{
   position:relative;
   overflow:hidden;
-  min-height:610px;
+  min-height:548px;
   display:flex;
   align-items:center;
-  padding:84px 0 72px;
+  padding:64px 0 58px;
   border-bottom:1px solid rgba(142,234,255,.13);
   background:#06131d;
 }
@@ -246,9 +247,9 @@ main::before{
   position:relative;
   z-index:1;
   display:grid;
-  grid-template-columns:minmax(0,1.12fr) minmax(330px,.88fr);
+  grid-template-columns:minmax(0,1.27fr) minmax(340px,.73fr);
   gap:54px;
-  align-items:end;
+  align-items:center;
 }
 
 .badge{
@@ -268,14 +269,14 @@ main::before{
 }
 
 .hero h1{
-  max-width:780px;
-  margin:20px 0 18px;
+  max-width:810px;
+  margin:18px 0 17px;
   color:#fff;
   font-family:var(--serif);
-  font-size:clamp(3.4rem,6vw,6.25rem);
+  font-size:clamp(3.05rem,4.15vw,5rem);
   font-weight:400;
-  line-height:.90;
-  letter-spacing:-.055em;
+  line-height:.91;
+  letter-spacing:-.058em;
   text-transform:none;
   text-wrap:balance;
 }
@@ -336,11 +337,17 @@ main::before{
 
 .hero-card{
   position:relative;
-  align-self:end;
-  padding:30px;
+  align-self:center;
+  min-height:344px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:34px;
   border-radius:22px;
-  background:linear-gradient(145deg,rgba(7,25,36,.94),rgba(4,15,23,.86));
-  border:1px solid rgba(142,234,255,.25);
+  background:
+    radial-gradient(circle at top right,rgba(142,234,255,.15),transparent 36%),
+    linear-gradient(145deg,rgba(7,25,36,.96),rgba(4,15,23,.90));
+  border:1px solid rgba(142,234,255,.27);
   border-left:3px solid var(--cyan);
   box-shadow:0 30px 70px rgba(0,0,0,.36);
   backdrop-filter:blur(10px);
@@ -1032,7 +1039,7 @@ footer{
 
   .hero{
     min-height:0;
-    padding:64px 0 56px;
+    padding:58px 0 52px;
   }
 
   .hero .container,
@@ -1086,7 +1093,12 @@ footer{
 
 @media(max-width:640px){
   .container{width:min(100% - 22px,1220px)}
-  .top{font-size:.66rem;padding:8px 12px}
+  .top{
+    font-size:.56rem;
+    padding:5px 10px;
+  }
+
+  .desktop-break{display:none}
 
   .nav{min-height:68px}
   .logo-mark{width:40px;height:40px}
@@ -1122,6 +1134,7 @@ footer{
   }
 
   .hero-card{
+    min-height:0;
     padding:24px;
     border-radius:18px;
     margin-top:8px;
@@ -1711,7 +1724,8 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
       <span class="badge">Boutique de cigarette électronique à Clermont-Ferrand</span>
 
       <h1>
-        La cigarette électronique <span class="hero-location">à Clermont-Ferrand</span>,<br>
+        La cigarette électronique<br class="desktop-break">
+        <span class="hero-location">à Clermont-Ferrand,</span><br class="desktop-break">
         avec du vrai <span>conseil</span>
       </h1>
 
@@ -1740,7 +1754,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
           <small>Avis Google</small>
         </div>
         <div class="hero-stat">
-          <b>4,9★</b>
+          <b>4,9 / 5</b>
           <small>Note moyenne</small>
         </div>
         <div class="hero-stat">
@@ -2152,26 +2166,8 @@ initHome();
   });
 
   document.addEventListener('keydown', function(event){
-    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    if(!isOpen) return;
-
-    if(event.key === 'Escape'){
+    if(event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true'){
       closeMenu(true);
-      return;
-    }
-
-    if(event.key === 'Tab'){
-      const focusables = [toggle].concat(Array.from(menu.querySelectorAll('a[href]')));
-      const first = focusables[0];
-      const last = focusables[focusables.length - 1];
-
-      if(event.shiftKey && document.activeElement === first){
-        event.preventDefault();
-        last.focus();
-      }else if(!event.shiftKey && document.activeElement === last){
-        event.preventDefault();
-        first.focus();
-      }
     }
   });
 
