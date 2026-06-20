@@ -2403,6 +2403,250 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+
+/* Correctif mobile prioritaire : le hero doit impérativement repasser sur une seule colonne. */
+@media(max-width:980px){
+  .hero .container{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:24px;
+  }
+
+  .hero .container > div:first-child,
+  .hero-assistant-card{
+    width:100%;
+    min-width:0;
+  }
+
+  .hero-assistant-card{
+    max-width:none;
+    margin-top:0;
+  }
+}
+
+@media(max-width:760px){
+  .hero{
+    padding:38px 0 46px;
+  }
+
+  .hero .container{
+    display:grid;
+    grid-template-columns:1fr !important;
+    gap:22px;
+  }
+
+  .hero h1{
+    max-width:100%;
+    font-size:clamp(2.85rem,14vw,4rem);
+    line-height:.91;
+  }
+
+  .hero p,
+  .assistant-hero-signal{
+    max-width:100%;
+  }
+
+  .assistant-hero-signal{
+    margin-top:16px;
+  }
+
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+    margin-top:20px;
+  }
+
+  .hero-actions .btn{
+    width:100%;
+  }
+
+  .hero-assistant-card{
+    min-height:0;
+    padding:18px;
+    border-radius:18px;
+  }
+
+  .hero-assistant-topline{
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .hero-assistant-topline strong{
+    max-width:none;
+    font-size:1.02rem;
+    line-height:1.16;
+  }
+
+  .hero-assistant-copy{
+    margin:14px 0;
+    font-size:.78rem;
+    line-height:1.5;
+  }
+
+  .hero-assistant-cta{
+    min-height:48px;
+    padding:0 14px;
+    font-size:.66rem;
+  }
+
+  .hero-assistant-services{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:6px;
+    margin-top:10px;
+  }
+
+  .hero-assistant-services span{
+    min-height:34px;
+    padding:7px;
+    font-size:.53rem;
+  }
+
+  .hero-stats-assistant{
+    margin-top:10px;
+  }
+
+  .hero-stats-assistant .hero-stat{
+    min-height:54px;
+    padding-top:9px;
+    padding-bottom:0;
+  }
+
+  /* Le compagnon reste accessible, mais compact pour ne plus masquer le contenu. */
+  .stoom-assistant{
+    right:15px;
+    bottom:92px;
+    z-index:89;
+  }
+
+  body.stoom-chat-open .stoom-assistant{
+    z-index:110;
+  }
+
+  .stoom-chat-launcher{
+    width:58px;
+    height:58px;
+    min-height:58px;
+    display:grid;
+    place-items:center;
+    padding:6px;
+    border-radius:50%;
+  }
+
+  .stoom-chat-launcher-copy{
+    display:none;
+  }
+
+  .stoom-chat-launcher::before{
+    inset:-4px;
+  }
+
+  .stoom-chat-launcher::after{
+    content:"";
+    top:0;
+    right:1px;
+    width:11px;
+    height:11px;
+    padding:0;
+    border:2px solid #06131d;
+    border-radius:50%;
+    background:var(--green);
+  }
+
+  .stoom-chat-launcher .stoom-companion-mark{
+    width:42px;
+    height:42px;
+    flex-basis:42px;
+    border-radius:14px;
+  }
+
+  .stoom-chat-launcher .stoom-companion-mark::before{
+    top:15px;
+    left:10px;
+    width:5px;
+    height:5px;
+    box-shadow:16px 0 0 #06131d;
+  }
+
+  .stoom-chat-launcher .stoom-companion-mark::after{
+    left:13px;
+    bottom:9px;
+    width:15px;
+    height:6px;
+  }
+
+  /* Quand le chat est ouvert, il se cale au-dessus de la barre Appeler / Itinéraire / Contact. */
+  .stoom-chat-panel{
+    position:fixed;
+    right:10px;
+    bottom:86px;
+    width:calc(100vw - 20px);
+    height:min(620px,calc(100dvh - 106px));
+    border-radius:20px;
+  }
+}
+
+
+/* Mobile : uniquement la bulle IA. Le bandeau complet reste réservé au PC. */
+@media(max-width:760px){
+  .stoom-assistant{
+    right:14px !important;
+    bottom:92px !important;
+    z-index:89;
+  }
+
+  .stoom-chat-launcher{
+    width:62px !important;
+    height:62px !important;
+    min-height:62px !important;
+    display:grid !important;
+    place-items:center !important;
+    padding:8px !important;
+    border-radius:50% !important;
+  }
+
+  .stoom-chat-launcher-copy{
+    display:none !important;
+  }
+
+  .stoom-chat-launcher::after{
+    content:"" !important;
+    top:1px !important;
+    right:1px !important;
+    width:12px !important;
+    height:12px !important;
+    padding:0 !important;
+    border:2px solid #06131d !important;
+    border-radius:50% !important;
+    background:var(--green) !important;
+  }
+
+  .stoom-chat-launcher::before{
+    inset:-5px !important;
+  }
+
+  .stoom-chat-launcher .stoom-companion-mark{
+    width:44px !important;
+    height:44px !important;
+    flex-basis:44px !important;
+    border-radius:15px !important;
+  }
+
+  .stoom-chat-launcher .stoom-companion-mark::before{
+    top:16px !important;
+    left:10px !important;
+    width:5px !important;
+    height:5px !important;
+    box-shadow:17px 0 0 #06131d !important;
+  }
+
+  .stoom-chat-launcher .stoom-companion-mark::after{
+    left:14px !important;
+    bottom:9px !important;
+    width:16px !important;
+    height:7px !important;
+  }
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
