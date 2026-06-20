@@ -2647,6 +2647,72 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+
+/* Chat compact : pas de zone vide, même avec peu de messages. */
+.stoom-assistant .sr-only{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+
+.stoom-chat-panel{
+  display:flex !important;
+  flex-direction:column !important;
+  height:auto !important;
+  max-height:min(620px,calc(100dvh - 110px)) !important;
+}
+
+.stoom-chat-header{
+  position:static !important;
+  top:auto !important;
+  z-index:auto !important;
+  flex:0 0 auto;
+  min-height:0 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+}
+
+.stoom-chat-body{
+  flex:0 1 auto;
+  min-height:0;
+  max-height:350px;
+  overflow-y:auto;
+}
+
+.stoom-chat-footer{
+  position:relative;
+  flex:0 0 auto;
+  min-height:0;
+}
+
+@media(max-width:980px){
+  .stoom-chat-panel{
+    height:auto !important;
+    max-height:calc(100dvh - 152px) !important;
+  }
+
+  .stoom-chat-body{
+    max-height:min(360px,calc(100dvh - 265px));
+  }
+}
+
+@media(max-width:760px){
+  .stoom-chat-panel{
+    height:auto !important;
+    max-height:calc(100dvh - 106px) !important;
+  }
+
+  .stoom-chat-body{
+    max-height:min(330px,calc(100dvh - 235px));
+  }
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
@@ -3248,7 +3314,7 @@ initHome();
   </button>
 
   <section class="stoom-chat-panel" id="stoomChatPanel" aria-label="Conversation avec l’assistant STOOM" aria-hidden="true">
-    <header class="stoom-chat-header">
+    <div class="stoom-chat-header" role="group" aria-label="En-tête de l’assistant">
       <div class="stoom-chat-heading">
         <span class="stoom-companion-mark" aria-hidden="true"></span>
         <div>
@@ -3257,7 +3323,7 @@ initHome();
         </div>
       </div>
       <button class="stoom-chat-close" id="stoomChatClose" type="button" aria-label="Fermer l’assistant">×</button>
-    </header>
+    </div>
 
     <div class="stoom-chat-body" id="stoomChatBody">
       <div class="stoom-chat-messages" id="stoomChatMessages" aria-live="polite" aria-relevant="additions text"></div>
