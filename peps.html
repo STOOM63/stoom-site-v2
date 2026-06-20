@@ -1478,8 +1478,8 @@
     <section class="brand-hero">
       <div class="container brand-hero-grid">
         <div class="brand-copy">
-          <span class="eyebrow">Pep's chez STOOM</span>
-          <h1>Pep's<br><span>à Clermont-Ferrand</span></h1>
+          <span class="eyebrow">Pep’s chez STOOM</span>
+          <h1>Pep’s<br><span>à Clermont-Ferrand</span></h1>
           <p>
             Retrouvez les e-liquides Pep’s chez STOOM Clermont-Ferrand. Une sélection de recettes fruitées, fraîches et originales autour du cola, de la cerise, du kiwi, du fruit du dragon, de la boisson énergisante, de la vanille et de notes fraîches.
           </p>
@@ -1490,7 +1490,7 @@
           </div>
         </div>
 
-        <aside class="brand-visual" aria-label="Univers Pep's">
+        <aside class="brand-visual" aria-label="Univers Pep’s">
           <img src="uploads/headpeps.webp" alt="E-liquides Pep’s fruités et frais chez STOOM Clermont-Ferrand" fetchpriority="high" decoding="async">
           <div class="brand-visual-content">
             <span>Univers Pep’s</span>
@@ -1501,11 +1501,11 @@
       </div>
     </section>
 
-    <section class="local-strip" aria-label="Informations Pep's STOOM">
+    <section class="local-strip" aria-label="Informations Pep’s STOOM">
       <div class="container local-strip-inner">
         <div class="local-strip-item">
           <span>En boutique</span>
-          <strong>Pep's disponible à Clermont-Ferrand</strong>
+          <strong>Pep’s disponible à Clermont-Ferrand</strong>
         </div>
         <div class="local-strip-item">
           <span>Adresse</span>
@@ -1521,7 +1521,7 @@
     <section class="section" id="catalogue">
       <div class="container">
         <div class="section-heading">
-          <h2>Les e-liquides <span>Pep's</span></h2>
+          <h2>Les e-liquides <span>Pep’s</span></h2>
           <p>
             Consultez les références affichées ci-dessous. Les stocks évoluent : pour une demande précise, appelez la boutique avant votre passage.
           </p>
@@ -1534,7 +1534,7 @@
           <strong>Une sélection à découvrir en boutique.</strong>
         </div>
 
-        <div class="catalog-toolbar" aria-label="Filtrer le catalogue Pep's">
+        <div class="catalog-toolbar" aria-label="Filtrer le catalogue Pep’s">
           <div class="field">
             <label for="filterSelect">Profil de saveur</label>
             <select class="filter-select" id="filterSelect">
@@ -1579,7 +1579,7 @@
             <a href="contact.html">Voir l’adresse, les horaires et préparer votre passage.</a>
           </div>
 
-          <aside class="brand-local-info" aria-label="Informations pratiques Pep's">
+          <aside class="brand-local-info" aria-label="Informations pratiques Pep’s">
             <div>
               <strong>Profil de la gamme</strong>
               <span>Des e-liquides aux profils fruités, frais et originaux autour du cola, de la cerise, du kiwi, du fruit du dragon, de la vanille et de la boisson énergisante.</span>
@@ -1600,7 +1600,7 @@
     <section class="section">
       <div class="container">
         <div class="section-heading">
-          <h2>Questions <span>Pep's</span></h2>
+          <h2>Questions <span>Pep’s</span></h2>
           <p>
             Trois repères simples pour trouver la gamme chez STOOM Clermont-Ferrand.
           </p>
@@ -1618,7 +1618,7 @@
           </article>
 
           <article class="faq-item">
-            <h3>Une référence Pep's est-elle disponible ?</h3>
+            <h3>Une référence Pep’s est-elle disponible ?</h3>
             <p>Les stocks peuvent évoluer. Pour un produit précis, le plus sûr reste de passer en boutique ou d’appeler avant votre déplacement.</p>
           </article>
         </div>
@@ -1629,7 +1629,7 @@
       <div class="container">
         <div class="final-card">
           <span class="eyebrow">STOOM Clermont-Ferrand</span>
-          <h2>Pep's, <span>à découvrir en boutique.</span></h2>
+          <h2>Pep’s, <span>à découvrir en boutique.</span></h2>
           <p>
             Repérez votre profil fruité, frais ou original ici, puis venez comparer les références et obtenir un conseil adapté à vos préférences.
           </p>
@@ -1712,7 +1712,7 @@
       return `
         <article class="product-card">
           <div class="product-image-wrap">
-            <img class="product-image" src="${escapeHtml(image)}" alt="${escapeHtml(item.nom || "E-liquide Pep's")}" loading="lazy" decoding="async">
+            <img class="product-image" src="${escapeHtml(image)}" alt="${escapeHtml(item.nom || "E-liquide Pep’s")}" loading="lazy" decoding="async">
           </div>
 
           <div class="product-content">
@@ -1740,14 +1740,14 @@
 
     try{
       const response = await fetch("data/peps.json?v=2", {cache:"no-store"});
-      if(!response.ok) throw new Error("Catalogue Pep's indisponible");
+      if(!response.ok) throw new Error("Catalogue Pep’s indisponible");
 
       const data = await response.json();
       allProducts = Array.isArray(data) ? data : [];
 
       if(allProducts.length === 0){
         grid.setAttribute("aria-busy","false");
-        grid.innerHTML = '<div class="empty">Aucun produit Pep's n’est affiché pour le moment.</div>';
+        grid.innerHTML = '<div class="empty">Aucun produit Pep’s n’est affiché pour le moment.</div>';
         count.textContent = "0";
         return;
       }
@@ -1755,7 +1755,7 @@
       renderProducts();
     }catch(error){
       grid.setAttribute("aria-busy","false");
-      grid.innerHTML = '<div class="empty">Impossible de charger les produits Pep's pour le moment.</div>';
+      grid.innerHTML = '<div class="empty">Impossible de charger les produits Pep’s pour le moment.</div>';
       count.textContent = "0";
     }
   }
