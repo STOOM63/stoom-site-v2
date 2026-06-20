@@ -1,1 +1,2068 @@
 
+{
+  "version": "1.1.0",
+  "mise_a_jour": "2026-06-20",
+  "source_catalogue": {
+    "fichier": "data/materiel.json",
+    "commit_sha": "b16c4ee35107a5991552393db451fcde598ee67a",
+    "principe": "Les compatibilités indiquées proviennent des descriptions du catalogue STOOM. Toute compatibilité absente ou ambiguë doit être confirmée par une photo nette, une référence imprimée ou la boutique."
+  },
+  "boutique": {
+    "nom": "STOOM Clermont-Ferrand",
+    "telephone": "0473273394",
+    "adresse": "109 avenue Édouard Michelin, 63100 Clermont-Ferrand",
+    "page_materiel": "materiel.html",
+    "page_contact": "contact.html"
+  },
+  "regles_assistant": {
+    "catalogue": [
+      "Ne recommander à la vente que des références présentes dans les fichiers catalogue STOOM.",
+      "Ne jamais garantir une disponibilité en stock : inviter le client à appeler ou passer en boutique pour confirmation.",
+      "Ne jamais inventer une compatibilité, une puissance ou une référence."
+    ],
+    "compatibilites": [
+      "Lorsqu'un matériel est marqué a_confirmer_reference_consommable, demander une photo nette du dessous de la cartouche ou de la résistance, ou orienter vers la boutique.",
+      "Pour une résistance amovible, demander la référence imprimée sur la résistance quand elle est lisible.",
+      "Pour une cartouche intégrée, demander le modèle exact et la valeur en ohm imprimée sous la cartouche."
+    ],
+    "securite": [
+      "Arrêter le diagnostic et orienter vers la boutique si un accu chauffe anormalement, est endommagé, gonflé, fuit, sent mauvais ou a subi un choc.",
+      "Ne jamais recommander de réparer, démonter ou utiliser un accu lithium endommagé.",
+      "En cas de doute sur la compatibilité d’une résistance ou d’une cartouche, demander une photo nette ou orienter vers la boutique."
+    ],
+    "sav": [
+      "Commencer par identifier le modèle exact, le consommable installé et le symptôme.",
+      "Proposer des vérifications simples avant toute conclusion : niveau de liquide, amorçage, puissance, propreté des contacts, fermeture de la cartouche ou du tank.",
+      "Orienter en boutique pour un défaut persistant, une fuite répétée, une panne électronique ou un doute de sécurité."
+    ]
+  },
+  "procedures": {
+    "cartouche_integree": [
+      "Retirer la cartouche usagée du matériel.",
+      "Remplir la nouvelle cartouche avec le liquide adapté en évitant le conduit central.",
+      "Laisser la cartouche neuve s’imbiber au moins 10 minutes avant la première utilisation.",
+      "Commencer avec quelques bouffées courtes et laisser le matériel ajuster la puissance si elle est automatique."
+    ],
+    "resistance_remplacable": [
+      "Vider le tank ou maintenir le tank à l’envers lorsque le modèle le permet.",
+      "Retirer la résistance usagée avec les doigts ou l’outil prévu par le fabricant.",
+      "Humidifier légèrement le coton visible de la nouvelle résistance avec quelques gouttes de liquide.",
+      "Installer la résistance neuve, remplir le réservoir, puis attendre au moins 10 minutes.",
+      "Reprendre à la puissance basse de la plage indiquée sur la résistance, puis augmenter progressivement si nécessaire."
+    ],
+    "cartouche_vide": [
+      "Retirer la cartouche du matériel.",
+      "Installer uniquement une résistance explicitement compatible avec cette cartouche.",
+      "Humidifier légèrement le coton de la résistance neuve avant remplissage.",
+      "Remplir la cartouche, attendre au moins 10 minutes et commencer doucement."
+    ]
+  },
+  "diagnostic_rapide": {
+    "gout_de_brule": [
+      "Vérifier que le niveau de liquide couvre bien les arrivées de liquide.",
+      "Vérifier que la résistance ou cartouche neuve a bien été amorcée.",
+      "Vérifier que la puissance n’est pas trop élevée pour la valeur en ohm.",
+      "Si le goût persiste après refroidissement et vérifications, remplacer le consommable et orienter vers la boutique si le doute reste."
+    ],
+    "fuite": [
+      "Vérifier que la cartouche ou le tank est correctement fermé.",
+      "Éviter de remplir au-delà de la limite et ne pas verser de liquide dans le conduit central.",
+      "Essuyer les contacts et l’intérieur du logement avant de remettre la cartouche.",
+      "Si la fuite persiste, demander une photo ou orienter vers la boutique."
+    ],
+    "pas_de_vapeur": [
+      "Vérifier la charge, la présence de liquide et la bonne connexion de la cartouche ou du tank.",
+      "Nettoyer délicatement les contacts secs avec un essuie-tout.",
+      "Essayer une cartouche ou résistance connue comme fonctionnelle lorsque cela est possible.",
+      "Ne jamais insister si le matériel chauffe anormalement ou affiche un comportement inhabituel."
+    ]
+  },
+  "familles_consommables": [
+    {
+      "id": "vaporesso-xros",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches XROS",
+      "marque": "Vaporesso",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches XROS"
+      },
+      "description_catalogue": "0.4 Ω • 0.6 Ω • 1.0 Ω • 1.2 Ω • Compatibles XROS, XROS Pro et XROS 5.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.4",
+          "profil": "plus aérien",
+          "conseil": "Réserver à un usage adapté à une cartouche 0.4 Ω ; confirmer le réglage sur le matériel."
+        },
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "1.0",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.2",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Vaporesso XROS 5 Mini"
+      ],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "vaporesso-vibe",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Vibe",
+      "marque": "Vaporesso",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Vibe SE"
+      },
+      "description_catalogue": "0.6 Ω / 0.8 Ω • Compatibles Vibe et Vibe SE.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Vaporesso Vibe SE"
+      ],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "geekvape-soul",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Soul",
+      "marque": "Geekvape",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Soul"
+      },
+      "description_catalogue": "0.6 Ω • 1.0 Ω • Compatibles Soul et Soul 2.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "1.0",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Geekvape Soul 2"
+      ],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "geekvape-peak",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Peak",
+      "marque": "Geekvape",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Peak"
+      },
+      "description_catalogue": "0.8 Ω • Compatibles Peak.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Geekvape Peak 2"
+      ],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "geekvape-digi-q",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Digi Q",
+      "marque": "Geekvape",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Digi Q"
+      },
+      "description_catalogue": "0.6 Ω • Compatibles Digi Q et Vista.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Geekvape Digi Q"
+      ],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "aspire-vilter",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Vilter",
+      "marque": "Aspire",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Vilter"
+      },
+      "description_catalogue": "0.8 Ω • 1.0 Ω • Compatibles Vilter et Vilter 2.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.0",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Aspire Vilter 2"
+      ],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "aspire-magnum",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Magnum",
+      "marque": "Aspire",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Magnum"
+      },
+      "description_catalogue": "0.25 Ω • Compatibles Magnum.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.25",
+          "profil": "tirage aérien / puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Aspire Magnum"
+      ],
+      "procedure": "cartouche_integree",
+      "notes": "La compatibilité avec Magnum NANO n’est pas ajoutée tant qu’elle n’est pas confirmée par une référence précise."
+    },
+    {
+      "id": "vaporesso-luxe-xr",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Luxe XR",
+      "marque": "Vaporesso",
+      "type": "cartouche_vide",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Luxe XR"
+      },
+      "description_catalogue": "Version MTL ou DTL compatible Luxe XR et GTX.",
+      "resistance_integree": false,
+      "options": [],
+      "materiels_compatibles_connus": [
+        "Vaporesso Luxe XR Max 2"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": "Cartouche vide : associer avec les résistances GTX appropriées. Demander MTL ou DTL avant de recommander."
+    },
+    {
+      "id": "vaporesso-armour-g",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Armour G",
+      "marque": "Vaporesso",
+      "type": "cartouche_vide",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Armour G"
+      },
+      "description_catalogue": "Cartouches vides compatibles Armour G et GTX.",
+      "resistance_integree": false,
+      "options": [],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": "Cartouche vide : associer avec les résistances GTX."
+    },
+    {
+      "id": "geekvape-force",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Force",
+      "marque": "Geekvape",
+      "type": "cartouche_vide",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Force"
+      },
+      "description_catalogue": "Cartouches vides compatibles Force.",
+      "resistance_integree": false,
+      "options": [],
+      "materiels_compatibles_connus": [
+        "Geekvape Aegis Force"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": "Le catalogue confirme la cartouche Force mais pas la famille de résistances. Ne pas annoncer de résistance sans photo ou vérification boutique."
+    },
+    {
+      "id": "vaporesso-luxe-x",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Luxe X",
+      "marque": "Vaporesso",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Luxe X"
+      },
+      "description_catalogue": "0.4 Ω • Compatibles Luxe X.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.4",
+          "profil": "plus aérien"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "vaporesso-eco-nano",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Eco Nano",
+      "marque": "Vaporesso",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Eco Nano"
+      },
+      "description_catalogue": "0.8 Ω • Grande autonomie 6 ml.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "vaporesso-veco-go",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Veco Go",
+      "marque": "Vaporesso",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Veco Go"
+      },
+      "description_catalogue": "0.6 Ω • Réservoir 5 ml.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "aspire-fluffi",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Fluffi",
+      "marque": "Aspire",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Fluffi"
+      },
+      "description_catalogue": "0.6 Ω • 1.0 Ω • Compatibles Fluffi.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "1.0",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "aspire-tg-pod",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches TG Pod",
+      "marque": "Aspire",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches TG Pod"
+      },
+      "description_catalogue": "0.8 Ω • 1.0 Ω • Compatibles Cyber G et TG Pod.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.0",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "voopoo-vmate",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches Vmate",
+      "marque": "Voopoo",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches Vmate"
+      },
+      "description_catalogue": "0.7 Ω • 1.0 Ω • 1.2 Ω • Compatibles Vmate.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.7",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "1.0",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.2",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "voopoo-ito",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches ITO",
+      "marque": "Voopoo",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches ITO"
+      },
+      "description_catalogue": "0.7 Ω • Compatibles Doric et ITO.",
+      "resistance_integree": true,
+      "options": [
+        {
+          "ohm": "0.7",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": ""
+    },
+    {
+      "id": "oxva-vprime",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Cartouches VPrime",
+      "marque": "OXVA",
+      "type": "cartouche",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Cartouches VPrime"
+      },
+      "description_catalogue": "Compatibles OXVA VPrime.",
+      "resistance_integree": true,
+      "options": [],
+      "materiels_compatibles_connus": [],
+      "procedure": "cartouche_integree",
+      "notes": "Valeur en ohm à relever sur la cartouche avant toute recommandation."
+    },
+    {
+      "id": "geekvape-b-series",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Geekvape B Series",
+      "marque": "Geekvape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Geekvape B Series"
+      },
+      "description_catalogue": "0.2 Ω • 0.3 Ω • 0.4 Ω • 0.6 Ω • 1.2 Ω • Compatibles B Series.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.3",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "1.2",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Geekvape Z Nano V3"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "geekvape-z-series",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Geekvape Z Series",
+      "marque": "Geekvape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Geekvape Z Series"
+      },
+      "description_catalogue": "0.15 Ω • 0.2 Ω • 0.4 Ω • Compatibles clearomiseurs Z Series.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "puissance modérée"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Geekvape Z Subohm 5",
+        "Geekvape Z Subohm SE"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "geekvape-z-xm",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Geekvape Z XM",
+      "marque": "Geekvape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Geekvape Z XM"
+      },
+      "description_catalogue": "0.15 Ω • 0.4 Ω • Version Boost • Compatibles Z XM.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "geekvape-m-series",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Geekvape M Series",
+      "marque": "Geekvape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Geekvape M Series"
+      },
+      "description_catalogue": "0.14 Ω • 0.15 Ω Quadra • 0.2 Ω Triple • Vape très puissante.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.14",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "geekvape-p-series",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Geekvape P Series",
+      "marque": "Geekvape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Geekvape P Series"
+      },
+      "description_catalogue": "0.2 Ω • 0.4 Ω • Compatibles P Series.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "vaporesso-gtx",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Vaporesso GTX",
+      "marque": "Vaporesso",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Vaporesso GTX"
+      },
+      "description_catalogue": "0.15 Ω • 0.2 Ω • 0.3 Ω • 0.4 Ω • 0.6 Ω • 0.8 Ω • 1.2 Ω.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.3",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.2",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Vaporesso Luxe XR Max 2",
+        "Cartouches Vaporesso Luxe XR",
+        "Cartouches Vaporesso Armour G"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "vaporesso-gti",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Vaporesso GTi",
+      "marque": "Vaporesso",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Vaporesso GTi"
+      },
+      "description_catalogue": "0.15 Ω • 0.2 Ω • 0.4 Ω • 0.5 Ω • Compatibles iTank.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "puissance modérée"
+        },
+        {
+          "ohm": "0.5",
+          "profil": "puissance modérée"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Vaporesso iTank T Dual"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "vaporesso-euc",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Vaporesso EUC",
+      "marque": "Vaporesso",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Vaporesso EUC"
+      },
+      "description_catalogue": "Ceramic 0.3 Ω / 0.6 Ω • Traditional 0.3 Ω / 0.4 Ω / 0.5 Ω.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.3",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.5",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "vaporesso-gt-core",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Vaporesso GT Core",
+      "marque": "Vaporesso",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Vaporesso GT Core"
+      },
+      "description_catalogue": "0.5 Ω • Compatible GT Core.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.5",
+          "profil": "puissance modérée"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "innokin-z-coil",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Innokin Z-Coil",
+      "marque": "Innokin",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Innokin Z-Coil"
+      },
+      "description_catalogue": "0.3 Ω • 0.8 Ω • 1.6 Ω • Compatibles Zenith, Zenith 2, Zenith Nex et Zlide.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.3",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.6",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Innokin Zenith NEX",
+        "Innokin Zenith 2",
+        "Innokin Zlide D24"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "innokin-prism-s",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Innokin Prism S",
+      "marque": "Innokin",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Innokin Prism S"
+      },
+      "description_catalogue": "0.8 Ω • 1.5 Ω • Compatibles Prism S.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.5",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "innokin-prism-t18e",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Innokin Prism T18E",
+      "marque": "Innokin",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Innokin Prism T18E"
+      },
+      "description_catalogue": "Résistances Prism T18E • Tirage serré • Vape débutant.",
+      "resistance_integree": false,
+      "options": [],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "aspire-nautilus",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Aspire Nautilus",
+      "marque": "Aspire",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Aspire Nautilus"
+      },
+      "description_catalogue": "0.7 Ω • 1.6 Ω • 1.8 Ω • Compatibles Nautilus.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.7",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "1.6",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.8",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "aspire-bp",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Aspire BP",
+      "marque": "Aspire",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Aspire BP"
+      },
+      "description_catalogue": "0.15 Ω • 0.4 Ω • 0.6 Ω • Compatibles BP Series.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.4",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "aspire-bvc-k1",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Aspire BVC K1",
+      "marque": "Aspire",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Aspire BVC K1"
+      },
+      "description_catalogue": "1.6 Ω • 1.8 Ω • Compatibles K1 / BVC.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "1.6",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.8",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "lost-vape-ub-max",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Lost Vape UB Max",
+      "marque": "Lost Vape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Lost Vape UB Max"
+      },
+      "description_catalogue": "0.15 Ω • 0.2 Ω • 0.3 Ω • Compatibles Centaurus Sub Ohm / Sub-Coo.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.3",
+          "profil": "puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Lost Vape Centaurus",
+        "Lost Vape Centaurus SUB-COO"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "lost-vape-ub-ultra",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Lost Vape UB Ultra",
+      "marque": "Lost Vape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Lost Vape UB Ultra"
+      },
+      "description_catalogue": "0.15 Ω • 0.2 Ω • 0.3 Ω • Compatibles UB Ultra / PM-100.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.3",
+          "profil": "puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "lost-vape-ub-mini",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Lost Vape UB Mini",
+      "marque": "Lost Vape",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Lost Vape UB Mini"
+      },
+      "description_catalogue": "0.6 Ω • Compatibles UB Mini / Thelema Go.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "voopoo-pnp",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Voopoo PnP",
+      "marque": "Voopoo",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Voopoo PnP"
+      },
+      "description_catalogue": "TM2 0.8 Ω • VM1 0.3 Ω • VM3 0.45 Ω • VM4 0.6 Ω • VM5 0.2 Ω • VM6 0.15 Ω.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.8",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.45",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "0.3",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "voopoo-pnp-x",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Voopoo PnP X",
+      "marque": "Voopoo",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Voopoo PnP X"
+      },
+      "description_catalogue": "0.6 Ω • Compatibles PnP X.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.6",
+          "profil": "polyvalent"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "voopoo-tpp",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Voopoo TPP",
+      "marque": "Voopoo",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Voopoo TPP"
+      },
+      "description_catalogue": "DM1 0.15 Ω • DM2 0.2 Ω • DM3 0.15 Ω • DM4 0.3 Ω.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.3",
+          "profil": "puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "justfog-q14-q16",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Justfog Q14 / Q16",
+      "marque": "Justfog",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Justfog Q14 / Q16"
+      },
+      "description_catalogue": "1.2 Ω • 1.6 Ω • Compatibles Q14 / Q16 / Q16 Pro.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "1.2",
+          "profil": "tirage serré"
+        },
+        {
+          "ohm": "1.6",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "vaptio-cosmo",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Vaptio Cosmo",
+      "marque": "Vaptio",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Vaptio Cosmo"
+      },
+      "description_catalogue": "0.7 Ω • 1.2 Ω • Compatibles Cosmo.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.7",
+          "profil": "polyvalent"
+        },
+        {
+          "ohm": "1.2",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "dotmod-dotstick",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Dotmod DotStick",
+      "marque": "Dotmod",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Dotmod DotStick"
+      },
+      "description_catalogue": "1.0 Ω • Compatible DotStick.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "1.0",
+          "profil": "tirage serré"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "eleaf-ec2-melo",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Eleaf EC2 Melo",
+      "marque": "Eleaf",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Eleaf EC2 Melo"
+      },
+      "description_catalogue": "0.3 Ω • 0.5 Ω • Compatibles Melo.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.3",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.5",
+          "profil": "puissance modérée"
+        }
+      ],
+      "materiels_compatibles_connus": [
+        "Eleaf Melo 6"
+      ],
+      "procedure": "resistance_remplacable",
+      "notes": "Le catalogue du Melo 6 mentionne également EC et EC-A. Le catalogue STOOM référence actuellement la famille EC2 Melo."
+    },
+    {
+      "id": "eleaf-hw",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Eleaf HW",
+      "marque": "Eleaf",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Eleaf HW"
+      },
+      "description_catalogue": "HW1 0.2 Ω • Compatible HW.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.2",
+          "profil": "puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "joyetech-bf-ss316",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Joyetech BF SS316",
+      "marque": "Joyetech",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Joyetech BF SS316"
+      },
+      "description_catalogue": "BF SS316 • Compatible AIO.",
+      "resistance_integree": false,
+      "options": [],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "smok-tfv16",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Smok TFV16",
+      "marque": "Smok",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Smok TFV16"
+      },
+      "description_catalogue": "Dual Mesh 0.12 Ω • Compatible TFV16.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.12",
+          "profil": "puissance"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    },
+    {
+      "id": "smok-tfv18",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "nom": "Résistances Smok TFV18",
+      "marque": "Smok",
+      "type": "resistance",
+      "aliases": [],
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Résistances Smok TFV18"
+      },
+      "description_catalogue": "0.15 Ω • 0.33 Ω • Compatible TFV18.",
+      "resistance_integree": false,
+      "options": [
+        {
+          "ohm": "0.15",
+          "profil": "puissance"
+        },
+        {
+          "ohm": "0.33",
+          "profil": "puissance modérée"
+        }
+      ],
+      "materiels_compatibles_connus": [],
+      "procedure": "resistance_remplacable",
+      "notes": ""
+    }
+  ],
+  "materiels": [
+    {
+      "id": "aspire-vilter-2",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Aspire",
+      "nom": "Vilter 2",
+      "aliases": [
+        "Vilter II"
+      ],
+      "categorie": "Pod",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Vilter 2"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "aspire-vilter",
+          "recommande": true,
+          "note": "Cartouches Vilter 0.8 Ω ou 1.0 Ω."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "vaporesso-xros-5-mini",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Vaporesso",
+      "nom": "XROS 5 Mini",
+      "aliases": [
+        "Xros 5 mini",
+        "XROS Mini 5"
+      ],
+      "categorie": "Pod",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "XROS 5 Mini"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "vaporesso-xros",
+          "recommande": true,
+          "note": "Cartouches XROS référencées sur le catalogue STOOM."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "vaporesso-vibe-se",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Vaporesso",
+      "nom": "Vibe SE",
+      "aliases": [
+        "Vibe"
+      ],
+      "categorie": "Pod",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Vibe SE"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "vaporesso-vibe",
+          "recommande": true,
+          "note": "Cartouches Vibe 0.6 Ω ou 0.8 Ω."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "geekvape-peak-2",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Geekvape",
+      "nom": "Peak 2",
+      "aliases": [
+        "Peak II"
+      ],
+      "categorie": "Pod",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Peak 2"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "geekvape-peak",
+          "recommande": true,
+          "note": "Cartouche Peak 0.8 Ω."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "geekvape-digi-q",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Geekvape",
+      "nom": "Digi Q",
+      "aliases": [
+        "DigiQ"
+      ],
+      "categorie": "Pod",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Digi Q"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "geekvape-digi-q",
+          "recommande": true,
+          "note": "Cartouche Digi Q 0.6 Ω."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "geekvape-soul-2",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Geekvape",
+      "nom": "Soul 2",
+      "aliases": [
+        "Soul II"
+      ],
+      "categorie": "Pod",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Soul 2"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "geekvape-soul",
+          "recommande": true,
+          "note": "Cartouches Soul 0.6 Ω ou 1.0 Ω."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "geekvape-aegis-force",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Geekvape",
+      "nom": "Aegis Force",
+      "aliases": [],
+      "categorie": "Kit",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Aegis Force"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "geekvape-force",
+          "recommande": true,
+          "note": "Le catalogue confirme la cartouche Force. La résistance éventuelle doit être identifiée sur le consommable ou vérifiée en boutique."
+        }
+      ],
+      "notes_assistant": "Ne pas proposer une famille de résistance sans référence lisible ou photo nette.",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "aspire-magnum",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Aspire",
+      "nom": "Magnum",
+      "aliases": [],
+      "categorie": "Pod rechargeable",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Magnum"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "aspire-magnum",
+          "recommande": true,
+          "note": "Cartouche Magnum 0.25 Ω."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "vaporesso-luxe-xr-max-2",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Vaporesso",
+      "nom": "Luxe XR Max 2",
+      "aliases": [
+        "Luxe XR Max II",
+        "Luxe XR Max"
+      ],
+      "categorie": "Kit",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Luxe XR Max 2"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "vaporesso-luxe-xr",
+          "recommande": true,
+          "note": "Cartouche Luxe XR version MTL ou DTL."
+        },
+        {
+          "famille_id": "vaporesso-gtx",
+          "recommande": true,
+          "note": "Résistances GTX ; demander la cartouche MTL ou DTL et la valeur actuelle avant de proposer une résistance."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "eleaf-melo-6",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Eleaf",
+      "nom": "Melo 6",
+      "aliases": [],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Melo 6"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "eleaf-ec2-melo",
+          "recommande": true,
+          "note": "Le catalogue du tank mentionne EC / EC2 / EC-A ; les résistances référencées STOOM sont EC2 Melo."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "vaporesso-itank-t-dual",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Vaporesso",
+      "nom": "iTank T Dual",
+      "aliases": [
+        "iTank T",
+        "iTank"
+      ],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "iTank T Dual"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "vaporesso-gti",
+          "recommande": true,
+          "note": "Résistances GTi."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "geekvape-z-subohm-5",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Geekvape",
+      "nom": "Z Subohm 5",
+      "aliases": [],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Z Subohm 5"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "geekvape-z-series",
+          "recommande": true,
+          "note": "Résistances Z Series."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "geekvape-z-subohm-se",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Geekvape",
+      "nom": "Z Subohm SE",
+      "aliases": [],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Z Subohm SE"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "geekvape-z-series",
+          "recommande": true,
+          "note": "Résistances Z Series."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "lost-vape-centaurus-tank",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Lost Vape",
+      "nom": "Centaurus",
+      "aliases": [],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Centaurus"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "lost-vape-ub-max",
+          "recommande": true,
+          "note": "Résistances UB Max."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "lost-vape-centaurus-sub-coo",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Lost Vape",
+      "nom": "Centaurus SUB-COO",
+      "aliases": [
+        "Centaurus Sub Coo",
+        "Centaurus Sub Ohm"
+      ],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Centaurus SUB-COO"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "lost-vape-ub-max",
+          "recommande": true,
+          "note": "Résistances UB Max."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "geekvape-z-nano-v3",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Geekvape",
+      "nom": "Z Nano V3",
+      "aliases": [],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Z Nano V3"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "geekvape-b-series",
+          "recommande": true,
+          "note": "Résistances B Series."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "innokin-zenith-nex",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Innokin",
+      "nom": "Zenith NEX",
+      "aliases": [
+        "Zenith Nex"
+      ],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Zenith NEX"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "innokin-z-coil",
+          "recommande": true,
+          "note": "Résistances Z-Coil."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "innokin-zlide-d24",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Innokin",
+      "nom": "Zlide D24",
+      "aliases": [
+        "Zlide",
+        "Zlide 24"
+      ],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Zlide D24"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "innokin-z-coil",
+          "recommande": true,
+          "note": "Résistances Z-Coil."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "innokin-zenith-2",
+      "actif": true,
+      "statut": "verifie_catalogue_stoom",
+      "marque": "Innokin",
+      "nom": "Zenith 2",
+      "aliases": [],
+      "categorie": "Clearomiseur",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Zenith 2"
+      },
+      "consommables_compatibles": [
+        {
+          "famille_id": "innokin-z-coil",
+          "recommande": true,
+          "note": "Résistances Z-Coil."
+        }
+      ],
+      "notes_assistant": "",
+      "orientation_sav": [
+        "Identifier le symptôme exact et vérifier le niveau de liquide, l’état des contacts et l’amorçage.",
+        "Pour une fuite persistante, un défaut électronique ou un doute sur la compatibilité, orienter vers STOOM Clermont-Ferrand."
+      ]
+    },
+    {
+      "id": "aspire-vilter-max",
+      "actif": true,
+      "statut": "a_confirmer_reference_consommable",
+      "marque": "Aspire",
+      "nom": "Vilter Max",
+      "aliases": [
+        "Vilter Max"
+      ],
+      "categorie": "Pod",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Vilter Max"
+      },
+      "consommables_compatibles": [],
+      "notes_assistant": "Le matériel est présent au catalogue STOOM, mais la cartouche compatible n’est pas explicitement identifiée dans les données actuelles. Demander une photo nette de la cartouche ou orienter vers la boutique."
+    },
+    {
+      "id": "aspire-magnum-nano",
+      "actif": true,
+      "statut": "a_confirmer_reference_consommable",
+      "marque": "Aspire",
+      "nom": "Magnum NANO",
+      "aliases": [
+        "Magnum Nano"
+      ],
+      "categorie": "Pod rechargeable",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Magnum NANO"
+      },
+      "consommables_compatibles": [],
+      "notes_assistant": "Le matériel est présent au catalogue STOOM, mais la compatibilité avec Cartouches Magnum n’est pas explicitement indiquée. Demander une photo de la cartouche ou orienter vers la boutique."
+    },
+    {
+      "id": "aspire-huracan-lx",
+      "actif": true,
+      "statut": "a_confirmer_reference_consommable",
+      "marque": "Aspire",
+      "nom": "Huracan LX",
+      "aliases": [
+        "Huracan"
+      ],
+      "categorie": "Box batterie intégrée",
+      "catalogue": {
+        "vendu_stoom": true,
+        "page": "materiel.html",
+        "nom_reference_catalogue": "Huracan LX"
+      },
+      "consommables_compatibles": [],
+      "notes_assistant": "La box est présente au catalogue. Le clearomiseur utilisé doit être identifié séparément avant toute recommandation de résistance."
+    }
+  ]
+}
