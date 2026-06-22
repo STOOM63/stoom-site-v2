@@ -4,8 +4,8 @@ on:
 push:
 branches: [main]
 paths:
-- "**/*.html"
-- "data/**/*.json"
+- "/*.html"
+- "data//*.json"
 - "scripts/build-assistant-catalogue.mjs"
 - ".github/workflows/build-assistant-catalogue.yml"
 workflow_dispatch:
@@ -17,7 +17,6 @@ jobs:
 generer-catalogue:
 if: github.actor != 'github-actions[bot]'
 runs-on: ubuntu-latest
-
 
 steps:
   - name: Récupérer le dépôt
