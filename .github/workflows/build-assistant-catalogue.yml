@@ -5,8 +5,8 @@
 "push": {
 "branches": ["main"],
 "paths": [
-"**/*.html",
-"data/**/*.json",
+"/*.html",
+"data//*.json",
 "scripts/build-assistant-catalogue.mjs",
 ".github/workflows/build-assistant-catalogue.yml"
 ]
@@ -36,7 +36,7 @@
 },
 {
 "name": "Enregistrer le catalogue mis à jour",
-"run": "git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com" && git add data/assistant/catalogue-produits.json && (git diff --cached --quiet || (git commit -m "chore: met à jour le catalogue Assistant STOOM" && git push))"
+"run": "git config user.name github-actions-bot && git config user.email actions@github.com && git add data/assistant/catalogue-produits.json && if git diff --cached --quiet; then echo no-change; else git commit -m catalogue-update && git push; fi"
 }
 ]
 }
