@@ -1,46 +1,44 @@
-name: Mettre à jour le catalogue Assistant STOOM
-
-on:
-workflow_dispatch:
-push:
-branches:
-- main
-paths:
-- "/*.html"
-- "data//*.json"
-- "scripts/build-assistant-catalogue.mjs"
-- ".github/workflows/build-assistant-catalogue.yml"
-
-permissions:
-contents: write
-
-jobs:
-generer-catalogue:
-runs-on: ubuntu-latest
-
-steps:
-  - name: Récupérer le dépôt
-    uses: actions/checkout@v4
-
-  - name: Installer Node
-    uses: actions/setup-node@v4
-    with:
-      node-version: 22
-
-  - name: Générer le catalogue complet
-    run: node scripts/build-assistant-catalogue.mjs
-
-  - name: Enregistrer le catalogue mis à jour
-    run: |
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      git add data/assistant/catalogue-produits.json
-
-      if git diff --cached --quiet; then
-        echo "Aucun changement dans le catalogue."
-        exit 0
-      fi
-
-      git commit -m "chore: met à jour le catalogue Assistant STOOM"
-      git push
+{
+"name": "Mettre à jour le catalogue Assistant STOOM",
+"on": {
+"workflow_dispatch": {},
+"push": {
+"branches": ["main"],
+"paths": [
+"**/*.html",
+"data/**/*.json",
+"scripts/build-assistant-catalogue.mjs",
+".github/workflows/build-assistant-catalogue.yml"
+]
+}
+},
+"permissions": {
+"contents": "write"
+},
+"jobs": {
+"generer-catalogue": {
+"runs-on": "ubuntu-latest",
+"steps": [
+{
+"name": "Récupérer le dépôt",
+"uses": "actions/checkout@v4"
+},
+{
+"name": "Installer Node",
+"uses": "actions/setup-node@v4",
+"with": {
+"node-version": 22
+}
+},
+{
+"name": "Générer le catalogue complet",
+"run": "node scripts/build-assistant-catalogue.mjs"
+},
+{
+"name": "Enregistrer le catalogue mis à jour",
+"run": "git config user.name "github-actions[bot]" && git config user.email "41898282+github-actions[bot]@users.noreply.github.com" && git add data/assistant/catalogue-produits.json && (git diff --cached --quiet || (git commit -m "chore: met à jour le catalogue Assistant STOOM" && git push))"
+}
+]
+}
+}
+}
