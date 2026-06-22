@@ -46,4 +46,4 @@ steps:
 
       git commit -m "chore: met à jour le catalogue Assistant STOOM"
       git push
-```
+
