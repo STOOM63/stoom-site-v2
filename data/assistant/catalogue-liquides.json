@@ -1,0 +1,397 @@
+{
+  "version": "2.0.0",
+  "mise_a_jour": "2026-06-22",
+  "nom": "Catalogue liquides — Assistant STOOM",
+  "description": "Manifest central lu par le Worker STOOM. Les recettes restent dans les JSON existants de chaque gamme. Le Worker charge chaque produit réel et calcule un profil de conseil précis : familles, notes dominantes, fraîcheur, sucrosité, acidité et intensité.",
+  "regles_assistant": {
+    "recommandation": [
+      "Proposer uniquement des recettes présentes dans les JSON source ci-dessous.",
+      "Proposer au maximum trois liquides à la fois.",
+      "Ne jamais annoncer un stock : indiquer que la disponibilité est à confirmer en boutique STOOM.",
+      "En cas de demande « sans frais », exclure les recettes détectées comme fraîches ou très fraîches.",
+      "Pour une alternative à un liquide cité, privilégier les recettes proches par notes dominantes et famille, sans prétendre à une copie exacte."
+    ],
+    "nicotine": [
+      "Ne citer un format ou un taux de nicotine que lorsqu’il est présent dans la fiche produit source.",
+      "Pour les grands formats à 0 mg, ne pas annoncer de dosage final sans connaître les boosters utilisés."
+    ]
+  },
+  "sources": [
+    {
+      "id": "origins",
+      "actif": true,
+      "marque": "Flavour Power",
+      "gamme": "Origin’s",
+      "fichier": "data/origins.json",
+      "page": "origins.html",
+      "profils": [
+        "classique",
+        "tabac",
+        "auvergnat"
+      ],
+      "tags": [
+        "tabac blond",
+        "tabac léger",
+        "tabac aromatique",
+        "menthe",
+        "vanille",
+        "orient",
+        "sels de nicotine"
+      ]
+    },
+    {
+      "id": "perfectmatch",
+      "actif": true,
+      "marque": "Flavour Power",
+      "gamme": "Le Perfect Match",
+      "fichier": "data/perfectmatch.json",
+      "page": "perfectmatch.html",
+      "profils": [
+        "fruité",
+        "auvergnat"
+      ],
+      "tags": [
+        "framboise",
+        "hibiscus",
+        "pomme",
+        "poire",
+        "citron",
+        "limonade",
+        "menthe",
+        "eucalyptus"
+      ]
+    },
+    {
+      "id": "powerjuice",
+      "actif": true,
+      "marque": "Flavour Power",
+      "gamme": "Power Juice",
+      "fichier": "data/powerjuice.json",
+      "page": "powerjuice.html",
+      "profils": [
+        "boisson",
+        "énergisante",
+        "fruité",
+        "auvergnat"
+      ],
+      "tags": [
+        "boisson énergisante",
+        "mangue",
+        "ananas",
+        "passion",
+        "pomme verte",
+        "raisin",
+        "pastèque",
+        "fraise",
+        "açaï",
+        "coco"
+      ]
+    },
+    {
+      "id": "cebueno",
+      "actif": true,
+      "marque": "Cebueno",
+      "gamme": "Cebueno",
+      "fichier": "data/cebueno.json",
+      "page": "cebueno.html",
+      "profils": [
+        "gourmand",
+        "dessert",
+        "crémeux"
+      ],
+      "tags": [
+        "chocolat",
+        "noisette",
+        "pistache",
+        "spéculoos",
+        "crème",
+        "biscuit"
+      ]
+    },
+    {
+      "id": "lafabriquefrancaise",
+      "actif": true,
+      "marque": "La Fabrique Française",
+      "gamme": "La Fabrique Française",
+      "fichier": "data/lafabriquefrancaise.json",
+      "page": "lafabriquefrancaise.html",
+      "profils": [
+        "gourmand",
+        "pâtisserie",
+        "dessert"
+      ],
+      "tags": [
+        "vanille",
+        "caramel",
+        "crème pâtissière",
+        "café",
+        "chocolat",
+        "mascarpone",
+        "cacao"
+      ]
+    },
+    {
+      "id": "fighterfuel",
+      "actif": true,
+      "marque": "Fighter Fuel",
+      "gamme": "Fighter Fuel",
+      "fichier": "data/fighterfuel.json",
+      "page": "fighterfuel.html",
+      "profils": [
+        "fruité",
+        "intense"
+      ],
+      "tags": [
+        "fruit du dragon",
+        "grenade",
+        "fruits rouges",
+        "fraise",
+        "pêche",
+        "kiwi",
+        "mangue",
+        "x enfer"
+      ]
+    },
+    {
+      "id": "fruityfuel",
+      "actif": true,
+      "marque": "Fruity Fuel",
+      "gamme": "Fruity Fuel",
+      "fichier": "data/fruityfuel.json",
+      "page": "fruityfuel.html",
+      "profils": [
+        "fruité"
+      ],
+      "tags": [
+        "citron",
+        "citron vert",
+        "pastèque",
+        "kiwi",
+        "fraise",
+        "grenade",
+        "limonade"
+      ]
+    },
+    {
+      "id": "vapecity",
+      "actif": true,
+      "marque": "Vape City",
+      "gamme": "Vape City",
+      "fichier": "data/vapecity.json",
+      "page": "vapecity.html",
+      "profils": [
+        "fruité"
+      ],
+      "tags": [
+        "framboise bleue",
+        "fruit du dragon",
+        "cassis",
+        "mûre",
+        "fraise",
+        "mangue",
+        "pastèque",
+        "pêche blanche",
+        "cerise"
+      ]
+    },
+    {
+      "id": "petitnuage",
+      "actif": true,
+      "marque": "Petit Nuage",
+      "gamme": "Petit Nuage",
+      "fichier": "data/petitnuage.json",
+      "page": "petitnuage.html",
+      "profils": [
+        "fruité",
+        "léger"
+      ],
+      "tags": [
+        "mangue",
+        "ananas",
+        "cerise",
+        "fruits rouges",
+        "fruit du dragon",
+        "goyave",
+        "grenade",
+        "menthe",
+        "limonade",
+        "violette"
+      ]
+    },
+    {
+      "id": "peps",
+      "actif": true,
+      "marque": "Pep’s",
+      "gamme": "Pep’s",
+      "fichier": "data/peps.json",
+      "page": "peps.html",
+      "profils": [
+        "boisson",
+        "cola"
+      ],
+      "tags": [
+        "cola",
+        "cerise",
+        "boisson énergisante",
+        "vanille",
+        "kiwi",
+        "fruit du dragon"
+      ]
+    },
+    {
+      "id": "vapeoflegend",
+      "actif": true,
+      "marque": "Vape of Legend",
+      "gamme": "Vape of Legend",
+      "fichier": "data/vapeoflegend.json",
+      "page": "vapeoflegend.html",
+      "profils": [
+        "fruité"
+      ],
+      "tags": [
+        "myrtille",
+        "raisin",
+        "framboise bleue",
+        "cassis",
+        "mûre",
+        "limonade",
+        "melon",
+        "passion",
+        "pitaya",
+        "cerise",
+        "tropical"
+      ]
+    },
+    {
+      "id": "prestige",
+      "actif": true,
+      "marque": "Prestige",
+      "gamme": "Prestige",
+      "fichier": "data/prestige.json",
+      "page": "prestige.html",
+      "profils": [
+        "fruité",
+        "évasion"
+      ],
+      "tags": [
+        "cactus",
+        "kiwi",
+        "groseille",
+        "cassis",
+        "framboise",
+        "fraise",
+        "pêche",
+        "violette",
+        "fruit du dragon",
+        "pastèque",
+        "litchi"
+      ]
+    },
+    {
+      "id": "liquideo",
+      "actif": true,
+      "marque": "Liquideo",
+      "gamme": "Liquideo",
+      "fichier": "data/liquideo.json",
+      "page": "liquideo.html",
+      "profils": [
+        "fruité",
+        "bonbon"
+      ],
+      "tags": [
+        "freeze",
+        "grenade",
+        "bonbon arlequin",
+        "orange",
+        "fraise",
+        "fruit du dragon",
+        "fruit du serpent",
+        "granité"
+      ]
+    },
+    {
+      "id": "mexicancartel",
+      "actif": true,
+      "marque": "Mexican Cartel",
+      "gamme": "Mexican Cartel",
+      "fichier": "data/mexicancartel.json",
+      "page": "mexicancartel.html",
+      "profils": [
+        "fruité",
+        "exotique"
+      ],
+      "tags": [
+        "ananas",
+        "pêche",
+        "coco",
+        "limonade",
+        "mangue",
+        "passion",
+        "cactus",
+        "citron",
+        "corossol",
+        "fruits rouges",
+        "pastèque",
+        "kiwi",
+        "cerise"
+      ]
+    },
+    {
+      "id": "shojo",
+      "actif": true,
+      "marque": "Shojo",
+      "gamme": "Shojo",
+      "fichier": "data/shojo.json",
+      "page": "shojo.html",
+      "profils": [
+        "fruité"
+      ],
+      "tags": [
+        "fruit du dragon",
+        "fraise",
+        "framboise bleue",
+        "pastèque",
+        "mangue"
+      ]
+    },
+    {
+      "id": "sixvape",
+      "actif": true,
+      "marque": "Six Vape",
+      "gamme": "Six Vape",
+      "fichier": "data/sixvape.json",
+      "page": "sixvape.html",
+      "profils": [
+        "fruité"
+      ],
+      "tags": [
+        "myrtille",
+        "cerise",
+        "framboise",
+        "cola",
+        "cassis",
+        "mûre",
+        "bonbons",
+        "ananas",
+        "citron",
+        "pêche",
+        "mangue",
+        "tropical"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "jnr",
+      "raison": "Puffs rechargeables : pas un catalogue e-liquides."
+    },
+    {
+      "id": "diy",
+      "raison": "Bases, boosters et arômes : traités dans conseils.json."
+    },
+    {
+      "id": "flavourpower",
+      "raison": "Page univers de marque : les recommandations précises sont faites à partir des JSON Origin’s, Le Perfect Match et Power Juice."
+    }
+  ]
+}
