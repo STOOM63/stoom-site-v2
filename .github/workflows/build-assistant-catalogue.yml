@@ -15,11 +15,10 @@ contents: write
 
 jobs:
 generer-catalogue:
-# Le commit automatique ne relance pas une boucle infinie.
 if: github.actor != 'github-actions[bot]'
 runs-on: ubuntu-latest
 
-```
+
 steps:
   - name: Récupérer le dépôt
     uses: actions/checkout@v4
@@ -46,4 +45,3 @@ steps:
 
       git commit -m "chore: met à jour le catalogue Assistant STOOM"
       git push
-
