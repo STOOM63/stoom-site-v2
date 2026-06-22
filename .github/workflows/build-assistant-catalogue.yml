@@ -1,21 +1,21 @@
 name: Mettre à jour le catalogue Assistant STOOM
 
 on:
+workflow_dispatch:
 push:
-branches: [main]
+branches:
+- main
 paths:
 - "/*.html"
 - "data//*.json"
 - "scripts/build-assistant-catalogue.mjs"
 - ".github/workflows/build-assistant-catalogue.yml"
-workflow_dispatch:
 
 permissions:
 contents: write
 
 jobs:
 generer-catalogue:
-if: github.actor != 'github-actions[bot]'
 runs-on: ubuntu-latest
 
 steps:
