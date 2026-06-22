@@ -2713,6 +2713,23 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+
+/* Liens produits dans les réponses de l’Assistant STOOM. */
+.stoom-chat-message-text .stoom-chat-product-link{
+  color:var(--cyan);
+  font-weight:900;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+
+.stoom-chat-message-text .stoom-chat-product-link:hover,
+.stoom-chat-message-text .stoom-chat-product-link:focus-visible{
+  color:#ffffff;
+  text-decoration-thickness:2px;
+  outline:none;
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
@@ -3427,6 +3444,44 @@ initHome();
     });
   }
 
+  function isSafeStoomLink(href){
+    const value = String(href || "").trim();
+
+    // Liens locaux vers les pages STOOM uniquement : aucun lien externe injecté par une réponse IA.
+    return /^(?:[a-z0-9-]+\.html)(?:#[a-z0-9-]+)?(?:\?[a-z0-9=&%._-]+)?$/i.test(value);
+  }
+
+  function appendAssistantText(container, text){
+    const value = String(text || "");
+    const linkPattern = /\[([^\]\n]{1,120})\]\(([^)\n]{1,240})\)/g;
+    let cursor = 0;
+    let match;
+
+    while((match = linkPattern.exec(value)) !== null){
+      const before = value.slice(cursor, match.index);
+      if(before) container.appendChild(document.createTextNode(before));
+
+      const label = match[1].trim();
+      const href = match[2].trim();
+
+      if(label && isSafeStoomLink(href)){
+        const link = document.createElement("a");
+        link.className = "stoom-chat-product-link";
+        link.href = href;
+        link.textContent = label;
+        link.setAttribute("aria-label", `Voir ${label} dans le catalogue STOOM`);
+        container.appendChild(link);
+      }else{
+        container.appendChild(document.createTextNode(match[0]));
+      }
+
+      cursor = linkPattern.lastIndex;
+    }
+
+    const remaining = value.slice(cursor);
+    if(remaining) container.appendChild(document.createTextNode(remaining));
+  }
+
   function addMessage(role, text){
     const item = document.createElement("article");
     item.className = "stoom-chat-message " + role;
@@ -3437,7 +3492,12 @@ initHome();
 
     const content = document.createElement("p");
     content.className = "stoom-chat-message-text";
-    content.textContent = text;
+
+    if(role === "assistant"){
+      appendAssistantText(content, text);
+    }else{
+      content.textContent = text;
+    }
 
     item.append(label, content);
     messages.appendChild(item);
