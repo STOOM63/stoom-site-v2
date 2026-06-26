@@ -26,15 +26,15 @@
     "ordre": 2
   },
   {
-    "nom": "XROS 5 Mini",
+    "nom": "XROS 6 Mini",
     "marque": "Vaporesso",
     "categorie": "Pods",
     "type": "Pod rechargeable",
     "profil": "Débutant",
     "usage": "Sevrage, Compact, Polyvalent",
     "description": "1500 mAh • Pod compact • Excellent rendu saveur",
-    "image": "uploads/xros-5-mini.webp",
-    "badge": "Meilleure vente",
+    "image": "uploads/xros-6-mini.webp",
+    "badge": "Nouveauté",
     "stock": "Disponible",
     "ordre": 3
   },
