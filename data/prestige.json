@@ -1,5 +1,13 @@
 [
   {
+    "nom": "Lush Oasis",
+    "saveurs": "Barbe à papa, Dragon, Fruits rouges",
+    "description": "Une création gourmande et douce à la fois.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/lushoasis.webp"
+  },
+  {
     "nom": "Cactus Kiwi",
     "saveurs": "Cactus, Kiwi",
     "description": "Une association originale entre la fraîcheur végétale du cactus et les notes fruitées du kiwi.",
