@@ -40,14 +40,6 @@
     "image": "uploads/fruits-rouges-givre-200ml.webp"
   },
   {
-    "nom": "Biggy Bear Fruits Rouges Pastèque Fraise des Bois",
-    "saveurs": "Fruits rouges, pastèque, fraise des bois",
-    "description": "Un mélange généreux de fruits rouges, de pastèque juteuse et de fraise des bois.",
-    "format": "200ml",
-    "nicotine": "0mg",
-    "image": "uploads/fruits-rouges-pasteque-fraise-des-bois-200ml.webp"
-  },
-  {
     "nom": "Biggy Bear Grenade Fraise Kiwi",
     "saveurs": "Grenade, fraise, kiwi",
     "description": "Une recette fruitée et équilibrée mêlant grenade acidulée, fraise douce et kiwi.",
@@ -103,15 +95,7 @@
     "nicotine": "0mg",
     "image": "uploads/pomme-cerise-bubble-gum-200ml.webp"
   },
-  {
-    "nom": "Biggy Bear Sorbet Fruit du Dragon",
-    "saveurs": "Sorbet, fruit du dragon",
-    "description": "Un fruit du dragon exotique interprété dans une version fraîche façon sorbet.",
-    "format": "200ml",
-    "nicotine": "0mg",
-    "image": "uploads/sorbet-fruit-du-dragon-200ml.webp"
-  },
-  {
+ {
     "nom": "Biggy Bear Sorbet Fraise Fruit du Dragon",
     "saveurs": "Sorbet, fraise, fruit du dragon",
     "description": "Une recette fraîche façon sorbet mêlant fraise gourmande et fruit du dragon exotique.",
