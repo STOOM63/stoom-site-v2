@@ -24,6 +24,14 @@
     "bouton": "Je fonce découvrir"
   },
   {
+    "titre": "Biggy Bear",
+    "categorie": "E-liquides Fruités",
+    "description": "Grands formats, prix mini !",
+    "image": "uploads/biggybearambiance.webp",
+    "lien": "biggybear.html",
+    "bouton": "Je fonce découvrir"
+  },
+  {
     "titre": "Vape City",
     "categorie": "E-liquides Fruités Frais",
     "description": "Fruités intenses et recettes fraîches.",
