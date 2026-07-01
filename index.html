@@ -2724,7 +2724,7 @@ body.stoom-chat-open .stoom-chat-launcher{
 
 
 
-/* Nouveautés : 4 cartes sur ordinateur, carrousel tactile sur mobile. */
+/* Nouveautés : bannières automatiques sur ordinateur, carrousel tactile conservé sur mobile. */
 .news-carousel{
   position:relative;
 }
@@ -2744,6 +2744,107 @@ body.stoom-chat-open .stoom-chat-launcher{
 
 .news-carousel-controls[hidden]{
   display:none !important;
+}
+
+@media(min-width:981px){
+  .news-carousel{
+    min-height:392px;
+  }
+
+  #homeNewsGrid{
+    position:relative;
+    display:block;
+    min-height:392px;
+    overflow:hidden;
+    border-radius:24px;
+  }
+
+  #homeNewsGrid .catalog-card{
+    position:absolute;
+    inset:0;
+    display:grid;
+    grid-template-columns:minmax(0,.94fr) minmax(480px,1.06fr);
+    min-height:392px;
+    overflow:hidden;
+    border-radius:24px;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateX(42px);
+    transition:opacity .65s ease,transform .65s ease,visibility .65s ease;
+  }
+
+  #homeNewsGrid .catalog-card.is-active{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateX(0);
+  }
+
+  #homeNewsGrid .catalog-card.is-leaving{
+    transform:translateX(-42px);
+  }
+
+  #homeNewsGrid .catalog-card::after{
+    height:100%;
+    background:linear-gradient(90deg,rgba(2,12,18,.18),transparent 68%);
+  }
+
+  #homeNewsGrid .catalog-img{
+    grid-column:2;
+    grid-row:1;
+    width:100%;
+    height:100%;
+    min-height:392px;
+    object-fit:cover;
+  }
+
+  #homeNewsGrid .catalog-content{
+    grid-column:1;
+    grid-row:1;
+    min-height:392px;
+    justify-content:center;
+    padding:48px 46px;
+    background:
+      radial-gradient(circle at 0 0,rgba(142,234,255,.11),transparent 42%),
+      linear-gradient(135deg,rgba(10,31,43,.99),rgba(4,15,23,.98));
+  }
+
+  #homeNewsGrid .catalog-content h3{
+    max-width:490px;
+    margin-bottom:15px;
+    font-family:var(--serif);
+    font-size:clamp(2.7rem,4vw,4.45rem);
+    font-weight:400;
+    line-height:.92;
+    letter-spacing:-.05em;
+  }
+
+  #homeNewsGrid .catalog-content p{
+    display:block;
+    max-width:470px;
+    margin-bottom:25px;
+    font-size:.98rem;
+    line-height:1.7;
+  }
+
+  #homeNewsGrid .catalog-badge{
+    margin-bottom:18px;
+  }
+
+  #homeNewsGrid .catalog-button{
+    font-size:.68rem;
+  }
+}
+
+@media(min-width:981px) and (max-width:1120px){
+  #homeNewsGrid .catalog-card{
+    grid-template-columns:minmax(0,.98fr) minmax(410px,1.02fr);
+  }
+
+  #homeNewsGrid .catalog-content{
+    padding:40px;
+  }
 }
 
 @media(min-width:761px) and (max-width:980px){
@@ -2837,6 +2938,11 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+@media(prefers-reduced-motion:reduce){
+  #homeNewsGrid .catalog-card{
+    transition:none !important;
+  }
+}
 
 
 /* =========================================================
@@ -3816,16 +3922,16 @@ function initNewsCarousel(){
   if(!track || !controls || !previous || !next || !progress) return;
 
   const cards = Array.from(track.querySelectorAll('.catalog-card'));
+  if(cards.length === 0) return;
 
-  if(cards.length < 2){
-    controls.hidden = true;
-    return;
-  }
-
-  controls.hidden = false;
+  const desktopMedia = window.matchMedia('(min-width:981px)');
+  const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   let currentIndex = 0;
+  let desktopIndex = 0;
   let ticking = false;
+  let rotationTimer = null;
+  let leavingTimer = null;
 
   const getClosestCardIndex = function(){
     let closestIndex = 0;
@@ -3843,7 +3949,9 @@ function initNewsCarousel(){
     return closestIndex;
   };
 
-  const updateControls = function(){
+  const updateMobileControls = function(){
+    if(desktopMedia.matches || cards.length < 2) return;
+
     currentIndex = getClosestCardIndex();
     progress.textContent = (currentIndex + 1) + ' / ' + cards.length;
     previous.disabled = currentIndex === 0;
@@ -3851,12 +3959,77 @@ function initNewsCarousel(){
   };
 
   const scrollToCard = function(index){
+    if(desktopMedia.matches) return;
+
     const targetIndex = Math.max(0, Math.min(cards.length - 1, index));
 
     track.scrollTo({
-      left: cards[targetIndex].offsetLeft,
-      behavior: 'smooth'
+      left:cards[targetIndex].offsetLeft,
+      behavior:'smooth'
     });
+  };
+
+  const showDesktopCard = function(index){
+    desktopIndex = (index + cards.length) % cards.length;
+
+    cards.forEach(function(card, cardIndex){
+      const isTarget = cardIndex === desktopIndex;
+      const wasActive = card.classList.contains('is-active');
+
+      card.classList.remove('is-leaving');
+
+      if(isTarget){
+        card.classList.add('is-active');
+      }else{
+        card.classList.remove('is-active');
+
+        if(wasActive){
+          card.classList.add('is-leaving');
+        }
+      }
+    });
+
+    window.clearTimeout(leavingTimer);
+    leavingTimer = window.setTimeout(function(){
+      cards.forEach(function(card){
+        if(!card.classList.contains('is-active')){
+          card.classList.remove('is-leaving');
+        }
+      });
+    },700);
+  };
+
+  const stopDesktopRotation = function(){
+    window.clearInterval(rotationTimer);
+    rotationTimer = null;
+  };
+
+  const startDesktopRotation = function(){
+    stopDesktopRotation();
+
+    if(!desktopMedia.matches || reducedMotionMedia.matches || cards.length < 2) return;
+
+    rotationTimer = window.setInterval(function(){
+      showDesktopCard(desktopIndex + 1);
+    },5200);
+  };
+
+  const syncCarouselMode = function(){
+    stopDesktopRotation();
+
+    if(desktopMedia.matches){
+      controls.hidden = true;
+      showDesktopCard(desktopIndex);
+      startDesktopRotation();
+      return;
+    }
+
+    cards.forEach(function(card){
+      card.classList.remove('is-active','is-leaving');
+    });
+
+    controls.hidden = cards.length < 2;
+    updateMobileControls();
   };
 
   previous.addEventListener('click', function(){
@@ -3868,17 +4041,19 @@ function initNewsCarousel(){
   });
 
   track.addEventListener('scroll', function(){
-    if(ticking) return;
+    if(desktopMedia.matches || ticking) return;
 
     ticking = true;
 
     window.requestAnimationFrame(function(){
-      updateControls();
+      updateMobileControls();
       ticking = false;
     });
-  }, {passive:true});
+  },{passive:true});
 
   track.addEventListener('keydown', function(event){
+    if(desktopMedia.matches) return;
+
     if(event.key === 'ArrowLeft'){
       event.preventDefault();
       scrollToCard(currentIndex - 1);
@@ -3890,8 +4065,42 @@ function initNewsCarousel(){
     }
   });
 
-  window.addEventListener('resize', updateControls, {passive:true});
-  updateControls();
+  track.addEventListener('mouseenter', stopDesktopRotation);
+  track.addEventListener('mouseleave', startDesktopRotation);
+  track.addEventListener('focusin', stopDesktopRotation);
+  track.addEventListener('focusout', function(){
+    window.setTimeout(function(){
+      if(!track.contains(document.activeElement)){
+        startDesktopRotation();
+      }
+    },0);
+  });
+
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden){
+      stopDesktopRotation();
+    }else{
+      startDesktopRotation();
+    }
+  });
+
+  window.addEventListener('resize', function(){
+    if(!desktopMedia.matches){
+      updateMobileControls();
+    }
+  },{passive:true});
+
+  const watchMedia = function(mediaQuery, handler){
+    if(typeof mediaQuery.addEventListener === 'function'){
+      mediaQuery.addEventListener('change', handler);
+    }else if(typeof mediaQuery.addListener === 'function'){
+      mediaQuery.addListener(handler);
+    }
+  };
+
+  watchMedia(desktopMedia, syncCarouselMode);
+  watchMedia(reducedMotionMedia, syncCarouselMode);
+  syncCarouselMode();
 }
 
 async function initHome(){
