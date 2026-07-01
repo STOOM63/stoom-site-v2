@@ -3063,6 +3063,124 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+
+/* =========================================================
+   HERO — photo intérieure fondue, sans cadre ni cartouche
+   ========================================================= */
+.hero{
+  min-height:420px;
+  padding:30px 0 28px;
+}
+
+.hero::before{
+  background:
+    linear-gradient(90deg,rgba(4,14,21,.985) 0%,rgba(4,14,21,.94) 37%,rgba(4,14,21,.74) 62%,rgba(4,14,21,.83) 100%),
+    linear-gradient(180deg,rgba(4,14,21,.03),rgba(4,14,21,.42)),
+    url("uploads/premierepage.webp") center/cover no-repeat;
+}
+
+.hero .container.hero-layout{
+  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
+  gap:20px;
+  align-items:center;
+}
+
+.hero-copy{
+  max-width:700px;
+}
+
+.hero h1{
+  max-width:700px;
+  margin:15px 0 14px;
+  font-size:clamp(2.7rem,3.8vw,4.12rem);
+  line-height:.96;
+  letter-spacing:-.052em;
+  text-wrap:balance;
+}
+
+.hero p{
+  max-width:575px;
+}
+
+/* L’image ne forme pas une carte : elle se dissout dans le hero. */
+.hero-photo-blend{
+  position:relative;
+  min-width:0;
+  min-height:315px;
+  height:315px;
+  margin-left:-8px;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.hero-photo-blend::before{
+  content:"";
+  position:absolute;
+  z-index:2;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,#06131d 0%,rgba(6,19,29,.93) 8%,rgba(6,19,29,.12) 30%,rgba(6,19,29,0) 54%,rgba(6,19,29,.18) 76%,#06131d 100%),
+    linear-gradient(180deg,rgba(6,19,29,.20) 0%,rgba(6,19,29,0) 36%,rgba(6,19,29,.76) 100%);
+}
+
+.hero-photo-blend::after{
+  content:"";
+  position:absolute;
+  z-index:3;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(ellipse at 70% 45%,transparent 36%,rgba(6,19,29,.30) 78%,rgba(6,19,29,.78) 100%);
+}
+
+.hero-photo-blend img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.88) contrast(1.03) brightness(.91);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 18%,#000 83%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 18%,#000 83%,transparent 100%);
+}
+
+/* Les anciens styles de carte photo restent inactifs par sécurité. */
+.hero-photo-card{display:none!important;}
+
+@media(max-width:980px){
+  .hero{
+    min-height:0;
+    padding:34px 0 30px;
+  }
+
+  .hero .container.hero-layout{
+    grid-template-columns:1fr!important;
+    gap:0;
+  }
+
+  .hero-photo-blend{
+    display:none;
+  }
+}
+
+@media(max-width:760px){
+  .hero{
+    padding:30px 0 27px;
+  }
+
+  .hero-copy{
+    padding-top:168px;
+  }
+
+  .hero h1{
+    max-width:100%;
+    font-size:clamp(2.65rem,13vw,3.72rem);
+    line-height:.93;
+    margin-top:15px;
+    text-wrap:balance;
+  }
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
@@ -3175,11 +3293,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
     <div class="hero-copy">
       <span class="badge">Boutique de cigarette électronique à Clermont-Ferrand</span>
 
-      <h1>
-        La cigarette électronique<br class="desktop-break">
-        <span class="hero-location">à Clermont-Ferrand,</span><br class="desktop-break">
-        avec du vrai <span>conseil.</span>
-      </h1>
+      <h1>La cigarette électronique à Clermont-Ferrand, avec du vrai <span>conseil.</span></h1>
 
       <p>
         STOOM est votre boutique de cigarette électronique à Clermont-Ferrand :
@@ -3198,17 +3312,17 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
       </div>
     </div>
 
-    <figure class="hero-photo-card">
+    <div class="hero-photo-blend" aria-hidden="true">
       <img
         src="uploads/interieur-magasin-index.webp"
-        alt="Intérieur de la boutique STOOM à Clermont-Ferrand"
+        alt=""
         width="1000"
         height="720"
         loading="eager"
         fetchpriority="high"
         decoding="async"
       >
-    </figure>
+    </div>
   </div>
 </section>
 
