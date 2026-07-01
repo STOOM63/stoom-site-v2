@@ -3,14 +3,7 @@
 <head>
   <link rel="icon" type="image/png" href="uploads/favicon.png">
   <link rel="apple-touch-icon" href="uploads/favicon.png">
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WCXHT7C9');</script>
-  <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager chargé après consentement via assets/site-shell.js -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,11 +31,7 @@
   <meta name="twitter:title" content="Contact & horaires | STOOM Clermont-Ferrand">
   <meta name="twitter:description" content="Adresse, horaires, téléphone, itinéraire et conseil en boutique.">
   <meta name="twitter:image" content="https://stoom.fr/uploads/contact-hero.webp">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css">
   <link rel="preload" as="image" href="uploads/contact-hero.webp" fetchpriority="high">
 
   <!-- Données structurées : page contact et boutique locale -->
@@ -1385,10 +1374,6 @@ footer{
 </head>
 
 <body data-page="contact">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCXHT7C9"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <div class="top">
     STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Ouvert non-stop · Parking facile · 650 avis Google · Note 4,9/5
@@ -1576,8 +1561,7 @@ footer{
           <div class="map-card">
             <iframe
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin&output=embed"
+              referrerpolicy="no-referrer-when-downgrade" data-stoom-map data-src="https://www.google.com/maps?q=STOOM%20Clermont-Ferrand%20109%20avenue%20Edouard%20Michelin&output=embed" src="about:blank"
               title="Carte STOOM Clermont-Ferrand">
             </iframe>
           </div>
