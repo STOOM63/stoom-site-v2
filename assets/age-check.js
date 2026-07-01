@@ -10,6 +10,22 @@
   }
 
   loadSiteShell();
+  function loadAssistant(){
+  if(document.querySelector('script[data-stoom-assistant="true"]')) return;
+
+  const script = document.createElement("script");
+  const currentScript = document.currentScript;
+  const assetsFolder = currentScript
+    ? new URL(".", currentScript.src)
+    : new URL("assets/", window.location.href);
+
+  script.src = new URL("stoom-assistant.js?v=1", assetsFolder).href;
+  script.defer = true;
+  script.dataset.stoomAssistant = "true";
+  document.head.appendChild(script);
+}
+
+loadAssistant();
 
   try{
     if(localStorage.getItem("stoom-age-ok") === "yes") return;
