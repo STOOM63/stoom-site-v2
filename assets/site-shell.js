@@ -59,6 +59,11 @@
       .stoom-site-footer *{box-sizing:border-box}
       .stoom-site-footer .container{width:min(1220px,calc(100% - 28px));margin:auto}
       .stoom-footer-grid{display:grid;grid-template-columns:1.28fr .9fr 1.1fr .88fr;gap:36px;padding-bottom:42px}
+      .stoom-footer-grid > section,
+.stoom-footer-grid > nav{
+  margin:0 !important;
+  padding:0 !important;
+}
       .stoom-footer-brand{max-width:340px}
       .stoom-footer-logo{display:inline-flex;align-items:center;gap:11px;margin-bottom:17px}
       .stoom-footer-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,#55d4ff,#8eeaff);color:#06131d;font-size:1.18rem;font-weight:950;box-shadow:0 0 25px rgba(85,212,255,.18)}
