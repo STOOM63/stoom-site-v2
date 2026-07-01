@@ -70,7 +70,22 @@ a{color:inherit}
   font-weight:950;
 }
 .legal-logo strong{display:block;font-size:1.45rem;line-height:.85;letter-spacing:2px}
-.legal-logo span{display:block;margin-top:5px;color:var(--cyan);font-size:.58rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.legal-logo > span:last-child{
+  display:block;
+  margin-top:5px;
+  color:var(--cyan);
+  font-size:.58rem;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.legal-mark{
+  display:grid !important;
+  place-items:center;
+  margin-top:0 !important;
+  line-height:1;
+}
 .legal-nav-links{display:flex;align-items:center;gap:18px}
 .legal-nav-links a{color:#d9edf5;font-size:.71rem;font-weight:900;letter-spacing:.03em;text-decoration:none;text-transform:uppercase}
 .legal-nav-links a:hover,.legal-nav-links a:focus-visible{color:var(--cyan);outline:none}
