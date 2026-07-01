@@ -32,6 +32,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <link rel="preload" as="image" href="uploads/premierepage.webp" fetchpriority="high">
 <link rel="preload" as="image" href="uploads/interieur-magasin-index.webp" fetchpriority="high">
+<link rel="preload" as="image" href="uploads/camille-assistant.webp" fetchpriority="high">
 
 <style>
 
@@ -3181,6 +3182,145 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+
+/* =========================================================
+   CAMILLE — PORTRAIT DU GUIDE STOOM
+   Le fichier WebP contient de la transparence. Le halo
+   bleu suit le buste grâce aux ombres portées CSS.
+========================================================= */
+.camille-avatar-frame{
+  position:relative;
+  width:68px;
+  height:72px;
+  flex:0 0 68px;
+  display:grid;
+  place-items:end center;
+  overflow:visible;
+}
+
+.camille-avatar{
+  display:block;
+  width:86px;
+  height:92px;
+  max-width:none;
+  object-fit:contain;
+  object-position:center bottom;
+  transform:translateY(-9px);
+  filter:
+    drop-shadow(0 0 1px rgba(239,253,255,.95))
+    drop-shadow(0 0 4px rgba(85,212,255,.95))
+    drop-shadow(0 0 12px rgba(85,212,255,.34));
+  pointer-events:none;
+  user-select:none;
+}
+
+.stoom-chat-launcher{
+  position:relative !important;
+  min-height:74px !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  padding:4px 17px 4px 4px !important;
+  overflow:visible !important;
+  border:1px solid rgba(85,212,255,.56) !important;
+  border-radius:999px !important;
+  background:
+    radial-gradient(circle at 14% 50%,rgba(85,212,255,.17),transparent 33%),
+    linear-gradient(145deg,rgba(9,33,46,.98),rgba(5,18,27,.98)) !important;
+  box-shadow:0 18px 46px rgba(0,0,0,.38),0 0 0 5px rgba(142,234,255,.05) !important;
+}
+
+.stoom-chat-launcher::before,
+.stoom-chat-launcher::after{
+  display:none !important;
+  content:none !important;
+}
+
+.stoom-chat-launcher:hover,
+.stoom-chat-launcher:focus-visible{
+  border-color:#dff8ff !important;
+  box-shadow:0 22px 54px rgba(0,0,0,.42),0 0 0 6px rgba(85,212,255,.13) !important;
+}
+
+.stoom-chat-launcher-copy{
+  display:grid !important;
+  gap:3px !important;
+  padding:0 1px 0 0;
+  text-align:left;
+}
+
+.stoom-chat-launcher-copy small{
+  color:var(--cyan) !important;
+  font-size:.53rem !important;
+  font-weight:900 !important;
+  letter-spacing:.075em !important;
+  text-transform:uppercase;
+}
+
+.stoom-chat-launcher-copy strong{
+  color:#fff !important;
+  font-size:.78rem !important;
+  font-weight:900 !important;
+}
+
+.stoom-chat-heading .camille-avatar-frame{
+  width:49px;
+  height:49px;
+  flex-basis:49px;
+}
+
+.stoom-chat-heading .camille-avatar{
+  width:62px;
+  height:67px;
+  transform:translateY(-7px);
+}
+
+.stoom-chat-heading small{
+  color:var(--cyan);
+}
+
+@media(max-width:760px){
+  .stoom-chat-launcher{
+    width:70px !important;
+    height:76px !important;
+    min-height:76px !important;
+    display:grid !important;
+    place-items:end center !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .stoom-chat-launcher:hover,
+  .stoom-chat-launcher:focus-visible{
+    transform:translateY(-3px) !important;
+    border-color:transparent !important;
+    box-shadow:none !important;
+  }
+
+  .stoom-chat-launcher-copy{
+    display:none !important;
+  }
+
+  .stoom-chat-launcher .camille-avatar-frame{
+    width:70px !important;
+    height:76px !important;
+    flex-basis:70px !important;
+  }
+
+  .stoom-chat-launcher .camille-avatar{
+    width:92px !important;
+    height:99px !important;
+    transform:translateY(-11px) !important;
+    filter:
+      drop-shadow(0 0 1px rgba(239,253,255,.95))
+      drop-shadow(0 0 4px rgba(85,212,255,.95))
+      drop-shadow(0 0 13px rgba(85,212,255,.38)) !important;
+  }
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
@@ -3832,26 +3972,30 @@ initHome();
 </script>
 
 
-<!-- Compagnon vendeur-technicien STOOM -->
-<aside class="stoom-assistant" id="stoomAssistant" aria-label="Assistant STOOM">
-  <button class="stoom-chat-launcher" id="stoomChatLauncher" type="button" aria-controls="stoomChatPanel" aria-expanded="false">
-    <span class="stoom-companion-mark" aria-hidden="true"></span>
+<!-- Camille : portrait du guide STOOM -->
+<aside class="stoom-assistant" id="stoomAssistant" aria-label="Camille, assistant virtuel STOOM">
+  <button class="stoom-chat-launcher" id="stoomChatLauncher" type="button" aria-controls="stoomChatPanel" aria-expanded="false" aria-label="Ouvrir Camille, conseil STOOM">
+    <span class="camille-avatar-frame" aria-hidden="true">
+      <img class="camille-avatar" src="uploads/camille-assistant.webp" alt="" width="656" height="820" decoding="async">
+    </span>
     <span class="stoom-chat-launcher-copy">
-      <small>Le compagnon STOOM</small>
+      <small>Camille · STOOM</small>
       <strong>Besoin d’un conseil&nbsp;?</strong>
     </span>
   </button>
 
-  <section class="stoom-chat-panel" id="stoomChatPanel" aria-label="Conversation avec l’assistant STOOM" aria-hidden="true">
-    <div class="stoom-chat-header" role="group" aria-label="En-tête de l’assistant">
+  <section class="stoom-chat-panel" id="stoomChatPanel" aria-label="Conversation avec Camille, assistant virtuel STOOM" aria-hidden="true">
+    <div class="stoom-chat-header" role="group" aria-label="En-tête de Camille">
       <div class="stoom-chat-heading">
-        <span class="stoom-companion-mark" aria-hidden="true"></span>
+        <span class="camille-avatar-frame" aria-hidden="true">
+          <img class="camille-avatar" src="uploads/camille-assistant.webp" alt="" width="656" height="820" decoding="async">
+        </span>
         <div>
-          <small>Conseil matériel, DIY et SAV</small>
-          <strong>Assistant STOOM</strong>
+          <small>Camille · assistant virtuel STOOM</small>
+          <strong>Conseil matériel, DIY et SAV</strong>
         </div>
       </div>
-      <button class="stoom-chat-close" id="stoomChatClose" type="button" aria-label="Fermer l’assistant">×</button>
+      <button class="stoom-chat-close" id="stoomChatClose" type="button" aria-label="Fermer Camille">×</button>
     </div>
 
     <div class="stoom-chat-body" id="stoomChatBody">
@@ -3867,11 +4011,11 @@ initHome();
 
     <footer class="stoom-chat-footer">
       <form class="stoom-chat-form" id="stoomChatForm">
-        <label class="sr-only" for="stoomChatInput">Votre question</label>
+        <label class="sr-only" for="stoomChatInput">Votre question pour Camille</label>
         <textarea class="stoom-chat-input" id="stoomChatInput" rows="1" maxlength="1200" placeholder="Décris ton matériel ou ta question…"></textarea>
         <button class="stoom-chat-send" id="stoomChatSend" type="submit">Envoyer</button>
       </form>
-      <p class="stoom-chat-privacy">Évite d’envoyer des coordonnées, des données de santé ou des informations bancaires.</p>
+      <p class="stoom-chat-privacy">Camille est un guide virtuel pour vous orienter. Évite d’envoyer des coordonnées, des données de santé ou des informations bancaires.</p>
     </footer>
   </section>
 </aside>
@@ -4000,7 +4144,7 @@ initHome();
 
     const label = document.createElement("span");
     label.className = "stoom-chat-message-label";
-    label.textContent = role === "user" ? "Vous" : "Assistant STOOM";
+    label.textContent = role === "user" ? "Vous" : "Camille · STOOM";
 
     const content = document.createElement("p");
     content.className = "stoom-chat-message-text";
@@ -4045,7 +4189,7 @@ initHome();
     greeted = true;
     addMessage(
       "assistant",
-      "Bonjour, je suis le compagnon STOOM. Je peux t’aider à trouver une cartouche ou une résistance compatible, préparer un DIY, vérifier un problème simple ou orienter ton choix de matériel."
+      "Bonjour, je suis Camille, le guide virtuel STOOM. Je peux t’aider à trouver une cartouche ou une résistance compatible, préparer un DIY, vérifier un problème simple ou orienter ton choix de matériel."
     );
   }
 
