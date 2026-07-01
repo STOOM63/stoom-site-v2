@@ -2720,6 +2720,121 @@ body.stoom-chat-open .stoom-chat-launcher{
   outline:none;
 }
 
+
+
+/* Nouveautés : 4 cartes sur ordinateur, carrousel tactile sur mobile. */
+.news-carousel{
+  position:relative;
+}
+
+#homeNewsGrid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+
+#homeNewsGrid .catalog-img{
+  height:205px;
+}
+
+.news-carousel-controls{
+  display:none;
+}
+
+.news-carousel-controls[hidden]{
+  display:none !important;
+}
+
+@media(min-width:761px) and (max-width:980px){
+  #homeNewsGrid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  #homeNewsGrid .catalog-img{
+    height:235px;
+  }
+}
+
+@media(max-width:760px){
+  .news-carousel{
+    position:relative;
+  }
+
+  #homeNewsGrid{
+    display:flex !important;
+    grid-template-columns:none !important;
+    gap:12px !important;
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:1px;
+    -webkit-overflow-scrolling:touch;
+    padding:1px 1px 12px;
+    scrollbar-width:none;
+  }
+
+  #homeNewsGrid::-webkit-scrollbar{
+    display:none;
+  }
+
+  #homeNewsGrid .catalog-card{
+    flex:0 0 min(82vw,310px);
+    scroll-snap-align:start;
+  }
+
+  #homeNewsGrid .catalog-img{
+    height:210px;
+  }
+
+  .news-carousel-controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-top:2px;
+  }
+
+  .news-carousel-button{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    padding:0;
+    border:1px solid rgba(142,234,255,.32);
+    border-radius:13px;
+    color:#eafaff;
+    background:rgba(142,234,255,.07);
+    font-family:inherit;
+    font-size:1.2rem;
+    font-weight:900;
+    line-height:1;
+    transition:transform .18s ease,background .18s ease,border-color .18s ease,opacity .18s ease;
+  }
+
+  .news-carousel-button:not(:disabled):hover,
+  .news-carousel-button:not(:disabled):focus-visible{
+    color:#06131d;
+    border-color:transparent;
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+    transform:translateY(-2px);
+    outline:none;
+  }
+
+  .news-carousel-button:disabled{
+    cursor:not-allowed;
+    opacity:.38;
+  }
+
+  .news-carousel-progress{
+    min-width:50px;
+    color:#bfeeff;
+    font-size:.66rem;
+    font-weight:900;
+    letter-spacing:.08em;
+    line-height:1;
+    text-align:center;
+  }
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
@@ -2903,7 +3018,15 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
       <p>Les arrivages et gammes à découvrir actuellement chez STOOM Clermont-Ferrand.</p>
     </div>
 
-    <div class="card-grid" id="homeNewsGrid"></div>
+    <div class="news-carousel">
+      <div class="card-grid" id="homeNewsGrid" role="region" aria-label="Nouveautés e-liquides STOOM" tabindex="0"></div>
+
+      <div class="news-carousel-controls" id="homeNewsControls" aria-label="Navigation des nouveautés" hidden>
+        <button class="news-carousel-button" id="homeNewsPrev" type="button" aria-label="Voir la nouveauté précédente">←</button>
+        <span class="news-carousel-progress" id="homeNewsProgress" aria-live="polite"></span>
+        <button class="news-carousel-button" id="homeNewsNext" type="button" aria-label="Voir la nouveauté suivante">→</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -3227,12 +3350,101 @@ const fallbackProducts = [
   }
 ];
 
+function initNewsCarousel(){
+  const track = document.getElementById('homeNewsGrid');
+  const controls = document.getElementById('homeNewsControls');
+  const previous = document.getElementById('homeNewsPrev');
+  const next = document.getElementById('homeNewsNext');
+  const progress = document.getElementById('homeNewsProgress');
+
+  if(!track || !controls || !previous || !next || !progress) return;
+
+  const cards = Array.from(track.querySelectorAll('.catalog-card'));
+
+  if(cards.length < 2){
+    controls.hidden = true;
+    return;
+  }
+
+  controls.hidden = false;
+
+  let currentIndex = 0;
+  let ticking = false;
+
+  const getClosestCardIndex = function(){
+    let closestIndex = 0;
+    let smallestDistance = Number.POSITIVE_INFINITY;
+
+    cards.forEach(function(card, index){
+      const distance = Math.abs(card.offsetLeft - track.scrollLeft);
+
+      if(distance < smallestDistance){
+        smallestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    return closestIndex;
+  };
+
+  const updateControls = function(){
+    currentIndex = getClosestCardIndex();
+    progress.textContent = (currentIndex + 1) + ' / ' + cards.length;
+    previous.disabled = currentIndex === 0;
+    next.disabled = currentIndex === cards.length - 1;
+  };
+
+  const scrollToCard = function(index){
+    const targetIndex = Math.max(0, Math.min(cards.length - 1, index));
+
+    track.scrollTo({
+      left: cards[targetIndex].offsetLeft,
+      behavior: 'smooth'
+    });
+  };
+
+  previous.addEventListener('click', function(){
+    scrollToCard(currentIndex - 1);
+  });
+
+  next.addEventListener('click', function(){
+    scrollToCard(currentIndex + 1);
+  });
+
+  track.addEventListener('scroll', function(){
+    if(ticking) return;
+
+    ticking = true;
+
+    window.requestAnimationFrame(function(){
+      updateControls();
+      ticking = false;
+    });
+  }, {passive:true});
+
+  track.addEventListener('keydown', function(event){
+    if(event.key === 'ArrowLeft'){
+      event.preventDefault();
+      scrollToCard(currentIndex - 1);
+    }
+
+    if(event.key === 'ArrowRight'){
+      event.preventDefault();
+      scrollToCard(currentIndex + 1);
+    }
+  });
+
+  window.addEventListener('resize', updateControls, {passive:true});
+  updateControls();
+}
+
 async function initHome(){
   const news = await loadJson('data/home/nouveautes.json?v=120', fallbackNews);
   const ranges = await loadJson('data/home/gammes.json?v=120', fallbackRanges);
   const products = await loadJson('data/home/produits.json?v=120', fallbackProducts);
 
   renderCards('homeNewsGrid', news);
+  initNewsCarousel();
   renderCards('homeRangesGrid', ranges);
   renderProducts('homeProductsGrid', products);
 }
