@@ -3884,16 +3884,6 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   </div>
 </section>
 
-<section class="home-section" id="produits">
-  <div class="container">
-    <div class="section-title">
-      <h2>Produits disponibles en boutique</h2>
-      <p>Une sélection courte, claire et mise à jour selon les produits à pousser en boutique.</p>
-    </div>
-
-    <div class="product-strip" id="homeProductsGrid"></div>
-  </div>
-</section>
 
 <section class="home-section">
   <div class="container duo-grid">
@@ -4055,36 +4045,6 @@ function renderCards(targetId, items){
   }).join('');
 }
 
-function renderProducts(targetId, items){
-  const el = document.getElementById(targetId);
-  if(!el) return;
-
-  if(!Array.isArray(items) || items.length === 0){
-    el.innerHTML = '<div class="empty-message">Aucun produit à afficher pour le moment.</div>';
-    return;
-  }
-
-  el.innerHTML = items.map(function(item){
-    const titre = item.titre || item.nom || '';
-    const description = item.description || item.saveurs || '';
-    const infos = [
-      item.saveurs,
-      item.format,
-      item.nicotine
-    ].filter(Boolean).join(' · ');
-
-    return `
-      <div class="small-product">
-        <img src="${escapeHtml(item.image || '')}" alt="${escapeHtml(titre)}" loading="lazy" decoding="async">
-        <div>
-          <h3>${escapeHtml(titre)}</h3>
-          <p>${escapeHtml(infos || description)}</p>
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-
 const fallbackNews = [
   {
     "titre":"Vape City",
@@ -4139,28 +4099,6 @@ const fallbackRanges = [
   }
 ];
 
-const fallbackProducts = [
-  {
-    "titre":"Base STOOM 50/50",
-    "description":"500 ml · DIY",
-    "image":"uploads/base5050500.jpg"
-  },
-  {
-    "titre":"Base STOOM 50/50",
-    "description":"1 L · DIY",
-    "image":"uploads/base50501l.jpg"
-  },
-  {
-    "titre":"Base STOOM 30/70",
-    "description":"500 ml · DIY",
-    "image":"uploads/base3070500.jpg"
-  },
-  {
-    "titre":"Base STOOM 30/70",
-    "description":"1 L · DIY",
-    "image":"uploads/base30701l.jpg"
-  }
-];
 
 function initNewsCarousel(){
   const track = document.getElementById('homeNewsGrid');
@@ -4372,12 +4310,10 @@ function initNewsCarousel(){
 async function initHome(){
   const news = await loadJson('data/home/nouveautes.json?v=120', fallbackNews);
   const ranges = await loadJson('data/home/gammes.json?v=120', fallbackRanges);
-  const products = await loadJson('data/home/produits.json?v=120', fallbackProducts);
 
   renderCards('homeNewsGrid', news);
   initNewsCarousel();
   renderCards('homeRangesGrid', ranges);
-  renderProducts('homeProductsGrid', products);
 }
 
 initHome();
