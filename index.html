@@ -3678,6 +3678,610 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+
+/* =========================================================
+   ACCUEIL STOOM — RETOUCHE VISUELLE PLUS VIVANTE / ADN BOUTIQUE
+   Aucun texte, lien, structure HTML ni police modifiés.
+   ========================================================= */
+
+body{
+  background:
+    radial-gradient(circle at 8% 3%,rgba(85,212,255,.19),transparent 24%),
+    radial-gradient(circle at 90% 12%,rgba(109,255,183,.12),transparent 24%),
+    linear-gradient(180deg,#06131d 0%,#08202d 48%,#06131d 100%);
+}
+
+.top{
+  position:relative;
+  overflow:hidden;
+  color:#e7f9ff;
+  background:linear-gradient(90deg,#06131d 0%,#0a3142 50%,#06131d 100%);
+  border-bottom-color:rgba(142,234,255,.22);
+}
+
+.top::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:-10%;
+  width:42%;
+  opacity:.58;
+  background:linear-gradient(90deg,transparent,rgba(142,234,255,.22),transparent);
+  transform:skewX(-24deg);
+  pointer-events:none;
+}
+
+header{
+  background:rgba(6,19,29,.94);
+  border-bottom-color:rgba(142,234,255,.18);
+  box-shadow:0 10px 30px rgba(0,0,0,.13);
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:-1px;
+  left:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent 4%,rgba(109,255,183,.72) 30%,rgba(142,234,255,.96) 50%,rgba(109,255,183,.72) 70%,transparent 96%);
+  pointer-events:none;
+}
+
+.logo-mark{
+  box-shadow:0 0 0 5px rgba(142,234,255,.05),0 10px 24px rgba(85,212,255,.20);
+}
+
+.nav-cta,
+.btn-primary{
+  background:linear-gradient(135deg,#6dffb7 0%,#8eeaff 58%,#55d4ff 100%);
+  box-shadow:0 14px 28px rgba(85,212,255,.20),0 0 0 1px rgba(255,255,255,.18) inset;
+}
+
+.nav-cta:hover,
+.btn-primary:hover{
+  filter:brightness(1.06);
+}
+
+main{
+  overflow:hidden;
+}
+
+/* Hero : vitrine lumineuse, plus immédiate et commerciale. */
+.hero{
+  min-height:482px;
+  padding:46px 0 44px;
+  background:
+    radial-gradient(circle at 8% 12%,rgba(109,255,183,.15),transparent 28%),
+    radial-gradient(circle at 76% 22%,rgba(85,212,255,.21),transparent 26%),
+    linear-gradient(115deg,#071923 0%,#0b2a39 52%,#071923 100%);
+  border-bottom-color:rgba(142,234,255,.24);
+}
+
+.hero::before{
+  display:none !important;
+}
+
+.hero::after{
+  width:420px;
+  height:420px;
+  right:-170px;
+  left:auto;
+  bottom:-270px;
+  border-color:rgba(142,234,255,.28);
+  box-shadow:0 0 0 52px rgba(142,234,255,.035),0 0 0 104px rgba(109,255,183,.024);
+}
+
+.hero .container.hero-layout{
+  grid-template-columns:minmax(0,1.02fr) minmax(380px,.98fr);
+  gap:40px;
+}
+
+.hero-copy{
+  position:relative;
+  z-index:2;
+  max-width:710px;
+}
+
+.hero-copy::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:-26px;
+  left:-38px;
+  width:min(640px,calc(100% + 58px));
+  height:calc(100% + 52px);
+  border:1px solid rgba(142,234,255,.16);
+  border-radius:28px;
+  background:linear-gradient(135deg,rgba(5,20,29,.63),rgba(8,36,48,.23));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+}
+
+.hero h1{
+  max-width:730px;
+  margin-top:17px;
+  text-shadow:0 12px 32px rgba(0,0,0,.22);
+}
+
+.hero h1 span{
+  color:#9fffe2;
+  text-shadow:0 0 24px rgba(109,255,183,.18);
+}
+
+.hero p{
+  color:#e0f1f6;
+}
+
+.btn-ghost{
+  border-color:rgba(255,255,255,.42);
+  background:rgba(3,16,24,.54);
+  box-shadow:0 10px 24px rgba(0,0,0,.13);
+}
+
+.hero-trust{
+  gap:9px;
+}
+
+.hero-trust span{
+  padding:8px 10px;
+  border:1px solid rgba(142,234,255,.18);
+  border-radius:999px;
+  background:rgba(2,15,23,.32);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+.hero-trust span:nth-child(2)::before{
+  background:#6dffb7;
+  box-shadow:0 0 10px rgba(109,255,183,.62);
+}
+
+.hero-photo-blend{
+  min-height:344px;
+  height:344px;
+  margin:0;
+  overflow:hidden;
+  border:1px solid rgba(142,234,255,.40);
+  border-radius:26px;
+  background:#0d2b3a;
+  box-shadow:0 28px 74px rgba(0,0,0,.34),0 0 0 7px rgba(142,234,255,.045);
+}
+
+.hero-photo-blend::before{
+  display:block !important;
+  z-index:3;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(6,19,29,.12),transparent 42%),
+    linear-gradient(180deg,rgba(142,234,255,.13),transparent 28%,rgba(6,19,29,.32) 100%);
+}
+
+.hero-photo-blend::after{
+  display:block !important;
+  z-index:4;
+  inset:auto 18px 18px auto;
+  width:96px;
+  height:3px;
+  border:0;
+  border-radius:999px;
+  background:linear-gradient(90deg,#6dffb7,#8eeaff);
+  box-shadow:0 0 16px rgba(142,234,255,.64);
+}
+
+.hero-photo-blend img{
+  transform:scale(1.015);
+  filter:saturate(1.07) contrast(1.03) !important;
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+}
+
+/* Sections : rythme plus net entre les familles de produits. */
+.home-section{
+  padding:66px 0;
+}
+
+main > .home-section:nth-of-type(2){
+  background:
+    radial-gradient(circle at 6% 28%,rgba(85,212,255,.13),transparent 21%),
+    linear-gradient(180deg,rgba(8,31,43,.82),rgba(6,20,29,.92));
+}
+
+main > .home-section:nth-of-type(4){
+  background:linear-gradient(135deg,rgba(6,24,34,.98),rgba(9,44,57,.92) 52%,rgba(6,19,29,.98));
+}
+
+main > .home-section:nth-of-type(6){
+  background:
+    radial-gradient(circle at 94% 25%,rgba(109,255,183,.12),transparent 24%),
+    linear-gradient(180deg,rgba(7,29,40,.92),rgba(5,18,27,.98));
+}
+
+.section-title{
+  position:relative;
+  margin-bottom:33px;
+  border-bottom-color:rgba(142,234,255,.28);
+}
+
+.section-title::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:-1px;
+  width:22%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#6dffb7);
+}
+
+.section-title h2::before{
+  width:62px;
+  background:linear-gradient(90deg,#6dffb7,#8eeaff 72%,transparent);
+  box-shadow:0 0 18px rgba(142,234,255,.25);
+}
+
+.section-title p{
+  color:#c8e4ed;
+}
+
+/* Nouveautés : effet de grande bannière de boutique. */
+@media(min-width:981px){
+  .news-carousel{
+    min-height:420px;
+  }
+
+  #homeNewsGrid{
+    min-height:420px;
+    border-radius:28px;
+    border-color:rgba(142,234,255,.56);
+    box-shadow:0 32px 78px rgba(0,0,0,.34),0 0 0 7px rgba(142,234,255,.035),0 0 42px rgba(85,212,255,.10);
+  }
+
+  #homeNewsGrid .catalog-card{
+    min-height:420px;
+    grid-template-columns:minmax(0,.9fr) minmax(500px,1.1fr);
+  }
+
+  #homeNewsGrid .catalog-content{
+    min-height:420px;
+    padding:51px 48px;
+    background:
+      radial-gradient(circle at 13% 12%,rgba(109,255,183,.22),transparent 28%),
+      radial-gradient(circle at 52% 100%,rgba(85,212,255,.20),transparent 38%),
+      linear-gradient(145deg,#0a3040 0%,#071923 82%);
+  }
+
+  #homeNewsGrid .catalog-img{
+    min-height:420px;
+  }
+}
+
+/* La zone catalogue devient le moment clair et marchand de l’accueil. */
+main > .home-section#gammes{
+  color:#06131d;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(85,212,255,.20),transparent 25%),
+    radial-gradient(circle at 96% 88%,rgba(109,255,183,.16),transparent 22%),
+    linear-gradient(135deg,#def7ff 0%,#f8fdff 50%,#e7fbf3 100%);
+  border-top:1px solid rgba(255,255,255,.62);
+  border-bottom:1px solid rgba(142,234,255,.28);
+}
+
+main > .home-section#gammes::before{
+  display:none !important;
+}
+
+#gammes .section-title{
+  border-bottom-color:rgba(6,19,29,.17);
+}
+
+#gammes .section-title::after{
+  background:linear-gradient(90deg,transparent,#0e819c);
+}
+
+#gammes .section-title h2,
+#gammes .section-title p{
+  color:#06131d;
+}
+
+#gammes .section-title p{
+  color:#345260;
+}
+
+#gammes .section-title h2::before{
+  background:linear-gradient(90deg,#0b859f,#36c3ee 68%,transparent);
+  box-shadow:none;
+}
+
+#homeRangesGrid{
+  gap:18px;
+}
+
+#homeRangesGrid .catalog-card{
+  overflow:hidden;
+  border-color:rgba(6,47,64,.14);
+  background:#fff;
+  box-shadow:0 16px 35px rgba(8,44,59,.14),inset 0 1px 0 rgba(255,255,255,.94);
+}
+
+#homeRangesGrid .catalog-card:hover{
+  border-color:rgba(14,149,186,.52);
+  box-shadow:0 25px 50px rgba(8,44,59,.20),0 0 0 5px rgba(85,212,255,.11);
+}
+
+#homeRangesGrid .catalog-img{
+  height:185px;
+  padding:0;
+  background:
+    radial-gradient(circle at 50% 28%,rgba(142,234,255,.32),transparent 47%),
+    linear-gradient(135deg,#eafaff,#f6feff);
+  filter:saturate(1.07) contrast(1.02);
+}
+
+#homeRangesGrid .catalog-content{
+  padding:19px 18px 18px;
+  background:linear-gradient(180deg,#ffffff,#f6fcff);
+}
+
+#homeRangesGrid .catalog-badge{
+  color:#0c6d84;
+  border-bottom-color:rgba(14,149,186,.48);
+}
+
+#homeRangesGrid .catalog-content h3{
+  color:#071821;
+}
+
+#homeRangesGrid .catalog-content p{
+  color:#47636e;
+}
+
+#homeRangesGrid .catalog-button{
+  color:#0b5267;
+  border-bottom-color:rgba(11,82,103,.48);
+}
+
+#homeRangesGrid .catalog-button::after{
+  color:#0f9bbd;
+}
+
+/* Bannières produit : plus d’éclat, sans changer l’univers sombre général. */
+.material-banner{
+  border-radius:28px;
+  border-color:rgba(142,234,255,.34);
+  background:
+    radial-gradient(circle at 8% 18%,rgba(109,255,183,.17),transparent 23%),
+    linear-gradient(135deg,#0a2e3d 0%,#071923 67%);
+  box-shadow:0 28px 68px rgba(0,0,0,.26),0 0 0 6px rgba(142,234,255,.025);
+}
+
+.material-banner::before{
+  background:
+    radial-gradient(circle at 15% 15%,rgba(142,234,255,.18),transparent 25%),
+    linear-gradient(90deg,rgba(255,255,255,.055),transparent 58%);
+}
+
+.material-content{
+  padding:50px;
+}
+
+.material-tags span{
+  background:rgba(142,234,255,.10);
+  border-color:rgba(142,234,255,.32);
+}
+
+.material-visual{
+  background:
+    radial-gradient(circle at 52% 45%,rgba(142,234,255,.34),transparent 42%),
+    radial-gradient(circle at 75% 18%,rgba(109,255,183,.20),transparent 28%),
+    linear-gradient(145deg,#0b3444,#08202d 78%);
+}
+
+.material-visual::after{
+  border-color:rgba(255,255,255,.16);
+}
+
+.material-visual img{
+  filter:drop-shadow(0 28px 27px rgba(0,0,0,.46)) saturate(1.08);
+}
+
+/* Les deux accès pratiques prennent chacun une vraie couleur de rayon. */
+.duo-grid{
+  gap:20px;
+}
+
+.duo-grid .big-card{
+  min-height:330px;
+  border-radius:24px;
+  border-color:rgba(142,234,255,.28);
+  box-shadow:0 24px 58px rgba(0,0,0,.20);
+}
+
+.duo-grid .big-card:first-child{
+  background:
+    radial-gradient(circle at 14% 0%,rgba(142,234,255,.24),transparent 30%),
+    radial-gradient(circle at 91% 82%,rgba(85,212,255,.17),transparent 30%),
+    linear-gradient(145deg,#0b3344,#071923 78%);
+}
+
+.duo-grid .big-card:last-child{
+  background:
+    radial-gradient(circle at 12% 6%,rgba(109,255,183,.24),transparent 30%),
+    radial-gradient(circle at 92% 87%,rgba(142,234,255,.16),transparent 32%),
+    linear-gradient(145deg,#103a3f,#071d27 78%);
+}
+
+.duo-grid .big-card::after{
+  border-color:rgba(142,234,255,.30);
+}
+
+.duo-grid .big-card:last-child .badge{
+  border-color:rgba(109,255,183,.46);
+  color:#d6ffeb;
+  background:rgba(109,255,183,.10);
+}
+
+/* Réassurance : davantage de relief de fin de parcours. */
+.reassurance-grid{
+  border-radius:23px;
+  border-color:rgba(142,234,255,.28);
+  background:linear-gradient(135deg,rgba(10,38,50,.93),rgba(5,18,27,.97));
+  box-shadow:0 22px 56px rgba(0,0,0,.22),0 0 0 6px rgba(142,234,255,.025);
+}
+
+.reassurance{
+  min-height:186px;
+}
+
+.reassurance:nth-child(even){
+  background:rgba(142,234,255,.035);
+}
+
+.reassurance::before{
+  width:42px;
+  background:linear-gradient(90deg,#6dffb7,#8eeaff);
+}
+
+/* Contact : une sortie plus accueillante, tout en restant dans l’ADN STOOM. */
+.home-panel{
+  border-radius:24px;
+  border-color:rgba(142,234,255,.30);
+  background:
+    radial-gradient(circle at 9% 5%,rgba(109,255,183,.20),transparent 29%),
+    linear-gradient(145deg,#0a3040,#071923 78%);
+  box-shadow:0 24px 62px rgba(0,0,0,.24),0 0 0 6px rgba(142,234,255,.025);
+}
+
+.home-panel::after{
+  border-color:rgba(142,234,255,.30);
+}
+
+.home-map{
+  border-color:rgba(142,234,255,.32);
+  box-shadow:0 24px 62px rgba(0,0,0,.24),0 0 0 6px rgba(142,234,255,.025);
+}
+
+footer{
+  background:linear-gradient(90deg,#05131b,#0a2937,#05131b);
+}
+
+@media(max-width:980px){
+  .hero{
+    min-height:0;
+    padding:36px 0 40px;
+  }
+
+  .hero .container.hero-layout{
+    gap:22px;
+  }
+
+  .hero-copy::before{
+    top:-18px;
+    left:-16px;
+    width:calc(100% + 32px);
+    height:calc(100% + 36px);
+  }
+
+  .hero-photo-blend{
+    position:relative !important;
+    top:auto !important;
+    right:auto !important;
+    left:auto !important;
+    width:100% !important;
+    min-height:285px !important;
+    height:285px !important;
+    margin:0 !important;
+    border-radius:22px !important;
+    box-shadow:0 20px 45px rgba(0,0,0,.26),0 0 0 5px rgba(142,234,255,.04);
+  }
+
+  .hero-copy{
+    padding-top:0 !important;
+  }
+
+  .home-section{
+    padding:54px 0;
+  }
+}
+
+@media(max-width:760px){
+  .top::before{display:none;}
+
+  .hero{
+    padding:28px 0 34px;
+  }
+
+  .hero::after{display:none;}
+
+  .hero-copy::before{
+    top:-12px;
+    left:-11px;
+    width:calc(100% + 22px);
+    height:calc(100% + 24px);
+    border-radius:20px;
+  }
+
+  .hero h1{
+    margin-top:16px;
+  }
+
+  .hero-trust span{
+    padding:7px 9px;
+  }
+
+  .hero-photo-blend{
+    min-height:215px !important;
+    height:215px !important;
+    border-radius:18px !important;
+  }
+
+  .home-section{
+    padding:44px 0;
+  }
+
+  .section-title{
+    margin-bottom:24px;
+  }
+
+  .section-title::after{
+    width:34%;
+  }
+
+  #homeRangesGrid{
+    gap:12px;
+  }
+
+  #homeRangesGrid .catalog-img{
+    height:138px;
+  }
+
+  #homeRangesGrid .catalog-content{
+    padding:14px 13px 15px;
+  }
+
+  .material-banner,
+  .duo-grid .big-card,
+  .reassurance-grid,
+  .home-panel{
+    border-radius:18px;
+  }
+
+  .material-content{
+    padding:29px 24px;
+  }
+
+  .material-visual{
+    min-height:250px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .nav-cta:hover,
+  .btn-primary:hover{
+    filter:none;
+  }
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
