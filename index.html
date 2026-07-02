@@ -3678,6 +3678,292 @@ body.stoom-chat-open .stoom-chat-launcher{
   }
 }
 
+
+
+/* --------------------------------------------------------------------------
+   Expérience mobile "application" : active uniquement à 760px et moins.
+   Aucun style PC n'est modifié.
+--------------------------------------------------------------------------- */
+@media(max-width:760px){
+  html{
+    scroll-padding-top:82px;
+  }
+
+  body{
+    padding-bottom:88px;
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  .top{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    padding:5px 12px;
+  }
+
+  header{
+    background:rgba(5,18,27,.94);
+    border-bottom-color:rgba(142,234,255,.18);
+    box-shadow:0 10px 28px rgba(0,0,0,.16);
+  }
+
+  .nav{
+    min-height:62px;
+  }
+
+  .logo{
+    gap:9px;
+  }
+
+  .logo-mark{
+    width:37px;
+    height:37px;
+    border-radius:13px;
+    font-size:.9rem;
+  }
+
+  .logo strong{
+    font-size:1.34rem;
+    letter-spacing:1.5px;
+  }
+
+  .logo span{
+    display:none;
+  }
+
+  .menu-toggle{
+    width:43px;
+    height:43px;
+    border-radius:15px;
+    background:linear-gradient(135deg,rgba(142,234,255,.17),rgba(85,212,255,.06));
+    border-color:rgba(142,234,255,.46);
+  }
+
+  /* Le menu devient une feuille coulissante, comme dans une application. */
+  .mobile-menu{
+    position:fixed;
+    z-index:111;
+    top:auto;
+    bottom:0;
+    left:0;
+    width:100%;
+    max-height:min(77dvh,630px);
+    overflow-y:auto;
+    border:1px solid rgba(142,234,255,.28);
+    border-bottom:0;
+    border-radius:25px 25px 0 0;
+    transform:translateY(104%);
+    background:
+      radial-gradient(circle at 88% 0%,rgba(109,255,183,.15),transparent 28%),
+      radial-gradient(circle at 8% 18%,rgba(85,212,255,.16),transparent 34%),
+      linear-gradient(180deg,rgba(10,34,46,.99),rgba(4,15,23,.99));
+    box-shadow:0 -24px 64px rgba(0,0,0,.42);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+
+  .mobile-menu::before{
+    content:"";
+    display:block;
+    width:42px;
+    height:4px;
+    margin:10px auto 0;
+    border-radius:999px;
+    background:rgba(233,251,255,.45);
+  }
+
+  .mobile-menu.is-open{
+    transform:translateY(0);
+  }
+
+  .mobile-menu-inner{
+    padding:15px 14px 18px;
+  }
+
+  .mobile-menu-label{
+    margin:0 4px 13px;
+    color:#eafaff;
+    font-size:.82rem;
+    letter-spacing:.025em;
+    text-transform:none;
+  }
+
+  .mobile-menu ul{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+  }
+
+  .mobile-menu a{
+    min-height:61px;
+    padding:0 13px;
+    border-radius:17px;
+    color:#eafbff;
+    border-color:rgba(142,234,255,.18);
+    background:rgba(255,255,255,.05);
+    font-size:.70rem;
+    letter-spacing:.01em;
+  }
+
+  .mobile-menu a::after{
+    font-size:1.12rem;
+  }
+
+  .mobile-menu-route{
+    min-height:54px !important;
+    margin-top:13px;
+    border-radius:17px !important;
+  }
+
+  .mobile-menu-backdrop{
+    z-index:110;
+    background:rgba(0,0,0,.64);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+  }
+
+  /*
+    Barre de navigation inférieure : l'ancien bandeau d'actions est remplacé
+    par un dock à cinq accès, facile à atteindre au pouce.
+  */
+  .mobile-actions{
+    position:fixed;
+    z-index:100;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    display:grid !important;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:0;
+    padding:7px 4px max(8px,env(safe-area-inset-bottom));
+    border:1px solid rgba(142,234,255,.20);
+    border-bottom:0;
+    border-radius:23px 23px 0 0;
+    background:rgba(5,18,27,.94);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+    box-shadow:0 -12px 34px rgba(0,0,0,.30);
+    transform:translateZ(0);
+  }
+
+  .mobile-actions .app-tab{
+    min-width:0;
+    min-height:60px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    padding:4px 2px;
+    border:0;
+    border-radius:15px;
+    color:#a9c4cf;
+    background:transparent;
+    font:inherit;
+    font-size:.56rem;
+    font-weight:900;
+    letter-spacing:.01em;
+    line-height:1.05;
+    text-transform:none;
+    cursor:pointer;
+    transition:color .18s ease,background .18s ease,transform .18s ease;
+  }
+
+  .mobile-actions .app-tab:active{
+    transform:scale(.93);
+  }
+
+  .mobile-actions .app-tab-icon{
+    width:30px;
+    height:28px;
+    display:grid;
+    place-items:center;
+    border-radius:11px;
+    color:currentColor;
+    transition:background .18s ease,color .18s ease,transform .18s ease;
+  }
+
+  .mobile-actions .app-tab-icon svg{
+    width:18px;
+    height:18px;
+    display:block;
+    stroke:currentColor;
+  }
+
+  .mobile-actions .app-tab-label{
+    display:block;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .mobile-actions .app-tab.is-active{
+    color:#f5fdff;
+  }
+
+  .mobile-actions .app-tab.is-active .app-tab-icon{
+    color:#06131d;
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+    box-shadow:0 6px 14px rgba(85,212,255,.18);
+  }
+
+  .mobile-actions .app-tab.app-tab-route .app-tab-icon{
+    color:#d6ffeb;
+  }
+
+  .mobile-actions .app-tab.app-tab-call .app-tab-icon{
+    color:#bfffe1;
+  }
+
+  .mobile-actions .app-tab:focus-visible{
+    outline:2px solid var(--cyan);
+    outline-offset:-2px;
+  }
+
+  /* Le chat reste juste au-dessus du dock, comme un bouton d'assistance d'app. */
+  .stoom-assistant{
+    right:14px !important;
+    bottom:93px !important;
+  }
+
+  .stoom-chat-panel{
+    bottom:84px !important;
+    height:min(620px,calc(100dvh - 104px)) !important;
+  }
+
+  body.mobile-menu-open .mobile-actions,
+  body.stoom-chat-open .mobile-actions{
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(16px);
+  }
+
+  footer{
+    padding-bottom:101px;
+  }
+
+  #top,
+  #nouveautes,
+  #gammes,
+  #materiel{
+    scroll-margin-top:84px;
+  }
+}
+
+@media(max-width:375px){
+  .mobile-actions .app-tab{
+    font-size:.51rem;
+  }
+
+  .mobile-actions .app-tab-icon{
+    width:28px;
+  }
+
+  .mobile-menu a{
+    font-size:.66rem;
+  }
+}
+
 </style>
 
 <!-- Données structurées : boutique locale STOOM -->
@@ -3724,7 +4010,7 @@ body.stoom-chat-open .stoom-chat-launcher{
 
 </head>
 
-<body data-page="home">
+<body id="top" data-page="home">
 <div class="top">
 STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage réservés aux majeurs · Pas de vente en ligne
 </div>
@@ -3777,11 +4063,38 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
 
 <button class="mobile-menu-backdrop" type="button" aria-label="Fermer le menu" tabindex="-1"></button>
 
-<div class="mobile-actions">
-  <a href="tel:0473273394">Appeler</a>
-  <a href="https://www.google.com/maps/place/STOOM+Cigarettes+%C3%A9lectronique+-+Clermont-Ferrand/@45.7803875,3.1121377,17z/data=!3m2!4b1!5s0x47f71c04b1104fbf:0xd83fa10f431a94a6!4m6!3m5!1s0x47f71c04a4b0e361:0xf13c887c2b2525ad!8m2!3d45.7803875!4d3.1147126!16s%2Fg%2F1pxwrpjl_?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Itinéraire</a>
-  <a href="contact.html">Contact</a>
-</div>
+<nav class="mobile-actions mobile-app-nav" aria-label="Accès rapides STOOM">
+  <a class="app-tab app-tab-home is-active" href="#top" data-mobile-tab="home" aria-label="Accueil">
+    <span class="app-tab-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path></svg>
+    </span>
+    <span class="app-tab-label">Accueil</span>
+  </a>
+  <a class="app-tab app-tab-news" href="#nouveautes" data-mobile-tab="news" aria-label="Voir les nouveautés">
+    <span class="app-tab-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.5 5.5L5 10l5.5 1.5L12 17l1.5-5.5L19 10l-5.5-1.5L12 3Z"></path><path d="m5 15-.7 2.3L2 18l2.3.7L5 21l.7-2.3L8 18l-2.3-.7L5 15Z"></path></svg>
+    </span>
+    <span class="app-tab-label">Nouveautés</span>
+  </a>
+  <a class="app-tab app-tab-material" href="materiel.html" aria-label="Voir le matériel">
+    <span class="app-tab-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M10 6h4"></path><path d="M10 17h4"></path></svg>
+    </span>
+    <span class="app-tab-label">Matériel</span>
+  </a>
+  <a class="app-tab app-tab-route" href="https://www.google.com/maps/place/STOOM+Cigarettes+%C3%A9lectronique+-+Clermont-Ferrand/@45.7803875,3.1121377,17z/data=!3m2!4b1!5s0x47f71c04b1104fbf:0xd83fa10f431a94a6!4m6!3m5!1s0x47f71c04a4b0e361:0xf13c887c2b2525ad!8m2!3d45.7803875!4d3.1147126!16s%2Fg%2F1pxwrpjl_?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" aria-label="Lancer l’itinéraire">
+    <span class="app-tab-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>
+    </span>
+    <span class="app-tab-label">Itinéraire</span>
+  </a>
+  <a class="app-tab app-tab-call" href="tel:0473273394" aria-label="Appeler STOOM">
+    <span class="app-tab-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.8 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.7 2.8.8a2 2 0 0 1 1.7 2Z"></path></svg>
+    </span>
+    <span class="app-tab-label">Appeler</span>
+  </a>
+</nav>
 
 <main>
 
@@ -3823,7 +4136,7 @@ STOOM Clermont-Ferrand · 109 avenue Édouard Michelin · Produits de vapotage r
   </div>
 </section>
 
-<section class="home-section">
+<section class="home-section" id="nouveautes">
   <div class="container">
     <div class="section-title">
       <h2>Nouveautés e-liquides du moment</h2>
@@ -4737,6 +5050,53 @@ initHome();
       closeChat();
     }
   });
+})();
+</script>
+
+
+<script>
+/* Navigation active du dock mobile : ne s'exécute visuellement que sur smartphone. */
+(function(){
+  const mobileMedia = window.matchMedia('(max-width: 760px)');
+  const dock = document.querySelector('.mobile-app-nav');
+  const homeTab = dock && dock.querySelector('[data-mobile-tab="home"]');
+  const newsTab = dock && dock.querySelector('[data-mobile-tab="news"]');
+  const newsSection = document.getElementById('nouveautes');
+
+  if(!dock || !homeTab || !newsTab || !newsSection) return;
+
+  const setActive = function(tab){
+    dock.querySelectorAll('[data-mobile-tab]').forEach(function(item){
+      item.classList.toggle('is-active', item === tab);
+      item.removeAttribute('aria-current');
+    });
+    tab.setAttribute('aria-current','page');
+  };
+
+  const updateDock = function(){
+    if(!mobileMedia.matches) return;
+    const threshold = newsSection.getBoundingClientRect().top;
+    setActive(threshold <= 132 ? newsTab : homeTab);
+  };
+
+  homeTab.addEventListener('click', function(){
+    setActive(homeTab);
+  });
+
+  newsTab.addEventListener('click', function(){
+    setActive(newsTab);
+  });
+
+  window.addEventListener('scroll', updateDock, {passive:true});
+  window.addEventListener('resize', updateDock, {passive:true});
+
+  if(typeof mobileMedia.addEventListener === 'function'){
+    mobileMedia.addEventListener('change', updateDock);
+  }else if(typeof mobileMedia.addListener === 'function'){
+    mobileMedia.addListener(updateDock);
+  }
+
+  updateDock();
 })();
 </script>
 
