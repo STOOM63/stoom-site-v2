@@ -7,6 +7,14 @@
     "lien": "vapecity.html",
     "bouton": "Découvrir"
   },
+  {
+    "titre": "Dot Pod MAX LITE",
+    "categorie": "Nouveauté Matériel",
+    "description": "Une restitution de saveur exceptionelle, systeme LED lumineux.",
+    "image": "uploads/dotpodmaxled.webp",
+    "lien": "materiel.html",
+    "bouton": "Découvrir"
+  },
     {
     "titre": "Six Vape",
     "categorie": "Nouveauté liquide",
