@@ -1091,6 +1091,19 @@
     "stock": "Disponible",
     "ordre": 467
   },
+   {
+    "nom": "Cartouches DotPod Max",
+    "marque": "Dotmod",
+    "categorie": "Cartouches",
+    "type": "DotPod",
+    "profil": "Polyvalent",
+    "usage": "Polyvalent,Saveurs",
+    "description": "Compatibles DotPro Max et Max Lite.",
+    "image": "uploads/cartouche-dotpod.webp",
+    "badge": "DotPro",
+    "stock": "Disponible",
+    "ordre": 468
+  },
   {
     "nom": "Accu 18650 MPV 20A 4000 mAh",
     "marque": "MPV",
