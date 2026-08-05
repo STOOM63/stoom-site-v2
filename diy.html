@@ -7,8 +7,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DIY e-liquide à Clermont-Ferrand | Calculateur, bases & boosters – STOOM</title>
-<meta name="description" content="Préparez votre DIY e-liquide avec le calculateur STOOM à Clermont-Ferrand : bases 50/50 et 30/70, boosters, arômes et conseils personnalisés en boutique.">
+<title>DIY e-liquide à Clermont-Ferrand | Arômes, calculateur & bases – STOOM</title>
+<meta name="description" content="Découvrez les arômes DIY disponibles chez STOOM Clermont-Ferrand, calculez votre recette et choisissez vos bases, boosters et concentrés en boutique.">
 <meta name="theme-color" content="#06131d">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="STOOM Clermont-Ferrand">
@@ -19,16 +19,16 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="STOOM Clermont-Ferrand">
-<meta property="og:title" content="DIY e-liquide à Clermont-Ferrand | Calculateur STOOM">
-<meta property="og:description" content="Calculez votre recette DIY : base, arôme, boosters et nicotine. Conseil personnalisé chez STOOM Clermont-Ferrand.">
+<meta property="og:title" content="DIY e-liquide à Clermont-Ferrand | Arômes & calculateur STOOM">
+<meta property="og:description" content="Consultez les arômes disponibles en boutique et calculez votre recette DIY chez STOOM Clermont-Ferrand.">
 <meta property="og:url" content="https://stoom.fr/diy.html">
 <meta property="og:image" content="https://stoom.fr/uploads/diyambiance2.jpg">
 <meta property="og:image:alt" content="DIY e-liquide et calculateur STOOM Clermont-Ferrand">
 
 <!-- X / Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DIY e-liquide à Clermont-Ferrand | STOOM">
-<meta name="twitter:description" content="Calculateur DIY, bases, boosters et conseils personnalisés en boutique.">
+<meta name="twitter:title" content="Arômes et DIY e-liquide à Clermont-Ferrand | STOOM">
+<meta name="twitter:description" content="Catalogue d’arômes en boutique, calculateur DIY, bases, boosters et conseils STOOM.">
 <meta name="twitter:image" content="https://stoom.fr/uploads/diyambiance2.jpg">
 <link rel="stylesheet" href="assets/style.css">
 
@@ -759,6 +759,326 @@ main > .section:nth-of-type(odd)::before{
   font-size:.78rem;
 }
 
+
+/* Catalogue d'arômes chargé depuis data/diy.json */
+.aroma-catalog{
+  overflow:hidden;
+}
+
+.catalog-intro-note{
+  margin:-12px 0 26px;
+  color:#9fc6d4;
+  font-size:.76rem;
+  font-weight:650;
+  line-height:1.55;
+}
+
+.catalog-toolbar{
+  display:grid;
+  grid-template-columns:minmax(260px,1.45fr) repeat(3,minmax(150px,.65fr));
+  gap:11px;
+  margin-bottom:16px;
+  padding:16px;
+  border-radius:19px;
+  background:linear-gradient(145deg,rgba(11,32,44,.93),rgba(6,20,29,.96));
+  border:1px solid rgba(142,234,255,.18);
+  box-shadow:0 18px 48px rgba(0,0,0,.18);
+}
+
+.catalog-field{
+  display:grid;
+  gap:7px;
+  min-width:0;
+}
+
+.catalog-field span{
+  color:#d8f5ff;
+  text-transform:uppercase;
+  letter-spacing:.055em;
+  font-weight:900;
+  font-size:.58rem;
+}
+
+.catalog-field input,
+.catalog-field select{
+  width:100%;
+  min-width:0;
+  min-height:50px;
+  padding:0 13px;
+  border-radius:13px;
+  border:1px solid rgba(142,234,255,.21);
+  background:#081923;
+  color:#fff;
+  font-size:16px;
+  font-weight:750;
+  outline:none;
+}
+
+.catalog-field select{
+  padding-right:32px;
+  -webkit-appearance:none;
+  appearance:none;
+  background-image:
+    linear-gradient(45deg,transparent 50%,var(--cyan) 50%),
+    linear-gradient(135deg,var(--cyan) 50%,transparent 50%);
+  background-position:
+    calc(100% - 16px) 21px,
+    calc(100% - 11px) 21px;
+  background-size:5px 5px,5px 5px;
+  background-repeat:no-repeat;
+}
+
+.catalog-field input:focus,
+.catalog-field select:focus{
+  border-color:rgba(142,234,255,.72);
+  box-shadow:0 0 0 4px rgba(142,234,255,.10);
+}
+
+.catalog-field input::placeholder{color:#7899a7}
+
+.catalog-summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:17px;
+  color:#bfd9e3;
+  font-size:.78rem;
+  line-height:1.45;
+}
+
+.catalog-summary strong{
+  color:var(--cyan);
+  font-weight:900;
+}
+
+.catalog-summary span:last-child{
+  text-align:right;
+  color:#91b7c5;
+  font-size:.70rem;
+  font-weight:650;
+}
+
+.aroma-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+
+.aroma-card{
+  min-width:0;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  border-radius:18px;
+  background:#091a24;
+  border:1px solid rgba(142,234,255,.17);
+  box-shadow:0 16px 42px rgba(0,0,0,.19);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+
+.aroma-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(142,234,255,.46);
+  box-shadow:0 24px 56px rgba(0,0,0,.28);
+}
+
+.aroma-media{
+  position:relative;
+  height:225px;
+  padding:13px;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(142,234,255,.09),transparent 48%),
+    #f7fbfe;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.aroma-media img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  transition:transform .28s ease;
+}
+
+.aroma-card:hover .aroma-media img{transform:scale(1.025)}
+
+.aroma-media.is-missing{
+  background:
+    radial-gradient(circle at 50% 42%,rgba(142,234,255,.14),transparent 48%),
+    linear-gradient(145deg,#0d2937,#071720);
+}
+
+.aroma-media.is-missing::before{
+  content:"Visuel bientôt disponible";
+  max-width:145px;
+  color:#c5e2ee;
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:.075em;
+  font-size:.60rem;
+  line-height:1.55;
+  font-weight:900;
+}
+
+.aroma-media.is-missing img{display:none}
+
+.aroma-availability{
+  position:absolute;
+  top:11px;
+  left:11px;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  min-height:27px;
+  padding:0 9px;
+  border-radius:999px;
+  color:#062117;
+  background:var(--green);
+  box-shadow:0 8px 20px rgba(0,0,0,.16);
+  font-size:.53rem;
+  font-weight:950;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+}
+
+.aroma-availability::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#075533;
+}
+
+.aroma-content{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:17px;
+  background:linear-gradient(180deg,#0a1e2a,#071720);
+}
+
+.aroma-kicker{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:9px;
+  margin-bottom:9px;
+  color:var(--cyan);
+  font-size:.55rem;
+  font-weight:900;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+
+.aroma-kicker span{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.aroma-format{
+  flex:0 0 auto;
+  padding:5px 7px;
+  border-radius:999px;
+  color:#d8f5ff;
+  background:rgba(142,234,255,.08);
+  border:1px solid rgba(142,234,255,.18);
+  font-size:.50rem;
+}
+
+.aroma-content h3{
+  margin:0 0 9px;
+  color:#fff;
+  font-size:1rem;
+  line-height:1.18;
+  text-transform:none;
+}
+
+.aroma-flavors{
+  margin:0 0 10px;
+  color:#d5f1fa;
+  line-height:1.45;
+  font-size:.74rem;
+  font-weight:800;
+}
+
+.aroma-flavors::before{
+  content:"Saveurs · ";
+  color:var(--cyan);
+  font-weight:900;
+}
+
+.aroma-description{
+  margin:0;
+  color:#abc8d3;
+  line-height:1.53;
+  font-size:.75rem;
+  font-weight:600;
+}
+
+.aroma-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:auto;
+  padding-top:14px;
+}
+
+.aroma-tag{
+  padding:6px 8px;
+  border-radius:999px;
+  color:#c8e6ef;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(142,234,255,.13);
+  font-size:.50rem;
+  font-weight:850;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+}
+
+.catalog-state{
+  grid-column:1/-1;
+  padding:34px 24px;
+  border-radius:19px;
+  color:#c4dce5;
+  text-align:center;
+  line-height:1.65;
+  font-size:.86rem;
+  font-weight:650;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(142,234,255,.13),transparent 48%),
+    rgba(255,255,255,.035);
+  border:1px dashed rgba(142,234,255,.25);
+}
+
+.catalog-state strong{
+  display:block;
+  margin-bottom:7px;
+  color:#fff;
+  font-family:var(--serif);
+  font-size:1.8rem;
+  font-weight:400;
+}
+
+.catalog-reset{
+  margin-top:15px;
+  min-height:42px;
+  padding:0 15px;
+  border:0;
+  border-radius:12px;
+  color:#06131d;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  cursor:pointer;
+  font-size:.67rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.035em;
+}
+
 .choice-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -1171,6 +1491,14 @@ footer{
   }
 
   .hero-card{max-width:640px}
+
+  .catalog-toolbar{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .aroma-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
   .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .mobile-actions{
     position:fixed;
@@ -1316,6 +1644,80 @@ footer{
     padding:15px;
   }
 
+
+  .catalog-toolbar{
+    grid-template-columns:1fr;
+    padding:13px;
+    border-radius:16px;
+  }
+
+  .catalog-summary{
+    display:block;
+    margin-bottom:14px;
+  }
+
+  .catalog-summary span:last-child{
+    display:block;
+    margin-top:5px;
+    text-align:left;
+  }
+
+  .aroma-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:11px;
+  }
+
+  .aroma-card{border-radius:14px}
+
+  .aroma-media{
+    height:157px;
+    padding:9px;
+  }
+
+  .aroma-availability{
+    top:8px;
+    left:8px;
+    min-height:23px;
+    padding:0 7px;
+    font-size:.44rem;
+  }
+
+  .aroma-content{padding:13px}
+
+  .aroma-kicker{
+    display:block;
+    margin-bottom:7px;
+    font-size:.47rem;
+  }
+
+  .aroma-kicker span{
+    display:block;
+    white-space:normal;
+  }
+
+  .aroma-format{
+    display:inline-flex !important;
+    width:max-content;
+    margin-top:5px;
+  }
+
+  .aroma-content h3{
+    font-size:.82rem;
+    line-height:1.15;
+  }
+
+  .aroma-flavors{
+    margin-bottom:0;
+    font-size:.66rem;
+  }
+
+  .aroma-description,
+  .aroma-tags{
+    display:none;
+  }
+
+  .catalog-intro-note{font-size:.72rem}
+
   .product-grid{
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:11px;
@@ -1385,6 +1787,7 @@ footer{
 }
 
 @media(max-width:390px){
+  .aroma-media{height:144px}
   .product-img{height:144px}
   .product-content h3{font-size:.76rem}
   .hero h1{font-size:2.95rem}
@@ -1410,8 +1813,8 @@ footer{
       "@type": "WebPage",
       "@id": "https://stoom.fr/diy.html#webpage",
       "url": "https://stoom.fr/diy.html",
-      "name": "DIY e-liquide à Clermont-Ferrand | Calculateur, bases & boosters – STOOM",
-      "description": "Page DIY e-liquide de STOOM Clermont-Ferrand avec calculateur de recette, bases 50/50 et 30/70, boosters, nicotine et conseils en boutique.",
+      "name": "DIY e-liquide à Clermont-Ferrand | Arômes, calculateur & bases – STOOM",
+      "description": "Page DIY de STOOM Clermont-Ferrand avec catalogue d’arômes disponibles en boutique, calculateur de recette, bases, boosters et conseils.",
       "inLanguage": "fr-FR",
       "isPartOf": {
         "@id": "https://stoom.fr/#website"
@@ -1538,7 +1941,7 @@ STOOM Clermont-Ferrand · DIY e-liquide · Produits réservés aux majeurs · Ac
 <div class="mobile-actions">
   <a href="tel:0473273394">Appeler</a>
   <a href="https://www.google.com/maps/place/STOOM+Cigarettes+%C3%A9lectronique+-+Clermont-Ferrand/@45.7803875,3.1121377,17z/data=!3m2!4b1!5s0x47f71c04b1104fbf:0xd83fa10f431a94a6!4m6!3m5!1s0x47f71c04a4b0e361:0xf13c887c2b2525ad!8m2!3d45.7803875!4d3.1147126!16s%2Fg%2F1pxwrpjl_?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Itinéraire</a>
-  <a href="#calculateur">Calculer</a>
+  <a href="#aromes">Arômes</a>
 </div>
 
 <main>
@@ -1559,7 +1962,7 @@ STOOM Clermont-Ferrand · DIY e-liquide · Produits réservés aux majeurs · Ac
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="#calculateur">Utiliser le calculateur</a>
-        <a class="btn btn-soft" href="#produits">Voir les bases STOOM</a>
+        <a class="btn btn-soft" href="#aromes">Voir les arômes en boutique</a>
       </div>
     </div>
 
@@ -1707,6 +2110,79 @@ STOOM Clermont-Ferrand · DIY e-liquide · Produits réservés aux majeurs · Ac
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<section class="section aroma-catalog" id="aromes" aria-labelledby="aromes-title">
+  <div class="container">
+
+    <div class="section-title">
+      <h2 id="aromes-title">Arômes disponibles <span>en boutique</span></h2>
+      <p>
+        Parcourez les concentrés et additifs actuellement proposés chez STOOM Clermont-Ferrand.
+        Ce catalogue est une vitrine : aucun achat ni paiement n’est réalisé en ligne.
+      </p>
+    </div>
+
+    <p class="catalog-intro-note">
+      Les arômes concentrés doivent être dilués dans une base adaptée et ne doivent pas être vapotés seuls.
+      La disponibilité peut évoluer entre deux mises à jour du catalogue.
+    </p>
+
+    <div class="catalog-toolbar" aria-label="Filtres du catalogue d’arômes">
+      <label class="catalog-field">
+        <span>Rechercher une saveur ou un nom</span>
+        <input
+          id="aromaSearch"
+          type="search"
+          placeholder="Ex. fruits rouges, menthe, Red Astaire…"
+          autocomplete="off"
+          enterkeyhint="search"
+        >
+      </label>
+
+      <label class="catalog-field">
+        <span>Marque</span>
+        <select id="aromaBrand">
+          <option value="">Toutes les marques</option>
+        </select>
+      </label>
+
+      <label class="catalog-field">
+        <span>Catégorie</span>
+        <select id="aromaCategory">
+          <option value="">Toutes les catégories</option>
+        </select>
+      </label>
+
+      <label class="catalog-field">
+        <span>Type</span>
+        <select id="aromaType">
+          <option value="">Tous les produits</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="catalog-summary" aria-live="polite">
+      <strong id="aromaCount">Chargement du catalogue…</strong>
+      <span>Disponible uniquement en boutique · Aucun prix affiché</span>
+    </div>
+
+    <div id="aromaGrid" class="aroma-grid" aria-live="polite" aria-busy="true">
+      <div class="catalog-state">
+        <strong>Chargement des arômes</strong>
+        Le catalogue va être récupéré depuis le fichier <code>data/diy.json</code>.
+      </div>
+    </div>
+
+    <noscript>
+      <div class="catalog-state">
+        <strong>JavaScript est nécessaire</strong>
+        Activez JavaScript pour consulter les arômes disponibles en boutique.
+      </div>
+    </noscript>
+
   </div>
 </section>
 
@@ -1948,6 +2424,206 @@ STOOM Clermont-Ferrand · DIY e-liquide · Produits réservés aux majeurs · Ac
 })();
 </script>
 
+
+<script>
+(function(){
+  const grid = document.getElementById("aromaGrid");
+  const count = document.getElementById("aromaCount");
+  const search = document.getElementById("aromaSearch");
+  const brandFilter = document.getElementById("aromaBrand");
+  const categoryFilter = document.getElementById("aromaCategory");
+  const typeFilter = document.getElementById("aromaType");
+
+  if(!grid || !count || !search || !brandFilter || !categoryFilter || !typeFilter) return;
+
+  let products = [];
+
+  function text(value){
+    return value == null ? "" : String(value).trim();
+  }
+
+  function safe(value){
+    return text(value)
+      .replace(/&/g,"&amp;")
+      .replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;")
+      .replace(/'/g,"&#039;");
+  }
+
+  function normalize(value){
+    return text(value)
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g,"")
+      .toLowerCase();
+  }
+
+  function flavorText(value){
+    if(Array.isArray(value)) return value.map(text).filter(Boolean).join(", ");
+    return text(value);
+  }
+
+  function uniqueValues(key){
+    return Array.from(new Set(products.map(function(item){
+      return text(item[key]);
+    }).filter(Boolean))).sort(function(a,b){
+      return a.localeCompare(b,"fr",{sensitivity:"base"});
+    });
+  }
+
+  function fillSelect(select, values){
+    values.forEach(function(value){
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+      select.appendChild(option);
+    });
+  }
+
+  function cardTemplate(item){
+    const name = text(item.nom) || "Arôme DIY";
+    const brand = text(item.marque) || "STOOM";
+    const flavors = flavorText(item.saveurs) || "Saveurs à découvrir en boutique";
+    const description = text(item.description);
+    const format = text(item.format);
+    const type = text(item.type) || "Arôme concentré";
+    const category = text(item.categorie);
+    const image = text(item.image);
+    const availability = text(item.disponibilite) || "Disponible en boutique";
+
+    const tags = [type, category].filter(Boolean).map(function(tag){
+      return '<span class="aroma-tag">' + safe(tag) + '</span>';
+    }).join("");
+
+    return [
+      '<article class="aroma-card">',
+        '<div class="aroma-media' + (image ? '' : ' is-missing') + '">',
+          '<span class="aroma-availability">' + safe(availability) + '</span>',
+          image
+            ? '<img src="' + safe(image) + '" alt="' + safe(name + " " + brand) + '" loading="lazy" decoding="async">'
+            : '',
+        '</div>',
+        '<div class="aroma-content">',
+          '<div class="aroma-kicker">',
+            '<span>' + safe(brand) + '</span>',
+            format ? '<span class="aroma-format">' + safe(format) + '</span>' : '',
+          '</div>',
+          '<h3>' + safe(name) + '</h3>',
+          '<p class="aroma-flavors">' + safe(flavors) + '</p>',
+          description ? '<p class="aroma-description">' + safe(description) + '</p>' : '',
+          tags ? '<div class="aroma-tags">' + tags + '</div>' : '',
+        '</div>',
+      '</article>'
+    ].join("");
+  }
+
+  function attachImageFallbacks(){
+    grid.querySelectorAll(".aroma-media img").forEach(function(image){
+      image.addEventListener("error",function(){
+        const media = image.closest(".aroma-media");
+        if(media) media.classList.add("is-missing");
+        image.remove();
+      },{once:true});
+    });
+  }
+
+  function render(){
+    const query = normalize(search.value);
+    const brand = brandFilter.value;
+    const category = categoryFilter.value;
+    const type = typeFilter.value;
+
+    const filtered = products.filter(function(item){
+      const haystack = normalize([
+        item.nom,
+        item.marque,
+        flavorText(item.saveurs),
+        item.description,
+        item.categorie,
+        item.type,
+        item.format
+      ].join(" "));
+
+      return (!query || haystack.includes(query))
+        && (!brand || text(item.marque) === brand)
+        && (!category || text(item.categorie) === category)
+        && (!type || text(item.type) === type);
+    });
+
+    count.textContent = filtered.length + (filtered.length > 1 ? " références affichées" : " référence affichée");
+
+    if(!filtered.length){
+      grid.innerHTML = [
+        '<div class="catalog-state">',
+          '<strong>Aucun arôme ne correspond</strong>',
+          'Essayez un autre mot-clé ou réinitialisez les filtres.',
+          '<br><button class="catalog-reset" type="button" id="resetAromaFilters">Réinitialiser les filtres</button>',
+        '</div>'
+      ].join("");
+
+      const reset = document.getElementById("resetAromaFilters");
+      if(reset){
+        reset.addEventListener("click",function(){
+          search.value = "";
+          brandFilter.value = "";
+          categoryFilter.value = "";
+          typeFilter.value = "";
+          render();
+          search.focus();
+        });
+      }
+      return;
+    }
+
+    grid.innerHTML = filtered.map(cardTemplate).join("");
+    attachImageFallbacks();
+  }
+
+  function showLoadError(){
+    grid.setAttribute("aria-busy","false");
+    count.textContent = "Catalogue bientôt disponible";
+    grid.innerHTML = [
+      '<div class="catalog-state">',
+        '<strong>Le fichier DIY sera ajouté ensuite</strong>',
+        'La page est prête. Les produits apparaîtront automatiquement dès que ',
+        '<code>data/diy.json</code> sera présent dans le dépôt.',
+      '</div>'
+    ].join("");
+  }
+
+  fetch("data/diy.json",{cache:"no-store"})
+    .then(function(response){
+      if(!response.ok) throw new Error("HTTP " + response.status);
+      return response.json();
+    })
+    .then(function(data){
+      if(!Array.isArray(data)) throw new Error("Le JSON doit contenir un tableau.");
+
+      products = data
+        .filter(function(item){
+          return item && typeof item === "object" && text(item.nom);
+        })
+        .sort(function(a,b){
+          return text(a.nom).localeCompare(text(b.nom),"fr",{sensitivity:"base"});
+        });
+
+      fillSelect(brandFilter,uniqueValues("marque"));
+      fillSelect(categoryFilter,uniqueValues("categorie"));
+      fillSelect(typeFilter,uniqueValues("type"));
+
+      grid.setAttribute("aria-busy","false");
+      render();
+    })
+    .catch(function(error){
+      console.info("Catalogue DIY non chargé :",error.message);
+      showLoadError();
+    });
+
+  [search,brandFilter,categoryFilter,typeFilter].forEach(function(control){
+    control.addEventListener(control === search ? "input" : "change",render);
+  });
+})();
+</script>
 
 <script>
 (function(){
