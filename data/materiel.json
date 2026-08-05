@@ -247,6 +247,19 @@
     "ordre": 201
   },
   {
+    "nom": "Thelema Solo PRO",
+    "marque": "Lost Vape",
+    "categorie": "Box simple accu 21700",
+    "type": "Simple accu 21700",
+    "profil": "Intermédiaire",
+    "usage": "Polyvalent, Grande autonomie",
+    "description": "Simple accu 21700 • Légère • Jusqu'à 100W",
+    "image": "uploads/thelemasolopro.webp",
+    "badge": "21700",
+    "stock": "Nouveauté",
+    "ordre": 202
+  },
+  {
     "nom": "Aegis Legend 2 L200",
     "marque": "Geekvape",
     "categorie": "Box double accus",
