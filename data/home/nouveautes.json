@@ -7,6 +7,14 @@
   "lien": "tornadoliq.html",
   "bouton": "Découvrir"
 },
+   {
+    "titre": "Maître Vapotier",
+    "categorie": "Nouveauté liquide",
+    "description": "Des e-liquides français aux recettes fruitées, fraîches, gourmandes et classiques, à découvrir en boutique.",
+    "image": "uploads/maitrevapotierfinal.webp",
+    "lien": "maitrevapotier.html",
+    "bouton": "Découvrir"
+  },
   {
     "titre": "Vape City",
     "categorie": "Nouveauté liquide",
