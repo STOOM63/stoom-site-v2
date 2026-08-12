@@ -1,0 +1,66 @@
+[
+  {
+    "nom": "Black Dragon Ice",
+    "saveurs": "Cassis, fruit du dragon, frais",
+    "description": "Une association intense de cassis et de fruit du dragon accompagnée d'une fraîcheur marquée.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/black-dragon-ice-blackcurrant-dragon-fruit-ice-0mg-50ml-monster-by-tornadoliq.webp"
+  },
+  {
+    "nom": "Blueberry Ice",
+    "saveurs": "Myrtille, frais",
+    "description": "Une myrtille fruitée et sucrée relevée par une fraîcheur intense dans un esprit puff.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/blueberry-ice-0mg-50ml-monster-by-tornadoliq.webp"
+  },
+  {
+    "nom": "Cherry Ice",
+    "saveurs": "Cerise, frais",
+    "description": "Une cerise sucrée et généreuse accompagnée d'une fraîcheur prononcée.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/cherry-ice-0mg-50ml-monster-by-tornadoliq.webp"
+  },
+  {
+    "nom": "Dragon Fruit Blueberry Ice",
+    "saveurs": "Fruit du dragon, myrtille, frais",
+    "description": "Un mélange exotique de fruit du dragon et de myrtille avec une touche de fraîcheur intense.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/dragon-fruit-blueberry-ice-0mg-50ml-monster-by-tornadoliq.webp"
+  },
+  {
+    "nom": "Peach Berry",
+    "saveurs": "Pêche, baies",
+    "description": "Une association fruitée et sucrée mêlant la douceur de la pêche à un mélange de baies.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/peach-berry-0mg-50ml-monster-by-tornadoliq.webp"
+  },
+  {
+    "nom": "Peach Ice",
+    "saveurs": "Pêche, frais",
+    "description": "Une pêche douce, juteuse et sucrée associée à une fraîcheur marquée.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/peach-ice-0mg-50ml-monster-by-tornadoliq.webp"
+  },
+  {
+    "nom": "Peach Mango Pineapple",
+    "saveurs": "Pêche, mangue, ananas",
+    "description": "Un mélange exotique et généreux associant pêche, mangue et ananas dans une recette intensément fruitée.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/peach-mango-pineapple-0mg-50ml-monster-by-tornadoliq.webp"
+  },
+  {
+    "nom": "Raspberry Watermelon Ice",
+    "saveurs": "Framboise, pastèque, frais",
+    "description": "Une association de framboise et de pastèque, sucrée et juteuse, complétée par une fraîcheur intense.",
+    "format": "50ml",
+    "nicotine": "0mg",
+    "image": "uploads/raspberry-watermelon-ice-0mg-50ml-monster-by-tornadoliq.webp"
+  }
+]
