@@ -24,6 +24,14 @@
     "bouton": "Je fonce découvrir"
   },
   {
+  "titre": "TORNADOLIQ",
+  "categorie": "E-liquides Fruités Frais",
+  "description": "Des e-liquides français en 50 ml, intensément fruités, sucrés et frais, dans un univers Monster explosif.",
+  "image": "uploads/headtornadoliq.webp",
+  "lien": "tornadoliq.html",
+  "bouton": "Je fonce découvrir"
+},
+  {
     "titre": "Biggy Bear",
     "categorie": "E-liquides Fruités",
     "description": "Grands formats, prix mini !",
