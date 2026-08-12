@@ -1,5 +1,13 @@
 [
   {
+  "titre": "TORNADOLIQ",
+  "categorie": "Nouveauté liquide",
+  "description": "Des liquides français en 50 ml, intensément fruités, sucrés et frais, dans un style inspiré des saveurs puff.",
+  "image": "uploads/tornadoliqfinal.webp",
+  "lien": "tornadoliq.html",
+  "bouton": "Découvrir"
+},
+  {
     "titre": "Vape City",
     "categorie": "Nouveauté liquide",
     "description": "Une gamme fruitée et fraîche à découvrir en boutique.",
