@@ -1,0 +1,47 @@
+[
+  {
+    "nom": "CAPTAIN CAT",
+    "saveurs": "Fruits rouges, fruit du dragon, fraîcheur",
+    "description": "Un mélange fruité de fruits rouges et de fruit du dragon, accompagné d'une légère touche de fraîcheur.",
+    "image": "uploads/catvengers-captain-cat.webp",
+    "profil": ["fruité", "frais"],
+    "format": "100 ml",
+    "nicotine": "0 mg"
+  },
+  {
+    "nom": "HULKY CAT",
+    "saveurs": "Fruits rouges, goyave, papaye, fraîcheur",
+    "description": "Une recette fruitée et exotique associant fruits rouges, goyave et papaye, relevée par une note de fraîcheur.",
+    "image": "uploads/catvengers-hulky-cat.webp",
+    "profil": ["fruité", "frais"],
+    "format": "100 ml",
+    "nicotine": "0 mg"
+  },
+  {
+    "nom": "IRON CAT",
+    "saveurs": "Pomme, raisin, fruits rouges, fraîcheur",
+    "description": "Un mélange fruité de pomme, de raisin et de fruits rouges, complété par une légère sensation de fraîcheur.",
+    "image": "uploads/catvengers-iron-cat.webp",
+    "profil": ["fruité", "frais"],
+    "format": "100 ml",
+    "nicotine": "0 mg"
+  },
+  {
+    "nom": "SPIDER CAT",
+    "saveurs": "Cerise, fruits rouges, fraîcheur",
+    "description": "Une association fruitée de cerise et de fruits rouges avec une touche fraîche en fin de bouche.",
+    "image": "uploads/catvengers-spider-cat.webp",
+    "profil": ["fruité", "frais"],
+    "format": "100 ml",
+    "nicotine": "0 mg"
+  },
+  {
+    "nom": "TRONY CAT",
+    "saveurs": "Mirabelle, abricot, fruits rouges, fraîcheur",
+    "description": "Une recette fruitée mêlant mirabelle, abricot et fruits rouges, accompagnée d'une touche de fraîcheur.",
+    "image": "uploads/catvengers-trony-cat.webp",
+    "profil": ["fruité", "frais"],
+    "format": "100 ml",
+    "nicotine": "0 mg"
+  }
+]
